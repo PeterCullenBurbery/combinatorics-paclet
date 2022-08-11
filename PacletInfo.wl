@@ -1,3 +1,5 @@
+(* ::Package:: *)
+
 PacletObject[
   <|
     "Name" -> "PeterBurbery/CombinatoricsPaclet",
@@ -17,7 +19,10 @@ PacletObject[
             "CombinatoricsPaclet.wl"
           }
         }
-      },
+      },"Symbols" -> {
+        "PeterBurbery`CombinatoricsPaclet`PermutationFromIndex",
+          
+        },
       {"Documentation", "Language" -> "English"}
     }
   |>
