@@ -1,0 +1,382 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12938,        373]
+NotebookOptionsPosition[      8933,        285]
+NotebookOutlinePosition[     11099,        340]
+CellTagsIndexPosition[     11014,        335]
+WindowTitle->DiscreteInverseEqual
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ COMBINATORICS PACLET SYMBOL", "PacletNameCell",
+           TextAlignment->Center], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]]]
+        }]],
+        StripOnInput->
+         False], {"\<\"PeterBurbery/CombinatoricsPaclet/ref/\
+DiscreteInverseEqual\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+             "PeterBurbery/CombinatoricsPaclet/ref/DiscreteInverseEqual"]}, 
+            Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/PeterBurbery/\
+CombinatoricsPaclet/ref/DiscreteInverseEqual.html"], StandardForm]], "Input", 
+              TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[(If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$216362], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "PeterBurbery/CombinatoricsPaclet/ref/DiscreteInverseEqual") <> 
+            ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0}]], "AnchorBar",
+     CacheGraphics->False]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["PeterBurbery`CombinatoricsPaclet`", "ContextNameCell"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell["DiscreteInverseEqual", "ObjectName"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]]],
+     Cell[BoxData[""], "ObjectNameTranslation"]
+    }]], "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["DiscreteInverseEqual"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/DiscreteInverseEqual", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["function", "TI"], ",", 
+        StyleBox["number", "TI"]}], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro"],
+     "\[LineSeparator]discrete inverse of ",
+     Cell[BoxData[
+      StyleBox["number", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro"],
+     " with regard to ",
+     Cell[BoxData[
+      StyleBox["function", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro"]
+    }]]}
+  }]], "Usage",
+ CellID->648195395]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{17., {7., 10.}}]]],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->511304272],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`CombinatoricsPaclet`\>\"", 
+  "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->66493648],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{17., {1.4750000000000005`, 15.524999999999999`}}]]],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]]],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->63432209],
+
+Cell["\<\
+Find the first number with 40 as an output of the Euler totient function \
+\[Phi].\
+\>", "ExampleText",
+ CellID->606923835],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiscreteInverseEqual", "[", 
+  RowBox[{
+   RowBox[{"EulerPhi", "[", "#", "]"}], ",", "40"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`CombinatoricsPaclet`"],
+ CellLabel->"In[1]:=",
+ CellID->662729567],
+
+Cell[BoxData["41"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->463128594]
+}, Open  ]],
+
+Cell[TextData[{
+ "Find the first number whose Fibonacci number contains 1000 digits to solve \
+Project Euler ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["1000-digit Fibonacci number"]], 
+    "https://projecteuler.net/problem=25"},
+   "WebLink",
+   BaseStyle->{"ExampleText"}]]],
+ ":"
+}], "ExampleText",
+ CellID->25021889],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiscreteInverseEqual", "[", 
+  RowBox[{
+   RowBox[{"IntegerLength", "[", 
+    RowBox[{"Fibonacci", "[", "#", "]"}], "]"}], ",", "1000"}], 
+  "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`CombinatoricsPaclet`"],
+ CellLabel->"In[2]:=",
+ CellID->595118651],
+
+Cell[BoxData["4782"], "Output",
+ CellLabel->"Out[2]=",
+ CellID->252654548]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"DiscreteInverseEqual",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2022, 8, 11, 19, 58, 27.3521141}", 
+    "history" -> {"", "", "", ""}, "context" -> 
+    "PeterBurbery`CombinatoricsPaclet`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Combinatorics Paclet Symbol", "language" -> 
+    "en", "paclet" -> "PeterBurbery/CombinatoricsPaclet", "status" -> "None", 
+    "summary" -> 
+    "DiscreteInverseEqual[function, number] discrete inverse of number with \
+regard to function", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "DiscreteInverseEqual", "titlemodifier" -> "", "windowtitle" -> 
+    "DiscreteInverseEqual", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/CombinatoricsPaclet/ref/DiscreteInverseEqual"}},
+CellContext->"Global`",
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.1 for Microsoft Windows (64-bit) (June 16, 2022)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4928, 144, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"c09a5449-6596-40f2-a87c-1e2f19649a16",
+   CellTags->"PrimaryExamplesSection",
+   CellID->511304272]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 10815, 328}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[592, 21, 3101, 77, 70, "AnchorBarGrid",ExpressionUUID->"afa597ec-211f-4f20-83c0-01ac382626bf",
+ CellID->1],
+Cell[3696, 100, 60, 0, 70, "ContextNameCell",ExpressionUUID->"9bf9f57b-147d-46e4-bb53-5696b1eba86b"],
+Cell[CellGroupData[{
+Cell[3781, 104, 255, 8, 70, "ObjectNameGrid",ExpressionUUID->"bf4712eb-bc68-4b54-82b9-1849ca62cb7a"],
+Cell[4039, 114, 852, 25, 70, "Usage",ExpressionUUID->"892ed7f3-4ac9-4602-be7d-84b833d5b3f0",
+ CellID->648195395]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4928, 144, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"c09a5449-6596-40f2-a87c-1e2f19649a16",
+ CellTags->"PrimaryExamplesSection",
+ CellID->511304272],
+Cell[6095, 181, 168, 4, 70, "Input",ExpressionUUID->"8a4f5bb4-44a3-4223-9697-dfb3095b2c39",
+ CellID->66493648],
+Cell[CellGroupData[{
+Cell[6288, 189, 1174, 34, 70, "ExampleSection",ExpressionUUID->"09df5fec-40c5-4162-a3ad-8371fb0eb545",
+ CellID->63432209],
+Cell[7465, 225, 133, 4, 70, "ExampleText",ExpressionUUID->"bcb97963-ee7d-4509-9941-d8b3b3e928fb",
+ CellID->606923835],
+Cell[CellGroupData[{
+Cell[7623, 233, 233, 6, 70, "Input",ExpressionUUID->"86b17866-4ab5-4cad-873b-e051452648b5",
+ CellID->662729567],
+Cell[7859, 241, 72, 2, 70, "Output",ExpressionUUID->"0f6d7aa4-94d1-429d-a48c-47b46123c8d8",
+ CellID->463128594]
+}, Open  ]],
+Cell[7946, 246, 335, 12, 70, "ExampleText",ExpressionUUID->"ca75adef-e2e1-46d6-8b36-84e3542d17cb",
+ CellID->25021889],
+Cell[CellGroupData[{
+Cell[8306, 262, 281, 8, 70, "Input",ExpressionUUID->"e0f905a3-06e0-43c9-9521-9e3f50942edb",
+ CellID->595118651],
+Cell[8590, 272, 74, 2, 70, "Output",ExpressionUUID->"c4d1d08e-a4c8-497e-bade-2f70155ceadf",
+ CellID->252654548]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[8906, 283, 23, 0, 70, "FooterCell",ExpressionUUID->"d807dd53-8b2c-4633-8e35-30f54f3be139"]
+}
+]
+*)
+
+(* End of internal cache information *)

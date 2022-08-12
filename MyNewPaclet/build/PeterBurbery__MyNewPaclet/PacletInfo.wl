@@ -1,9 +1,7 @@
-(* ::Package:: *)
-
 PacletObject[
   <|
-    "Name" -> "PeterBurbery/CombinatoricsPaclet",
-    "Description" -> "functions for tuples permutations and combinations",
+    "Name" -> "PeterBurbery/MyNewPaclet",
+    "Description" -> "A demonstration for creating a new paclet",
     "Creator" -> "Peter Cullen Burbery",
     "Version" -> "1.0.0",
     "WolframVersion" -> "13.1+",
@@ -15,14 +13,11 @@ PacletObject[
         "Root" -> "Kernel",
         "Context" -> {
           {
-            "PeterBurbery`CombinatoricsPaclet`",
-            "CombinatoricsPaclet.wl"
+            "PeterBurbery`MyNewPaclet`",
+            "MyNewPaclet.wl"
           }
         }
-      },"Symbols" -> {
-        "PeterBurbery`CombinatoricsPaclet`PermutationFromIndex",
-          
-        },
+      },
       {"Documentation", "Language" -> "English"}
     }
   |>

@@ -1,0 +1,256 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8898,        247]
+NotebookOptionsPosition[      5774,        182]
+NotebookOutlinePosition[      7517,        224]
+CellTagsIndexPosition[      7474,        221]
+WindowTitle->Tuples, Permutations, and Subsets
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ COMBINATORICS PACLET GUIDE", "PacletNameCell",
+           TextAlignment->Center], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center],
+        Background->RGBColor[0.85098, 0.396078, 0],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]]]
+        }]],
+        StripOnInput->
+         False], {"\<\"PeterBurbery/CombinatoricsPaclet/guide/\
+TuplesPermutationsAndSubsets\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+             "PeterBurbery/CombinatoricsPaclet/guide/\
+TuplesPermutationsAndSubsets"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/PeterBurbery/\
+CombinatoricsPaclet/guide/TuplesPermutationsAndSubsets.html"], StandardForm]],
+               "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[(If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$80334], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "PeterBurbery/CombinatoricsPaclet/guide/\
+TuplesPermutationsAndSubsets") <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0}]], "AnchorBar",
+     CacheGraphics->False]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Tuples, Permutations, and Subsets", "GuideTitle",
+ CellID->317630819],
+
+Cell["\<\
+These functions are useful for converting to and from indexes to \
+permutations, tuples, ordered tuples, and subsets.\
+\>", "GuideAbstract",
+ CellID->650988824],
+
+Cell["\t", "GuideDelimiterSubsection"],
+
+Cell[TextData[{
+ Cell["PermutationFromIndex", "InlineFunctionSansUnlinked"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Give the permutation corresponding to a given length and lexicographic \
+index"
+}], "GuideText",
+ CellID->348763423],
+
+Cell[TextData[{
+ Cell["PermutationIndex", "InlineFunctionSansUnlinked"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Give the lexicographic index of a permutation"
+}], "GuideText",
+ CellID->306435021],
+
+Cell[TextData[{
+ Cell["OrderedTupleFromIndex", "InlineFunctionSansUnlinked"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get the ordered tuple with the given index and length"
+}], "GuideText",
+ CellID->639827],
+
+Cell[TextData[{
+ Cell["OrderedTupleIndex", "InlineFunctionSansUnlinked"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Give the index of an ordered tuple"
+}], "GuideText",
+ CellID->32508110],
+
+Cell[TextData[{
+ Cell["SubsetFromIndex", "InlineFunctionSansUnlinked"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get the subset with the given index and length"
+}], "GuideText",
+ CellID->204953227],
+
+Cell[TextData[{
+ Cell["SubsetIndex", "InlineFunctionSansUnlinked"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Give the index of a subset"
+}], "GuideText",
+ CellID->103662544],
+
+Cell[TextData[{
+ Cell["TupleFromIndex", "InlineFunctionSansUnlinked"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Return the tuple corresponding to a given index"
+}], "GuideText",
+ CellID->29543756],
+
+Cell[TextData[{
+ Cell["TupleIndex", "InlineFunctionSansUnlinked"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Compute the index of a given tuple of non-negative integers"
+}], "GuideText",
+ CellID->21294979]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Tuples, Permutations, and Subsets",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {"", ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2022, 8, 11, 15, 35, 53.4741500}", 
+    "history" -> {"", "", "", ""}, "context" -> 
+    "PeterBurbery`CombinatoricsPaclet`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Combinatorics Paclet Guide", "language" -> 
+    "en", "paclet" -> "PeterBurbery/CombinatoricsPaclet", "status" -> "None", 
+    "summary" -> 
+    "These functions are useful for converting to and from indexes to \
+permutations, tuples, ordered tuples, and subsets.", "synonyms" -> {}, 
+    "tabletags" -> DocumentationBuild`Make`Private`tabletaggingrules$80306, 
+    "title" -> "Tuples, Permutations, and Subsets", "titlemodifier" -> "", 
+    "windowtitle" -> "Tuples, Permutations, and Subsets", "type" -> "Guide", 
+    "uri" -> "PeterBurbery/CombinatoricsPaclet/guide/\
+TuplesPermutationsAndSubsets"}},
+CacheGraphics->False,
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[605, 21, 3123, 78, 70, "AnchorBarGrid",ExpressionUUID->"a5a9bc7e-2532-4aa2-8277-37c34819656a",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3753, 103, 75, 1, 70, "GuideTitle",ExpressionUUID->"742c4896-73a3-49bf-87af-fecf54c17572",
+ CellID->317630819],
+Cell[3831, 106, 170, 4, 70, "GuideAbstract",ExpressionUUID->"7c326abe-9a0a-4cce-a821-5a3407658c2e",
+ CellID->650988824],
+Cell[4004, 112, 38, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"f14324da-a800-4509-9523-e7ac3c6f42a9"],
+Cell[4045, 114, 243, 7, 70, "GuideText",ExpressionUUID->"67284d60-0c0a-429d-bfce-0f0e11786f22",
+ CellID->348763423],
+Cell[4291, 123, 206, 6, 70, "GuideText",ExpressionUUID->"4f2f7b7c-4cf6-4f05-a0c1-3be7d63f5716",
+ CellID->306435021],
+Cell[4500, 131, 216, 6, 70, "GuideText",ExpressionUUID->"547e43c9-a5d3-4058-8e9f-1410da94e7e2",
+ CellID->639827],
+Cell[4719, 139, 195, 6, 70, "GuideText",ExpressionUUID->"6c5ca7ce-0295-4bf7-ba3e-ce3631259919",
+ CellID->32508110],
+Cell[4917, 147, 206, 6, 70, "GuideText",ExpressionUUID->"5ae7cb0b-f948-4d7b-a5a8-679fd51f9afc",
+ CellID->204953227],
+Cell[5126, 155, 182, 6, 70, "GuideText",ExpressionUUID->"58f35ad7-1673-4bdf-a55b-eb4723f58962",
+ CellID->103662544],
+Cell[5311, 163, 205, 6, 70, "GuideText",ExpressionUUID->"43eeb762-8c2a-48f2-9495-20c7078cf5ee",
+ CellID->29543756],
+Cell[5519, 171, 213, 6, 70, "GuideText",ExpressionUUID->"1ad4b15c-5e9c-4a44-9788-379f3aba7bfe",
+ CellID->21294979]
+}, Open  ]],
+Cell[5747, 180, 23, 0, 70, "FooterCell",ExpressionUUID->"51c6e84e-09aa-4f72-b053-8482cb36964f"]
+}
+]
+*)
+
+(* End of internal cache information *)
