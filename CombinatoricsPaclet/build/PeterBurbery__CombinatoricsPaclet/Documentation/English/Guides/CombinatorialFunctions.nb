@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12941,        362]
-NotebookOptionsPosition[      9752,        296]
-NotebookOutlinePosition[     11433,        337]
-CellTagsIndexPosition[     11390,        334]
+NotebookDataLength[     13648,        382]
+NotebookOptionsPosition[     10343,        314]
+NotebookOutlinePosition[     12023,        355]
+CellTagsIndexPosition[     11980,        352]
 WindowTitle->Combinatorial Functions
 WindowFrame->Normal*)
 
@@ -51,8 +51,10 @@ Cell[BoxData[GridBox[{
             ImageSize->20,
             PlotRange->{{-3, 4}, {-1, 1}}]]]
          }]],
-         StripOnInput->False], {"\<\"DiscreteInverseLessThan\"\>":>
+         StripOnInput->False], {"\<\"DiscreteInverseEqual\"\>":>
         Documentation`HelpLookup[
+        "paclet:PeterBurbery/CombinatoricsPaclet/ref/DiscreteInverseEqual"], \
+"\<\"DiscreteInverseLessThan\"\>":>Documentation`HelpLookup[
         "paclet:PeterBurbery/CombinatoricsPaclet/ref/DiscreteInverseLessThan"]\
 , "\<\"OrderedTupleFromIndex\"\>":>Documentation`HelpLookup[
         "paclet:PeterBurbery/CombinatoricsPaclet/ref/OrderedTupleFromIndex"], \
@@ -122,7 +124,7 @@ CombinatoricsPaclet/guide/CombinatorialFunctions.html"], StandardForm]],
          Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
           NotebookLocate[{
             URL[(If[
-                TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$193838], 
+                TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$80098], 
                 "http://reference.wolfram.com/system-modeler/", 
                 "http://reference.wolfram.com/language/"] <> 
               "PeterBurbery/CombinatoricsPaclet/guide/CombinatorialFunctions")\
@@ -289,7 +291,23 @@ Cell[TextData[{
  " find the last number that is less than a number when evaluated for a \
 discrete combinatorial function"
 }], "GuideText",
- CellID->144081010]
+ CellID->144081010],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["DiscreteInverseEqual"]], 
+    "paclet:PeterBurbery/CombinatoricsPaclet/ref/DiscreteInverseEqual", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " find the first number that when evaluated with a discrete function is a \
+number"
+}], "GuideText",
+ CellID->1016674]
 }, Open  ]],
 
 Cell[" ", "FooterCell"]
@@ -307,7 +325,7 @@ TaggingRules->{
   "NewStyles" -> True, "CitationPopupData" -> {"", ""}, "ShowCitation" -> 
   False, "RootCaptions" -> "", 
   "Metadata" -> {
-   "built" -> "{2022, 8, 11, 16, 31, 33.2176949}", 
+   "built" -> "{2022, 8, 11, 20, 12, 14.2131059}", 
     "history" -> {"", "", "", ""}, "context" -> 
     "PeterBurbery`CombinatoricsPaclet`", "keywords" -> {}, 
     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
@@ -316,7 +334,7 @@ TaggingRules->{
     "summary" -> 
     "The paclet includes functions for computing indexes for permutations, \
 tuples, and subsets.", "synonyms" -> {}, "tabletags" -> 
-    DocumentationBuild`Make`Private`tabletaggingrules$193800, "title" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$80057, "title" -> 
     "Combinatorial Functions", "titlemodifier" -> "", "windowtitle" -> 
     "Combinatorial Functions", "type" -> "Guide", "uri" -> 
     "PeterBurbery/CombinatoricsPaclet/guide/CombinatorialFunctions"}},
@@ -336,34 +354,36 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[595, 21, 5025, 120, 70, "AnchorBarGrid",ExpressionUUID->"be25028b-4770-4618-9686-f5bdf7ddce28",
+Cell[595, 21, 5161, 122, 70, "AnchorBarGrid",ExpressionUUID->"e02116d8-511c-4faf-bd79-3146b9640919",
  CellID->1],
 Cell[CellGroupData[{
-Cell[5645, 145, 65, 1, 70, "GuideTitle",ExpressionUUID->"6ebd3b71-d2d4-4d35-b653-b195e35e4b6d",
+Cell[5781, 147, 65, 1, 70, "GuideTitle",ExpressionUUID->"87f0fbe2-06bb-41b2-acb9-08f1ee941e75",
  CellID->557070836],
-Cell[5713, 148, 145, 4, 70, "GuideAbstract",ExpressionUUID->"a28a1fd9-670e-4422-a077-49d39235d534",
+Cell[5849, 150, 145, 4, 70, "GuideAbstract",ExpressionUUID->"0607d68e-d793-40ed-a349-83ed7d0973db",
  CellID->660808434],
-Cell[5861, 154, 38, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"e25af06c-1ce8-43cf-9aa4-07b667ad3b4d"],
-Cell[5902, 156, 452, 14, 70, "GuideText",ExpressionUUID->"7472d722-0bc4-40a4-ba63-71f1e58e6a52",
+Cell[5997, 156, 38, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"50bc72f2-0f70-4f0b-b16e-de6af1903ff6"],
+Cell[6038, 158, 452, 14, 70, "GuideText",ExpressionUUID->"9bc00ca2-460a-428e-97b3-d86791620f7b",
  CellID->348763423],
-Cell[6357, 172, 411, 13, 70, "GuideText",ExpressionUUID->"d68ea4e6-8bfa-46eb-84b4-0972550b6ac9",
+Cell[6493, 174, 411, 13, 70, "GuideText",ExpressionUUID->"55ab9bec-268a-4b79-97e3-0cd0c0746a34",
  CellID->306435021],
-Cell[6771, 187, 426, 13, 70, "GuideText",ExpressionUUID->"16e3bb92-d551-4906-8136-b6c78d2e8249",
+Cell[6907, 189, 426, 13, 70, "GuideText",ExpressionUUID->"ad6e88ea-c4e7-4d5a-b402-b6f2cf90a197",
  CellID->639827],
-Cell[7200, 202, 401, 13, 70, "GuideText",ExpressionUUID->"20f01f84-aa5d-4781-b01a-71927ed20083",
+Cell[7336, 204, 401, 13, 70, "GuideText",ExpressionUUID->"3c31c5bc-2bc2-4dea-879a-b4e3127c3a73",
  CellID->32508110],
-Cell[7604, 217, 410, 13, 70, "GuideText",ExpressionUUID->"b588228f-e6c6-4e87-991a-c3d90888fe95",
+Cell[7740, 219, 410, 13, 70, "GuideText",ExpressionUUID->"4d3661ab-1bad-4061-8b77-54c9103ea36c",
  CellID->204953227],
-Cell[8017, 232, 382, 13, 70, "GuideText",ExpressionUUID->"ce124411-4b39-4348-9dc6-b325b9497ef4",
+Cell[8153, 234, 382, 13, 70, "GuideText",ExpressionUUID->"68d32ba1-e88b-4835-b20e-1090f5da36f6",
  CellID->103662544],
-Cell[8402, 247, 408, 13, 70, "GuideText",ExpressionUUID->"c463c60a-0d26-4674-af96-11388096b0b7",
+Cell[8538, 249, 408, 13, 70, "GuideText",ExpressionUUID->"919df372-0365-4e4c-a82f-e1142a070f0d",
  CellID->29543756],
-Cell[8813, 262, 412, 13, 70, "GuideText",ExpressionUUID->"7235399b-6359-438f-892f-faf693dc72e9",
+Cell[8949, 264, 412, 13, 70, "GuideText",ExpressionUUID->"f9dd537a-9bbb-4aa0-9078-7f67c09bb26e",
  CellID->21294979],
-Cell[9228, 277, 482, 14, 70, "GuideText",ExpressionUUID->"bf1390a4-fb47-470f-802a-308d1d6c7b2f",
- CellID->144081010]
+Cell[9364, 279, 482, 14, 70, "GuideText",ExpressionUUID->"527863a8-29d4-4e4d-8b0e-df99dfab48ff",
+ CellID->144081010],
+Cell[9849, 295, 452, 14, 70, "GuideText",ExpressionUUID->"e55ccaa9-b612-4cf2-aa3d-9c58c7f4616a",
+ CellID->1016674]
 }, Open  ]],
-Cell[9725, 294, 23, 0, 70, "FooterCell",ExpressionUUID->"be775880-7604-46ee-befe-5a58f4c87e74"]
+Cell[10316, 312, 23, 0, 70, "FooterCell",ExpressionUUID->"2cfef429-591a-4f9d-a8c3-67a3cb9ce442"]
 }
 ]
 *)

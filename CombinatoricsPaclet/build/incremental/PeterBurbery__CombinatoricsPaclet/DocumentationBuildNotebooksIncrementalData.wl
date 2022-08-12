@@ -1,11 +1,11 @@
 <|"English\\Guides\\CombinatorialFunctions.nb" -> 
   <|"Result" -> Success["BuildDocumentationNotebook", 
-     <|"Time" -> Quantity[1.9972656, "Seconds"]|>], 
-   "FileHash" -> "WnrfvzvxDE6nysWA+KSbqfZkCNI76TNbS5qJws8Pjno="|>, 
+     <|"Time" -> Quantity[2.8864284, "Seconds"]|>], 
+   "FileHash" -> "a+dlIoINFxEfHH7vrHstnM8J+WYOOSnlFXN4c5jlcs0="|>, 
  "English\\Guides\\TuplesPermutationsAndSubsets.nb" -> 
   <|"Result" -> Success["BuildDocumentationNotebook", 
-     <|"Time" -> Quantity[1.2063817, "Seconds"]|>], 
-   "FileHash" -> "ilEn5w8MxSPyyAWznNECHosSAWbBlcvHYuUh5yLZw5Q="|>, 
+     <|"Time" -> Quantity[1.4986096, "Seconds"]|>], 
+   "FileHash" -> "/VW6R6gHqXD/t2uj4Odr31fDVpwX4JVzJPDIxIQKMNw="|>, 
  "English\\ReferencePages\\Symbols\\LehmerCodeFromPermutation.nb" -> 
   <|"Result" -> Success["BuildDocumentationNotebook", 
      <|"Time" -> Quantity[3.3499271, "Seconds"]|>], 
@@ -56,5 +56,5 @@
    "FileHash" -> "3bk/PYup6SUmXZ4Y5/80VOf4bSxadwC8Bnt3omh7TIU="|>, 
  "English\\ReferencePages\\Symbols\\DiscreteInverseEqual.nb" -> 
   <|"Result" -> Success["BuildDocumentationNotebook", 
-     <|"Time" -> Quantity[6.1888311, "Seconds"]|>], 
-   "FileHash" -> "pWvLJ52YFLuDcMuYRFEoQMFrSMvxquZnAWcjpCPdqzg="|>|>
+     <|"Time" -> Quantity[4.5802782, "Seconds"]|>], 
+   "FileHash" -> "Akj0UWcPUJkRelYkbWtH6pzVrLwt2MDrqdXs0exizHk="|>|>
