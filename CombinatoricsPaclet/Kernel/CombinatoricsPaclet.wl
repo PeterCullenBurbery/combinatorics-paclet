@@ -18,13 +18,14 @@ TableauxToPermutation;
 DiscreteInverseLessThan;
 DiscreteInverseEqual;
 RepetendCycleLength;
+NDigitNumbers;
 Begin["`Private`"];
 
 (* Define your public and private symbols here. *)
 (*Clearing previous definitions*)
 ClearAll[PermutationFromIndex,TupleFromIndex,LehmerCodeFromPermutation,PermutationIndex,OrderedTupleIndex,TupleIndex,SubsetIndex,
 SubsetFromIndex,PermutationToTableaux,TableauxToPermutation,DiscreteInverseLessThan,
-DiscreteInverseEqual,RepetendCycleLength]
+DiscreteInverseEqual,RepetendCycleLength,NDigitNumbers]
 PermutationFromIndex[index_Integer,length_Integer] := PermutationFromLehmerCode[LehmerCodeFromIndex[index,length]];
 LehmerCodeFromIndex[index_Integer,length_Integer] := Reverse[Last/@FoldList[{Floor[#1[[1]]/#2],Mod[#1[[1]],#2]}&,{index-1,0},Range[2,length]]];
 PermutationFromLehmerCode[lehmercode_List] := Module[{vals, result},
@@ -139,6 +140,8 @@ DiscreteInverseLessThan[function_,n_]:=NestWhile[#1+1&,1,function<n&,1,\[Infinit
 DiscreteInverseEqual[function_,n_]:=NestWhile[#1+1&,1,function!=n&]/;!MatchQ[function,_Function]
 Attributes[RepetendCycleLength]={Listable};
 RepetendCycleLength[n_?(IntegerQ[#]\[And]#>0&)] := Block[{q}, q = Last[First[RealDigits[1/n]]]; If[IntegerQ[q], q = {}]; Length[q]];
+NDigitNumbers[number_]:=Select[IntegerLength[#]==number&][Range[10^number]]
+NDigitNumbers[number_,base_]:=Select[IntegerLength[#,base]==number&][Range[base^number]]
 End[]; (* End `Private` *)
 
 EndPackage[];

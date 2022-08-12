@@ -1,0 +1,586 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     26355,        577]
+NotebookOptionsPosition[     22206,        487]
+NotebookOutlinePosition[     24404,        543]
+CellTagsIndexPosition[     24319,        538]
+WindowTitle->NDigitNumbers
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ COMBINATORICS PACLET SYMBOL", "PacletNameCell",
+           TextAlignment->Center], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]]]
+         }]],
+         StripOnInput->False], {"\<\"Combinatorial Functions\"\>":>
+        Documentation`HelpLookup[
+        "paclet:PeterBurbery/CombinatoricsPaclet/guide/\
+CombinatorialFunctions"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]]]
+         }]],
+         StripOnInput->
+          False], {"\<\"PeterBurbery/CombinatoricsPaclet/ref/NDigitNumbers\"\>\
+":>None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["PeterBurbery/CombinatoricsPaclet/ref/NDigitNumbers"]}, 
+             Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/PeterBurbery/\
+CombinatoricsPaclet/ref/NDigitNumbers.html"], StandardForm]], "Input", 
+               TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[(If[
+                TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$173177], 
+                "http://reference.wolfram.com/system-modeler/", 
+                "http://reference.wolfram.com/language/"] <> 
+              "PeterBurbery/CombinatoricsPaclet/ref/NDigitNumbers") <> 
+             ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar",
+     CacheGraphics->False]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["PeterBurbery`CombinatoricsPaclet`", "ContextNameCell"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell["NDigitNumbers", "ObjectName"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]]],
+     Cell[BoxData[""], "ObjectNameTranslation"]
+    }]], "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["NDigitNumbers"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/NDigitNumbers", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["number", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro"],
+     "\[LineSeparator]find all numbers with ",
+     Cell[BoxData[
+      StyleBox["number", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro"],
+     " digits in base 10"
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["NDigitNumbers"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/NDigitNumbers", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["number", "TI"], ",", 
+        StyleBox["base", "TI"]}], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro"],
+     "\[LineSeparator]find all numbers with ",
+     Cell[BoxData[
+      StyleBox["number", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro"],
+     " digits in base ",
+     Cell[BoxData[
+      StyleBox["base", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro"]
+    }]]}
+  }]], "Usage",
+ CellID->840393953]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{17., {7., 10.}}]]],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->137773983],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`CombinatoricsPaclet`\>\"", 
+  "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->69833613],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{17., {1.4750000000000005`, 15.524999999999999`}}]]],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]]],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->45886630],
+
+Cell["Find all three digit numbers:", "ExampleText",
+ CellID->206675694],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NDigitNumbers", "[", "3", "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`CombinatoricsPaclet`"],
+ CellLabel->"In[1]:=",
+ CellID->163111813],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "100", ",", "101", ",", "102", ",", "103", ",", "104", ",", "105", ",", 
+   "106", ",", "107", ",", "108", ",", "109", ",", "110", ",", "111", ",", 
+   "112", ",", "113", ",", "114", ",", "115", ",", "116", ",", "117", ",", 
+   "118", ",", "119", ",", "120", ",", "121", ",", "122", ",", "123", ",", 
+   "124", ",", "125", ",", "126", ",", "127", ",", "128", ",", "129", ",", 
+   "130", ",", "131", ",", "132", ",", "133", ",", "134", ",", "135", ",", 
+   "136", ",", "137", ",", "138", ",", "139", ",", "140", ",", "141", ",", 
+   "142", ",", "143", ",", "144", ",", "145", ",", "146", ",", "147", ",", 
+   "148", ",", "149", ",", "150", ",", "151", ",", "152", ",", "153", ",", 
+   "154", ",", "155", ",", "156", ",", "157", ",", "158", ",", "159", ",", 
+   "160", ",", "161", ",", "162", ",", "163", ",", "164", ",", "165", ",", 
+   "166", ",", "167", ",", "168", ",", "169", ",", "170", ",", "171", ",", 
+   "172", ",", "173", ",", "174", ",", "175", ",", "176", ",", "177", ",", 
+   "178", ",", "179", ",", "180", ",", "181", ",", "182", ",", "183", ",", 
+   "184", ",", "185", ",", "186", ",", "187", ",", "188", ",", "189", ",", 
+   "190", ",", "191", ",", "192", ",", "193", ",", "194", ",", "195", ",", 
+   "196", ",", "197", ",", "198", ",", "199", ",", "200", ",", "201", ",", 
+   "202", ",", "203", ",", "204", ",", "205", ",", "206", ",", "207", ",", 
+   "208", ",", "209", ",", "210", ",", "211", ",", "212", ",", "213", ",", 
+   "214", ",", "215", ",", "216", ",", "217", ",", "218", ",", "219", ",", 
+   "220", ",", "221", ",", "222", ",", "223", ",", "224", ",", "225", ",", 
+   "226", ",", "227", ",", "228", ",", "229", ",", "230", ",", "231", ",", 
+   "232", ",", "233", ",", "234", ",", "235", ",", "236", ",", "237", ",", 
+   "238", ",", "239", ",", "240", ",", "241", ",", "242", ",", "243", ",", 
+   "244", ",", "245", ",", "246", ",", "247", ",", "248", ",", "249", ",", 
+   "250", ",", "251", ",", "252", ",", "253", ",", "254", ",", "255", ",", 
+   "256", ",", "257", ",", "258", ",", "259", ",", "260", ",", "261", ",", 
+   "262", ",", "263", ",", "264", ",", "265", ",", "266", ",", "267", ",", 
+   "268", ",", "269", ",", "270", ",", "271", ",", "272", ",", "273", ",", 
+   "274", ",", "275", ",", "276", ",", "277", ",", "278", ",", "279", ",", 
+   "280", ",", "281", ",", "282", ",", "283", ",", "284", ",", "285", ",", 
+   "286", ",", "287", ",", "288", ",", "289", ",", "290", ",", "291", ",", 
+   "292", ",", "293", ",", "294", ",", "295", ",", "296", ",", "297", ",", 
+   "298", ",", "299", ",", "300", ",", "301", ",", "302", ",", "303", ",", 
+   "304", ",", "305", ",", "306", ",", "307", ",", "308", ",", "309", ",", 
+   "310", ",", "311", ",", "312", ",", "313", ",", "314", ",", "315", ",", 
+   "316", ",", "317", ",", "318", ",", "319", ",", "320", ",", "321", ",", 
+   "322", ",", "323", ",", "324", ",", "325", ",", "326", ",", "327", ",", 
+   "328", ",", "329", ",", "330", ",", "331", ",", "332", ",", "333", ",", 
+   "334", ",", "335", ",", "336", ",", "337", ",", "338", ",", "339", ",", 
+   "340", ",", "341", ",", "342", ",", "343", ",", "344", ",", "345", ",", 
+   "346", ",", "347", ",", "348", ",", "349", ",", "350", ",", "351", ",", 
+   "352", ",", "353", ",", "354", ",", "355", ",", "356", ",", "357", ",", 
+   "358", ",", "359", ",", "360", ",", "361", ",", "362", ",", "363", ",", 
+   "364", ",", "365", ",", "366", ",", "367", ",", "368", ",", "369", ",", 
+   "370", ",", "371", ",", "372", ",", "373", ",", "374", ",", "375", ",", 
+   "376", ",", "377", ",", "378", ",", "379", ",", "380", ",", "381", ",", 
+   "382", ",", "383", ",", "384", ",", "385", ",", "386", ",", "387", ",", 
+   "388", ",", "389", ",", "390", ",", "391", ",", "392", ",", "393", ",", 
+   "394", ",", "395", ",", "396", ",", "397", ",", "398", ",", "399", ",", 
+   "400", ",", "401", ",", "402", ",", "403", ",", "404", ",", "405", ",", 
+   "406", ",", "407", ",", "408", ",", "409", ",", "410", ",", "411", ",", 
+   "412", ",", "413", ",", "414", ",", "415", ",", "416", ",", "417", ",", 
+   "418", ",", "419", ",", "420", ",", "421", ",", "422", ",", "423", ",", 
+   "424", ",", "425", ",", "426", ",", "427", ",", "428", ",", "429", ",", 
+   "430", ",", "431", ",", "432", ",", "433", ",", "434", ",", "435", ",", 
+   "436", ",", "437", ",", "438", ",", "439", ",", "440", ",", "441", ",", 
+   "442", ",", "443", ",", "444", ",", "445", ",", "446", ",", "447", ",", 
+   "448", ",", "449", ",", "450", ",", "451", ",", "452", ",", "453", ",", 
+   "454", ",", "455", ",", "456", ",", "457", ",", "458", ",", "459", ",", 
+   "460", ",", "461", ",", "462", ",", "463", ",", "464", ",", "465", ",", 
+   "466", ",", "467", ",", "468", ",", "469", ",", "470", ",", "471", ",", 
+   "472", ",", "473", ",", "474", ",", "475", ",", "476", ",", "477", ",", 
+   "478", ",", "479", ",", "480", ",", "481", ",", "482", ",", "483", ",", 
+   "484", ",", "485", ",", "486", ",", "487", ",", "488", ",", "489", ",", 
+   "490", ",", "491", ",", "492", ",", "493", ",", "494", ",", "495", ",", 
+   "496", ",", "497", ",", "498", ",", "499", ",", "500", ",", "501", ",", 
+   "502", ",", "503", ",", "504", ",", "505", ",", "506", ",", "507", ",", 
+   "508", ",", "509", ",", "510", ",", "511", ",", "512", ",", "513", ",", 
+   "514", ",", "515", ",", "516", ",", "517", ",", "518", ",", "519", ",", 
+   "520", ",", "521", ",", "522", ",", "523", ",", "524", ",", "525", ",", 
+   "526", ",", "527", ",", "528", ",", "529", ",", "530", ",", "531", ",", 
+   "532", ",", "533", ",", "534", ",", "535", ",", "536", ",", "537", ",", 
+   "538", ",", "539", ",", "540", ",", "541", ",", "542", ",", "543", ",", 
+   "544", ",", "545", ",", "546", ",", "547", ",", "548", ",", "549", ",", 
+   "550", ",", "551", ",", "552", ",", "553", ",", "554", ",", "555", ",", 
+   "556", ",", "557", ",", "558", ",", "559", ",", "560", ",", "561", ",", 
+   "562", ",", "563", ",", "564", ",", "565", ",", "566", ",", "567", ",", 
+   "568", ",", "569", ",", "570", ",", "571", ",", "572", ",", "573", ",", 
+   "574", ",", "575", ",", "576", ",", "577", ",", "578", ",", "579", ",", 
+   "580", ",", "581", ",", "582", ",", "583", ",", "584", ",", "585", ",", 
+   "586", ",", "587", ",", "588", ",", "589", ",", "590", ",", "591", ",", 
+   "592", ",", "593", ",", "594", ",", "595", ",", "596", ",", "597", ",", 
+   "598", ",", "599", ",", "600", ",", "601", ",", "602", ",", "603", ",", 
+   "604", ",", "605", ",", "606", ",", "607", ",", "608", ",", "609", ",", 
+   "610", ",", "611", ",", "612", ",", "613", ",", "614", ",", "615", ",", 
+   "616", ",", "617", ",", "618", ",", "619", ",", "620", ",", "621", ",", 
+   "622", ",", "623", ",", "624", ",", "625", ",", "626", ",", "627", ",", 
+   "628", ",", "629", ",", "630", ",", "631", ",", "632", ",", "633", ",", 
+   "634", ",", "635", ",", "636", ",", "637", ",", "638", ",", "639", ",", 
+   "640", ",", "641", ",", "642", ",", "643", ",", "644", ",", "645", ",", 
+   "646", ",", "647", ",", "648", ",", "649", ",", "650", ",", "651", ",", 
+   "652", ",", "653", ",", "654", ",", "655", ",", "656", ",", "657", ",", 
+   "658", ",", "659", ",", "660", ",", "661", ",", "662", ",", "663", ",", 
+   "664", ",", "665", ",", "666", ",", "667", ",", "668", ",", "669", ",", 
+   "670", ",", "671", ",", "672", ",", "673", ",", "674", ",", "675", ",", 
+   "676", ",", "677", ",", "678", ",", "679", ",", "680", ",", "681", ",", 
+   "682", ",", "683", ",", "684", ",", "685", ",", "686", ",", "687", ",", 
+   "688", ",", "689", ",", "690", ",", "691", ",", "692", ",", "693", ",", 
+   "694", ",", "695", ",", "696", ",", "697", ",", "698", ",", "699", ",", 
+   "700", ",", "701", ",", "702", ",", "703", ",", "704", ",", "705", ",", 
+   "706", ",", "707", ",", "708", ",", "709", ",", "710", ",", "711", ",", 
+   "712", ",", "713", ",", "714", ",", "715", ",", "716", ",", "717", ",", 
+   "718", ",", "719", ",", "720", ",", "721", ",", "722", ",", "723", ",", 
+   "724", ",", "725", ",", "726", ",", "727", ",", "728", ",", "729", ",", 
+   "730", ",", "731", ",", "732", ",", "733", ",", "734", ",", "735", ",", 
+   "736", ",", "737", ",", "738", ",", "739", ",", "740", ",", "741", ",", 
+   "742", ",", "743", ",", "744", ",", "745", ",", "746", ",", "747", ",", 
+   "748", ",", "749", ",", "750", ",", "751", ",", "752", ",", "753", ",", 
+   "754", ",", "755", ",", "756", ",", "757", ",", "758", ",", "759", ",", 
+   "760", ",", "761", ",", "762", ",", "763", ",", "764", ",", "765", ",", 
+   "766", ",", "767", ",", "768", ",", "769", ",", "770", ",", "771", ",", 
+   "772", ",", "773", ",", "774", ",", "775", ",", "776", ",", "777", ",", 
+   "778", ",", "779", ",", "780", ",", "781", ",", "782", ",", "783", ",", 
+   "784", ",", "785", ",", "786", ",", "787", ",", "788", ",", "789", ",", 
+   "790", ",", "791", ",", "792", ",", "793", ",", "794", ",", "795", ",", 
+   "796", ",", "797", ",", "798", ",", "799", ",", "800", ",", "801", ",", 
+   "802", ",", "803", ",", "804", ",", "805", ",", "806", ",", "807", ",", 
+   "808", ",", "809", ",", "810", ",", "811", ",", "812", ",", "813", ",", 
+   "814", ",", "815", ",", "816", ",", "817", ",", "818", ",", "819", ",", 
+   "820", ",", "821", ",", "822", ",", "823", ",", "824", ",", "825", ",", 
+   "826", ",", "827", ",", "828", ",", "829", ",", "830", ",", "831", ",", 
+   "832", ",", "833", ",", "834", ",", "835", ",", "836", ",", "837", ",", 
+   "838", ",", "839", ",", "840", ",", "841", ",", "842", ",", "843", ",", 
+   "844", ",", "845", ",", "846", ",", "847", ",", "848", ",", "849", ",", 
+   "850", ",", "851", ",", "852", ",", "853", ",", "854", ",", "855", ",", 
+   "856", ",", "857", ",", "858", ",", "859", ",", "860", ",", "861", ",", 
+   "862", ",", "863", ",", "864", ",", "865", ",", "866", ",", "867", ",", 
+   "868", ",", "869", ",", "870", ",", "871", ",", "872", ",", "873", ",", 
+   "874", ",", "875", ",", "876", ",", "877", ",", "878", ",", "879", ",", 
+   "880", ",", "881", ",", "882", ",", "883", ",", "884", ",", "885", ",", 
+   "886", ",", "887", ",", "888", ",", "889", ",", "890", ",", "891", ",", 
+   "892", ",", "893", ",", "894", ",", "895", ",", "896", ",", "897", ",", 
+   "898", ",", "899", ",", "900", ",", "901", ",", "902", ",", "903", ",", 
+   "904", ",", "905", ",", "906", ",", "907", ",", "908", ",", "909", ",", 
+   "910", ",", "911", ",", "912", ",", "913", ",", "914", ",", "915", ",", 
+   "916", ",", "917", ",", "918", ",", "919", ",", "920", ",", "921", ",", 
+   "922", ",", "923", ",", "924", ",", "925", ",", "926", ",", "927", ",", 
+   "928", ",", "929", ",", "930", ",", "931", ",", "932", ",", "933", ",", 
+   "934", ",", "935", ",", "936", ",", "937", ",", "938", ",", "939", ",", 
+   "940", ",", "941", ",", "942", ",", "943", ",", "944", ",", "945", ",", 
+   "946", ",", "947", ",", "948", ",", "949", ",", "950", ",", "951", ",", 
+   "952", ",", "953", ",", "954", ",", "955", ",", "956", ",", "957", ",", 
+   "958", ",", "959", ",", "960", ",", "961", ",", "962", ",", "963", ",", 
+   "964", ",", "965", ",", "966", ",", "967", ",", "968", ",", "969", ",", 
+   "970", ",", "971", ",", "972", ",", "973", ",", "974", ",", "975", ",", 
+   "976", ",", "977", ",", "978", ",", "979", ",", "980", ",", "981", ",", 
+   "982", ",", "983", ",", "984", ",", "985", ",", "986", ",", "987", ",", 
+   "988", ",", "989", ",", "990", ",", "991", ",", "992", ",", "993", ",", 
+   "994", ",", "995", ",", "996", ",", "997", ",", "998", ",", "999"}], 
+  "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->445546255]
+}, Open  ]],
+
+Cell["Find all 3 digit numbers in ternary base, base 3:", "ExampleText",
+ CellID->1500488],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NDigitNumbers", "[", 
+  RowBox[{"3", ",", "3"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`CombinatoricsPaclet`"],
+ CellLabel->"In[2]:=",
+ CellID->745921491],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "9", ",", "10", ",", "11", ",", "12", ",", "13", ",", "14", ",", "15", ",", 
+   "16", ",", "17", ",", "18", ",", "19", ",", "20", ",", "21", ",", "22", 
+   ",", "23", ",", "24", ",", "25", ",", "26"}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->2059660]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{62.5, {34., 41.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Combinatorial Functions"]], 
+           "paclet:PeterBurbery/CombinatoricsPaclet/guide/\
+CombinatorialFunctions"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout"]}]}
+     }]}
+  }]], "MoreAboutSection"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"NDigitNumbers",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2022, 8, 11, 21, 34, 7.3607896}", 
+    "history" -> {"", "", "", ""}, "context" -> 
+    "PeterBurbery`CombinatoricsPaclet`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Combinatorics Paclet Symbol", "language" -> 
+    "en", "paclet" -> "PeterBurbery/CombinatoricsPaclet", "status" -> "None", 
+    "summary" -> 
+    "NDigitNumbers[number] find all numbers with number digits in base 10 \
+NDigitNumbers[number, base] find all numbers with number digits in base base",
+     "synonyms" -> {}, "tabletags" -> {}, "title" -> "NDigitNumbers", 
+    "titlemodifier" -> "", "windowtitle" -> "NDigitNumbers", "type" -> 
+    "Symbol", "uri" -> 
+    "PeterBurbery/CombinatoricsPaclet/ref/NDigitNumbers"}},
+CellContext->"Global`",
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.1 for Microsoft Windows (64-bit) (June 16, 2022)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[6363, 187, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"65064245-7513-4436-9207-b39c11afe663",
+   CellTags->"PrimaryExamplesSection",
+   CellID->137773983]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 24120, 531}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[585, 21, 3955, 102, 70, "AnchorBarGrid",ExpressionUUID->"737994d0-0430-413d-b603-16257b2bc5bc",
+ CellID->1],
+Cell[4543, 125, 60, 0, 70, "ContextNameCell",ExpressionUUID->"5e283ca6-7d9b-4a94-a218-c3c4bffbbf40"],
+Cell[CellGroupData[{
+Cell[4628, 129, 248, 8, 70, "ObjectNameGrid",ExpressionUUID->"1423a315-46a9-4dcc-a0dd-5354f8011a6b"],
+Cell[4879, 139, 1447, 43, 70, "Usage",ExpressionUUID->"2dd11e6a-a93b-4d96-9dfa-30aaa6905fc9",
+ CellID->840393953]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6363, 187, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"65064245-7513-4436-9207-b39c11afe663",
+ CellTags->"PrimaryExamplesSection",
+ CellID->137773983],
+Cell[7530, 224, 168, 4, 70, "Input",ExpressionUUID->"6e79552a-ffcc-4354-90b7-0c628ca4c37e",
+ CellID->69833613],
+Cell[CellGroupData[{
+Cell[7723, 232, 1174, 34, 70, "ExampleSection",ExpressionUUID->"4cfa1c8b-cd9c-46de-b7a8-f54fb98621d3",
+ CellID->45886630],
+Cell[8900, 268, 72, 1, 70, "ExampleText",ExpressionUUID->"9ff91a93-79d6-45e3-aec1-b50d0a25ff54",
+ CellID->206675694],
+Cell[CellGroupData[{
+Cell[8997, 273, 166, 4, 70, "Input",ExpressionUUID->"bbe94786-3f2a-45ae-9d05-659fd512d029",
+ CellID->163111813],
+Cell[9166, 279, 11498, 155, 70, "Output",ExpressionUUID->"de1af932-9b13-4aef-b5c1-be7fdcd2c44a",
+ CellID->445546255]
+}, Open  ]],
+Cell[20679, 437, 90, 1, 70, "ExampleText",ExpressionUUID->"50c43359-f8b9-47a6-ae4d-aea645d9df3b",
+ CellID->1500488],
+Cell[CellGroupData[{
+Cell[20794, 442, 189, 5, 70, "Input",ExpressionUUID->"78a6c0b5-6811-4060-8009-f1d1bc79cd71",
+ CellID->745921491],
+Cell[20986, 449, 302, 7, 70, "Output",ExpressionUUID->"2a1ad983-4639-419a-9dca-15b0ebae5def",
+ CellID->2059660]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[21530, 465, 646, 18, 70, "MoreAboutSection",ExpressionUUID->"1a0462c8-b3cf-48ba-98ca-c7bfd319554d"],
+Cell[22179, 485, 23, 0, 70, "FooterCell",ExpressionUUID->"da862f84-9dcb-4087-8f4a-f05b8db50b77"]
+}
+]
+*)
+
+(* End of internal cache information *)

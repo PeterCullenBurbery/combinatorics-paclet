@@ -1,7 +1,7 @@
 <|"English\\Guides\\CombinatorialFunctions.nb" -> 
   <|"Result" -> Success["BuildDocumentationNotebook", 
-     <|"Time" -> Quantity[1.9707242, "Seconds"]|>], 
-   "FileHash" -> "KNXkUGaf/MLm/e1KYDfRBpuzGuRkfUmpB4nx05ShTeA="|>, 
+     <|"Time" -> Quantity[3.4427867, "Seconds"]|>], 
+   "FileHash" -> "NjMea/X3PS1DYSzojtFUQBkwCHe8obsJ0b/AqH0+ilU="|>, 
  "English\\Guides\\TuplesPermutationsAndSubsets.nb" -> 
   <|"Result" -> Success["BuildDocumentationNotebook", 
      <|"Time" -> Quantity[1.4986096, "Seconds"]|>], 
@@ -61,4 +61,8 @@
  "English\\ReferencePages\\Symbols\\RepetendCycleLength.nb" -> 
   <|"Result" -> Success["BuildDocumentationNotebook", 
      <|"Time" -> Quantity[3.8794895, "Seconds"]|>], 
-   "FileHash" -> "qFGgw3M7WB+jVk3fZepgf0sdi0M8Si9Vgu6gyNVk9xI="|>|>
+   "FileHash" -> "qFGgw3M7WB+jVk3fZepgf0sdi0M8Si9Vgu6gyNVk9xI="|>, 
+ "English\\ReferencePages\\Symbols\\NDigitNumbers.nb" -> 
+  <|"Result" -> Success["BuildDocumentationNotebook", 
+     <|"Time" -> Quantity[4.7255791, "Seconds"]|>], 
+   "FileHash" -> "bX2zwTq99V4SqloLrdVPGlDtxTGWG1hRXzq+emRy3o8="|>|>

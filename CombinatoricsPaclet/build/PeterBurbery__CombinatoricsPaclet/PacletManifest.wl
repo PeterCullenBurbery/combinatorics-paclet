@@ -11,7 +11,7 @@
             ,
             "Hash"
             ->
-            "fd7f70670d728c2c8cbf94afa419d8cc7a1318974e9eb81270e8a67ddc2a5618"
+            "31377d4e2d617170081c7b73f10d6346aabff29703e39ba5f232bbf96ca87453"
                 
         |>
         ,
@@ -25,7 +25,7 @@
             ,
             "Hash"
             ->
-            "35c66be4b2d034cc44123e9d1b32e89ac73aad76c340b784f2174719161b5ed4"
+            "3703c2ae67923cb076cf82e1701b716fd180d517f9db96b8f15532509b850ffd"
                 
         |>
         ,
@@ -82,6 +82,20 @@
             "Hash"
             ->
             "66422ac3d16b241bc2897c8da9681cc8cc23406c97984691be91574b6884e0d2"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\NDigitNumbers.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "c77f8e14363535de1876a40430c5e50459080fc97e10072bc0772dbb0891c79b"
                 
         |>
         ,
