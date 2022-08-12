@@ -11,7 +11,7 @@
             ,
             "Hash"
             ->
-            "33c7e98314e3b7b6068e2a3da0762a9674499cc94d3963dc25e4faeee33ae066"
+            "fd7f70670d728c2c8cbf94afa419d8cc7a1318974e9eb81270e8a67ddc2a5618"
                 
         |>
         ,
@@ -25,7 +25,7 @@
             ,
             "Hash"
             ->
-            "fa2b28a6ec9b8af7050324c4a09b9957d483d188e49d3eef51370d557d9ac455"
+            "35c66be4b2d034cc44123e9d1b32e89ac73aad76c340b784f2174719161b5ed4"
                 
         |>
         ,
@@ -152,6 +152,20 @@
             "Hash"
             ->
             "c4ff4a9b65d6ab8e5a44c63b071c6e06af276423b7d1d5f3600fc74ac44a56a4"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\RepetendCycleLength.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "9763e6c94c90a3dd6eaf303331d796a2da83e73e8a153207c18f613b77f14f9a"
                 
         |>
         ,

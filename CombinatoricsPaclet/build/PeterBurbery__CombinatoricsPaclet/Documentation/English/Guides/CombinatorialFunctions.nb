@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13648,        382]
-NotebookOptionsPosition[     10343,        314]
-NotebookOutlinePosition[     12023,        355]
-CellTagsIndexPosition[     11980,        352]
+NotebookDataLength[     14336,        401]
+NotebookOptionsPosition[     10912,        331]
+NotebookOutlinePosition[     12593,        372]
+CellTagsIndexPosition[     12550,        369]
 WindowTitle->Combinatorial Functions
 WindowFrame->Normal*)
 
@@ -64,7 +64,9 @@ Cell[BoxData[GridBox[{
         "paclet:PeterBurbery/CombinatoricsPaclet/ref/PermutationFromIndex"], \
 "\<\"PermutationIndex\"\>":>Documentation`HelpLookup[
         "paclet:PeterBurbery/CombinatoricsPaclet/ref/PermutationIndex"], \
-"\<\"SubsetFromIndex\"\>":>Documentation`HelpLookup[
+"\<\"RepetendCycleLength\"\>":>Documentation`HelpLookup[
+        "paclet:PeterBurbery/CombinatoricsPaclet/ref/RepetendCycleLength"], "\
+\<\"SubsetFromIndex\"\>":>Documentation`HelpLookup[
         "paclet:PeterBurbery/CombinatoricsPaclet/ref/SubsetFromIndex"], \
 "\<\"SubsetIndex\"\>":>Documentation`HelpLookup[
         "paclet:PeterBurbery/CombinatoricsPaclet/ref/SubsetIndex"], \
@@ -124,7 +126,7 @@ CombinatoricsPaclet/guide/CombinatorialFunctions.html"], StandardForm]],
          Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
           NotebookLocate[{
             URL[(If[
-                TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$80098], 
+                TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$223451], 
                 "http://reference.wolfram.com/system-modeler/", 
                 "http://reference.wolfram.com/language/"] <> 
               "PeterBurbery/CombinatoricsPaclet/guide/CombinatorialFunctions")\
@@ -307,7 +309,22 @@ Cell[TextData[{
  " find the first number that when evaluated with a discrete function is a \
 number"
 }], "GuideText",
- CellID->1016674]
+ CellID->1016674],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["RepetendCycleLength"]], 
+    "paclet:PeterBurbery/CombinatoricsPaclet/ref/RepetendCycleLength", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " find the length of the cycle of the repetend for an integer"
+}], "GuideText",
+ CellID->47301483]
 }, Open  ]],
 
 Cell[" ", "FooterCell"]
@@ -325,7 +342,7 @@ TaggingRules->{
   "NewStyles" -> True, "CitationPopupData" -> {"", ""}, "ShowCitation" -> 
   False, "RootCaptions" -> "", 
   "Metadata" -> {
-   "built" -> "{2022, 8, 11, 20, 12, 14.2131059}", 
+   "built" -> "{2022, 8, 11, 20, 27, 14.6436484}", 
     "history" -> {"", "", "", ""}, "context" -> 
     "PeterBurbery`CombinatoricsPaclet`", "keywords" -> {}, 
     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
@@ -334,7 +351,7 @@ TaggingRules->{
     "summary" -> 
     "The paclet includes functions for computing indexes for permutations, \
 tuples, and subsets.", "synonyms" -> {}, "tabletags" -> 
-    DocumentationBuild`Make`Private`tabletaggingrules$80057, "title" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$223411, "title" -> 
     "Combinatorial Functions", "titlemodifier" -> "", "windowtitle" -> 
     "Combinatorial Functions", "type" -> "Guide", "uri" -> 
     "PeterBurbery/CombinatoricsPaclet/guide/CombinatorialFunctions"}},
@@ -354,36 +371,38 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[595, 21, 5161, 122, 70, "AnchorBarGrid",ExpressionUUID->"e02116d8-511c-4faf-bd79-3146b9640919",
+Cell[595, 21, 5297, 124, 70, "AnchorBarGrid",ExpressionUUID->"23c6c9ae-79a0-45a4-a684-58585aeda956",
  CellID->1],
 Cell[CellGroupData[{
-Cell[5781, 147, 65, 1, 70, "GuideTitle",ExpressionUUID->"87f0fbe2-06bb-41b2-acb9-08f1ee941e75",
+Cell[5917, 149, 65, 1, 70, "GuideTitle",ExpressionUUID->"d37a8781-78c6-46e1-997e-2734604e0fe9",
  CellID->557070836],
-Cell[5849, 150, 145, 4, 70, "GuideAbstract",ExpressionUUID->"0607d68e-d793-40ed-a349-83ed7d0973db",
+Cell[5985, 152, 145, 4, 70, "GuideAbstract",ExpressionUUID->"8e2b4fc5-d01d-4ec5-98f0-cf19a3e7d8a9",
  CellID->660808434],
-Cell[5997, 156, 38, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"50bc72f2-0f70-4f0b-b16e-de6af1903ff6"],
-Cell[6038, 158, 452, 14, 70, "GuideText",ExpressionUUID->"9bc00ca2-460a-428e-97b3-d86791620f7b",
+Cell[6133, 158, 38, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"8c492661-d61c-4025-8825-5eefab7be774"],
+Cell[6174, 160, 452, 14, 70, "GuideText",ExpressionUUID->"22e3cfd8-34b9-4f41-97a0-eccdbd2e6efa",
  CellID->348763423],
-Cell[6493, 174, 411, 13, 70, "GuideText",ExpressionUUID->"55ab9bec-268a-4b79-97e3-0cd0c0746a34",
+Cell[6629, 176, 411, 13, 70, "GuideText",ExpressionUUID->"3430c5a9-56bf-4705-a8a2-b16c7dc09a3e",
  CellID->306435021],
-Cell[6907, 189, 426, 13, 70, "GuideText",ExpressionUUID->"ad6e88ea-c4e7-4d5a-b402-b6f2cf90a197",
+Cell[7043, 191, 426, 13, 70, "GuideText",ExpressionUUID->"e5afe8ab-29fc-4b37-99a4-cfcdc2ef4be8",
  CellID->639827],
-Cell[7336, 204, 401, 13, 70, "GuideText",ExpressionUUID->"3c31c5bc-2bc2-4dea-879a-b4e3127c3a73",
+Cell[7472, 206, 401, 13, 70, "GuideText",ExpressionUUID->"5f7144ba-8702-4a0e-ad17-634578faa67a",
  CellID->32508110],
-Cell[7740, 219, 410, 13, 70, "GuideText",ExpressionUUID->"4d3661ab-1bad-4061-8b77-54c9103ea36c",
+Cell[7876, 221, 410, 13, 70, "GuideText",ExpressionUUID->"39f814f5-4aad-417f-b930-0f03dcbf5561",
  CellID->204953227],
-Cell[8153, 234, 382, 13, 70, "GuideText",ExpressionUUID->"68d32ba1-e88b-4835-b20e-1090f5da36f6",
+Cell[8289, 236, 382, 13, 70, "GuideText",ExpressionUUID->"50e66275-d2a5-4051-8775-b58ecddf7d4d",
  CellID->103662544],
-Cell[8538, 249, 408, 13, 70, "GuideText",ExpressionUUID->"919df372-0365-4e4c-a82f-e1142a070f0d",
+Cell[8674, 251, 408, 13, 70, "GuideText",ExpressionUUID->"8bb26dfd-ea32-4d76-96a6-9ba072bc1567",
  CellID->29543756],
-Cell[8949, 264, 412, 13, 70, "GuideText",ExpressionUUID->"f9dd537a-9bbb-4aa0-9078-7f67c09bb26e",
+Cell[9085, 266, 412, 13, 70, "GuideText",ExpressionUUID->"e6c2fff7-eee5-4e14-8fce-9de39852ef15",
  CellID->21294979],
-Cell[9364, 279, 482, 14, 70, "GuideText",ExpressionUUID->"527863a8-29d4-4e4d-8b0e-df99dfab48ff",
+Cell[9500, 281, 482, 14, 70, "GuideText",ExpressionUUID->"4b35bb8d-d76b-471c-9111-ed8bbd2f40c8",
  CellID->144081010],
-Cell[9849, 295, 452, 14, 70, "GuideText",ExpressionUUID->"e55ccaa9-b612-4cf2-aa3d-9c58c7f4616a",
- CellID->1016674]
+Cell[9985, 297, 452, 14, 70, "GuideText",ExpressionUUID->"4f8bede6-50b5-4e61-bb78-40bb474ec06c",
+ CellID->1016674],
+Cell[10440, 313, 430, 13, 70, "GuideText",ExpressionUUID->"6e83bec0-47b4-4ee6-9804-28650cc3bff2",
+ CellID->47301483]
 }, Open  ]],
-Cell[10316, 312, 23, 0, 70, "FooterCell",ExpressionUUID->"2cfef429-591a-4f9d-a8c3-67a3cb9ce442"]
+Cell[10885, 329, 23, 0, 70, "FooterCell",ExpressionUUID->"67aa947a-4bb3-4eb9-8b46-50e72441ef67"]
 }
 ]
 *)

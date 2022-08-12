@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Peter Cullen Burbery",
     "License" -> "MIT",
     "PublisherID" -> "PeterBurbery",
-    "Version" -> "1.5.0",
+    "Version" -> "1.6.0",
     "WolframVersion" -> "13.1+",
     "Extensions" -> {
       {
@@ -32,7 +32,8 @@ PacletObject[
           "PeterBurbery`CombinatoricsPaclet`PermutationToTableaux",
           "PeterBurbery`CombinatoricsPaclet`TableauxToPermutation",
           "PeterBurbery`CombinatoricsPaclet`DiscreteInverseLessThan",
-          "PeterBurbery`CombinatoricsPaclet`DiscreteInverseEqual"
+          "PeterBurbery`CombinatoricsPaclet`DiscreteInverseEqual",
+     "PeterBurbery`CombinatoricsPaclet`RepetendCycleLength"  
         }
       },
       {"Documentation", "Language" -> "English"}
