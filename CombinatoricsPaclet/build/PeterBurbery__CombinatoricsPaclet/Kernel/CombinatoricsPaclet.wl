@@ -140,8 +140,8 @@ DiscreteInverseLessThan[function_,n_]:=NestWhile[#1+1&,1,function<n&,1,\[Infinit
 DiscreteInverseEqual[function_,n_]:=NestWhile[#1+1&,1,function!=n&]/;!MatchQ[function,_Function]
 Attributes[RepetendCycleLength]={Listable};
 RepetendCycleLength[n_?(IntegerQ[#]\[And]#>0&)] := Block[{q}, q = Last[First[RealDigits[1/n]]]; If[IntegerQ[q], q = {}]; Length[q]];
-NDigitNumbers[n_]:=Range[10^n,10^n-1]
-NDigitNumbers[n_,base_]:=Range[base^n,base^n-1]
+NDigitNumbers[n_]:=Range[10^n,10^(n+1)-1]
+NDigitNumbers[n_,base_]:=Range[base^n,base^(n+1)-1]
 End[]; (* End `Private` *)
 
 EndPackage[];

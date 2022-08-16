@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10510,        294]
-NotebookOptionsPosition[      7521,        227]
-NotebookOutlinePosition[      9572,        280]
-CellTagsIndexPosition[      9488,        275]
+NotebookDataLength[     14508,        410]
+NotebookOptionsPosition[     10603,        325]
+NotebookOutlinePosition[     12682,        378]
+CellTagsIndexPosition[     12597,        373]
 WindowTitle->SubsetIndex
 WindowFrame->Normal*)
 
@@ -54,7 +54,10 @@ Cell[BoxData[GridBox[{
          StripOnInput->False], {"\<\"Combinatorial Functions\"\>":>
         Documentation`HelpLookup[
         "paclet:PeterBurbery/CombinatoricsPaclet/guide/\
-CombinatorialFunctions"]},
+CombinatorialFunctions"], "\<\"Tuples, Permutations, and Subsets\"\>":>
+        Documentation`HelpLookup[
+        "paclet:PeterBurbery/CombinatoricsPaclet/guide/\
+TuplesPermutationsAndSubsets"]},
         Appearance->None,
         MenuAppearance->Automatic,
         MenuStyle->"MoreAbout"],
@@ -104,7 +107,7 @@ CombinatoricsPaclet/ref/SubsetIndex.html"], StandardForm]], "Input",
          Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
           NotebookLocate[{
             URL[(If[
-                TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$118273], 
+                TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$308436], 
                 "http://reference.wolfram.com/system-modeler/", 
                 "http://reference.wolfram.com/language/"] <> 
               "PeterBurbery/CombinatoricsPaclet/ref/SubsetIndex") <> ".html"],
@@ -147,9 +150,14 @@ Cell[BoxData[GridBox[{
          "paclet:PeterBurberyCombinatoricsPaclet/ref/SubsetIndex", 
          "PeterBurberyCombinatoricsPaclet Package Symbol"},
         "PackageLink",
-        BaseStyle->"InlineFormula"], "[", "]"}]], "InlineFormula",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["list", "TI"], "]"}]], "InlineFormula",
       FontFamily->"Source Sans Pro"],
-     "\[LineSeparator]XXXX"
+     "\[LineSeparator]gives the index of subset ",
+     Cell[BoxData[
+      StyleBox["list", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro"],
+     "."
     }]]}
   }]], "Usage",
  CellID->68250698]
@@ -181,24 +189,105 @@ Cell[TextData[{
          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
        0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
-   ImageSizeCache->{17., {7., 10.}}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]]],
  Cell[BoxData[
   TemplateBox[{1},
    "Spacer1"]]],
  "Examples",
  "\[NonBreakingSpace]\[NonBreakingSpace]",
- Cell["(0)", "ExampleCount"]
+ Cell["(1)", "ExampleCount"]
 }], "PrimaryExamplesSection",
  WholeCellGroupOpener->True,
  CacheGraphics->False,
  CellTags->"PrimaryExamplesSection",
- CellID->371679797],
+ CellID->24226690],
 
 Cell[BoxData[
  RowBox[{"Needs", "[", "\"\<PeterBurbery`CombinatoricsPaclet`\>\"", 
   "]"}]], "Input", "ExampleInitialization",
  CellLabel->"In[1]:=",
- CellID->104897037]
+ CellID->104897037],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]]],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]]],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->388077817],
+
+Cell["Find the subset index of a random tuple:", "ExampleText",
+ CellID->39090107],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomSample", "[", 
+  RowBox[{
+   RowBox[{"Range", "[", "100", "]"}], ",", "18"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`CombinatoricsPaclet`"],
+ CellLabel->"In[1]:=",
+ CellID->428469647],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "82", ",", "97", ",", "79", ",", "68", ",", "4", ",", "26", ",", "64", ",", 
+   "51", ",", "25", ",", "76", ",", "59", ",", "33", ",", "89", ",", "19", 
+   ",", "71", ",", "5", ",", "92", ",", "73"}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->500631902]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SubsetIndex", "[", 
+  RowBox[{"RandomSample", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", "100", "]"}], ",", "18"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`CombinatoricsPaclet`"],
+ CellLabel->"In[2]:=",
+ CellID->219286414],
+
+Cell[BoxData["1410728530721282903"], "Output",
+ CellLabel->"Out[2]=",
+ CellID->272862881]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
 }, Dynamic[CurrentValue[
  EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
   Closed]]]],
@@ -207,7 +296,7 @@ Cell[BoxData[GridBox[{
    {
     DynamicBox[FEPrivate`ImportImage[
       FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
-     ImageSizeCache->{62.5, {34., 41.}}], GridBox[{
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
       {
        StyleBox[
         RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
@@ -219,6 +308,15 @@ Cell[BoxData[GridBox[{
            "paclet:PeterBurbery/CombinatoricsPaclet/guide/\
 CombinatorialFunctions"},
           "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout"]}]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Tuples, Permutations, and Subsets"]], 
+           "paclet:PeterBurbery/CombinatoricsPaclet/guide/\
+TuplesPermutationsAndSubsets"},
+          "RefLinkPlain",
           BaseStyle->{"MoreAbout"}]], "MoreAbout"]}]}
      }]}
   }]], "MoreAboutSection"],
@@ -227,7 +325,7 @@ Cell[" ", "FooterCell"]
 },
 Saveable->False,
 ScreenStyleEnvironment->"Working",
-WindowSize->{900., 604.8},
+WindowSize->{900, 497},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 WindowTitle->"SubsetIndex",
 TaggingRules->{
@@ -238,16 +336,16 @@ TaggingRules->{
   "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
   False, "RootCaptions" -> "", 
   "Metadata" -> {
-   "built" -> "{2022, 8, 11, 15, 51, 30.5580026}", 
+   "built" -> "{2022, 8, 16, 16, 26, 58.0743688}", 
     "history" -> {"", "", "", ""}, "context" -> 
     "PeterBurbery`CombinatoricsPaclet`", "keywords" -> {}, 
     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
      "label" -> "Peter Burbery/ Combinatorics Paclet Symbol", "language" -> 
     "en", "paclet" -> "PeterBurbery/CombinatoricsPaclet", "status" -> "None", 
-    "summary" -> "SubsetIndex[] XXXX", "synonyms" -> {}, "tabletags" -> {}, 
-    "title" -> "SubsetIndex", "titlemodifier" -> "", "windowtitle" -> 
-    "SubsetIndex", "type" -> "Symbol", "uri" -> 
-    "PeterBurbery/CombinatoricsPaclet/ref/SubsetIndex"}},
+    "summary" -> "SubsetIndex[list] gives the index of subset list.", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> "SubsetIndex", 
+    "titlemodifier" -> "", "windowtitle" -> "SubsetIndex", "type" -> "Symbol",
+     "uri" -> "PeterBurbery/CombinatoricsPaclet/ref/SubsetIndex"}},
 CellContext->"Global`",
 FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
 StyleDefinitions->Notebook[{
@@ -267,35 +365,53 @@ StyleDefinitions->Notebook[{
 (*CellTagsOutline
 CellTagsIndex->{
  "PrimaryExamplesSection"->{
-  Cell[5391, 159, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"f8ccee56-273a-4565-aba7-ddc55a098757",
+  Cell[5729, 167, 1193, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"43cf5c57-98cc-49ea-97e6-f211fb5a92c6",
    CellTags->"PrimaryExamplesSection",
-   CellID->371679797]}
+   CellID->24226690]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"PrimaryExamplesSection", 9289, 268}
+ {"PrimaryExamplesSection", 12399, 366}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[583, 21, 3953, 102, 70, "AnchorBarGrid",ExpressionUUID->"921e52b3-cfff-455e-ba47-0902a61e881a",
+Cell[583, 21, 4122, 105, 70, "AnchorBarGrid",ExpressionUUID->"903e8de4-e55d-4e60-919b-32dcfef5695d",
  CellID->1],
-Cell[4539, 125, 60, 0, 70, "ContextNameCell",ExpressionUUID->"550d22f0-daa2-4bd0-bc3f-a4dc69dccefa"],
+Cell[4708, 128, 60, 0, 70, "ContextNameCell",ExpressionUUID->"d3d49b1c-810f-43b2-88e6-bdd484f59168"],
 Cell[CellGroupData[{
-Cell[4624, 129, 246, 8, 70, "ObjectNameGrid",ExpressionUUID->"6d9e89a8-edf1-4ab2-b447-1b83aaf488fb"],
-Cell[4873, 139, 481, 15, 70, "Usage",ExpressionUUID->"192afb2c-2105-494d-8eac-6973ea4c13d5",
+Cell[4793, 132, 246, 8, 70, "ObjectNameGrid",ExpressionUUID->"a02d4756-758d-41b9-a9b6-31ef885dd970"],
+Cell[5042, 142, 650, 20, 70, "Usage",ExpressionUUID->"c573033f-05cc-45f7-893a-da56a327ab36",
  CellID->68250698]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5391, 159, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"f8ccee56-273a-4565-aba7-ddc55a098757",
+Cell[5729, 167, 1193, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"43cf5c57-98cc-49ea-97e6-f211fb5a92c6",
  CellTags->"PrimaryExamplesSection",
- CellID->371679797],
-Cell[6558, 196, 169, 4, 70, "Input",ExpressionUUID->"f328b04f-a6b6-4219-aec9-9f11be2e29b9",
- CellID->104897037]
+ CellID->24226690],
+Cell[6925, 204, 169, 4, 70, "Input",ExpressionUUID->"dd89be47-3772-4095-96df-61f24806eaac",
+ CellID->104897037],
+Cell[CellGroupData[{
+Cell[7119, 212, 1195, 35, 70, "ExampleSection",ExpressionUUID->"30900312-1294-4027-a4b8-c8f763519728",
+ CellID->388077817],
+Cell[8317, 249, 82, 1, 70, "ExampleText",ExpressionUUID->"14da1ab6-6a06-482a-a9f9-aab52d8a7d38",
+ CellID->39090107],
+Cell[CellGroupData[{
+Cell[8424, 254, 224, 6, 70, "Input",ExpressionUUID->"5da8770d-b126-4ee2-88a7-91a1ce09b61e",
+ CellID->428469647],
+Cell[8651, 262, 303, 7, 70, "Output",ExpressionUUID->"acd982fa-9f34-4159-a12e-c5d88569c3db",
+ CellID->500631902]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8991, 274, 264, 7, 70, "Input",ExpressionUUID->"57914fa0-b5c5-4ab5-a5eb-b87c9dd14341",
+ CellID->219286414],
+Cell[9258, 283, 89, 2, 70, "Output",ExpressionUUID->"6607e410-b7ef-4548-95b7-c9e17f109f07",
+ CellID->272862881]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
 }, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
-Cell[6845, 205, 646, 18, 70, "MoreAboutSection",ExpressionUUID->"400afdc9-58fe-4faf-b7e7-902e2774e8fd"],
-Cell[7494, 225, 23, 0, 70, "FooterCell",ExpressionUUID->"ebcbb2c1-27a2-4a82-9e61-1f8db993aa42"]
+Cell[9589, 294, 984, 27, 70, "MoreAboutSection",ExpressionUUID->"243e54cf-cc63-44c4-87bc-43321dabbdce"],
+Cell[10576, 323, 23, 0, 70, "FooterCell",ExpressionUUID->"d51bca4d-610a-4352-9b6f-4b4e76778e61"]
 }
 ]
 *)
