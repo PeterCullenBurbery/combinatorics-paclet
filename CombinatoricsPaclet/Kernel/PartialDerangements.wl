@@ -11,13 +11,10 @@ PartialDerangements // ClearAll
 PartialDerangements::usage = "PartialDerangements[multiset,number] returns the partial derangements of the multiset with the given number of fixed points.";
 
 PartialDerangements[set_, number_ ? (IntegerQ[#] && # \[Element] NonNegativeIntegers&
-    )] :=
-    Select[Count[SameQ @@@ Transpose[{#, set}], False] === Abs[Length[
-        set] - number]&][Permutations[set]]
+    ), Optional[limit_, All]] :=
+    Take[Select[Count[SameQ @@@ Transpose[{#, set}], False] === Abs[Length[
+        set] - number]&][Permutations[set]], limit]
 
 End[]
 
 EndPackage[]
-
-
-
