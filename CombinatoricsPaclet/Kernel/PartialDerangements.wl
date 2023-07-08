@@ -7,10 +7,17 @@ PeterBurbery`CombinatoricsPaclet`PartialDerangements
 Begin["`Private`"]
 
 PartialDerangements // ClearAll
-PartialDerangements[set_, 
-  number_?(IntegerQ[#] && # \[Element] NonNegativeIntegers &)] := 
- Select[Count[SameQ @@@ Transpose[{#, set}], False] === number &][
-  Permutations[set]]
+
+PartialDerangements::usage = "PartialDerangements[multiset,number] returns the partial derangements of the multiset with the given number of fixed points.";
+
+PartialDerangements[set_, number_ ? (IntegerQ[#] && # \[Element] NonNegativeIntegers&
+    )] :=
+    Select[Count[SameQ @@@ Transpose[{#, set}], False] === Abs[Length[
+        set] - number]&][Permutations[set]]
+
 End[]
 
 EndPackage[]
+
+
+
