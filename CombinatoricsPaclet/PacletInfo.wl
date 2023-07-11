@@ -20,21 +20,24 @@ PacletObject[
           }
         },
         "Symbols" -> {
-          "PeterBurbery`CombinatoricsPaclet`PermutationFromIndex",
-          "PeterBurbery`CombinatoricsPaclet`TupleFromIndex",
-          "PeterBurbery`CombinatoricsPaclet`OrderedTupleFromIndex",
-          "PeterBurbery`CombinatoricsPaclet`LehmerCodeFromPermutation",
-          "PeterBurbery`CombinatoricsPaclet`PermutationIndex",
-          "PeterBurbery`CombinatoricsPaclet`OrderedTupleIndex",
-          "PeterBurbery`CombinatoricsPaclet`TupleIndex",
-          "PeterBurbery`CombinatoricsPaclet`SubsetIndex",
-          "PeterBurbery`CombinatoricsPaclet`SubsetFromIndex",
-          "PeterBurbery`CombinatoricsPaclet`PermutationToTableaux",
-          "PeterBurbery`CombinatoricsPaclet`TableauxToPermutation",
-          "PeterBurbery`CombinatoricsPaclet`DiscreteInverseLessThan",
           "PeterBurbery`CombinatoricsPaclet`DiscreteInverseEqual",
+          "PeterBurbery`CombinatoricsPaclet`DiscreteInverseLessThan",
+          "PeterBurbery`CombinatoricsPaclet`EnumerateMultisetPartialDerangements",
+          "PeterBurbery`CombinatoricsPaclet`LehmerCodeFromPermutation",
+          "PeterBurbery`CombinatoricsPaclet`MultisetPartialDerangements",
+          "PeterBurbery`CombinatoricsPaclet`NDigitNumbers",
+          "PeterBurbery`CombinatoricsPaclet`OrderedTupleFromIndex",
+          "PeterBurbery`CombinatoricsPaclet`OrderedTupleIndex",
+          "PeterBurbery`CombinatoricsPaclet`PartialDerangements",
+          "PeterBurbery`CombinatoricsPaclet`PermutationFromIndex",
+          "PeterBurbery`CombinatoricsPaclet`PermutationIndex",
+          "PeterBurbery`CombinatoricsPaclet`PermutationToTableaux",
           "PeterBurbery`CombinatoricsPaclet`RepetendCycleLength",
-          "PeterBurbery`CombinatoricsPaclet`NDigitNumbers"
+          "PeterBurbery`CombinatoricsPaclet`SubsetFromIndex",
+          "PeterBurbery`CombinatoricsPaclet`SubsetIndex",
+          "PeterBurbery`CombinatoricsPaclet`TableauxToPermutation",
+          "PeterBurbery`CombinatoricsPaclet`TupleFromIndex",
+          "PeterBurbery`CombinatoricsPaclet`TupleIndex"
         }
       },
       {"Documentation", "Language" -> "English"}

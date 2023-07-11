@@ -2,13 +2,13 @@
 
 BeginPackage["PeterBurbery`CombinatoricsPaclet`"]
 
-PeterBurbery`CombinatoricsPaclet`MultisetPartialDerangements
+PeterBurbery`CombinatoricsPaclet`PartialDerangements
 
 Begin["`Private`"]
 
-MultisetPartialDerangements // ClearAll
+PartialDerangements // ClearAll
 
-MultisetPartialDerangements::usage = "MultisetPartialDerangements[multiset] returns the derangements of the multiset with 0 fixed points where every element moves.\nMultisetPartialDerangements[multiset,number] returns the partial derangements of the multiset with the given number of fixed points.\nMultisetPartialDerangements[multiset,number,limit] returns only limit derangements.\nMultisetPartialDerangements[n] represents an operator form that takes n of the derangements.";
+PartialDerangements::usage = "PartialDerangements[multiset] returns the derangements of the multiset with 0 fixed points.\nPartialDerangements[multiset,number] returns the partial derangements of the multiset with the given number of fixed points.\nPartialDerangements[multiset,number,limit] returns only limit derangements.\nPartialDerangements[n] represents an operator form that takes n of the derangements.";
 (*This seems like it would work but it doesn't because of a StyleBox.*)
 
 (*PartialDerangements::usage = "PartialDerangements[multiset,number] returns the partial derangements of the multiset with the given number of fixed points.\nPartialDerangements[multiset,number,limit] returns only limit derangements.\nPartialDerangements[takespec] represents an operator form that takes from the partial derangements based on takespec.";
@@ -27,3 +27,7 @@ PartialDerangements[args___] :=
 End[]
 
 EndPackage[]
+
+
+
+
