@@ -16,3 +16,6 @@ Multichoose[n_, k_] :=
 End[]
 
 EndPackage[]
+
+
+
