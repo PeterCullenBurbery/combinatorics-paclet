@@ -1,7 +1,7 @@
 <|"English\\Guides\\CombinatorialFunctions.nb" -> 
-  <|"Result" -> Success["BuildDocumentationNotebook", 
-     <|"Time" -> Quantity[4.2136471, "Seconds"]|>], 
-   "FileHash" -> "a3a4/fsK85v8s+mOIhJZYp/TRtvDlF1FuL0zWpf3osM="|>, 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[1.4424395, "Seconds"]|>], 
+   "FileHash" -> "Os6pR/yFGreI4lwz7vFl5IpesKfSgR638zUb6CKhYiQ="|>, 
  "English\\Guides\\TuplesPermutationsAndSubsets.nb" -> 
   <|"Result" -> Success["BuildDocumentationNotebook", 
      <|"Time" -> Quantity[1.4986096, "Seconds"]|>], 
@@ -65,4 +65,16 @@
  "English\\ReferencePages\\Symbols\\NDigitNumbers.nb" -> 
   <|"Result" -> Success["BuildDocumentationNotebook", 
      <|"Time" -> Quantity[5.4800388, "Seconds"]|>], 
-   "FileHash" -> "GF03hLNVgKaYtqUk5/RJT00A56iEShwMIngVjbq4XhE="|>|>
+   "FileHash" -> "GF03hLNVgKaYtqUk5/RJT00A56iEShwMIngVjbq4XhE="|>, 
+ "English\\ReferencePages\\Symbols\\EnumerateMultisetPartialDerangements.nb" \
+-> <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[2.2502583, "Seconds"]|>], 
+   "FileHash" -> "OZqOZoLxi7Z+lOn6OLjkyctOi86Y6UqUA+99mPgvTTc="|>, 
+ "English\\ReferencePages\\Symbols\\MultisetPartialDerangements.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[2.295063, "Seconds"]|>], 
+   "FileHash" -> "8Stc3Cx9i06CXleU94EMySsQgdc5oePvfRamrS0Argc="|>, 
+ "English\\ReferencePages\\Symbols\\PartialDerangements.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[1.6856987, "Seconds"]|>], 
+   "FileHash" -> "PvSQqoVjsza1Zl6+6lR0kRhEOcdRcZYcwFNu47mEnGQ="|>|>

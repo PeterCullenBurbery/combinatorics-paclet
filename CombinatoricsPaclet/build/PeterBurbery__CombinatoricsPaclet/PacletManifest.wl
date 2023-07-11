@@ -6,12 +6,103 @@
             "File"
             ->
             File[
+                "Kernel\\CombinatoricsPaclet copy.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "903b2d17479c6e3e950b057ba75b8e4bc0eb1665087303f958cd57bb2d8b7fa9"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Kernel\\CombinatoricsPaclet.wl"
             ]
             ,
             "Hash"
             ->
-            "cc59a9b65e4002408a9698dd66865fa403343fdd837da639753833a4769ee144"
+            "c299d3d56902bf1e66116eef5324e12451ed4bfc80e4376a1f08692a62043dc1"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\EnumerateMultisetPartialDerangements.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "aadccfec2eb30e5d8b846704e530be858d0d48215c9b1aba75cc8a4fdd4ae497"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\LehmerCodeFromIndex.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "2b111760d5f7aad875660d7aee7426223e030c93eeabbed23ae0641a366ceb88"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\MultisetPartialDerangements.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "1ebec393f64ed32fadd17eddcd4e625b71c9d114289a3b554c2032e6c8ae23ba"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\PartialDerangements.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "7bf032194bea99eb56052307c54bf77c9e8cf87acce0feb2f67792ec36fb3a53"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\PermutationFromIndex.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "171d31cf46992b667a162eba490c302d275d62c43498080ae68e9400441cb0af"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\PermutationFromLehmerCode.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "18b37a7224f123f0956d99d78f3baf56dc0015b4de103d7e7d1f1fddcb2eef24"
                 
         |>
         ,
@@ -25,7 +116,7 @@
             ,
             "Hash"
             ->
-            "dfc5dbc2eda8245d6766a383ecb871934a92a42f89dbdaf227035fd7d37032ac"
+            "22605c205f0a4eaab0f8a258e4e599660bae69452bdf756201aa81c058ff37c3"
                 
         |>
         ,
@@ -75,6 +166,20 @@
             "File"
             ->
             File[
+                "Documentation\\English\\ReferencePages\\Symbols\\EnumerateMultisetPartialDerangements.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "8d7af371743cdb2cc458f1d3ad96d59882bc796a3d9cacacb68ed2a6bc1ad4b5"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Documentation\\English\\ReferencePages\\Symbols\\LehmerCodeFromPermutation.nb"
                     
             ]
@@ -82,6 +187,20 @@
             "Hash"
             ->
             "66422ac3d16b241bc2897c8da9681cc8cc23406c97984691be91574b6884e0d2"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\MultisetPartialDerangements.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "f5544932cd98a6b3baaaed7be59b17bad6c3c8df9192a9c466c9670ee3e0d0be"
                 
         |>
         ,
@@ -124,6 +243,46 @@
             "Hash"
             ->
             "3dcbd1103364d449eb46174fb6d4f9b058c2cf817e2b50ec1229e607f58bc07e"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\MultisetPartialDerangements.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\PartialDerangements.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\PartialDerangements.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "90d1235964f7f481cb08daf3ec5f384899a4cd3ed565b1d13fc39f0a935f4625"
                 
         |>
         ,
