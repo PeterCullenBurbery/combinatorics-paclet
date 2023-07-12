@@ -1,6 +1,10 @@
+(* ::Package:: *)
+
 <<PeterBurbery`CombinatoricsPaclet`EnumerateMultisetPartialDerangements`;
 
 <<PeterBurbery`CombinatoricsPaclet`LehmerCodeFromIndex`;
+
+<<PeterBurbery`CombinatoricsPaclet`Multichoose`;
 
 <<PeterBurbery`CombinatoricsPaclet`Multichoose`;
 
@@ -11,3 +15,8 @@
 <<PeterBurbery`CombinatoricsPaclet`PermutationFromIndex`;
 
 <<PeterBurbery`CombinatoricsPaclet`PermutationFromLehmerCode`;
+
+<<PeterBurbery`CombinatoricsPaclet`Phitorial`;
+
+
+

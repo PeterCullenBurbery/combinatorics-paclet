@@ -13,17 +13,20 @@ MultisetPartialDerangements::usage = "MultisetPartialDerangements[multiset] retu
 
 (*PartialDerangements::usage = "PartialDerangements[multiset,number] returns the partial derangements of the multiset with the given number of fixed points.\nPartialDerangements[multiset,number,limit] returns only limit derangements.\nPartialDerangements[takespec] represents an operator form that takes from the partial derangements based on takespec.";
 *)
-PartialDerangements[set_List?ListQ, Optional[number_ ? (IntegerQ[#] && # \[Element] NonNegativeIntegers&
+MultisetPartialDerangements[set_List?ListQ, Optional[number_ ? (IntegerQ[#] && # \[Element] NonNegativeIntegers&
     ),1], Optional[limit_, All]] :=
     Take[Select[Count[SameQ @@@ Transpose[{#, set}], False] === Abs[Length[
         set] - number]&][Permutations[set]], limit]
 
-PartialDerangements[n_] :=
-    OperatorApplied[PartialDerangements,{2,3,1}][n]
+MultisetPartialDerangements[n_] :=
+    OperatorApplied[PartialDerangements,{3,1,2}][n]
 
-PartialDerangements[args___] :=
-    Null /; CheckArguments[PartialDerangements[args], {1, 2}]
+MultisetPartialDerangements[args___] :=
+    Null /; CheckArguments[MultisetPartialDerangements[args], {1, 3}]
 
 End[]
 
 EndPackage[]
+
+
+
