@@ -26,7 +26,7 @@ LucasNumberV2 // ClearAll
 
 SetAttributes[LucasNumberV2, {Listable, NumericFunction}]
 
-LucasNumberV2::usage = "LucasNumberV2[n, m]number of all such permutations of the multiset where there are two of every element with exactly km ascents.";
+LucasNumberV2::usage="LucasNumberV2[n, p, q] calculates the term of the Lucas sequence of the second kind V_n(p, q).";
 
 LucasNumberV2[n_, m_] :=
     0 /; Or @@ {m >= n, n === 0}
