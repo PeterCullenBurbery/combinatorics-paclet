@@ -12,7 +12,7 @@ BeginPackage["PeterBurbery`CombinatoricsPaclet`"];
 (*Declare your public symbols here:*)
 
 
-PeterBurbery`CombinatoricsPaclet`IntegerPartitionQ;
+PeterBurbery`CombinatoricsPaclet`GrayCode;
 
 Begin["`Private`"];
 
@@ -26,15 +26,13 @@ Begin["`Private`"];
 (*Define your public and private symbols here:*)
 
 
-IntegerPartitionQ // ClearAll
+GrayCode // ClearAll
 
-IntegerPartitionQ::usage="IntegerPartitionQ[x] checks whether x is a weakly decreasing list of positive integers.\nIntegerPartitionQ[x,n] checks whether x is an integer partition of n.";
+Attributes[GrayCode] = { Listable };
 
-IntegerPartitionQ[x_] := 
- VectorQ[x, Internal`PositiveIntegerQ] && 
-  VectorQ[Differences[x], Internal`NonPositiveIntegerQ]
-IntegerPartitionQ[x_, n_] := 
- IntegerQ[n] && IntegerPartitionQ[x] && Total[x] == n
+GrayCode::usage="GrayCode[n] gives the Gray code of the integer n.";
+
+GrayCode[ n_Integer?(IntegerQ [#]&& NonNegative[#]&) ] := IntegerDigits[ BitXor[ n, BitShiftRight[ n, 1 ]], 2 ]
 
 
 (* ::Section::Closed:: *)
