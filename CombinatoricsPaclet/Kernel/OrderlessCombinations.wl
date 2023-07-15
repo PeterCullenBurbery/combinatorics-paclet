@@ -1,26 +1,30 @@
 (* ::Package:: *)
 
 (* ::Section:: *)
-
 (*Package Header*)
+
 
 BeginPackage["PeterBurbery`CombinatoricsPaclet`"];
 
-(* ::Text:: *)
 
+
+(* ::Text:: *)
 (*Declare your public symbols here:*)
+
 
 PeterBurbery`CombinatoricsPaclet`OrderlessCombinations;
 
 Begin["`Private`"];
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Definitions*)
 
-(* ::Text:: *)
 
+(* ::Text:: *)
 (*Define your public and private symbols here:*)
+
 
 OrderlessCombinations // ClearAll
 
@@ -54,12 +58,14 @@ OrderlessCombinations[data_List, {min_Integer, max_Integer, step_Integer
     Join @@ Table[OrderlessCombinations[Union[data], {i}], {i, min, max,
          step}];
 
-OrderlessCombinations[data_List, list_List] /; max >= min :=
-    Join @@ Table[OrderlessCombinations[Union[data], {i}], {i, list}];
+OrderlessCombinations[data_List, list:{{__}}]  :=
+    Join @@ Table[OrderlessCombinations[Union[data], {i}], {i,Flatten@list}];
+
+
 
 (* ::Section::Closed:: *)
-
 (*Package Footer*)
+
 
 End[];
 
