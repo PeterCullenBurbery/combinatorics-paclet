@@ -26,10 +26,18 @@ HuffmanDecode // ClearAll
 
 HuffmanDecode::usage = "HuffmanDecode[assoc] returns the decoding of an association assoc representing a Huffman encoding as a string.";
 
-HuffmanDecode[p_ /; VectorQ[p, NumericQ]] :=
-    Sort[Flatten[MapIndexed[Rule, FixedPoint[Replace[Sort[#1], {{p0_,
-         i0_}, {p1_, i1_}, pi___} :> {{p0 + p1, {i0, i1}}, pi}]&, MapIndexed[
-        List, Normalize[p, Total]]][[1, 2]], {-1}]]][[All, -1,  ;; -2]] - 1
+HuffmanDecode[assoc_?AssociationQ] :=
+    Module[{chars, cList, encoding, words},
+        {chars, encoding, words} = Lookup[assoc, {"Symbols", "Encoding",
+             "CodeWords"}];
+        (
+                cList = chars[[First[{{}, encoding} //. MapIndexed[{{
+                    r___}, Flatten[{#1, s___}]} :> {{r, #2[[1]]}, {s}}&, words]]]];
+                StringJoin[cList] /; MatchQ[cList, {__String}]
+            ) /; FreeQ[{chars, encoding, words}, _Missing] && chars ===
+                 DeleteDuplicates[chars] && Length[chars] == Length[words] && MatchQ[
+                words, {{(0 | 1)..}..}] && MatchQ[encoding, {(0 | 1)..}]
+    ]
 
 (* ::Section::Closed:: *)
 
