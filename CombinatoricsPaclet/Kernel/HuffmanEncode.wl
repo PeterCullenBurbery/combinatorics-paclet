@@ -29,7 +29,7 @@ HuffmanEncode::usage="HuffmanEncode[string] gives an optimal binary Huffman enco
 HuffmanEncode[d_] /; MatchQ[d, {__String}] := 
  Module[{chars = Union[d], code},
   code = 
-   ResourceFunction["HuffmanCodeWords"][(Count[d, #1] & /@ chars)/
+   HuffmanCodeWords[(Count[d, #1] & /@ chars)/
      Length[d]];
   <|"Symbols" -> chars, "CodeWords" -> code, 
    "Encoding" -> Flatten[d /. MapThread[Rule, {chars, code}]]|>]

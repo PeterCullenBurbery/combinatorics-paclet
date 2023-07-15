@@ -12,7 +12,7 @@ BeginPackage["PeterBurbery`CombinatoricsPaclet`"];
 (*Declare your public symbols here:*)
 
 
-PeterBurbery`CombinatoricsPaclet`FerrersDiagram;
+PeterBurbery`CombinatoricsPaclet`TransposeTableau;
 
 Begin["`Private`"];
 
@@ -26,11 +26,12 @@ Begin["`Private`"];
 (*Define your public and private symbols here:*)
 
 
-FerrersDiagram//ClearAll
+TransposeTableau // ClearAll
 
-FerrersDiagram::usage="FerrersDiagram[p] gives a ragged array of dots, with the number of dots in each row equal to a corresponding part of the integer partition p.";
+TransposeTableau::usage = 
+  "TransposeTableau[t] returns the transpose of the Young tableau t.";
 
-FerrersDiagram@p_:=Grid[Table["\[FilledCircle]",#]&/@p]/;IntegerPartitionQ@p
+TransposeTableau[tb_List]:=Flatten[tb,{{2},{1}}]
 
 
 (* ::Section::Closed:: *)
