@@ -24,7 +24,7 @@ Begin["`Private`"];
 
 OrderlessCombinations // ClearAll
 
-OrderlessCombinations::usage = "OrderlessCombinations[list,n] gives all possible orderless sets comprised of the elements of list up to length n.\nOrderlessCombinationsOrderlessCombinations[list,{n}] gives sets of exactly length n.\nOrderlessCombinations[list,{n,m}] gives sets containing between n and m elements.\nOrderlessCombinations[list,{n,m,t}] uses step t.\nOrderlessCombinations[list,{i1,i2,\[Ellipsis]}] uses the successive values i1, i2, \[Ellipsis].";
+OrderlessCombinations::usage = "OrderlessCombinations[list,n] gives all possible orderless sets comprised of the elements of list up to length n.\nOrderlessCombinations[list,{n}] gives sets of exactly length n.\nOrderlessCombinations[list,{n,m}] gives sets containing between n and m elements.\nOrderlessCombinations[list,{n,m,t}] uses step t.\nOrderlessCombinations[list,{i1,i2,\[Ellipsis]}] uses the successive values i1, i2, \[Ellipsis].";
 
 OrderlessCombinations[data_List, {0}] = {{}};
 
