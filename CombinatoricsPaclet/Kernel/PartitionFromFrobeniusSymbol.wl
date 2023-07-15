@@ -28,13 +28,17 @@ Begin["`Private`"];
 
 PartitionFromFrobeniusSymbol//ClearAll
 
-SetAttributes[PartitionFromFrobeniusSymbol,{Listable,NumericFunction}]
+PartitionFromFrobeniusSymbol::usage="PartitionFromFrobeniusSymbol[f] gives the partition whose Frobenius symbol is f.";
 
-PartitionFromFrobeniusSymbol::usage="PartitionFromFrobeniusSymbol[n] gives the 0-1 list that indicates the unique nonconsecutive Fibonacci numbers that sum to the non-negative integer n.";
-
-PartitionFromFrobeniusSymbol[(n_Integer)?(#1 >= 0 & )] := Module[{i, k, l, m, addon, r}, k = 0; If[n == 0, r = {0}, If[n == 1, r = {1}, l = LeadingIndex[n]; m = n - Fibonacci[l]; k = LeadingIndex[m]; addon = Flatten[{1, Table[0, {i, k + 2, l}]}]; r = Flatten[{addon, PartitionFromFrobeniusSymbol[m]}]]]; r]
-
-LeadingIndex[(n_Integer)?(#1 >= 0 & )] := Module[{k}, If[n == 0, k = 2, For[k = 2, Fibonacci[k] <= n, k++]; k--; ]; k]
+PartitionFromFrobeniusSymbol[f_]:=Module[
+{a,b,d},
+{a,b}=f;
+d=Length@a;
+Join[
+a+Range@d,
+ConjugatePartition@DeleteCases[b-Reverse[-1+Range@d],0]
+]
+]/;MatrixQ@f&&Length@f==2&&IntegerPartitionQ[First@f+1]&&IntegerPartitionQ[Last@f+1]
 
 
 (* ::Section::Closed:: *)
