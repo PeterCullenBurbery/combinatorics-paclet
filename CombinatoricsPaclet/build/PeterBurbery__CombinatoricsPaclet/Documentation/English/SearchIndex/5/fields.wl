@@ -30,6 +30,22 @@
 		"BulkRetrievalOptimized" -> False
 	|>,
 	<|
+		"Name" -> "SeeAlso",
+		"Type" -> "Text",
+		"LengthWeighted" -> False,
+		"Tokenized" -> True,
+		"Stored" -> False,
+		"Weight" -> 1,
+		"Searchable" -> True,
+		"Language" -> "English",
+		"IgnoreCase" -> True,
+		"StemmingMethod" -> Automatic,
+		"CamelCaseMatching" -> True,
+		"DeleteStopWords" -> True,
+		"StoreTermVectors" -> False,
+		"BulkRetrievalOptimized" -> False
+	|>,
+	<|
 		"Name" -> "ExactTitle",
 		"Type" -> "Text",
 		"Stored" -> True,
@@ -347,12 +363,11 @@
 		"BulkRetrievalOptimized" -> False
 	|>,
 	<|
-		"Name" -> "SeeAlso",
+		"Name" -> "Abstract",
 		"Type" -> "Text",
-		"LengthWeighted" -> False,
+		"Weight" -> 1.5,
 		"Tokenized" -> True,
 		"Stored" -> False,
-		"Weight" -> 1,
 		"Searchable" -> True,
 		"Language" -> "English",
 		"IgnoreCase" -> True,
@@ -363,11 +378,11 @@
 		"BulkRetrievalOptimized" -> False
 	|>,
 	<|
-		"Name" -> "Abstract",
+		"Name" -> "FunctionsSubsection",
 		"Type" -> "Text",
-		"Weight" -> 1.5,
 		"Tokenized" -> True,
 		"Stored" -> False,
+		"Weight" -> 1,
 		"Searchable" -> True,
 		"Language" -> "English",
 		"IgnoreCase" -> True,
