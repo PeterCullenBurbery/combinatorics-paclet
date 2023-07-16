@@ -28,11 +28,13 @@ Begin["`Private`"];
 
 TableauQ//ClearAll
 
-SetAttributes[TableauQ,{Listable,NumericFunction}]
+TableauQ::usage="TableauQ[t] determines if t is a Young tableau.";
 
-TableauQ::usage="TableauQ[n,k] gives the signed Lah number L(n,k).";
-
-TableauQ[n_,k_]:=(-1)^n Binomial[n-1,k-1] n!/k!
+TableauQ[{}]=True;
+TableauQ[t_]:=MatchQ[t,{{__Integer?Positive}..}]&&AllTrue[Differences/@t,Positive,2]&&AllTrue[Differences[Map[Length,t]],NonPositive]&&
+With[{tt=Flatten[t,{{2},{1}}]},
+AllTrue[Differences/@tt,Positive,2]&&
+AllTrue[Differences[Map[Length,tt]],NonPositive]];
 
 
 (* ::Section::Closed:: *)

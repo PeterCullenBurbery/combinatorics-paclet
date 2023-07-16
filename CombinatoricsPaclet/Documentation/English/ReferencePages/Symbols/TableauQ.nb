@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     25964,        693]
-NotebookOptionsPosition[     18783,        537]
-NotebookOutlinePosition[     20111,        576]
-CellTagsIndexPosition[     19973,        569]
+NotebookDataLength[     45431,       1198]
+NotebookOptionsPosition[     36919,       1013]
+NotebookOutlinePosition[     38232,       1051]
+CellTagsIndexPosition[     38091,       1044]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -377,12 +377,488 @@ Cell[TextData[{
  CellTags->"ExtendedExamples",
  CellID->150727277,ExpressionUUID->"3192d701-7429-45f9-9260-4c0d81f4d43f"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  InterpretationBox[Cell[
   "Scope", "ExampleSection",ExpressionUUID->
    "863b2e6c-3885-4634-9062-6dff93988335"],
   $Line = 0; Null]], "ExampleSection",
  CellID->198523713,ExpressionUUID->"7230f7f9-0ebb-4648-b451-e6624e4444d7"],
+
+Cell["Create a random pair of order 15 tableaux:", "ExampleText",
+ TaggingRules->{},
+ CellChangeTimes->{{3.852034724066225*^9, 3.8520347697299786`*^9}, {
+  3.8520348727568555`*^9, 3.8520348790566764`*^9}, {3.852037048902397*^9, 
+  3.852037051324437*^9}},
+ CellID->638762216,ExpressionUUID->"936fdd98-c4fa-449d-9ec9-7dbb10beb678"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"randomlarge", "=", 
+  RowBox[{
+   RowBox[{"ResourceFunction", "[", "\"\<PermutationToTableaux\>\"", "]"}], 
+   "[", 
+   RowBox[{
+    RowBox[{"ResourceFunction", "[", "\"\<PermutationFromIndex\>\"", "]"}], 
+    "[", 
+    RowBox[{
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{"15", "!"}], "]"}], ",", "15"}], "]"}], "]"}]}]], "Input", \
+"ExampleInput",
+ TaggingRules->{},
+ CellChangeTimes->{{3.8520345956985173`*^9, 3.852034649006467*^9}},
+ CellLabel->"In[11]:=",
+ CellID->697209665,ExpressionUUID->"534f1fae-3565-4695-8ba6-57d5bbd49b36"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "4", ",", "5", ",", "7", ",", "10", ",", "13"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "9", ",", "15"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "12"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"6", ",", "14"}], "}"}], ",", 
+     RowBox[{"{", "8", "}"}], ",", 
+     RowBox[{"{", "11", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "4", ",", "6", ",", "7", ",", "8", ",", "12"}], "}"}],
+      ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "5", ",", "14"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "13"}], "}"}], ",", 
+     RowBox[{"{", "11", "}"}], ",", 
+     RowBox[{"{", "15", "}"}]}], "}"}]}], "}"}]], "Output", "ExampleOutput",
+ TaggingRules->{},
+ CellChangeTimes->{{3.8520346131962004`*^9, 3.852034653274172*^9}},
+ CellLabel->"Out[11]=",
+ CellID->930010838,ExpressionUUID->"573e0c44-9403-4d99-8714-00405f5c2de2"]
+}, Open  ]],
+
+Cell["Verify these are each a tableau:", "ExampleText",
+ TaggingRules->{},
+ CellChangeTimes->{{3.852034724066225*^9, 3.8520347907595797`*^9}, {
+  3.8520348222440233`*^9, 3.8520348571625547`*^9}, {3.8520370621172457`*^9, 
+  3.8520370659255424`*^9}},
+ CellID->469789004,ExpressionUUID->"153a1d49-9c9f-4bcf-83a1-7505e71cd30d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   TagBox[
+    TagBox[
+     DynamicModuleBox[{Typeset`open = False}, 
+      FrameBox[
+       PaneSelectorBox[{False->GridBox[{
+          {
+           PaneBox[GridBox[{
+              {
+               StyleBox[
+                StyleBox[
+                 AdjustmentBox["\<\"[\[FilledSmallSquare]]\"\>",
+                  BoxBaselineShift->-0.25,
+                  BoxMargins->{{0, 0}, {-1, -1}}], "ResourceFunctionIcon",
+                 FontColor->GrayLevel[0.45]],
+                ShowStringCharacters->False,
+                FontFamily->"Source Sans Pro Black",
+                FontSize->0.6538461538461539 Inherited,
+                FontWeight->"Heavy",
+                PrivateFontOptions->{"OperatorSubstitution"->False}], 
+               StyleBox[
+                RowBox[{
+                 StyleBox["TableauQ", "ResourceFunctionLabel"], " "}],
+                ShowAutoStyles->False,
+                ShowStringCharacters->False,
+                FontSize->Rational[12, 13] Inherited,
+                FontColor->GrayLevel[0.1]]}
+             },
+             GridBoxSpacings->{"Columns" -> {{0.25}}}],
+            Alignment->Left,
+            BaseStyle->{LineSpacing -> {0, 0}, LineBreakWithin -> False},
+            BaselinePosition->Baseline,
+            FrameMargins->{{3, 0}, {0, 0}}], 
+           ItemBox[
+            PaneBox[
+             TogglerBox[Dynamic[Typeset`open], {True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "IconizeCloser"],
+               ImageSizeCache->{11., {2., 9.}}], False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "IconizeOpener"],
+               ImageSizeCache->{11., {2., 9.}}]},
+              Appearance->None,
+              BaselinePosition->Baseline,
+              ContentPadding->False,
+              FrameMargins->0],
+             Alignment->Left,
+             BaselinePosition->Baseline,
+             FrameMargins->{{1, 1}, {0, 0}}],
+            Frame->{{
+               RGBColor[
+               0.8313725490196079, 0.8470588235294118, 0.8509803921568627, 
+                0.5], False}, {False, False}}]}
+         },
+         BaselinePosition->{1, 1},
+         GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+         GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0}}}], True->
+        GridBox[{
+          {GridBox[{
+             {
+              PaneBox[GridBox[{
+                 {
+                  StyleBox[
+                   StyleBox[
+                    AdjustmentBox["\<\"[\[FilledSmallSquare]]\"\>",
+                    BoxBaselineShift->-0.25,
+                    BoxMargins->{{0, 0}, {-1, -1}}], "ResourceFunctionIcon",
+                    FontColor->GrayLevel[0.45]],
+                   ShowStringCharacters->False,
+                   FontFamily->"Source Sans Pro Black",
+                   FontSize->0.6538461538461539 Inherited,
+                   FontWeight->"Heavy",
+                   PrivateFontOptions->{"OperatorSubstitution"->False}], 
+                  StyleBox[
+                   RowBox[{
+                    StyleBox["TableauQ", "ResourceFunctionLabel"], " "}],
+                   ShowAutoStyles->False,
+                   ShowStringCharacters->False,
+                   FontSize->Rational[12, 13] Inherited,
+                   FontColor->GrayLevel[0.1]]}
+                },
+                GridBoxSpacings->{"Columns" -> {{0.25}}}],
+               Alignment->Left,
+               BaseStyle->{LineSpacing -> {0, 0}, LineBreakWithin -> False},
+               BaselinePosition->Baseline,
+               FrameMargins->{{3, 0}, {0, 0}}], 
+              ItemBox[
+               PaneBox[
+                TogglerBox[Dynamic[Typeset`open], {True->
+                 DynamicBox[FEPrivate`FrontEndResource[
+                  "FEBitmaps", "IconizeCloser"]], False->
+                 
+                 DynamicBox[FEPrivate`FrontEndResource[
+                  "FEBitmaps", "IconizeOpener"]]},
+                 Appearance->None,
+                 BaselinePosition->Baseline,
+                 ContentPadding->False,
+                 FrameMargins->0],
+                Alignment->Left,
+                BaselinePosition->Baseline,
+                FrameMargins->{{1, 1}, {0, 0}}],
+               Frame->{{
+                  RGBColor[
+                  0.8313725490196079, 0.8470588235294118, 0.8509803921568627, 
+                   0.5], False}, {False, False}}]}
+            },
+            BaselinePosition->{1, 1},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0}}}]},
+          {
+           StyleBox[
+            PaneBox[GridBox[{
+               {
+                RowBox[{
+                 TagBox["\<\"Version (latest): \"\>",
+                  "IconizedLabel"], " ", 
+                 TagBox["\<\"1.0.0\"\>",
+                  "IconizedItem"]}]},
+               {
+                TagBox[
+                 
+                 TemplateBox[{
+                  "\"Documentation \[RightGuillemet]\"", 
+                   "https://resources.wolframcloud.com/FunctionRepository/\
+resources/f900e6fd-f6d6-4ef7-a5cc-defbad917f3c/"},
+                  "HyperlinkURL"],
+                 "IconizedItem"]}
+              },
+              DefaultBaseStyle->"Column",
+              GridBoxAlignment->{"Columns" -> {{Left}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+             Alignment->Left,
+             BaselinePosition->Baseline,
+             FrameMargins->{{5, 4}, {0, 4}}], "DialogStyle",
+            FontFamily->"Roboto",
+            FontSize->11]}
+         },
+         BaselinePosition->{1, 1},
+         GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+         GridBoxDividers->{"Columns" -> {{None}}, "Rows" -> {False, {
+              GrayLevel[0.8]}, False}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, Dynamic[
+        Typeset`open],
+        BaselinePosition->Baseline,
+        ImageSize->Automatic],
+       Background->RGBColor[
+        0.9686274509803922, 0.9764705882352941, 0.984313725490196],
+       BaselinePosition->Baseline,
+       DefaultBaseStyle->{},
+       FrameMargins->{{0, 0}, {1, 0}},
+       FrameStyle->RGBColor[
+        0.8313725490196079, 0.8470588235294118, 0.8509803921568627],
+       RoundingRadius->4]],
+     #& ,
+     TagBoxNote->" "],
+    {"FunctionResourceBox", 
+     GrayLevel[0.45], "TableauQ"},
+    TagBoxNote->"FunctionResourceBox"],
+   ResourceFunction["TableauQ"],
+   BoxID -> "TableauQ",
+   Selectable->False], "/@", "randomlarge"}]], "Input", "ExampleInput",
+ TaggingRules->{},
+ CellChangeTimes->{{3.852034661117936*^9, 3.852034666753227*^9}},
+ CellLabel->"In[12]:=",
+ CellID->265202090,ExpressionUUID->"5b903e77-38a1-4557-a106-32875ab62621"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"True", ",", "True"}], "}"}]], "Output", "ExampleOutput",
+ TaggingRules->{},
+ CellChangeTimes->{3.8520346677872844`*^9},
+ CellLabel->"Out[12]=",
+ CellID->86005154,ExpressionUUID->"6de1f45b-265f-4eaf-8144-b94529a2309d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "bf0966f6-c5f7-4955-bebc-591f2a314462"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ TaggingRules->{},
+ CellID->14107562,ExpressionUUID->"7311fb93-e240-4ebf-8042-9452cf5e1cf2"],
+
+Cell["This is not a tableau:", "ExampleText",
+ TaggingRules->{},
+ CellChangeTimes->{{3.852034942671931*^9, 3.8520349536151485`*^9}},
+ CellID->693242544,ExpressionUUID->"a601225c-760d-4e56-8506-a7b00a3361cc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   TagBox[
+    TagBox[
+     DynamicModuleBox[{Typeset`open = False}, 
+      FrameBox[
+       PaneSelectorBox[{False->GridBox[{
+          {
+           PaneBox[GridBox[{
+              {
+               StyleBox[
+                StyleBox[
+                 AdjustmentBox["\<\"[\[FilledSmallSquare]]\"\>",
+                  BoxBaselineShift->-0.25,
+                  BoxMargins->{{0, 0}, {-1, -1}}], "ResourceFunctionIcon",
+                 FontColor->GrayLevel[0.45]],
+                ShowStringCharacters->False,
+                FontFamily->"Source Sans Pro Black",
+                FontSize->0.6538461538461539 Inherited,
+                FontWeight->"Heavy",
+                PrivateFontOptions->{"OperatorSubstitution"->False}], 
+               StyleBox[
+                RowBox[{
+                 StyleBox["TableauQ", "ResourceFunctionLabel"], " "}],
+                ShowAutoStyles->False,
+                ShowStringCharacters->False,
+                FontSize->Rational[12, 13] Inherited,
+                FontColor->GrayLevel[0.1]]}
+             },
+             GridBoxSpacings->{"Columns" -> {{0.25}}}],
+            Alignment->Left,
+            BaseStyle->{LineSpacing -> {0, 0}, LineBreakWithin -> False},
+            BaselinePosition->Baseline,
+            FrameMargins->{{3, 0}, {0, 0}}], 
+           ItemBox[
+            PaneBox[
+             TogglerBox[Dynamic[Typeset`open], {True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "IconizeCloser"],
+               ImageSizeCache->{11., {2., 9.}}], False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "IconizeOpener"],
+               ImageSizeCache->{11., {2., 9.}}]},
+              Appearance->None,
+              BaselinePosition->Baseline,
+              ContentPadding->False,
+              FrameMargins->0],
+             Alignment->Left,
+             BaselinePosition->Baseline,
+             FrameMargins->{{1, 1}, {0, 0}}],
+            Frame->{{
+               RGBColor[
+               0.8313725490196079, 0.8470588235294118, 0.8509803921568627, 
+                0.5], False}, {False, False}}]}
+         },
+         BaselinePosition->{1, 1},
+         GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+         GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0}}}], True->
+        GridBox[{
+          {GridBox[{
+             {
+              PaneBox[GridBox[{
+                 {
+                  StyleBox[
+                   StyleBox[
+                    AdjustmentBox["\<\"[\[FilledSmallSquare]]\"\>",
+                    BoxBaselineShift->-0.25,
+                    BoxMargins->{{0, 0}, {-1, -1}}], "ResourceFunctionIcon",
+                    FontColor->GrayLevel[0.45]],
+                   ShowStringCharacters->False,
+                   FontFamily->"Source Sans Pro Black",
+                   FontSize->0.6538461538461539 Inherited,
+                   FontWeight->"Heavy",
+                   PrivateFontOptions->{"OperatorSubstitution"->False}], 
+                  StyleBox[
+                   RowBox[{
+                    StyleBox["TableauQ", "ResourceFunctionLabel"], " "}],
+                   ShowAutoStyles->False,
+                   ShowStringCharacters->False,
+                   FontSize->Rational[12, 13] Inherited,
+                   FontColor->GrayLevel[0.1]]}
+                },
+                GridBoxSpacings->{"Columns" -> {{0.25}}}],
+               Alignment->Left,
+               BaseStyle->{LineSpacing -> {0, 0}, LineBreakWithin -> False},
+               BaselinePosition->Baseline,
+               FrameMargins->{{3, 0}, {0, 0}}], 
+              ItemBox[
+               PaneBox[
+                TogglerBox[Dynamic[Typeset`open], {True->
+                 DynamicBox[FEPrivate`FrontEndResource[
+                  "FEBitmaps", "IconizeCloser"]], False->
+                 
+                 DynamicBox[FEPrivate`FrontEndResource[
+                  "FEBitmaps", "IconizeOpener"]]},
+                 Appearance->None,
+                 BaselinePosition->Baseline,
+                 ContentPadding->False,
+                 FrameMargins->0],
+                Alignment->Left,
+                BaselinePosition->Baseline,
+                FrameMargins->{{1, 1}, {0, 0}}],
+               Frame->{{
+                  RGBColor[
+                  0.8313725490196079, 0.8470588235294118, 0.8509803921568627, 
+                   0.5], False}, {False, False}}]}
+            },
+            BaselinePosition->{1, 1},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0}}}]},
+          {
+           StyleBox[
+            PaneBox[GridBox[{
+               {
+                RowBox[{
+                 TagBox["\<\"Version (latest): \"\>",
+                  "IconizedLabel"], " ", 
+                 TagBox["\<\"1.0.0\"\>",
+                  "IconizedItem"]}]},
+               {
+                TagBox[
+                 
+                 TemplateBox[{
+                  "\"Documentation \[RightGuillemet]\"", 
+                   "https://resources.wolframcloud.com/FunctionRepository/\
+resources/f900e6fd-f6d6-4ef7-a5cc-defbad917f3c/"},
+                  "HyperlinkURL"],
+                 "IconizedItem"]}
+              },
+              DefaultBaseStyle->"Column",
+              GridBoxAlignment->{"Columns" -> {{Left}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+             Alignment->Left,
+             BaselinePosition->Baseline,
+             FrameMargins->{{5, 4}, {0, 4}}], "DialogStyle",
+            FontFamily->"Roboto",
+            FontSize->11]}
+         },
+         BaselinePosition->{1, 1},
+         GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+         GridBoxDividers->{"Columns" -> {{None}}, "Rows" -> {False, {
+              GrayLevel[0.8]}, False}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, Dynamic[
+        Typeset`open],
+        BaselinePosition->Baseline,
+        ImageSize->Automatic],
+       Background->RGBColor[
+        0.9686274509803922, 0.9764705882352941, 0.984313725490196],
+       BaselinePosition->Baseline,
+       DefaultBaseStyle->{},
+       FrameMargins->{{0, 0}, {1, 0}},
+       FrameStyle->RGBColor[
+        0.8313725490196079, 0.8470588235294118, 0.8509803921568627],
+       RoundingRadius->4]],
+     #& ,
+     TagBoxNote->" "],
+    {"FunctionResourceBox", 
+     GrayLevel[0.45], "TableauQ"},
+    TagBoxNote->"FunctionResourceBox"],
+   ResourceFunction["TableauQ"],
+   BoxID -> "TableauQ",
+   Selectable->False], "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", "11", "}"}], ",", 
+    RowBox[{"{", "8", "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"6", ",", "14"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"3", ",", "12"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", "9", ",", "15"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "4", ",", "5", ",", "7", ",", "10", ",", "13"}], 
+     "}"}]}], "}"}], "]"}]], "Input", "ExampleInput",
+ TaggingRules->{},
+ CellChangeTimes->{{3.852034928575614*^9, 3.8520349302293396`*^9}},
+ CellLabel->"In[14]:=",
+ CellID->448072710,ExpressionUUID->"fbffcc01-0f9f-49e4-a546-8fce4c6b6ef9"],
+
+Cell[BoxData["False"], "Output", "ExampleOutput",
+ TaggingRules->{},
+ CellChangeTimes->{3.8520349310464573`*^9},
+ CellLabel->"Out[14]=",
+ CellID->222066221,ExpressionUUID->"c9edc45b-90c5-4a2b-94fc-b988898f8d1e"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
 
 Cell[BoxData[
  InterpretationBox[Cell[
@@ -535,9 +1011,8 @@ Cell[BoxData[""], "Template",
 }, Closed]]
 }, Open  ]]
 },
-WindowSize->{576, 585.6},
-WindowMargins->{{
-  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+WindowSize->{553.8, 585.6},
+WindowMargins->{{Automatic, -5.399999999999864}, {Automatic, 0}},
 TaggingRules-><|
  "Paclet" -> "PeterBurbery/CombinatoricsPaclet", 
   "Openers" -> <|"ExampleSection" -> <|"40101ce79b3dda7f" -> Closed|>|>|>,
@@ -556,21 +1031,21 @@ CellTagsIndex->{
   Cell[2997, 95, 667, 10, 27, "Notes",ExpressionUUID->"bbe1fe6b-19d4-4ff7-8699-2608e7b0682b",
    CellTags->{"DefaultContent", "TabNext"},
    CellID->441361000]},
- "TabNext"->{
-  Cell[2997, 95, 667, 10, 27, "Notes",ExpressionUUID->"bbe1fe6b-19d4-4ff7-8699-2608e7b0682b",
-   CellTags->{"DefaultContent", "TabNext"},
-   CellID->441361000]},
  "ExtendedExamples"->{
   Cell[12979, 364, 487, 13, 57, "ExtendedExamplesSection",ExpressionUUID->"3192d701-7429-45f9-9260-4c0d81f4d43f",
    CellTags->"ExtendedExamples",
-   CellID->150727277]}
+   CellID->150727277]},
+ "TabNext"->{
+  Cell[2997, 95, 667, 10, 27, "Notes",ExpressionUUID->"bbe1fe6b-19d4-4ff7-8699-2608e7b0682b",
+   CellTags->{"DefaultContent", "TabNext"},
+   CellID->441361000]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"DefaultContent", 19418, 554},
- {"TabNext", 19594, 558},
- {"ExtendedExamples", 19779, 562}
+ {"DefaultContent", 37536, 1029},
+ {"ExtendedExamples", 37721, 1033},
+ {"TabNext", 37906, 1037}
  }
 *)
 (*NotebookFileOutline
@@ -636,62 +1111,92 @@ Cell[CellGroupData[{
 Cell[12979, 364, 487, 13, 57, "ExtendedExamplesSection",ExpressionUUID->"3192d701-7429-45f9-9260-4c0d81f4d43f",
  CellTags->"ExtendedExamples",
  CellID->150727277],
-Cell[13469, 379, 241, 5, 35, "ExampleSection",ExpressionUUID->"7230f7f9-0ebb-4648-b451-e6624e4444d7",
+Cell[CellGroupData[{
+Cell[13491, 381, 241, 5, 35, "ExampleSection",ExpressionUUID->"7230f7f9-0ebb-4648-b451-e6624e4444d7",
  CellID->198523713],
-Cell[13713, 386, 264, 5, 23, "ExampleSection",ExpressionUUID->"b4a34d2b-b830-4929-8f37-5ce418d6a325",
+Cell[13735, 388, 329, 5, 24, "ExampleText",ExpressionUUID->"936fdd98-c4fa-449d-9ec9-7dbb10beb678",
+ CellID->638762216],
+Cell[CellGroupData[{
+Cell[14089, 397, 565, 15, 43, "Input",ExpressionUUID->"534f1fae-3565-4695-8ba6-57d5bbd49b36",
+ CellID->697209665],
+Cell[14657, 414, 1107, 32, 42, "Output",ExpressionUUID->"573e0c44-9403-4d99-8714-00405f5c2de2",
+ CellID->930010838]
+}, Open  ]],
+Cell[15779, 449, 323, 5, 24, "ExampleText",ExpressionUUID->"153a1d49-9c9f-4bcf-83a1-7505e71cd30d",
+ CellID->469789004],
+Cell[CellGroupData[{
+Cell[16127, 458, 7139, 176, 32, "Input",ExpressionUUID->"5b903e77-38a1-4557-a106-32875ab62621",
+ CellID->265202090],
+Cell[23269, 636, 257, 6, 24, "Output",ExpressionUUID->"6de1f45b-265f-4eaf-8144-b94529a2309d",
+ CellID->86005154]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23563, 647, 260, 6, 20, "ExampleDelimiter",ExpressionUUID->"7311fb93-e240-4ebf-8042-9452cf5e1cf2",
+ CellID->14107562],
+Cell[23826, 655, 207, 3, 24, "ExampleText",ExpressionUUID->"a601225c-760d-4e56-8506-a7b00a3361cc",
+ CellID->693242544],
+Cell[CellGroupData[{
+Cell[24058, 662, 7538, 189, 32, "Input",ExpressionUUID->"fbffcc01-0f9f-49e4-a546-8fce4c6b6ef9",
+ CellID->448072710],
+Cell[31599, 853, 211, 4, 24, "Output",ExpressionUUID->"c9edc45b-90c5-4a2b-94fc-b988898f8d1e",
+ CellID->222066221]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[31849, 862, 264, 5, 35, "ExampleSection",ExpressionUUID->"b4a34d2b-b830-4929-8f37-5ce418d6a325",
  CellID->106424700],
 Cell[CellGroupData[{
-Cell[14002, 395, 242, 5, 23, "ExampleSection",ExpressionUUID->"42c18f8c-2c0d-402d-9021-e6d6eb92a42c",
+Cell[32138, 871, 242, 5, 23, "ExampleSection",ExpressionUUID->"42c18f8c-2c0d-402d-9021-e6d6eb92a42c",
  CellID->29075551],
-Cell[14247, 402, 246, 5, 26, "ExampleSubsection",ExpressionUUID->"0fafd9e6-45bc-4dbf-942f-dd11a0f08289",
+Cell[32383, 878, 246, 5, 26, "ExampleSubsection",ExpressionUUID->"0fafd9e6-45bc-4dbf-942f-dd11a0f08289",
  CellID->108049295],
-Cell[14496, 409, 246, 5, 22, "ExampleSubsection",ExpressionUUID->"4ec78953-20fb-4fd7-93ac-14769cc79eb2",
+Cell[32632, 885, 246, 5, 22, "ExampleSubsection",ExpressionUUID->"4ec78953-20fb-4fd7-93ac-14769cc79eb2",
  CellID->682090538]
 }, Open  ]],
-Cell[14757, 417, 248, 5, 35, "ExampleSection",ExpressionUUID->"ef382059-8a24-4dfa-91a2-620d5c48369e",
+Cell[32893, 893, 248, 5, 35, "ExampleSection",ExpressionUUID->"ef382059-8a24-4dfa-91a2-620d5c48369e",
  CellID->775157485],
-Cell[15008, 424, 257, 5, 23, "ExampleSection",ExpressionUUID->"f6f9a4ba-7e75-4b17-acb1-0958667fb139",
+Cell[33144, 900, 257, 5, 23, "ExampleSection",ExpressionUUID->"f6f9a4ba-7e75-4b17-acb1-0958667fb139",
  CellID->76255755],
-Cell[15268, 431, 251, 5, 23, "ExampleSection",ExpressionUUID->"9f831dc2-2cfb-41fe-8056-214a9be59191",
+Cell[33404, 907, 251, 5, 23, "ExampleSection",ExpressionUUID->"9f831dc2-2cfb-41fe-8056-214a9be59191",
  CellID->741314016],
-Cell[15522, 438, 255, 5, 23, "ExampleSection",ExpressionUUID->"0eea12fb-9b40-4bd4-a181-72c75c277c5f",
+Cell[33658, 914, 255, 5, 23, "ExampleSection",ExpressionUUID->"0eea12fb-9b40-4bd4-a181-72c75c277c5f",
  CellID->27931243],
-Cell[15780, 445, 249, 5, 23, "ExampleSection",ExpressionUUID->"2b2c9356-f2a1-40c4-9cb1-ee26ef50fffe",
+Cell[33916, 921, 249, 5, 23, "ExampleSection",ExpressionUUID->"2b2c9356-f2a1-40c4-9cb1-ee26ef50fffe",
  CellID->513344916]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16066, 455, 109, 1, 72, "MetadataSection",ExpressionUUID->"0db95f6c-d79b-44f4-9bde-1f4d26ad3392",
+Cell[34202, 931, 109, 1, 72, "MetadataSection",ExpressionUUID->"0db95f6c-d79b-44f4-9bde-1f4d26ad3392",
  CellID->63967640],
-Cell[16178, 458, 473, 11, 26, "History",ExpressionUUID->"09bfaf6b-0545-41d2-9889-9a7b772393ff",
+Cell[34314, 934, 473, 11, 26, "History",ExpressionUUID->"09bfaf6b-0545-41d2-9889-9a7b772393ff",
  CellID->642244739],
 Cell[CellGroupData[{
-Cell[16676, 473, 483, 13, 21, "CategorizationSection",ExpressionUUID->"ba8bf6e6-564e-4181-a087-34d7ca60339a",
+Cell[34812, 949, 483, 13, 21, "CategorizationSection",ExpressionUUID->"ba8bf6e6-564e-4181-a087-34d7ca60339a",
  CellID->10515167],
-Cell[17162, 488, 133, 2, 35, "Categorization",ExpressionUUID->"2f665010-2b28-4f07-a877-0394ed724677",
+Cell[35298, 964, 133, 2, 35, "Categorization",ExpressionUUID->"2f665010-2b28-4f07-a877-0394ed724677",
  CellID->36242342],
-Cell[17298, 492, 160, 2, 35, "Categorization",ExpressionUUID->"fdf50ed2-9a1a-41d5-b9e9-5907a7302b2b",
+Cell[35434, 968, 160, 2, 35, "Categorization",ExpressionUUID->"fdf50ed2-9a1a-41d5-b9e9-5907a7302b2b",
  CellID->310315360],
-Cell[17461, 496, 157, 2, 35, "Categorization",ExpressionUUID->"2d4a49ff-2d4d-4516-82a8-e6bbc469d11e",
+Cell[35597, 972, 157, 2, 35, "Categorization",ExpressionUUID->"2d4a49ff-2d4d-4516-82a8-e6bbc469d11e",
  CellID->490784251],
-Cell[17621, 500, 164, 2, 35, "Categorization",ExpressionUUID->"4f334290-8d9f-49dd-ad39-60fd5d3213ce",
+Cell[35757, 976, 164, 2, 35, "Categorization",ExpressionUUID->"4f334290-8d9f-49dd-ad39-60fd5d3213ce",
  CellID->34740019]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[17822, 507, 109, 1, 21, "KeywordsSection",ExpressionUUID->"45871d05-24c2-47d5-8f3b-9e54b0c2c2f2",
+Cell[35958, 983, 109, 1, 21, "KeywordsSection",ExpressionUUID->"45871d05-24c2-47d5-8f3b-9e54b0c2c2f2",
  CellID->12119399],
-Cell[17934, 510, 98, 1, 70, "Keywords",ExpressionUUID->"e4c27258-0a6e-4228-8b26-f061c5739bdb",
+Cell[36070, 986, 98, 1, 70, "Keywords",ExpressionUUID->"e4c27258-0a6e-4228-8b26-f061c5739bdb",
  CellID->97150161]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[18069, 516, 118, 1, 21, "TemplatesSection",ExpressionUUID->"fc6fe73b-2aeb-4e2a-aeb1-3f26d30f538c",
+Cell[36205, 992, 118, 1, 21, "TemplatesSection",ExpressionUUID->"fc6fe73b-2aeb-4e2a-aeb1-3f26d30f538c",
  CellID->12704977],
-Cell[18190, 519, 147, 2, 70, "Template",ExpressionUUID->"ea4f4d64-e357-4cd4-89a4-399e706c0b78",
+Cell[36326, 995, 147, 2, 70, "Template",ExpressionUUID->"ea4f4d64-e357-4cd4-89a4-399e706c0b78",
  CellID->96632110],
-Cell[18340, 523, 137, 2, 70, "Template",ExpressionUUID->"84642d49-bd7f-4ae9-968a-d550ec74629e",
+Cell[36476, 999, 137, 2, 70, "Template",ExpressionUUID->"84642d49-bd7f-4ae9-968a-d550ec74629e",
  CellID->249778541],
-Cell[18480, 527, 135, 2, 70, "Template",ExpressionUUID->"4dc4855c-da51-4b3c-b7e7-f247fcd684e1",
+Cell[36616, 1003, 135, 2, 70, "Template",ExpressionUUID->"4dc4855c-da51-4b3c-b7e7-f247fcd684e1",
  CellID->125813982],
-Cell[18618, 531, 137, 2, 70, "Template",ExpressionUUID->"3d78e9c5-9633-47bc-af28-f097cff2ea75",
+Cell[36754, 1007, 137, 2, 70, "Template",ExpressionUUID->"3d78e9c5-9633-47bc-af28-f097cff2ea75",
  CellID->206907025]
 }, Closed]]
 }, Open  ]]
