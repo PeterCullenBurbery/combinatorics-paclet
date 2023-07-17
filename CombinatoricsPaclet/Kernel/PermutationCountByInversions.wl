@@ -28,12 +28,19 @@ Begin["`Private`"];
 
 PermutationCountByInversions//ClearAll
 
-PermutationCountByInversions::usage="PermutationCountByInversions[poset] determines if the coordinates in poset are partially ordered.";
+PermutationCountByInversions::usage="PermutationCountByInversions[n, k] gives the number of permutations of length n with exactly k inversions.\nPermutationCountByInversions[n] gives a List for all k starting at zero.";
 
-PermutationCountByInversions[poset_]:=Module[{sortedlast,sortedfirst,gatherfirst,gatherlast},If[!MatrixQ[poset,IntegerQ],Return[False,Module]];sortedlast=GatherBy[Sort[poset],Last];
-sortedfirst=GatherBy[Sort[poset],First];
-gatherfirst=GatherBy[Reverse[Flatten[Position[sortedlast,#]&/@poset,1],2],First];gatherlast=GatherBy[Flatten[Position[sortedfirst,#]&/@poset,1],Last];
-sortedlast===gatherlast&&sortedfirst===gatherfirst ]
+PermutationCountByInversions[n_Integer?Positive]:=PermutationCountByInversions[n,All]
+
+PermutationCountByInversions[n_Integer?Positive,All]:=Module[{p,z,i},p=Expand[Product[Cancel[(z^i-1)/(z-1)],{i,1,n}]];
+CoefficientList[p,z]]
+
+PermutationCountByInversions[n_Integer,k_Integer]:=0/;(k>Binomial[n,2])
+
+PermutationCountByInversions[n_Integer,0]:=1
+
+PermutationCountByInversions[n_Integer,k_Integer?Positive]:=PermutationCountByInversions[n,All][[k+1]]
+(*https://resources.wolframcloud.com/FunctionRepository/resources/PermutationCountByInversions*)
 
 
 (* ::Section::Closed:: *)
