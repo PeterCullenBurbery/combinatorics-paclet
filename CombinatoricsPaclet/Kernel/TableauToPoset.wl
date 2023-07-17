@@ -1,51 +1,41 @@
 (* ::Package:: *)
 
 (* ::Section:: *)
-
 (*Package Header*)
+
 
 BeginPackage["PeterBurbery`CombinatoricsPaclet`"];
 
-(* ::Text:: *)
 
+
+(* ::Text:: *)
 (*Declare your public symbols here:*)
+
 
 PeterBurbery`CombinatoricsPaclet`TableauToPoset;
 
 Begin["`Private`"];
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Definitions*)
 
-(* ::Text:: *)
 
+(* ::Text:: *)
 (*Define your public and private symbols here:*)
 
-TableauToPoset // ClearAll
 
-TableauToPoset::usage = "TableauToPoset[p] gives the number of rows involved in the Durfee square of partition p, the side of the largest-sized square contained within the Ferrers diagram of p.";
+TableauToPoset//ClearAll
 
-TableauToPoset[{}] = 0
+TableauToPoset::usage="TableauToPoset[young] converts the Young tableau young to a partially ordered set of coordinates.";
 
-TableauToPoset[s_List] :=
-    Module[{i, max = 1},
-            Do[
-                If[s[[i]] >= i,
-                    max = i
-                ]
-                ,
-                {i, 2, Min[Length[s], First[s]]}
-            ];
-            max
-        ] /; PeterBurbery`CombinatoricsPaclet`IntegerPartitionQ[s]
+TableauToPoset[young_]/;TableauQ[young]:= Reverse[Sort[Flatten[MapIndexed[{#1,#2}&,young,{2}],1]][[All,-1]],2]
 
-(* (* slower, but uses less memory *)
-TableauToPoset[{n_Integer?Positive}]:=NestWhileList[nextTableauToPoset,1,#<=n&,1,Infinity,-1]*)
 
 (* ::Section::Closed:: *)
-
 (*Package Footer*)
+
 
 End[];
 

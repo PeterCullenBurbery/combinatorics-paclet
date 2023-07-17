@@ -12,7 +12,7 @@ BeginPackage["PeterBurbery`CombinatoricsPaclet`"];
 (*Declare your public symbols here:*)
 
 
-PeterBurbery`CombinatoricsPaclet`PosetQ;
+PeterBurbery`CombinatoricsPaclet`InversionVectorQ;
 
 Begin["`Private`"];
 
@@ -26,11 +26,11 @@ Begin["`Private`"];
 (*Define your public and private symbols here:*)
 
 
-PosetQ//ClearAll
+InversionVectorQ//ClearAll
 
-PosetQ::usage="PosetQ[poset] determines if the coordinates in poset are partially ordered.";
+InversionVectorQ::usage="InversionVectorQ[poset] determines if the coordinates in poset are partially ordered.";
 
-PosetQ[poset_]:=Module[{sortedlast,sortedfirst,gatherfirst,gatherlast},If[!MatrixQ[poset,IntegerQ],Return[False,Module]];sortedlast=GatherBy[Sort[poset],Last];
+InversionVectorQ[poset_]:=Module[{sortedlast,sortedfirst,gatherfirst,gatherlast},If[!MatrixQ[poset,IntegerQ],Return[False,Module]];sortedlast=GatherBy[Sort[poset],Last];
 sortedfirst=GatherBy[Sort[poset],First];
 gatherfirst=GatherBy[Reverse[Flatten[Position[sortedlast,#]&/@poset,1],2],First];gatherlast=GatherBy[Flatten[Position[sortedfirst,#]&/@poset,1],Last];
 sortedlast===gatherlast&&sortedfirst===gatherfirst ]
