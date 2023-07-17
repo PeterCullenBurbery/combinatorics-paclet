@@ -28,12 +28,11 @@ Begin["`Private`"];
 
 InversionCount//ClearAll
 
-InversionCount::usage="InversionCount[poset] determines if the coordinates in poset are partially ordered.";
+InversionCount::usage="InversionCount[p] counts the number of inversions in permutation p.";
 
-InversionCount[poset_]:=Module[{sortedlast,sortedfirst,gatherfirst,gatherlast},If[!MatrixQ[poset,IntegerQ],Return[False,Module]];sortedlast=GatherBy[Sort[poset],Last];
-sortedfirst=GatherBy[Sort[poset],First];
-gatherfirst=GatherBy[Reverse[Flatten[Position[sortedlast,#]&/@poset,1],2],First];gatherlast=GatherBy[Flatten[Position[sortedfirst,#]&/@poset,1],Last];
-sortedlast===gatherlast&&sortedfirst===gatherfirst ]
+InversionCount[{}]:=0
+
+InversionCount[p_?PermutationListQ]:=Total[ToInversionVector[p]]
 
 
 (* ::Section::Closed:: *)

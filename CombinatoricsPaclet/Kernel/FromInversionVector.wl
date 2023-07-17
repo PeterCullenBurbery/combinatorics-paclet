@@ -28,12 +28,10 @@ Begin["`Private`"];
 
 FromInversionVector//ClearAll
 
-FromInversionVector::usage="FromInversionVector[poset] determines if the coordinates in poset are partially ordered.";
+FromInversionVector::usage="FromInversionVector[vect] constructs the permutation list corresponding to the inversion vector vect.";
 
-FromInversionVector[poset_]:=Module[{sortedlast,sortedfirst,gatherfirst,gatherlast},If[!MatrixQ[poset,IntegerQ],Return[False,Module]];sortedlast=GatherBy[Sort[poset],Last];
-sortedfirst=GatherBy[Sort[poset],First];
-gatherfirst=GatherBy[Reverse[Flatten[Position[sortedlast,#]&/@poset,1],2],First];gatherlast=GatherBy[Flatten[Position[sortedfirst,#]&/@poset,1],Last];
-sortedlast===gatherlast&&sortedfirst===gatherfirst ]
+FromInversionVector[vec_?(InversionVectorQ)]:=Module[{n=Length[vec],i,p},
+p={n};Do[p=Insert[p,i,vec[[i]]+1],{i,n-1,1,-1}];p]
 
 
 (* ::Section::Closed:: *)
