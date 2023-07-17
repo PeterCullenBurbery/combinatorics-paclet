@@ -1,0 +1,649 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24645,        639]
+NotebookOptionsPosition[     18809,        518]
+NotebookOutlinePosition[     21158,        576]
+CellTagsIndexPosition[     21073,        571]
+WindowTitle->DiscreteInverseLessThan
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ COMBINATORICS PACLET SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "d215a6b0-b5f3-4586-98f1-c598c143c434"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "a46c0513-2bc7-4466-b4c2-f89396cb3953"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "a6fb17df-2530-4f3d-adb8-ce4d31b6a5c8"]
+         }],ExpressionUUID->"8203120f-47b3-4c65-99e2-77775c0f0b5b"],
+         StripOnInput->False],{
+        "\"Combinatorial Functions\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/guide/\
+CombinatorialFunctions"], "\"Combinatorial Functions\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/guide/\
+CombinatorialFunctionsRevision"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "a0ce4f95-d195-4b70-8343-073a3f1de323"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "24197da1-098c-4dd2-a288-e97efd76ea9c"]
+         }],ExpressionUUID->"41ef4ba9-e443-4e79-ab35-905ba00a7be4"],
+         StripOnInput->False],{
+        "\"PeterBurbery/Combinatorics/ref/DiscreteInverseLessThan\"" :> 
+         None, "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/Combinatorics/ref/\
+DiscreteInverseLessThan"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+Combinatorics/ref/DiscreteInverseLessThan.html"], StandardForm]], 
+                 "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+               False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$870005], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/Combinatorics/ref/DiscreteInverseLessThan" <> 
+               ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "df405175-2154-4abd-8b28-9d68d7a1981a"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "b5bb0edf-54ba-4ebd-b28a-ece3b6d9910d"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"fff0e75b-11e5-4fce-a8ec-a1d64ada5175"],
+
+Cell["PeterBurbery`Combinatorics`", "ContextNameCell",ExpressionUUID->"c99c106c-aeb9-45fa-90ac-b2ae248198b8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "DiscreteInverseLessThan", "ObjectName",ExpressionUUID->
+      "ca62e288-70b5-415d-897b-fd55c7c4d22b"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"395f4fab-a8ab-4dd6-b44c-2b1184ceabc6"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "34e68111-9920-4ceb-a60a-326c209e6795"]
+    }],ExpressionUUID->"0b48745a-ec5e-4438-9374-b8aa52062ca9"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"adbae84c-b672-48a9-8858-\
+d2bf200c6b2f"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["DiscreteInverseLessThan"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/DiscreteInverseLessThan",
+          "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["function", "TI"], ",", " ", 
+        StyleBox["number", "TI"]}], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "de76f66a-b6ce-4f5d-b5b1-20ed8b09dfd9"],
+     "\[LineSeparator]find the largest number than when evaluated in the \
+discrete ",
+     Cell[BoxData[
+      StyleBox["function", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "cb3fdee8-7e07-4372-bba6-7e153e877c22"],
+     " is less than ",
+     Cell[BoxData[
+      StyleBox["number", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "83609deb-b71e-49ce-9794-97413e54b4db"]
+    }],ExpressionUUID->"80372f78-0f71-43ce-be9c-f1412f2c69d3"]}
+  }]], "Usage",
+ CellID->108167945,ExpressionUUID->"c51725e6-d527-4da8-af45-9b5fe9f82395"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"21674464-28af-4e5a-940f-0a0c6f4fd8c3"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"d4e388a2-7398-4085-bbb6-cf407c865b20"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"2ab814df-3cba-46c1-8c48-27bb2866e50d"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"29bb9b78-07f0-44a8-8e72-761a182a7dc1"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->398463608,ExpressionUUID->"1dab9d4f-2ad8-43a0-ae8f-bd556b93cbc5"],
+
+Cell["\<\
+The function should have a slot but not an ampersand. For example \
+Fibonacci[#] will work but Fibonacci[#]& or Function[Fibonacci[Slot[1]] will \
+not work.\
+\>", "Notes",
+ CellID->32290835,ExpressionUUID->"b65db96b-2c22-4915-9ead-1a4f19d01cd2"],
+
+Cell["The function uses NestWhile.", "Notes",
+ CellID->104272805,ExpressionUUID->"21465722-ddf6-4ecc-aa6e-cb9a9168e9f5"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"3f3f0423-a2b3-41fd-a9fa-91c1ca290c76"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"1efd9135-c2d6-40b4-bfaa-80ed5d83e5a0"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount",ExpressionUUID->
+  "6b325b0b-85c7-4a71-b30c-4893e52fd078"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->751637218,ExpressionUUID->"c51a95e5-c091-49fe-ae49-f30999f898ea"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`Combinatorics`\>\"", 
+  "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->862592727,ExpressionUUID->"7700b6c6-8093-4132-8c48-a7345f3597c4"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"336efcc6-fdea-4b48-ba38-4e31083e5453"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"80ce04d6-0b3f-47fb-8497-cb98ae59a195"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "7a952ade-bcf0-47c8-a707-822c846d3090"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->473849765,ExpressionUUID->"d2c1c65e-6f04-44b5-872e-90d51e7daea2"],
+
+Cell["\<\
+Find the largest number that has a term in the Fibonacci sequence less than 4 \
+million:\
+\>", "ExampleText",
+ CellID->44681564,ExpressionUUID->"3e05c9d4-2dfb-416e-9583-af7df79a4276"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiscreteInverseLessThan", "[", 
+  RowBox[{
+   RowBox[{"Fibonacci", "[", "#", "]"}], ",", 
+   RowBox[{"4", " ", 
+    SuperscriptBox["10", "6"]}]}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->532036292,ExpressionUUID->"6f7885a9-78d7-406e-a41a-f5de7a856198"],
+
+Cell[BoxData["33"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->184404548,ExpressionUUID->"cd7b98ae-7222-45ca-a860-b3b92a19c3ea"]
+}, Open  ]],
+
+Cell["Find the largest number will less than two hundred divisors:", \
+"ExampleText",
+ CellID->3061151,ExpressionUUID->"3feddb46-9dbd-4ede-9b54-b26c7a706c81"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiscreteInverseLessThan", "[", 
+  RowBox[{
+   RowBox[{"DivisorSigma", "[", 
+    RowBox[{"0", ",", "#"}], "]"}], ",", "200"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->70957979,ExpressionUUID->"073f27b8-c77e-4b55-96d9-0598fe661c03"],
+
+Cell[BoxData["554399"], "Output",
+ CellLabel->"Out[2]=",
+ CellID->445325965,ExpressionUUID->"9cf0bc34-2126-4852-ad23-7aba788e9c98"]
+}, Open  ]],
+
+Cell["Check the result:", "ExampleText",
+ CellID->147634341,ExpressionUUID->"3dd2c9f0-f95b-4848-9513-f95fea52ffbc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DivisorSigma", "[", 
+  RowBox[{"0", ",", 
+   RowBox[{
+    RowBox[{"DiscreteInverseLessThan", "[", 
+     RowBox[{
+      RowBox[{"DivisorSigma", "[", 
+       RowBox[{"0", ",", "#"}], "]"}], ",", "200"}], "]"}], "+", "1"}]}], 
+  "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[3]:=",
+ CellID->29348690,ExpressionUUID->"0d2ed4f9-3a95-4539-b31d-1b6a10d339d5"],
+
+Cell[BoxData["216"], "Output",
+ CellLabel->"Out[3]=",
+ CellID->60911785,ExpressionUUID->"477292b3-18ad-4920-8259-1a9b3403a327"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+  ExpressionUUID->"a148a1d6-0b3b-4a21-9846-ea4af15d9db6"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"02e78c45-bb64-4121-a80e-e976d770f0df"],
+ "Possible Issues",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "1576d95c-7e3e-41a1-92bb-35a0b4adc8a4"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->284087650,ExpressionUUID->"9c38ff0f-36cd-484b-a02c-97e824412433"],
+
+Cell["\<\
+The function will not evaluate with functions that have the head Function:\
+\>", "ExampleText",
+ CellID->73588145,ExpressionUUID->"d48cd1cd-1493-4a73-a4f8-3a6a62b3f62e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DiscreteInverseLessThan", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"DivisorSigma", "[", 
+     RowBox[{"0", ",", "#"}], "]"}], "&"}], ",", "200"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->12777954,ExpressionUUID->"780a6fe2-bcfb-4994-9fb8-55ae0d4c5a9c"],
+
+Cell[BoxData[
+ RowBox[{"DiscreteInverseLessThan", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"DivisorSigma", "[", 
+     RowBox[{"0", ",", "#1"}], "]"}], "&"}], ",", "200"}], "]"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->410139457,ExpressionUUID->"5c51c460-6cb6-44ed-9e7c-c32150d85117"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Combinatorial Functions"]], 
+           "paclet:PeterBurbery/Combinatorics/guide/\
+CombinatorialFunctions"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "2e7646a6-fb94-4791-aa2e-f9cdaa650f3e"]}]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Combinatorial Functions"]], 
+           "paclet:PeterBurbery/Combinatorics/guide/\
+CombinatorialFunctionsRevision"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "cd5e0650-2f97-48fe-bc6c-584388d61962"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"7c32a7b7-76b4-4426-b5f8-\
+b9c0ffaa6809"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"cfdfe373-73f8-4f35-9cd8-e1712b8a8c92"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"DiscreteInverseLessThan",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, 
+    "ExampleSection" -> {"0" -> Open, "2" -> Closed}, "NotesSection" -> 
+    Closed}, "NewStyles" -> True, "CitationPopupData" -> $Failed, 
+  "ShowCitation" -> False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 7, 15, 12, 25, 2.7878950}", 
+    "history" -> {"", "", "", ""}, "context" -> 
+    "PeterBurbery`Combinatorics`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Combinatorics Paclet Symbol", "language" -> 
+    "en", "paclet" -> "PeterBurbery/Combinatorics", "status" -> "None", 
+    "summary" -> 
+    "DiscreteInverseLessThan[function, number] find the largest number than \
+when evaluated in the discrete function is less than number", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> "DiscreteInverseLessThan",
+     "titlemodifier" -> "", "metadescription" -> "", "windowtitle" -> 
+    "DiscreteInverseLessThan", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/Combinatorics/ref/DiscreteInverseLessThan"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (June 3, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"86eea43d-80f0-4615-9b18-2056d2319a84"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[9790, 256, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"c51a95e5-c091-49fe-ae49-f30999f898ea",
+   CellTags->"PrimaryExamplesSection",
+   CellID->751637218]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 20874, 564}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[595, 21, 4820, 115, 56, "AnchorBarGrid",ExpressionUUID->"fff0e75b-11e5-4fce-a8ec-a1d64ada5175",
+ CellID->1],
+Cell[5418, 138, 115, 0, 23, "ContextNameCell",ExpressionUUID->"c99c106c-aeb9-45fa-90ac-b2ae248198b8"],
+Cell[CellGroupData[{
+Cell[5558, 142, 566, 14, 56, "ObjectNameGrid",ExpressionUUID->"adbae84c-b672-48a9-8858-d2bf200c6b2f"],
+Cell[6127, 158, 1199, 29, 111, "Usage",ExpressionUUID->"c51725e6-d527-4da8-af45-9b5fe9f82395",
+ CellID->108167945]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7363, 192, 1919, 48, 37, "NotesSection",ExpressionUUID->"1dab9d4f-2ad8-43a0-ae8f-bd556b93cbc5",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->398463608],
+Cell[9285, 242, 255, 5, 70, "Notes",ExpressionUUID->"b65db96b-2c22-4915-9ead-1a4f19d01cd2",
+ CellID->32290835],
+Cell[9543, 249, 120, 1, 70, "Notes",ExpressionUUID->"21465722-ddf6-4ecc-aa6e-cb9a9168e9f5",
+ CellID->104272805]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[9790, 256, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"c51a95e5-c091-49fe-ae49-f30999f898ea",
+ CellTags->"PrimaryExamplesSection",
+ CellID->751637218],
+Cell[11213, 295, 224, 4, 26, "Input",ExpressionUUID->"7700b6c6-8093-4132-8c48-a7345f3597c4",
+ CellID->862592727],
+Cell[CellGroupData[{
+Cell[11462, 303, 1398, 36, 30, "ExampleSection",ExpressionUUID->"d2c1c65e-6f04-44b5-872e-90d51e7daea2",
+ CellID->473849765],
+Cell[12863, 341, 193, 4, 38, "ExampleText",ExpressionUUID->"3e05c9d4-2dfb-416e-9583-af7df79a4276",
+ CellID->44681564],
+Cell[CellGroupData[{
+Cell[13081, 349, 342, 8, 30, "Input",ExpressionUUID->"6f7885a9-78d7-406e-a41a-f5de7a856198",
+ CellID->532036292],
+Cell[13426, 359, 127, 2, 35, "Output",ExpressionUUID->"cd7b98ae-7222-45ca-a860-b3b92a19c3ea",
+ CellID->184404548]
+}, Open  ]],
+Cell[13568, 364, 158, 2, 38, "ExampleText",ExpressionUUID->"3feddb46-9dbd-4ede-9b54-b26c7a706c81",
+ CellID->3061151],
+Cell[CellGroupData[{
+Cell[13751, 370, 320, 7, 26, "Input",ExpressionUUID->"073f27b8-c77e-4b55-96d9-0598fe661c03",
+ CellID->70957979],
+Cell[14074, 379, 131, 2, 35, "Output",ExpressionUUID->"9cf0bc34-2126-4852-ad23-7aba788e9c98",
+ CellID->445325965]
+}, Open  ]],
+Cell[14220, 384, 115, 1, 38, "ExampleText",ExpressionUUID->"3dd2c9f0-f95b-4848-9513-f95fea52ffbc",
+ CellID->147634341],
+Cell[CellGroupData[{
+Cell[14360, 389, 420, 11, 26, "Input",ExpressionUUID->"0d2ed4f9-3a95-4539-b31d-1b6a10d339d5",
+ CellID->29348690],
+Cell[14783, 402, 127, 2, 35, "Output",ExpressionUUID->"477292b3-18ad-4920-8259-1a9b3403a327",
+ CellID->60911785]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[15059, 412, 1422, 37, 70, "ExampleSection",ExpressionUUID->"9c38ff0f-36cd-484b-a02c-97e824412433",
+ CellID->284087650],
+Cell[16484, 451, 179, 3, 70, "ExampleText",ExpressionUUID->"d48cd1cd-1493-4a73-a4f8-3a6a62b3f62e",
+ CellID->73588145],
+Cell[CellGroupData[{
+Cell[16688, 458, 341, 8, 70, "Input",ExpressionUUID->"780a6fe2-bcfb-4994-9fb8-55ae0d4c5a9c",
+ CellID->12777954],
+Cell[17032, 468, 287, 7, 35, "Output",ExpressionUUID->"5c51c460-6cb6-44ed-9e7c-c32150d85117",
+ CellID->410139457]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[17561, 484, 1163, 30, 70, "MoreAboutSection",ExpressionUUID->"7c32a7b7-76b4-4426-b5f8-b9c0ffaa6809"],
+Cell[18727, 516, 78, 0, 70, "FooterCell",ExpressionUUID->"cfdfe373-73f8-4f35-9cd8-e1712b8a8c92"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

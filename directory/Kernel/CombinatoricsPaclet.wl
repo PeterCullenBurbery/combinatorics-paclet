@@ -1,4 +1,4 @@
-BeginPackage["PeterBurbery`CombinatoricsPaclet`"];
+BeginPackage["PeterBurbery`Combinatorics`"];
 
 (* Declare your packages public symbols here. *)
 

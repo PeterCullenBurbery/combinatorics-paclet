@@ -2,7 +2,7 @@
 
 PacletObject[
   <|
-    "Name" -> "PeterBurbery/CombinatoricsPaclet",
+    "Name" -> "PeterBurbery/Combinatorics",
     "Description" -> "functions for tuples permutations and combinations",
     "Creator" -> "Peter Cullen Burbery",
     "Version" -> "1.0.0",
@@ -15,26 +15,26 @@ PacletObject[
         "Root" -> "Kernel",
         "Context" -> {
           {
-            "PeterBurbery`CombinatoricsPaclet`",
-            "CombinatoricsPaclet.wl"
+            "PeterBurbery`Combinatorics`",
+            "Combinatorics.wl"
           }
         }
       },"Symbols" -> {
-        "PeterBurbery`CombinatoricsPaclet`PermutationFromIndex",
-         "PeterBurbery`CombinatoricsPaclet`TupleFromIndex",
-            "PeterBurbery`CombinatoricsPaclet`OrderedTupleFromIndex",
-            "PeterBurbery`CombinatoricsPaclet`LehmerCodeFromPermutation",
-          "PeterBurbery`CombinatoricsPaclet`PermutationIndex",
-          "PeterBurbery`CombinatoricsPaclet`OrderedTupleIndex",
-                    "PeterBurbery`CombinatoricsPaclet`TupleIndex",
+        "PeterBurbery`Combinatorics`PermutationFromIndex",
+         "PeterBurbery`Combinatorics`TupleFromIndex",
+            "PeterBurbery`Combinatorics`OrderedTupleFromIndex",
+            "PeterBurbery`Combinatorics`LehmerCodeFromPermutation",
+          "PeterBurbery`Combinatorics`PermutationIndex",
+          "PeterBurbery`Combinatorics`OrderedTupleIndex",
+                    "PeterBurbery`Combinatorics`TupleIndex",
 
-          "PeterBurbery`CombinatoricsPaclet`SubsetIndex",
+          "PeterBurbery`Combinatorics`SubsetIndex",
 
-          "PeterBurbery`CombinatoricsPaclet`SubsetFromIndex",
+          "PeterBurbery`Combinatorics`SubsetFromIndex",
 
-          "PeterBurbery`CombinatoricsPaclet`PermutationToTableaux",
-          "PeterBurbery`CombinatoricsPaclet`TableauxToPermutation",
-          "PeterBurbery`CombinatoricsPaclet`LehmerCodeFromPermutation"
+          "PeterBurbery`Combinatorics`PermutationToTableaux",
+          "PeterBurbery`Combinatorics`TableauxToPermutation",
+          "PeterBurbery`Combinatorics`LehmerCodeFromPermutation"
           
 
         },

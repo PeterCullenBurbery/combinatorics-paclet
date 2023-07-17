@@ -1,0 +1,371 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14444,        361]
+NotebookOptionsPosition[     10966,        287]
+NotebookOutlinePosition[     13504,        347]
+CellTagsIndexPosition[     13419,        342]
+WindowTitle->PartialDerangements
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ COMBINATORICS PACLET SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "feb4799d-c732-45fb-a630-54b475a5319d"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "358ca111-4830-46df-aee9-70479a0f8762"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "298feebf-93b4-40bb-97c5-15380e4e3929"]
+        }],ExpressionUUID->"9adfeda8-61b8-4b41-80f3-ac8d849be88d"],
+        StripOnInput->False],{
+       "\"PeterBurbery/Combinatorics/ref/PartialDerangements\"" :> None,
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell["PeterBurbery/Combinatorics/ref/PartialDerangements"]\
+}, Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+        "\"Copy web URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell[BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                  "http://reference.wolfram.com/language/PeterBurbery/\
+Combinatorics/ref/PartialDerangements.html"], StandardForm]], "Input", 
+                TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        "\"Go to web URL\"" :> 
+        FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$875809], 
+                "http://reference.wolfram.com/system-modeler/", 
+                "http://reference.wolfram.com/language/"] <> 
+              "PeterBurbery/Combinatorics/ref/PartialDerangements" <> 
+              ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "1f86bf18-9b4a-4972-b3b3-d2aea92958e7"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "376ae555-b80e-4cdd-bb44-ced51ec8a99a"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"7f457f05-2ce7-4ffc-b554-7786f545c411"],
+
+Cell["PeterBurbery`Combinatorics`", "ContextNameCell",ExpressionUUID->"8456eda3-6ca1-4838-a7bd-2876e245b01b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "PartialDerangements", "ObjectName",ExpressionUUID->
+      "862cbddf-eff1-44e6-8520-1abdf09f22ea"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"e4e6a613-3020-44c2-8705-a1c45bfe652b"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "8602c768-582b-4184-8788-c4750db7ef69"]
+    }],ExpressionUUID->"0cd73820-8d23-4515-9a96-4eeb4508843f"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"5adbea29-dd76-45a1-8262-\
+3b0b8ae0e53c"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["PartialDerangements"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/PartialDerangements", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["multiset", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "bb4ced21-b0e6-406f-9093-24bf688161b9"],
+     "\[LineSeparator]returns the derangements of the ",
+     Cell[BoxData[
+      StyleBox["multiset", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c77d7d7f-ee2f-4889-9215-3d224c0e6927"],
+     " with 0 fixed points. "
+    }],ExpressionUUID->"3f6c40fb-eeab-4e13-ac8d-4f1dd7ddbf1a"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["PartialDerangements"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/PartialDerangements", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["multiset", "TI"], ",", 
+        StyleBox["number", "TI"]}], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e5cb9e84-d8bb-450f-8936-77048eb498c7"],
+     "\[LineSeparator]returns the partial derangements of the ",
+     Cell[BoxData[
+      StyleBox["multiset", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "030b97a0-7a0a-4932-925a-f13a9d1ab874"],
+     " with the given ",
+     Cell[BoxData[
+      StyleBox["number", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ac859c40-3231-4890-a974-016c05a35c2f"],
+     " of fixed points. "
+    }],ExpressionUUID->"6fd0ee97-65d8-4d0d-9453-98f91df35a20"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["PartialDerangements"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/PartialDerangements", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["multiset", "TI"], ",", 
+        StyleBox["number", "TI"], ",", 
+        StyleBox["limit", "TI"]}], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "3ac79f18-372a-4bfa-a10f-61a0a643a44d"],
+     "\[LineSeparator]returns only ",
+     Cell[BoxData[
+      StyleBox["limit", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "28f88cbd-4c42-4214-be0d-a90f7cc73999"],
+     " derangements. "
+    }],ExpressionUUID->"23aa5179-f0dc-4ff4-a6b8-a09725e38546"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["PartialDerangements"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/PartialDerangements", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["n", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "ca64a0a0-0b17-4999-9a6c-ee7649b2bc12"],
+     "\[LineSeparator]represents an operator form that takes n of the \
+derangements."
+    }],ExpressionUUID->"f43beb92-41bc-42d2-84e0-dc5fdfd52f6d"]}
+  }]], "Usage",
+ CellID->807621428,ExpressionUUID->"fa738d55-dcd9-413e-93be-c45c45abd848"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"bda87cab-3352-45b4-b3b7-5d0acc8a1143"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"d96d0c01-d44d-47d9-ac49-0d25a2c0016a"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(0)", "ExampleCount",ExpressionUUID->
+  "e237c479-fd81-4436-9c4f-e9056525cf92"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->358136599,ExpressionUUID->"d5886f72-d5f1-41e5-b46c-276eb12617e1"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`Combinatorics`\>\"", 
+  "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->56125874,ExpressionUUID->"a832947b-5a11-4d67-87f0-2b6395c0c72a"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[Cell[BoxData[
+        TagBox[
+         FrameBox["\"\<XXXX\>\""],
+         "FunctionPlaceholder"]], "InlineFormula",
+        FontFamily->"Source Sans Pro",ExpressionUUID->
+        "9c77da2e-8edb-44fb-a198-8e3e33467500"]], "SeeAlso",ExpressionUUID->
+        "2480a8a2-e902-4c90-8437-dff41adc591e"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"e9c08786-d5d6-4201-a793-\
+758b6e772131"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"915a49bd-c3f1-4be7-9f5f-66ffbf1353d3"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"PartialDerangements",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 7, 9, 18, 9, 9.8064742}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`Combinatorics`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Combinatorics Paclet Symbol", "language" -> 
+    "en", "paclet" -> "PeterBurbery/Combinatorics", "status" -> "None", 
+    "summary" -> 
+    "PartialDerangements[multiset] returns the derangements of the multiset \
+with 0 fixed points. PartialDerangements[multiset, number] returns the \
+partial derangements of the multiset with the given number of fixed points. \
+PartialDerangements[multiset, number, limit] returns only limit derangements. \
+PartialDerangements[n] represents an operator form that takes n of the \
+derangements.", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "PartialDerangements", "titlemodifier" -> "", "metadescription" -> "", 
+    "windowtitle" -> "PartialDerangements", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/Combinatorics/ref/PartialDerangements"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (June 3, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"06632cc0-71e7-45aa-9260-16e3de1668cd"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[8418, 217, 1420, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"d5886f72-d5f1-41e5-b46c-276eb12617e1",
+   CellTags->"PrimaryExamplesSection",
+   CellID->358136599]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 13220, 335}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[591, 21, 3526, 81, 70, "AnchorBarGrid",ExpressionUUID->"7f457f05-2ce7-4ffc-b554-7786f545c411",
+ CellID->1],
+Cell[4120, 104, 115, 0, 70, "ContextNameCell",ExpressionUUID->"8456eda3-6ca1-4838-a7bd-2876e245b01b"],
+Cell[CellGroupData[{
+Cell[4260, 108, 562, 14, 70, "ObjectNameGrid",ExpressionUUID->"5adbea29-dd76-45a1-8262-3b0b8ae0e53c"],
+Cell[4825, 124, 3556, 88, 70, "Usage",ExpressionUUID->"fa738d55-dcd9-413e-93be-c45c45abd848",
+ CellID->807621428]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8418, 217, 1420, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"d5886f72-d5f1-41e5-b46c-276eb12617e1",
+ CellTags->"PrimaryExamplesSection",
+ CellID->358136599],
+Cell[9841, 256, 223, 4, 70, "Input",ExpressionUUID->"a832947b-5a11-4d67-87f0-2b6395c0c72a",
+ CellID->56125874]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[10182, 265, 699, 18, 70, "SeeAlsoSection",ExpressionUUID->"e9c08786-d5d6-4201-a793-758b6e772131"],
+Cell[10884, 285, 78, 0, 70, "FooterCell",ExpressionUUID->"915a49bd-c3f1-4be7-9f5f-66ffbf1353d3"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
