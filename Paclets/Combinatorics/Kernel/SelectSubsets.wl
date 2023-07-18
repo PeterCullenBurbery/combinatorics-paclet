@@ -26,14 +26,53 @@ Begin["`Private`"];
 (*Define your public and private symbols here:*)
 
 
-SelectSubsets//ClearAll
+ClearAll[SelectSubsets,expandn,iSelectSubsets]
+SelectSubsets::usage="SelectSubsets[list, crit] gives a list of all possible subsets of list that satisfy the criterion crit.\nSelectSubsets[list, n, crit] gives all subsets containing at most n elements that satisfy crit.\nSelectSubsets[list, {n}, crit] gives all subsets containing exactly n elements that satisfy crit.\nSelectSubsets[list, {nmin, nmax}, crit] gives all subsets containing between nmin and nmax elements that satisfy crit.\nSelectSubsets[list, nspec, crit, s] limits the results to the first s subsets.";
 
-SelectSubsets::usage="SelectSubsets[poset] determines if the coordinates in poset are partially ordered.";
+iSelectSubsets[list_List,n_List,crit_,m_:\[Infinity]]:=Module[{vars,its,len=Length[list],begin,end,val,found=0,result,broken=False},
+result=Reap[
+Table[
+If[!broken,
+Which[numvar>0,
+vars=Table[Unique["i"],numvar];
+begin=Prepend[Most[vars]+1,1];
+end=Range[len-numvar+1,len];
+its=Transpose[{vars,begin,end}];
 
-SelectSubsets[poset_]:=Module[{sortedlast,sortedfirst,gatherfirst,gatherlast},If[!MatrixQ[poset,IntegerQ],Return[False,Module]];sortedlast=GatherBy[Sort[poset],Last];
-sortedfirst=GatherBy[Sort[poset],First];
-gatherfirst=GatherBy[Reverse[Flatten[Position[sortedlast,#]&/@poset,1],2],First];gatherlast=GatherBy[Flatten[Position[sortedfirst,#]&/@poset,1],Last];
-sortedlast===gatherlast&&sortedfirst===gatherfirst ]
+Do[
+val=Part[list,vars];
+If[TrueQ[crit[val]],
+found++;
+If[found>m,broken=True;Break[]];
+Sow[val];
+]
+,
+Evaluate[Sequence@@its]
+]
+,
+numvar==0,
+val={};
+If[TrueQ[crit[val]],
+found++;
+If[found>m,broken=True;Break[]];
+Sow[val];
+]
+]
+]
+,
+{numvar,n}
+];
+];
+First[result[[2]],{}]
+]
+expandn[list_,All]:=expandn[list,Length[list]]
+expandn[list_,n_Integer?NonNegative]:=Range[0,n]
+expandn[list_,{n_Integer?NonNegative}]:={n}
+expandn[list_,{nmin_Integer?NonNegative,nmax_Integer?NonNegative}]:=Range[nmin,nmax]
+expandn[list_,{nmin_Integer?NonNegative,nmax_Integer?NonNegative,dn_Integer}]:=Range[nmin,nmax,dn]
+SelectSubsets[list_List,crit_]:=iSelectSubsets[list,expandn[list,All],crit]
+SelectSubsets[list_List,n_,crit_]:=iSelectSubsets[list,expandn[list,n],crit]
+SelectSubsets[list_List,n_,crit_,m_:\[Infinity]]:=iSelectSubsets[list,expandn[list,n],crit,m]
 
 
 (* ::Section::Closed:: *)
