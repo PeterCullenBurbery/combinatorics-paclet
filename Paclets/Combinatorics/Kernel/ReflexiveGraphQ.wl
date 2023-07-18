@@ -1,39 +1,43 @@
 (* ::Package:: *)
 
 (* ::Section:: *)
-
 (*Package Header*)
+
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-(* ::Text:: *)
 
+
+(* ::Text:: *)
 (*Declare your public symbols here:*)
+
 
 PeterBurbery`Combinatorics`ReflexiveGraphQ;
 
 Begin["`Private`"];
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Definitions*)
 
-(* ::Text:: *)
 
+(* ::Text:: *)
 (*Define your public and private symbols here:*)
 
-ReflexiveGraphQ // ClearAll
 
-SetAttributes[ReflexiveGraphQ, {NumericFunction, Listable}]
+ReflexiveGraphQ//ClearAll
 
-ReflexiveGraphQ::usage = "ReflexiveGraphQ[n] calculates the nth secant number.";
+ReflexiveGraphQ::usage="ReflexiveGraphQ[g] yields True if the graph g is reflexive and False otherwise.";
 
-ReflexiveGraphQ[n_] :=
-    Abs[EulerE[2 n]]
+ReflexiveGraphQ[g_Graph]:=False/;VertexCount[g]==0
+
+ReflexiveGraphQ[g_Graph]:=Module[{e=List@@@EdgeList[g],i},Apply[And,Table[MemberQ[e,{i,i}],{i,VertexList[g]}]]]
+
 
 (* ::Section::Closed:: *)
-
 (*Package Footer*)
+
 
 End[];
 
