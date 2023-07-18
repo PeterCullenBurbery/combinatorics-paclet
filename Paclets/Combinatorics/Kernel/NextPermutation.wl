@@ -28,12 +28,15 @@ Begin["`Private`"];
 
 NextPermutation//ClearAll
 
-NextPermutation::usage="NextPermutation[poset] determines if the coordinates in poset are partially ordered.";
+NextPermutation::usage="NextPermutation[p] gives the permutation following p in lexicographic order.";
 
-NextPermutation[poset_]:=Module[{sortedlast,sortedfirst,gatherfirst,gatherlast},If[!MatrixQ[poset,IntegerQ],Return[False,Module]];sortedlast=GatherBy[Sort[poset],Last];
-sortedfirst=GatherBy[Sort[poset],First];
-gatherfirst=GatherBy[Reverse[Flatten[Position[sortedlast,#]&/@poset,1],2],First];gatherlast=GatherBy[Flatten[Position[sortedfirst,#]&/@poset,1],Last];
-sortedlast===gatherlast&&sortedfirst===gatherfirst ]
+NextPermutation[l_List]:=Module[{sorted=Sort[l]},sorted/;l===Reverse[sorted]]
+
+NextPermutation[l_List]:=Module[{n=Length[l],i,j,nl=l},i=n-1;While[Order[nl[[i]],nl[[i+1]]]==-1,i--];
+j=n;While[Order[nl[[j]],nl[[i]]]==1,j--];
+{nl[[i]],nl[[j]]}={nl[[j]],nl[[i]]};
+Join[Take[nl,i],Reverse[Drop[nl,i]]]]
+
 
 
 (* ::Section::Closed:: *)

@@ -28,12 +28,9 @@ Begin["`Private`"];
 
 DescendingSublists//ClearAll
 
-DescendingSublists::usage="DescendingSublists[poset] determines if the coordinates in poset are partially ordered.";
+DescendingSublists::usage="DescendingSublists[list] makes sublists of list starting at its left-to-right maxima.";
 
-DescendingSublists[poset_]:=Module[{sortedlast,sortedfirst,gatherfirst,gatherlast},If[!MatrixQ[poset,IntegerQ],Return[False,Module]];sortedlast=GatherBy[Sort[poset],Last];
-sortedfirst=GatherBy[Sort[poset],First];
-gatherfirst=GatherBy[Reverse[Flatten[Position[sortedlast,#]&/@poset,1],2],First];gatherlast=GatherBy[Flatten[Position[sortedfirst,#]&/@poset,1],Last];
-sortedlast===gatherlast&&sortedfirst===gatherfirst ]
+DescendingSublists[list_]:=TakeList[list,Length/@Split[Max/@Table[Take[list,n],{n,Length@list}]]]
 
 
 (* ::Section::Closed:: *)
