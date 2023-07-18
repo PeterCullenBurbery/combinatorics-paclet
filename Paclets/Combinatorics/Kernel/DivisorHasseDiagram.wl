@@ -28,9 +28,14 @@ Begin["`Private`"];
 
 DivisorHasseDiagram//ClearAll
 
-DivisorHasseDiagram::usage="DivisorHasseDiagram[list] makes sublists of list starting at its left-to-right maxima.";
+DivisorHasseDiagram::usage="DivisorHasseDiagram[n] gives a Hasse diagram based on the divisors of n, represented as a Graph.";
 
-DivisorHasseDiagram[list_]:=TakeList[list,Length/@Split[Max/@Table[Take[list,n],{n,Length@list}]]]
+Options[DivisorHasseDiagram]=Options[Graph];
+
+DivisorHasseDiagram[n_Integer?Positive,opt:OptionsPattern[]]:=Module[{divisors=Divisors[n],links},
+links=Reap[Do[If[a>b&&Divisible[a,b],Sow[a\[DirectedEdge]b]],{a,divisors},{b,divisors}];Nothing]//Flatten;
+TransitiveReductionGraph[links,Evaluate@FilterRules[{opt},Options[Graph]]]
+]
 
 
 (* ::Section::Closed:: *)
