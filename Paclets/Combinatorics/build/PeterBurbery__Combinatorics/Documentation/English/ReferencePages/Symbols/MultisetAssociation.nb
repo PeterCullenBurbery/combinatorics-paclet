@@ -1,0 +1,590 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23029,        580]
+NotebookOptionsPosition[     18877,        491]
+NotebookOutlinePosition[     21069,        546]
+CellTagsIndexPosition[     20984,        541]
+WindowTitle->MultisetAssociation
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ COMBINATORICS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "7ddbf80c-2a57-415e-a45f-716ee8b06207"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "0573170d-f212-42ac-b938-d42fe05ea0c4"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "See Also",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "29f699be-fe4b-4a3d-b7f6-41c2086f87aa"]
+         }],ExpressionUUID->"d31a9b32-766f-4fd1-b760-4749d68b15c6"],
+         StripOnInput->False],{
+        "\"MapIndexed\"" :> Documentation`HelpLookup["paclet:ref/MapIndexed"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"SeeAlso"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "8b48ca44-5ce5-45f0-8fea-6cc87d0c14b7"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "981e7d07-de54-449b-9184-4b5bf6110f87"]
+         }],ExpressionUUID->"c0142d80-98fa-49c7-a9d2-ab6dcfdef200"],
+         StripOnInput->False],{
+        "\"PeterBurbery/Combinatorics/ref/MultisetAssociation\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/Combinatorics/ref/MultisetAssociation"]}, 
+               Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+Combinatorics/ref/MultisetAssociation.html"], StandardForm]], "Input", 
+                 TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$584870], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/Combinatorics/ref/MultisetAssociation" <> 
+               ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "51aea975-bcdb-443c-9967-805c7f2e47e2"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "21eca6fe-a1d6-4545-bcba-ccf2eca957e5"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"85d15177-7749-404a-a4fe-fd326c0bdd95"],
+
+Cell["PeterBurbery`Combinatorics`", "ContextNameCell",ExpressionUUID->"4d4d81bc-e9c9-41cc-a9b5-5adb7bee44e5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "MultisetAssociation", "ObjectName",ExpressionUUID->
+      "492e5531-4c18-4b35-a129-02e847aac1ff"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"677a4cac-2787-41bb-87f3-5f6c85045d18"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "79c26467-bf93-4b4d-bc2e-1b453329b78e"]
+    }],ExpressionUUID->"53084031-7bb6-4d3a-a1b3-e1e072c2edb5"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"b6f9b67c-9ee0-47fb-96fc-\
+0907895c0204"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["MultisetAssociation"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/MultisetAssociation", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["multiset", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "230651e7-0c56-4a40-8052-c59b6b360006"],
+     "\[LineSeparator]returns an association for ",
+     Cell[BoxData[
+      StyleBox["multiset", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "6d14f2da-7c9a-4ca8-86e8-f8ee2f01f44f"],
+     "."
+    }],ExpressionUUID->"27feb2fb-2ea5-40a3-be2e-9a34bf7b7ae5"]}
+  }]], "Usage",
+ CellID->293491757,ExpressionUUID->"6249b327-e345-4d1f-a7f1-bef819592c34"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"b24c2f02-958b-4fc3-8ecd-7bff49c68869"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"9b6a08c1-3539-449e-acae-563f4b76089b"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "0e6d7b6a-bf44-4347-9ba1-9a84f60be79c"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->507023450,ExpressionUUID->"555e8870-494a-42ea-bb9e-0ac88f17c941"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`Combinatorics`\>\"", "]"}]], "Input",\
+ "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->33441326,ExpressionUUID->"27c34873-5ad9-4b22-9870-f5e487fa31a0"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"9db020f4-7afa-4522-883c-0778013a8375"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"acc7957a-ced9-4368-b65d-e1f8342142e7"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "d790fc52-79ef-47f4-9f9c-3a9a3af31bba"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->194828610,ExpressionUUID->"9bc590ab-7c8d-475b-9e68-31f7fb55b933"],
+
+Cell["Random multiset:", "ExampleText",
+ CellID->383766428,ExpressionUUID->"eb97f83c-4835-4ff3-8580-30d723a20a3b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"randomMultiset", "=", 
+  RowBox[{"RandomChoice", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "LightRed", ",", "LightGreen", ",", "LightBlue", ",", "LightPurple", ",",
+       "LightOrange"}], "}"}], ",", "30"}], "]"}]}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->364292809,ExpressionUUID->"f52da7cb-404d-464f-8013-ea289912e6a4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[<|"color" -> RGBColor[0.87, 0.94, 1]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0.85, 0.85]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0.9, 0.8]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.94, 0.88, 0.94]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0.85, 0.85]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.94, 0.88, 0.94]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0.85, 0.85]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0.9, 0.8]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.94, 0.88, 0.94]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0.9, 0.8]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.87, 0.94, 1]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.87, 0.94, 1]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0.9, 0.8]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.94, 0.88, 0.94]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0.85, 0.85]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.87, 0.94, 1]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0.9, 0.8]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0.85, 0.85]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.94, 0.88, 0.94]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.94, 0.88, 0.94]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0.85, 0.85]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0.87, 0.94, 1]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0.9, 0.8]|>,
+    "RGBColorSwatchTemplate"]}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->28583644,ExpressionUUID->"33f684f8-6e87-4a4e-801e-1516bc5d6950"]
+}, Open  ]],
+
+Cell["An association for the multiset:", "ExampleText",
+ CellID->565672879,ExpressionUUID->"5e87d66e-19ee-44ec-8052-3039ae9a1ff5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Association", "[", 
+  RowBox[{"MapIndexed", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Identity", "@@", "#2"}], "->", "#1"}], "&"}], ",", 
+    "randomMultiset"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->74734170,ExpressionUUID->"1738cb6d-a4df-47f2-8a88-763eec1fafa8"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"1", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.87, 0.94, 1]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"2", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"3", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[1, 0.85, 0.85]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"4", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[1, 0.9, 0.8]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"5", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.94, 0.88, 0.94]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"6", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[1, 0.85, 0.85]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"7", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.94, 0.88, 0.94]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"8", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"9", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[1, 0.85, 0.85]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"10", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[1, 0.9, 0.8]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"11", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.94, 0.88, 0.94]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"12", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[1, 0.9, 0.8]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"13", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"14", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.87, 0.94, 1]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"15", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.87, 0.94, 1]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"16", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[1, 0.9, 0.8]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"17", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"18", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"19", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.94, 0.88, 0.94]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"20", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[1, 0.85, 0.85]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"21", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.87, 0.94, 1]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"22", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[1, 0.9, 0.8]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"23", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"24", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[1, 0.85, 0.85]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"25", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.94, 0.88, 0.94]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"26", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.94, 0.88, 0.94]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"27", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.88, 1, 0.88]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"28", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[1, 0.85, 0.85]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"29", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[0.87, 0.94, 1]|>,
+     "RGBColorSwatchTemplate"]}], ",", 
+   RowBox[{"30", "\[Rule]", 
+    TemplateBox[<|"color" -> RGBColor[1, 0.9, 0.8]|>,
+     "RGBColorSwatchTemplate"]}]}], "\[RightAssociation]"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->413552558,ExpressionUUID->"7473341f-6e05-4c4b-a074-5fc5c94cab74"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[Cell[BoxData[
+        TemplateBox[{
+          Cell[
+           TextData["MapIndexed"]], "paclet:ref/MapIndexed"},
+         "RefLink",
+         BaseStyle->{"InlineFormula"}]], "InlineFormula",
+        FontFamily->"Source Sans Pro",ExpressionUUID->
+        "86648f01-9631-4d38-9421-16351629209f"]], "SeeAlso",ExpressionUUID->
+        "a63905bb-0322-4278-846d-7546496732a6"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"d37bf4ec-1001-4039-af75-\
+28c58929b265"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"d2868671-8536-4720-96a4-7c2ef6e4c386"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"MultisetAssociation",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 7, 21, 19, 27, 50.6115099}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`Combinatorics`", "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Peter Burbery/ Combinatorics Symbol", "language" -> "en", "paclet" -> 
+    "PeterBurbery/Combinatorics", "status" -> "None", "summary" -> 
+    "MultisetAssociation[multiset] returns an association for multiset.", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> "MultisetAssociation", 
+    "titlemodifier" -> "", "metadescription" -> "", "windowtitle" -> 
+    "MultisetAssociation", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/Combinatorics/ref/MultisetAssociation"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (June 3, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"0d9d19cf-a841-4deb-9aad-e014961627dc"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[6758, 178, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"555e8870-494a-42ea-bb9e-0ac88f17c941",
+   CellTags->"PrimaryExamplesSection",
+   CellID->507023450]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 20785, 534}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[591, 21, 4518, 108, 56, "AnchorBarGrid",ExpressionUUID->"85d15177-7749-404a-a4fe-fd326c0bdd95",
+ CellID->1],
+Cell[5112, 131, 109, 0, 23, "ContextNameCell",ExpressionUUID->"4d4d81bc-e9c9-41cc-a9b5-5adb7bee44e5"],
+Cell[CellGroupData[{
+Cell[5246, 135, 562, 14, 56, "ObjectNameGrid",ExpressionUUID->"b6f9b67c-9ee0-47fb-96fc-0907895c0204"],
+Cell[5811, 151, 910, 22, 111, "Usage",ExpressionUUID->"6249b327-e345-4d1f-a7f1-bef819592c34",
+ CellID->293491757]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6758, 178, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"555e8870-494a-42ea-bb9e-0ac88f17c941",
+ CellTags->"PrimaryExamplesSection",
+ CellID->507023450],
+Cell[8181, 217, 216, 4, 26, "Input",ExpressionUUID->"27c34873-5ad9-4b22-9870-f5e487fa31a0",
+ CellID->33441326],
+Cell[CellGroupData[{
+Cell[8422, 225, 1398, 36, 30, "ExampleSection",ExpressionUUID->"9bc590ab-7c8d-475b-9e68-31f7fb55b933",
+ CellID->194828610],
+Cell[9823, 263, 114, 1, 38, "ExampleText",ExpressionUUID->"eb97f83c-4835-4ff3-8580-30d723a20a3b",
+ CellID->383766428],
+Cell[CellGroupData[{
+Cell[9962, 268, 413, 10, 26, "Input",ExpressionUUID->"f52da7cb-404d-464f-8013-ea289912e6a4",
+ CellID->364292809],
+Cell[10378, 280, 2916, 64, 35, "Output",ExpressionUUID->"33f684f8-6e87-4a4e-801e-1516bc5d6950",
+ CellID->28583644]
+}, Open  ]],
+Cell[13309, 347, 130, 1, 38, "ExampleText",ExpressionUUID->"5e87d66e-19ee-44ec-8052-3039ae9a1ff5",
+ CellID->565672879],
+Cell[CellGroupData[{
+Cell[13464, 352, 375, 10, 26, "Input",ExpressionUUID->"1738cb6d-a4df-47f2-8a88-763eec1fafa8",
+ CellID->74734170],
+Cell[13842, 364, 3933, 94, 51, "Output",ExpressionUUID->"7473341f-6e05-4c4b-a074-5fc5c94cab74",
+ CellID->413552558]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[18017, 467, 775, 20, 114, "SeeAlsoSection",ExpressionUUID->"d37bf4ec-1001-4039-af75-28c58929b265"],
+Cell[18795, 489, 78, 0, 70, "FooterCell",ExpressionUUID->"d2868671-8536-4720-96a4-7c2ef6e4c386"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

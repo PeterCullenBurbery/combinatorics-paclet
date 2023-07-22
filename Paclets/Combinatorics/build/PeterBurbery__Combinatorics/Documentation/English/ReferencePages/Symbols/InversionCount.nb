@@ -1,0 +1,1796 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     64542,       1786]
+NotebookOptionsPosition[     52546,       1529]
+NotebookOutlinePosition[     54854,       1587]
+CellTagsIndexPosition[     54768,       1582]
+WindowTitle->InversionCount
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ COMBINATORICS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "82decf8b-97d7-4882-8380-37d9bbbc74c8"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "34fbb5e0-9c85-436b-930c-4b982a9b7657"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "See Also",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "82b6073b-d950-408a-8b8f-44cebe876a88"]
+         }],ExpressionUUID->"46bb47a6-d1e3-4c91-b818-e2052271de36"],
+         StripOnInput->False],{
+        "\"Permutations\"" :> 
+         Documentation`HelpLookup["paclet:ref/Permutations"], 
+         "\"InversePermutation\"" :> 
+         Documentation`HelpLookup["paclet:ref/InversePermutation"], 
+         "\"Subsets\"" :> Documentation`HelpLookup["paclet:ref/Subsets"], 
+         "\"Tuples\"" :> Documentation`HelpLookup["paclet:ref/Tuples"], 
+         "\"Signature\"" :> Documentation`HelpLookup["paclet:ref/Signature"], 
+         Delimiter, 
+         StyleBox[
+          "\"Functions\"", "SeeAlsoSection", FontSize -> 14, FontSlant -> 
+           "Italic", StripOnInput -> False] :> 
+         NotebookFind[EvaluationNotebook[], "SeeAlsoSection", All, CellStyle],
+          StyleBox[
+          "\"ToInversionVector\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/ToInversionVector"], 
+         StyleBox[
+          "\"PermutationMajorIndex\"", "SeeAlsoRelated", StripOnInput -> 
+           False] :> Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PermutationMajorIndex"], 
+         StyleBox[
+          "\"PermutationGraph\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PermutationGraph"], 
+         StyleBox[
+          "\"PermutationIndex\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PermutationIndex"], 
+         StyleBox[
+          "\"PermutationFromIndex\"", "SeeAlsoRelated", StripOnInput -> 
+           False] :> Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PermutationFromIndex"], 
+         StyleBox[
+          "\"PermutationAscents\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PermutationAscents"], 
+         StyleBox[
+          "\"NextPermutation\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/NextPermutation"], 
+         StyleBox[
+          "\"FromInversionVector\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/FromInversionVector"], 
+         StyleBox[
+          "\"InversionVectorQ\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/InversionVectorQ"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"SeeAlso"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "a654db1d-ac7b-4048-abe4-19809db36c5d"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "816c8dc1-71a5-4f0d-8d2e-e3151ee0bd2e"]
+         }],ExpressionUUID->"401abc0f-853a-4e5f-b387-0f9f24ec16a4"],
+         StripOnInput->False],{
+        "\"PeterBurbery/Combinatorics/ref/InversionCount\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{Cell["PeterBurbery/Combinatorics/ref/InversionCount"]},
+                Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+Combinatorics/ref/InversionCount.html"], StandardForm]], "Input", 
+                 TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$582311], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/Combinatorics/ref/InversionCount" <> ".html"], 
+              None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "39e4952f-98d3-480b-a360-cf84be05063d"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "eda76eb8-36f4-4e38-a977-e58402f3641a"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"48ff4bfd-c4af-4766-ae01-e88cb7ab055a"],
+
+Cell["PeterBurbery`Combinatorics`", "ContextNameCell",ExpressionUUID->"edebcc52-bac0-45dc-b5e3-8821afe8bae0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "InversionCount", "ObjectName",ExpressionUUID->
+      "54bbdcdf-8bc9-43d1-aa3e-8d2f47fad09f"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"74516740-bc46-445f-9d17-0e46e06a1534"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "6cc94008-b6c6-4ca9-bcee-6a6894809ddb"]
+    }],ExpressionUUID->"8b08ff6b-6592-46e3-9746-4e82893c5a9b"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"ca0dd8f7-e6ef-4220-be5d-\
+dc0d3e6b56a3"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["InversionCount"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/InversionCount", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["p", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2e2dfb9f-e32e-4be3-aed1-f56dcb02903f"],
+     "\[LineSeparator]counts the number of inversions in permutation ",
+     Cell[BoxData[
+      StyleBox["p", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b856c10b-a837-4924-bf5a-6c4e3645f8cb"],
+     "."
+    }],ExpressionUUID->"f86db319-b7b1-45b0-9fc5-fbeba468133f"]}
+  }]], "Usage",
+ CellID->17850715,ExpressionUUID->"033f49ed-9732-40fc-a6ce-d799d98b967e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"1f0a1e17-87e6-45ce-a08e-a3502b5b71ee"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"4c23f8fc-a42a-49ef-9d10-0f1fc5b62f4e"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(8)", "ExampleCount",ExpressionUUID->
+  "993dfdc6-7f26-49b1-974f-75f65ab64ee0"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->4496284,ExpressionUUID->"6d1b0b86-405c-4196-a788-8e53e9757a48"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`Combinatorics`\>\"", "]"}]], "Input",\
+ "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->71323967,ExpressionUUID->"30aa0428-7cb9-404a-91e4-331ea6a3545b"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"0ae7bae8-eaef-4c5a-86d6-018b8937a857"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"f49afd58-3d07-4216-baac-2919298a0703"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "7e6c3da0-15cb-4d6e-96f0-fba1a9a2ce7c"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->379467769,ExpressionUUID->"220d01b7-81ce-45fc-b386-02279d5d30d2"],
+
+Cell["\<\
+The number of pairs of elements that must be reversed to bring the \
+permutation to canonical order:\
+\>", "ExampleText",
+ CellID->2084485982,ExpressionUUID->"9991c959-5019-44f1-9044-a75a30c714c7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InversionCount", "[", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", "3", ",", "2", ",", "5", ",", "4"}], "}"}], 
+  "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->1646981735,ExpressionUUID->"2a0dc923-305a-4c12-ba98-64c554a36694"],
+
+Cell[BoxData["2"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->189066372,ExpressionUUID->"7675052d-e8fe-4c28-b006-a9d6323b607c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InversionCount", "[", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5"}], "}"}], 
+  "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->1398512215,ExpressionUUID->"1feff3fd-c1a6-46ba-bd0a-075f26583da4"],
+
+Cell[BoxData["0"], "Output",
+ CellLabel->"Out[2]=",
+ CellID->72878438,ExpressionUUID->"3e02b32f-f6df-49a3-b60a-5e6c6a382c2c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InversionCount", "[", 
+  RowBox[{"Range", "[", "5", "]"}], "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[3]:=",
+ CellID->1274646292,ExpressionUUID->"bd2720cf-377f-42dd-9c03-2cbee02eee04"],
+
+Cell[BoxData["0"], "Output",
+ CellLabel->"Out[3]=",
+ CellID->69869332,ExpressionUUID->"cdbb20ce-4a9d-4046-9923-22179dd17402"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+  ExpressionUUID->"ca9cfbe3-4c41-4b1a-b998-3d82b62a55ec"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"9830ce78-4e75-45b9-87d6-9de1e26b1e4e"],
+ "Properties & Relations",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(7)", "ExampleCount",ExpressionUUID->
+  "758a8cf6-c4f2-4e55-b5ba-3440b48526b6"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->558580206,ExpressionUUID->"aec3f796-2022-41e2-8c2d-97ab15c29cf8"],
+
+Cell[TextData[{
+ "The number of inversions in a permutation of size ",
+ Cell[BoxData[
+  StyleBox["n", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "8e638ffc-5b2e-4d88-bd4b-6b0c130e0c88"],
+ " ranges from 0 to ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    TagBox[
+     RowBox[{"(", 
+      FractionBox[
+       StyleBox["n", "TI"], "2"], ")"}],
+     "ForceRasterization"], "MarkedForRasterization"], TraditionalForm]],
+  ExpressionUUID->"aeb81ccc-ba44-4487-9ca5-24fdda8eeb9b"],
+ ":"
+}], "ExampleText",
+ CellID->341144850,ExpressionUUID->"3dd0a99a-475f-44a0-8133-bb798f296bd2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"n", "=", "5"}], ";"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->250656996,ExpressionUUID->"716a1d94-32dc-43a1-90b1-e3b77c13287a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Union", "[", 
+  RowBox[{"InversionCount", "/@", 
+   RowBox[{"Permutations", "[", 
+    RowBox[{"Range", "[", "n", "]"}], "]"}]}], "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->1816536073,ExpressionUUID->"a38903e0-f427-4d6a-bfc1-7bf8b2923c8b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0", ",", "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", 
+   ",", "8", ",", "9", ",", "10"}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->72339200,ExpressionUUID->"01e0764a-023b-4fda-86cf-5326d40be557"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"Max", "[", "%", "]"}], ",", 
+   RowBox[{"Binomial", "[", 
+    RowBox[{"n", ",", "2"}], "]"}]}], "}"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[3]:=",
+ CellID->1436470015,ExpressionUUID->"d5949e43-e3d7-4328-8c45-a52d047ef50c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"10", ",", "10"}], "}"}]], "Output",
+ CellLabel->"Out[3]=",
+ CellID->32823877,ExpressionUUID->"9dfafeaa-3a09-498d-a4ff-481a06bf6135"]
+}, Open  ]],
+
+Cell["\<\
+The largest inversion count comes from the reverse of the identity \
+permutation:\
+\>", "ExampleText",
+ CellID->1570701872,ExpressionUUID->"b5e53664-7d3f-4adc-9fbb-4a47fb6c0461"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InversionCount", "[", 
+  RowBox[{"Reverse", "[", 
+   RowBox[{"Range", "[", "n", "]"}], "]"}], "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[4]:=",
+ CellID->1931974050,ExpressionUUID->"7c58829f-b4b7-4e47-87b7-fc41200eb6e1"],
+
+Cell[BoxData["10"], "Output",
+ CellLabel->"Out[4]=",
+ CellID->920105005,ExpressionUUID->"b510a91d-6ba3-4673-a15f-1abaabcdd0b3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "b71796fc-e364-4850-82f4-3b1bd9e77e3c"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->1122372168,ExpressionUUID->"18f51fe6-047e-4aa5-a7f0-3699223a18f5"],
+
+Cell[TextData[{
+ "There are an average of ",
+ Cell[BoxData[
+  RowBox[{
+   StyleBox["n", "TI"], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      StyleBox["n", "TI"], "-", 
+      StyleBox["l", "TI"]}], ")"}], "/", "4"}]}]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "aafc1dd9-8844-4113-ac68-d0f785207334"],
+ " inversions per permutation:"
+}], "ExampleText",
+ CellID->1527205912,ExpressionUUID->"5863e08c-e0a0-4daa-ba62-0eb5d162339c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"n", "=", "5"}], ";"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->373475936,ExpressionUUID->"1ccd3fb3-0a8a-4963-ba57-60842638e651"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"InversionCount", "[", 
+      RowBox[{
+       RowBox[{"RandomPermutation", "[", "n", "]"}], "//", 
+       "PermutationList"}], "]"}], ",", 
+     RowBox[{"{", "5000", "}"}]}], "]"}]}], ";"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->955603221,ExpressionUUID->"3021e271-6e32-440b-a5c1-7c825c55720a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"m", "=", 
+    RowBox[{
+     RowBox[{"Mean", "[", "data", "]"}], "//", "N"}]}], ",", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"n", ",", "2"}], "]"}], "/", "2"}]}], "}"}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[3]:=",
+ CellID->226034308,ExpressionUUID->"ab3184e9-a833-4254-8fd0-836dcfb2503a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"5.008`", ",", "5"}], "}"}]], "Output",
+ CellLabel->"Out[3]=",
+ CellID->61330443,ExpressionUUID->"354713fb-2f78-4d91-a747-567a814c4bd9"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"highlightbar", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x0_", ",", "x1_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y0_", ",", "y1_"}], "}"}]}], "}"}], ",", "d_", ",", 
+    "meta___"}], "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"x0", "\[LessEqual]", 
+       RowBox[{"First", "[", "meta", "]"}], "<", "x1"}], ",", "Red", ",", 
+      RowBox[{"{", "}"}]}], "]"}], ",", 
+    RowBox[{"Rectangle", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x0", ",", "y0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x1", ",", "y1"}], "}"}]}], "]"}]}], "}"}]}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[4]:=",
+ CellID->1214539612,ExpressionUUID->"d0925acf-ab12-4152-9de5-18258043da5a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Histogram", "[", 
+  RowBox[{
+   RowBox[{"data", "\[Rule]", "m"}], ",", 
+   RowBox[{"ChartElementFunction", "\[Rule]", "highlightbar"}]}], 
+  "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[5]:=",
+ CellID->1293868467,ExpressionUUID->"059744e5-8de2-4925-818c-01947c571bc3"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.987148, 0.8073604000000001, 0.49470040000000004`], EdgeForm[{
+    Opacity[0.609], Thickness[Small]}], {}, 
+    {RGBColor[0.987148, 0.8073604000000001, 0.49470040000000004`], EdgeForm[{
+     Opacity[0.609], Thickness[Small]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], {{}, 
+            RectangleBox[{-0.5, 0}, {0.5, 44.}]}},
+          
+          ImageSizeCache->{{23.937027406654323`, 44.902746672852075`}, {
+           54.86933520569501, 62.07812499999999}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 44]& ,
+        TagBoxNote->"44"],
+       StyleBox["44", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[44, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], {{}, 
+            RectangleBox[{0.5, 0}, {1.5, 166.}]}},
+          
+          ImageSizeCache->{{44.402746672852075`, 65.36846593904983}, {
+           36.26769077603119, 62.07812499999999}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 166]& ,
+        TagBoxNote->"166"],
+       StyleBox["166", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[166, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], {{}, 
+            RectangleBox[{1.5, 0}, {2.5, 344.}]}},
+          
+          ImageSizeCache->{{64.86846593904983, 85.83418520524759}, {
+           9.127586608161018, 62.07812499999999}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 344]& ,
+        TagBoxNote->"344"],
+       StyleBox["344", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[344, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], {{}, 
+            RectangleBox[{2.5, 0}, {3.5, 656.}]}},
+          
+          ImageSizeCache->{{85.33418520524759, 
+           106.29990447144533`}, {-38.443831933274346`, 62.07812499999999}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 656]& ,
+        TagBoxNote->"656"],
+       StyleBox["656", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[656, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], {{}, 
+            RectangleBox[{3.5, 0}, {4.5, 816.}]}},
+          
+          ImageSizeCache->{{105.79990447144533`, 
+           126.7656237376431}, {-62.83943118529246, 62.07812499999999}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 816]& ,
+        TagBoxNote->"816"],
+       StyleBox["816", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[816, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], {
+            RGBColor[1, 0, 0], 
+            RectangleBox[{4.5, 0}, {5.5, 882.}]}},
+          
+          ImageSizeCache->{{126.2656237376431, 
+           147.23134300384086`}, {-72.90261587674993, 62.078125}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 882]& ,
+        TagBoxNote->"882"],
+       StyleBox["882", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[882, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], {{}, 
+            RectangleBox[{5.5, 0}, {6.5, 884.}]}},
+          
+          ImageSizeCache->{{146.73134300384086`, 
+           167.69706227003863`}, {-73.20756086740016, 62.078125}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 884]& ,
+        TagBoxNote->"884"],
+       StyleBox["884", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[884, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], {{}, 
+            RectangleBox[{6.5, 0}, {7.5, 641.}]}},
+          
+          ImageSizeCache->{{167.19706227003863`, 
+           188.16278153623637`}, {-36.15674450339764, 62.07812499999999}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 641]& ,
+        TagBoxNote->"641"],
+       StyleBox["641", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[641, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], {{}, 
+            RectangleBox[{7.5, 0}, {8.5, 386.}]}},
+          
+          ImageSizeCache->{{187.66278153623637`, 208.62850080243413`}, {
+           2.723741804506254, 62.07812499999999}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 386]& ,
+        TagBoxNote->"386"],
+       StyleBox["386", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[386, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], {{}, 
+            RectangleBox[{8.5, 0}, {9.5, 145.}]}},
+          
+          ImageSizeCache->{{208.12850080243413`, 229.09422006863187`}, {
+           39.46961317785856, 62.07812499999999}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 145]& ,
+        TagBoxNote->"145"],
+       StyleBox["145", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[145, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], {{}, 
+            RectangleBox[{9.5, 0}, {10.5, 36.}]}},
+          
+          ImageSizeCache->{{228.59422006863187`, 249.55993933482964`}, {
+           56.08911516829591, 62.07812499999999}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 36]& ,
+        TagBoxNote->"36"],
+       StyleBox["36", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[36, {}], 
+       "Tooltip"]& ]}, {}, {}}, {{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{-0.72, 0},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->{254.5, Automatic},
+  ImageSizeRaw->{509, 315},
+  PlotRange->{{-0.5, 10.5}, {All, All}},
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellLabel->"Out[5]=",
+ CellID->516313563,ExpressionUUID->"4bf3fcf8-9ccf-4ac2-8a65-2afb39f0db18"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "a5c101cf-c548-4988-a084-983ee89ef0c9"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->1662301575,ExpressionUUID->"cc04ff47-bf59-464c-a7bc-c6535eaa7239"],
+
+Cell["\<\
+The number of inversions in a permutation is equal to that of its inverse :\
+\>", "ExampleText",
+ CellID->1916638559,ExpressionUUID->"daf72f66-d968-4445-af18-7efddbbd3bf7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"p", "=", 
+  RowBox[{
+   RowBox[{"RandomPermutation", "[", "10", "]"}], "//", 
+   "PermutationList"}]}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->1768735107,ExpressionUUID->"480a20dc-9379-40a5-89f7-8d146435dc56"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "10", ",", "6", ",", "5", ",", "4", ",", "1", ",", "2", ",", "9", ",", "3", 
+   ",", "7", ",", "8"}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->169634507,ExpressionUUID->"c8eaa48d-f367-4dc5-b6b3-44585bd28554"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"InversionCount", "[", "p", "]"}], ",", 
+   RowBox[{"InversionCount", "[", 
+    RowBox[{"InversePermutation", "[", "p", "]"}], "]"}]}], "}"}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->1547831979,ExpressionUUID->"92b2f32d-4fee-42ad-a30a-a91e0aa9d884"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"24", ",", "24"}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->281739455,ExpressionUUID->"ff1667c0-8196-43ac-bb59-f5e2459a2e66"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "8d90ab89-51f7-46f6-bb12-447939705133"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->1693884729,ExpressionUUID->"046ffa8c-e596-4250-ab5b-89ffa7e21cd4"],
+
+Cell[TextData[{
+ "The number of permutations of length ",
+ Cell[BoxData[
+  StyleBox["n", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "90501c40-6906-4177-b815-19119cb00f5a"],
+ " with major index ",
+ Cell[BoxData[
+  StyleBox["k", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "86d8c712-c201-4917-8eeb-72e0a7394b29"],
+ " and inversion count ",
+ Cell[BoxData[
+  StyleBox["i", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "fd00aecf-dc69-4504-8f88-6b865b4b5d36"],
+ " is the same as the number of permutations of length ",
+ Cell[BoxData[
+  StyleBox["n", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "484f9370-b6c8-4978-b51d-5c96b4da85ea"],
+ " with major index ",
+ Cell[BoxData[
+  StyleBox["i", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "836ebc52-4c17-4b0b-ac1e-20e113048b05"],
+ " and inversion count ",
+ Cell[BoxData[
+  StyleBox["k", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "a92e4641-6b93-4de2-87b1-208ebe33f118"],
+ ":"
+}], "ExampleText",
+ CellID->2077415671,ExpressionUUID->"85b3852f-dc4e-40f3-935d-93d895f886e5"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"n", "=", "7"}], ";", 
+  RowBox[{"k", "=", "10"}], ";", 
+  RowBox[{"i", "=", "4"}], ";"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->951398515,ExpressionUUID->"7c713b3f-61f6-4aad-814b-619788af6616"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"p", "=", 
+   RowBox[{"Permutations", "[", 
+    RowBox[{"Range", "[", "n", "]"}], "]"}]}], ";"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->1104695869,ExpressionUUID->"4e910b86-3e77-4f3b-a11d-92b828f147fb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Length", "[", 
+   RowBox[{"Select", "[", 
+    RowBox[{"p", ",", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"PermutationMajorIndex", "[", "#", "]"}], "\[Equal]", "k"}], 
+        "&&", 
+        RowBox[{
+         RowBox[{"InversionCount", "[", "#", "]"}], "\[Equal]", "i"}]}], 
+       ")"}], "&"}]}], "]"}], "]"}], "===", 
+  RowBox[{"Length", "[", 
+   RowBox[{"Select", "[", 
+    RowBox[{"p", ",", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"PermutationMajorIndex", "[", "#", "]"}], "\[Equal]", "i"}], 
+        "&&", 
+        RowBox[{
+         RowBox[{"InversionCount", "[", "#", "]"}], "\[Equal]", "k"}]}], 
+       ")"}], "&"}]}], "]"}], "]"}]}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[3]:=",
+ CellID->1236089506,ExpressionUUID->"706b5373-4461-4a4a-b6d7-a4d661796b23"],
+
+Cell[BoxData["True"], "Output",
+ CellLabel->"Out[3]=",
+ CellID->17723200,ExpressionUUID->"37714778-bf83-4d59-9113-28051ecbd668"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "c58f95a3-25f9-403b-8a25-cad5497a8a6a"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->2021477112,ExpressionUUID->"82c4cd03-f399-4e6c-bf7b-255fc912e967"],
+
+Cell["\<\
+The number of inversions is a sum of elements of the inversion vector:\
+\>", "ExampleText",
+ CellID->2092674965,ExpressionUUID->"b7ce869c-e504-412d-8204-a22fecda6e21"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"p", "=", 
+  RowBox[{
+   RowBox[{"RandomPermutation", "[", "5", "]"}], "//", 
+   "PermutationList"}]}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->689556113,ExpressionUUID->"b50942d0-b52e-4260-b2b7-2466f6dbedde"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2", ",", "3", ",", "4", ",", "1"}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->159599614,ExpressionUUID->"c030d940-6469-4137-b2cb-16f8b5f8c538"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToInversionVector", "[", "p", "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->1546236313,ExpressionUUID->"efc0bd15-d283-4fbe-94c3-bcd16ce261f4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"3", ",", "0", ",", "0", ",", "0"}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->87638367,ExpressionUUID->"cbaaa666-e21f-4dbc-8997-d237e3186fce"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "[", "%", "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[3]:=",
+ CellID->114512756,ExpressionUUID->"9f20d4da-2423-4b5f-95e5-da153d138593"],
+
+Cell[BoxData["3"], "Output",
+ CellLabel->"Out[3]=",
+ CellID->244116268,ExpressionUUID->"ca68079e-229a-4ba1-99d1-f6d9adebc7f7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InversionCount", "[", "p", "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[4]:=",
+ CellID->363385939,ExpressionUUID->"bab90540-416e-4d89-9562-306d43da3918"],
+
+Cell[BoxData["3"], "Output",
+ CellLabel->"Out[4]=",
+ CellID->153445967,ExpressionUUID->"891ba0a5-1e5f-45fc-a420-c69f52620985"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "39181bc2-df1f-4f60-a246-c3087001f7ae"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->1424542631,ExpressionUUID->"a53d1165-c621-4f44-82ec-703dd5a691ba"],
+
+Cell["\<\
+The number of inversions in a permutation is equal to the number of edges in \
+its permutation graph:\
+\>", "ExampleText",
+ CellID->1345501819,ExpressionUUID->"b6fcd5ce-0a76-429c-95b5-33253d1faf95"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"p", "=", 
+  RowBox[{
+   RowBox[{"RandomPermutation", "[", "15", "]"}], "//", 
+   "PermutationList"}]}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->827706608,ExpressionUUID->"5b55bf19-f8b2-4f53-b126-361ec3fd76c8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "6", ",", "13", ",", "3", ",", "10", ",", "12", ",", "2", ",", "5", ",", 
+   "9", ",", "8", ",", "1", ",", "15", ",", "11", ",", "7", ",", "4", ",", 
+   "14"}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->148201543,ExpressionUUID->"c848348c-a6c3-4d46-b8a7-73004eaa1aa0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"InversionCount", "[", "p", "]"}], ",", 
+   RowBox[{"EdgeCount", "[", 
+    RowBox[{"PermutationGraph", "[", "p", "]"}], "]"}]}], "}"}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->92236414,ExpressionUUID->"5f5f0cf8-6e16-492d-ad56-787d0c5e783b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"50", ",", "50"}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->239513176,ExpressionUUID->"94facd96-e9d4-41d2-b31a-dc7dd5652123"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "43ba93ad-4dd4-41b4-af72-4cfd43cae26e"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->212477979,ExpressionUUID->"37585b5d-034f-4c46-a2d9-1f2bc770fe30"],
+
+Cell[TextData[{
+ "The number of ",
+ Cell[BoxData[
+  StyleBox["n", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "92c74d76-0909-4e01-a7c4-af9632df53a4"],
+ " permutations with ",
+ Cell[BoxData[
+  StyleBox["k", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "3652b06c-1892-403a-9bbd-07dd0b1c3a3f"],
+ " inversions is given by the function PermutationCountByInversions:"
+}], "ExampleText",
+ CellID->1700755230,ExpressionUUID->"093df39f-e38a-464d-9d08-5b0f67ef2e4f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"n", "=", "4"}], ";", 
+  RowBox[{"k", "=", "3"}], ";"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->1151262478,ExpressionUUID->"fc02dcc6-ffdd-4d2f-a549-525582a937d1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{"Permutations", "[", 
+    RowBox[{"Range", "[", "n", "]"}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"InversionCount", "[", "#", "]"}], "\[Equal]", "k"}], ")"}], 
+    "&"}]}], "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->848135982,ExpressionUUID->"2507f220-a312-4b6d-8b4f-ae9f401166ad"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "4", ",", "3", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3", ",", "4", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "4", ",", "1", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "1", ",", "4", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "2", ",", "1", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "1", ",", "2", ",", "3"}], "}"}]}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->133412437,ExpressionUUID->"f7dae49b-d377-4919-86ef-54f95bd68ca1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "%", "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[3]:=",
+ CellID->1513604327,ExpressionUUID->"ccfd99c5-e320-4e4b-9119-4de8c63d17e5"],
+
+Cell[BoxData["6"], "Output",
+ CellLabel->"Out[3]=",
+ CellID->662641691,ExpressionUUID->"e6124f70-dc53-4847-8c8a-7070f35d80e2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PermutationCountByInversions", "[", 
+  RowBox[{"n", ",", "k"}], "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[4]:=",
+ CellID->1999571739,ExpressionUUID->"1aab4e27-d8f5-424c-9105-80d6ea04a17b"],
+
+Cell[BoxData["6"], "Output",
+ CellLabel->"Out[4]=",
+ CellID->876946311,ExpressionUUID->"42528b0e-6d95-4888-99ca-1decac6fb406"]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[{
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Permutations"]], "paclet:ref/Permutations"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",ExpressionUUID->
+         "a4ee24e9-67ae-477d-b077-525ab491712d"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["InversePermutation"]], "paclet:ref/InversePermutation"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"d3fb31f5-d7ba-4dc8-b4df-c9b3a42c0ffb",ExpressionUUID->
+         "37d9b84d-9e91-4c3e-908b-03a853041515"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Subsets"]], "paclet:ref/Subsets"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"30c6716a-87f0-4bb1-b70e-fbe7131152dc",ExpressionUUID->
+         "bdc798dd-9811-4e2b-9f28-08cc87583c71"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Tuples"]], "paclet:ref/Tuples"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"1744732d-a1ec-4f64-804d-9d73c86121e6",ExpressionUUID->
+         "8cf3d094-40a7-4749-a66d-559d30fb0e06"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Signature"]], "paclet:ref/Signature"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"8663be94-72b0-498f-92c5-ef884817f709",ExpressionUUID->
+         "0a9cec93-cb1e-403b-90d4-121f34ca0f1b"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["ToInversionVector"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/ToInversionVector", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"0117f232-b9b5-46a4-aecc-cfa38db03175",ExpressionUUID->
+         "a05e639f-319d-4706-a8a1-1b0a40aa1c69"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["PermutationMajorIndex"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/PermutationMajorIndex", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"48c46e09-9642-4e60-b6e7-15131fec65f8",ExpressionUUID->
+         "3f46e8f1-f524-40a1-8678-bf106a87d431"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["PermutationGraph"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/PermutationGraph", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"f1440769-fe51-4576-8f87-40aa0344d4df",ExpressionUUID->
+         "9cb7ff00-0a06-4902-82ce-635e446505ba"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["PermutationIndex"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/PermutationIndex", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"05bcab50-fe7e-4b2e-84a5-49cf44fdb712",ExpressionUUID->
+         "31878b6a-ad23-4634-97be-32d5675d13a8"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["PermutationFromIndex"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/PermutationFromIndex", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"f706665f-d7c7-49d2-b4c8-b27ac5d1e476",ExpressionUUID->
+         "8cbcf601-c686-4b37-ba42-63b712cb9982"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["PermutationAscents"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/PermutationAscents", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"ab858d71-0fa1-44b4-9d6c-31c2de6006a7",ExpressionUUID->
+         "755a58c8-bfe1-4058-8382-d367ba0fdfe3"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["NextPermutation"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/NextPermutation", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"2ef1c9db-a31c-422b-96d3-7013dea874a8",ExpressionUUID->
+         "08b48931-8040-4938-af04-25e9e4d72fb0"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["FromInversionVector"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/FromInversionVector", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"c40a91b9-353f-4dcf-b163-8143e91766a2",ExpressionUUID->
+         "4c3ceca1-ca99-4f6d-96ee-b3a9a582b18c"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["InversionVectorQ"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/InversionVectorQ", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"771c42de-c3a5-47f8-926e-5cd3c0fe241f",ExpressionUUID->
+         "1f84f591-cdfb-4330-adc0-13ea58eb8100"]
+       }], "SeeAlso",ExpressionUUID->"25b5811d-85f2-4131-9f7b-74be8df8977f"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"dc65e760-a9ea-46a2-bdc7-\
+c1a54c014533"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], 
+                 "Tutorial: Combinatorica"}]]]], 
+            "https://reference.wolfram.com/language/Combinatorica/tutorial/\
+Combinatorica.html"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "e01905a3-3cda-4f9d-895a-43b6a8982df4"]}]],ExpressionUUID->
+        "7f2e0b69-d8a4-4a23-bc4d-ce17ec2fe7b5"]], "RelatedLinks",
+        ExpressionUUID->"9936014a-5c7e-47b9-921b-b88babe823b6"]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], 
+                 "Wikipedia\[LongDash]Major index"}]]]], 
+            "https://en.wikipedia.org/wiki/Major_index"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "08152a4d-b445-47d0-8903-1157b08eadf6"]}]],ExpressionUUID->
+        "db3b8ab2-ad2a-4e9f-83a3-36a7546f486a"]], "RelatedLinks",
+        ExpressionUUID->"ac8ea3ba-7509-4479-931f-afd0e7540ec2"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"7789e6e0-66fd-4c4e-9fd0-\
+b1a1905e83ef"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"4605814a-417c-4133-b36b-a94a880c2c69"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"InversionCount",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, 
+    "ExampleSection" -> {"0" -> Open, "2" -> Closed}}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2023, 7, 21, 19, 27, 33.3231892}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`Combinatorics`", 
+    "keywords" -> {
+     "permutation", "permutation order", "permutation disorder", 
+      "inverse permutation", "inversion vector"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Peter Burbery/ Combinatorics Symbol", "language" -> "en", "paclet" -> 
+    "PeterBurbery/Combinatorics", "status" -> "None", "summary" -> 
+    "InversionCount[p] counts the number of inversions in permutation p.", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> "InversionCount", 
+    "titlemodifier" -> "", "metadescription" -> "", "windowtitle" -> 
+    "InversionCount", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/Combinatorics/ref/InversionCount"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (June 3, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"e915edb0-d2e1-4e94-96be-a5912d6f6477"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[9156, 224, 1418, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"6d1b0b86-405c-4196-a788-8e53e9757a48",
+   CellTags->"PrimaryExamplesSection",
+   CellID->4496284]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 54571, 1575}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[586, 21, 6931, 154, 56, "AnchorBarGrid",ExpressionUUID->"48ff4bfd-c4af-4766-ae01-e88cb7ab055a",
+ CellID->1],
+Cell[7520, 177, 109, 0, 23, "ContextNameCell",ExpressionUUID->"edebcc52-bac0-45dc-b5e3-8821afe8bae0"],
+Cell[CellGroupData[{
+Cell[7654, 181, 557, 14, 56, "ObjectNameGrid",ExpressionUUID->"ca0dd8f7-e6ef-4220-be5d-dc0d3e6b56a3"],
+Cell[8214, 197, 905, 22, 111, "Usage",ExpressionUUID->"033f49ed-9732-40fc-a6ce-d799d98b967e",
+ CellID->17850715]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9156, 224, 1418, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"6d1b0b86-405c-4196-a788-8e53e9757a48",
+ CellTags->"PrimaryExamplesSection",
+ CellID->4496284],
+Cell[10577, 263, 216, 4, 26, "Input",ExpressionUUID->"30aa0428-7cb9-404a-91e4-331ea6a3545b",
+ CellID->71323967],
+Cell[CellGroupData[{
+Cell[10818, 271, 1398, 36, 30, "ExampleSection",ExpressionUUID->"220d01b7-81ce-45fc-b386-02279d5d30d2",
+ CellID->379467769],
+Cell[12219, 309, 207, 4, 38, "ExampleText",ExpressionUUID->"9991c959-5019-44f1-9044-a75a30c714c7",
+ CellID->2084485982],
+Cell[CellGroupData[{
+Cell[12451, 317, 313, 7, 26, "Input",ExpressionUUID->"2a0dc923-305a-4c12-ba98-64c554a36694",
+ CellID->1646981735],
+Cell[12767, 326, 126, 2, 35, "Output",ExpressionUUID->"7675052d-e8fe-4c28-b006-a9d6323b607c",
+ CellID->189066372]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12930, 333, 313, 7, 26, "Input",ExpressionUUID->"1feff3fd-c1a6-46ba-bd0a-075f26583da4",
+ CellID->1398512215],
+Cell[13246, 342, 125, 2, 35, "Output",ExpressionUUID->"3e02b32f-f6df-49a3-b60a-5e6c6a382c2c",
+ CellID->72878438]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13408, 349, 265, 5, 26, "Input",ExpressionUUID->"bd2720cf-377f-42dd-9c03-2cbee02eee04",
+ CellID->1274646292],
+Cell[13676, 356, 125, 2, 35, "Output",ExpressionUUID->"cdbb20ce-4a9d-4046-9923-22179dd17402",
+ CellID->69869332]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[13950, 366, 1429, 37, 30, "ExampleSection",ExpressionUUID->"aec3f796-2022-41e2-8c2d-97ab15c29cf8",
+ CellID->558580206],
+Cell[15382, 405, 611, 18, 70, "ExampleText",ExpressionUUID->"3dd0a99a-475f-44a0-8133-bb798f296bd2",
+ CellID->341144850],
+Cell[15996, 425, 232, 5, 70, "Input",ExpressionUUID->"716a1d94-32dc-43a1-90b1-e3b77c13287a",
+ CellID->250656996],
+Cell[CellGroupData[{
+Cell[16253, 434, 335, 7, 70, "Input",ExpressionUUID->"a38903e0-f427-4d6a-bfc1-7bf8b2923c8b",
+ CellID->1816536073],
+Cell[16591, 443, 268, 6, 35, "Output",ExpressionUUID->"01e0764a-023b-4fda-86cf-5326d40be557",
+ CellID->72339200]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16896, 454, 330, 8, 70, "Input",ExpressionUUID->"d5949e43-e3d7-4328-8c45-a52d047ef50c",
+ CellID->1436470015],
+Cell[17229, 464, 172, 4, 35, "Output",ExpressionUUID->"9dfafeaa-3a09-498d-a4ff-481a06bf6135",
+ CellID->32823877]
+}, Open  ]],
+Cell[17416, 471, 188, 4, 70, "ExampleText",ExpressionUUID->"b5e53664-7d3f-4adc-9fbb-4a47fb6c0461",
+ CellID->1570701872],
+Cell[CellGroupData[{
+Cell[17629, 479, 300, 6, 70, "Input",ExpressionUUID->"7c58829f-b4b7-4e47-87b7-fc41200eb6e1",
+ CellID->1931974050],
+Cell[17932, 487, 127, 2, 35, "Output",ExpressionUUID->"b510a91d-6ba3-4673-a15f-1abaabcdd0b3",
+ CellID->920105005]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18096, 494, 243, 5, 70, "ExampleDelimiter",ExpressionUUID->"18f51fe6-047e-4aa5-a7f0-3699223a18f5",
+ CellID->1122372168],
+Cell[18342, 501, 467, 14, 70, "ExampleText",ExpressionUUID->"5863e08c-e0a0-4daa-ba62-0eb5d162339c",
+ CellID->1527205912],
+Cell[18812, 517, 232, 5, 70, "Input",ExpressionUUID->"1ccd3fb3-0a8a-4963-ba57-60842638e651",
+ CellID->373475936],
+Cell[19047, 524, 465, 12, 70, "Input",ExpressionUUID->"3021e271-6e32-440b-a5c1-7c825c55720a",
+ CellID->955603221],
+Cell[CellGroupData[{
+Cell[19537, 540, 413, 12, 70, "Input",ExpressionUUID->"ab3184e9-a833-4254-8fd0-836dcfb2503a",
+ CellID->226034308],
+Cell[19953, 554, 175, 4, 35, "Output",ExpressionUUID->"354713fb-2f78-4d91-a747-567a814c4bd9",
+ CellID->61330443]
+}, Open  ]],
+Cell[20143, 561, 878, 27, 70, "Input",ExpressionUUID->"d0925acf-ab12-4152-9de5-18258043da5a",
+ CellID->1214539612],
+Cell[CellGroupData[{
+Cell[21046, 592, 347, 8, 70, "Input",ExpressionUUID->"059744e5-8de2-4925-818c-01947c571bc3",
+ CellID->1293868467],
+Cell[21396, 602, 8512, 258, 70, "Output",ExpressionUUID->"4bf3fcf8-9ccf-4ac2-8a65-2afb39f0db18",
+ CellID->516313563]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29957, 866, 243, 5, 70, "ExampleDelimiter",ExpressionUUID->"cc04ff47-bf59-464c-a7bc-c6535eaa7239",
+ CellID->1662301575],
+Cell[30203, 873, 182, 3, 70, "ExampleText",ExpressionUUID->"daf72f66-d968-4445-af18-7efddbbd3bf7",
+ CellID->1916638559],
+Cell[CellGroupData[{
+Cell[30410, 880, 303, 7, 70, "Input",ExpressionUUID->"480a20dc-9379-40a5-89f7-8d146435dc56",
+ CellID->1768735107],
+Cell[30716, 889, 259, 6, 35, "Output",ExpressionUUID->"c8eaa48d-f367-4dc5-b6b3-44585bd28554",
+ CellID->169634507]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31012, 900, 371, 9, 70, "Input",ExpressionUUID->"92b2f32d-4fee-42ad-a30a-a91e0aa9d884",
+ CellID->1547831979],
+Cell[31386, 911, 173, 4, 35, "Output",ExpressionUUID->"ff1667c0-8196-43ac-bb59-f5e2459a2e66",
+ CellID->281739455]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31608, 921, 243, 5, 70, "ExampleDelimiter",ExpressionUUID->"046ffa8c-e596-4250-ab5b-89ffa7e21cd4",
+ CellID->1693884729],
+Cell[31854, 928, 1249, 33, 70, "ExampleText",ExpressionUUID->"85b3852f-dc4e-40f3-935d-93d895f886e5",
+ CellID->2077415671],
+Cell[33106, 963, 299, 7, 70, "Input",ExpressionUUID->"7c713b3f-61f6-4aad-814b-619788af6616",
+ CellID->951398515],
+Cell[33408, 972, 307, 7, 70, "Input",ExpressionUUID->"4e910b86-3e77-4f3b-a11d-92b828f147fb",
+ CellID->1104695869],
+Cell[CellGroupData[{
+Cell[33740, 983, 939, 28, 70, "Input",ExpressionUUID->"706b5373-4461-4a4a-b6d7-a4d661796b23",
+ CellID->1236089506],
+Cell[34682, 1013, 128, 2, 35, "Output",ExpressionUUID->"37714778-bf83-4d59-9113-28051ecbd668",
+ CellID->17723200]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34859, 1021, 243, 5, 70, "ExampleDelimiter",ExpressionUUID->"82c4cd03-f399-4e6c-bf7b-255fc912e967",
+ CellID->2021477112],
+Cell[35105, 1028, 177, 3, 70, "ExampleText",ExpressionUUID->"b7ce869c-e504-412d-8204-a22fecda6e21",
+ CellID->2092674965],
+Cell[CellGroupData[{
+Cell[35307, 1035, 301, 7, 70, "Input",ExpressionUUID->"b50942d0-b52e-4260-b2b7-2466f6dbedde",
+ CellID->689556113],
+Cell[35611, 1044, 191, 4, 35, "Output",ExpressionUUID->"c030d940-6469-4137-b2cb-16f8b5f8c538",
+ CellID->159599614]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35839, 1053, 236, 4, 70, "Input",ExpressionUUID->"efc0bd15-d283-4fbe-94c3-bcd16ce261f4",
+ CellID->1546236313],
+Cell[36078, 1059, 190, 4, 35, "Output",ExpressionUUID->"cbaaa666-e21f-4dbc-8997-d237e3186fce",
+ CellID->87638367]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36305, 1068, 223, 4, 70, "Input",ExpressionUUID->"9f20d4da-2423-4b5f-95e5-da153d138593",
+ CellID->114512756],
+Cell[36531, 1074, 126, 2, 35, "Output",ExpressionUUID->"ca68079e-229a-4ba1-99d1-f6d9adebc7f7",
+ CellID->244116268]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36694, 1081, 232, 4, 70, "Input",ExpressionUUID->"bab90540-416e-4d89-9562-306d43da3918",
+ CellID->363385939],
+Cell[36929, 1087, 126, 2, 35, "Output",ExpressionUUID->"891ba0a5-1e5f-45fc-a420-c69f52620985",
+ CellID->153445967]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37104, 1095, 243, 5, 70, "ExampleDelimiter",ExpressionUUID->"a53d1165-c621-4f44-82ec-703dd5a691ba",
+ CellID->1424542631],
+Cell[37350, 1102, 208, 4, 70, "ExampleText",ExpressionUUID->"b6fcd5ce-0a76-429c-95b5-33253d1faf95",
+ CellID->1345501819],
+Cell[CellGroupData[{
+Cell[37583, 1110, 302, 7, 70, "Input",ExpressionUUID->"5b55bf19-f8b2-4f53-b126-361ec3fd76c8",
+ CellID->827706608],
+Cell[37888, 1119, 318, 7, 35, "Output",ExpressionUUID->"c848348c-a6c3-4d46-b8a7-73004eaa1aa0",
+ CellID->148201543]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38243, 1131, 362, 9, 70, "Input",ExpressionUUID->"5f5f0cf8-6e16-492d-ad56-787d0c5e783b",
+ CellID->92236414],
+Cell[38608, 1142, 173, 4, 35, "Output",ExpressionUUID->"94facd96-e9d4-41d2-b31a-dc7dd5652123",
+ CellID->239513176]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38830, 1152, 242, 5, 70, "ExampleDelimiter",ExpressionUUID->"37585b5d-034f-4c46-a2d9-1f2bc770fe30",
+ CellID->212477979],
+Cell[39075, 1159, 535, 13, 70, "ExampleText",ExpressionUUID->"093df39f-e38a-464d-9d08-5b0f67ef2e4f",
+ CellID->1700755230],
+Cell[39613, 1174, 266, 6, 70, "Input",ExpressionUUID->"fc02dcc6-ffdd-4d2f-a549-525582a937d1",
+ CellID->1151262478],
+Cell[CellGroupData[{
+Cell[39904, 1184, 448, 12, 70, "Input",ExpressionUUID->"2507f220-a312-4b6d-8b4f-ae9f401166ad",
+ CellID->848135982],
+Cell[40355, 1198, 625, 16, 35, "Output",ExpressionUUID->"f7dae49b-d377-4919-86ef-54f95bd68ca1",
+ CellID->133412437]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41017, 1219, 225, 4, 70, "Input",ExpressionUUID->"ccfd99c5-e320-4e4b-9119-4de8c63d17e5",
+ CellID->1513604327],
+Cell[41245, 1225, 126, 2, 35, "Output",ExpressionUUID->"e6124f70-dc53-4847-8c8a-7070f35d80e2",
+ CellID->662641691]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41408, 1232, 270, 5, 70, "Input",ExpressionUUID->"1aab4e27-d8f5-424c-9105-80d6ea04a17b",
+ CellID->1999571739],
+Cell[41681, 1239, 126, 2, 35, "Output",ExpressionUUID->"42528b0e-6d95-4888-99ca-1decac6fb406",
+ CellID->876946311]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[42061, 1251, 8526, 221, 148, "SeeAlsoSection",ExpressionUUID->"dc65e760-a9ea-46a2-bdc7-c1a54c014533"],
+Cell[50590, 1474, 1871, 51, 70, "RelatedLinksSection",ExpressionUUID->"7789e6e0-66fd-4c4e-9fd0-b1a1905e83ef"],
+Cell[52464, 1527, 78, 0, 70, "FooterCell",ExpressionUUID->"4605814a-417c-4133-b36b-a94a880c2c69"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

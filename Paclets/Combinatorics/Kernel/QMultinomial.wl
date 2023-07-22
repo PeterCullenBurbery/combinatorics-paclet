@@ -26,7 +26,7 @@ QMultinomial // ClearAll
 
 SetAttributes[QMultinomial, {NumericFunction, Listable}]
 
-QMultinomial::usage = "QMultinomial[n1, n2, \[Ellipsis]] q-multinomial coefficient for n1, n2, n3 that approaches (n1+n2+\[Ellipsis])!/(n1!n2!\[Ellipsis]) as q goes to 1.";
+QMultinomial::usage = "QMultinomial[n1, n2, n3, \[Ellipsis]] q-multinomial coefficient for n1, n2, n3 that approaches (n1+n2+\[Ellipsis])!/(n1!n2!\[Ellipsis]) as q goes to 1.";
 
 QMultinomial[numbers__, q_] :=
     Module[{uniqueVariables, originalInputList, replacementRules, normalMultinomial,
