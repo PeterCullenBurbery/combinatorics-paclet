@@ -1,57 +1,47 @@
 (* ::Package:: *)
 
 (* ::Section:: *)
-(*Package Header*)
 
+(*Package Header*)
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-
-
 (* ::Text:: *)
+
 (*Declare your public symbols here:*)
 
-
-PeterBurbery`Combinatorics`InverseGrayCode;
-
-
+PeterBurbery`Combinatorics`PartitionCrank;
 
 Begin["`Private`"];
 
-
-
 (* ::Section:: *)
+
 (*Definitions*)
 
-
 (* ::Text:: *)
+
 (*Define your public and private symbols here:*)
 
+PartitionCrank // ClearAll
 
-InverseGrayCode // ClearAll
+PartitionCrank::usage = "PartitionCrank[x] gives Dyson's crank of the partition x.";
 
-InverseGrayCode::usage="InverseGrayCode[{b1,b2,\[Ellipsis]}] gives the integer corresponding to the Gray code represented by the bits bi.";
+PartitionCrank[{1}] = 1;
 
-InverseGrayCode[v:{(0|1)..}]:=iInverseGrayCode[v]
+PartitionCrank\[Mu][\[Lambda]_] :=
+    Count[# > Count[\[Lambda], 1]& /@ \[Lambda], True] /; ResourceFunction[
+        "IntegerPartitionQ"][\[Lambda]]
 
-iInverseGrayCode[v_]:=If[Length[v]<1.2*2^16(* empirically found threshold *),
-iInverseGrayCodeSmall[v],
-iInverseGrayCodeBig[v]]
-
-iInverseGrayCodeSmall[v_]:=
-With[{n=FromDigits[v,2]},Fold[BitXor,n,BitShiftRight[n,Range[Length[v]-1]]]]
-
-iInverseGrayCodeBig[v_]:=Module[{n=FromDigits[v,2],res},
-res=n;
-Do[n=BitShiftRight[n];
-res=BitXor[res,n],
-{Length[v]-1}];
-res]
-
+PartitionCrank[\[Lambda]_] :=
+    If[Count[\[Lambda], 1] > 0,
+            PartitionCrank\[Mu][\[Lambda]] - Count[\[Lambda], 1]
+            ,
+            Max @ \[Lambda]
+        ] /; ResourceFunction["IntegerPartitionQ"][\[Lambda]]
 
 (* ::Section::Closed:: *)
-(*Package Footer*)
 
+(*Package Footer*)
 
 End[];
 

@@ -12,7 +12,7 @@ BeginPackage["PeterBurbery`Combinatorics`"];
 (*Declare your public symbols here:*)
 
 
-PeterBurbery`Combinatorics`InverseGrayCode;
+PeterBurbery`Combinatorics`PartitionRank;
 
 
 
@@ -28,20 +28,20 @@ Begin["`Private`"];
 (*Define your public and private symbols here:*)
 
 
-InverseGrayCode // ClearAll
+PartitionRank // ClearAll
 
-InverseGrayCode::usage="InverseGrayCode[{b1,b2,\[Ellipsis]}] gives the integer corresponding to the Gray code represented by the bits bi.";
+PartitionRank::usage="PartitionRank[{b1,b2,\[Ellipsis]}] gives the integer corresponding to the Gray code represented by the bits bi.";
 
-InverseGrayCode[v:{(0|1)..}]:=iInverseGrayCode[v]
+PartitionRank[v:{(0|1)..}]:=iPartitionRank[v]
 
-iInverseGrayCode[v_]:=If[Length[v]<1.2*2^16(* empirically found threshold *),
-iInverseGrayCodeSmall[v],
-iInverseGrayCodeBig[v]]
+iPartitionRank[v_]:=If[Length[v]<1.2*2^16(* empirically found threshold *),
+iPartitionRankSmall[v],
+iPartitionRankBig[v]]
 
-iInverseGrayCodeSmall[v_]:=
+iPartitionRankSmall[v_]:=
 With[{n=FromDigits[v,2]},Fold[BitXor,n,BitShiftRight[n,Range[Length[v]-1]]]]
 
-iInverseGrayCodeBig[v_]:=Module[{n=FromDigits[v,2],res},
+iPartitionRankBig[v_]:=Module[{n=FromDigits[v,2],res},
 res=n;
 Do[n=BitShiftRight[n];
 res=BitXor[res,n],
