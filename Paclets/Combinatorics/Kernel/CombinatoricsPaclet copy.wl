@@ -72,6 +72,8 @@ PermutationToTableaux[p_?PermutationListQ]:=Module[{pt={{p[[1]]}},qt={{1}},r},
 Do[{pt,r}=InsertIntoTableau[p[[i]],pt,All];
 If[r<=Length[qt],AppendTo[qt[[r]],i],AppendTo[qt,{i}]],{i,2,Length[p]}];
 {pt,qt}];
+
+
 PermutationIndex[perm_List] := LehmerCodeIndex[LehmerCodeFromPermutation[perm]]+1;
 
 LehmerCodeIndex[lehmer_List] := Total[lehmer Reverse[Range[0,Length[lehmer]-1]]!];
@@ -136,6 +138,8 @@ If[item<p[[rowi,col]],col--];
 q[[row]]=Most[q[[row]]];
 If[p==={},First[firstrow],First[Complement[firstrow,First[p]]]],
 {Total[Map[Length,p1]]}]]]
+
+
 DiscreteInverseLessThan[function_,n_]:=NestWhile[#1+1&,1,function<n&,1,\[Infinity],-1]/;Head[function]!=Function
 DiscreteInverseEqual[function_,n_]:=NestWhile[#1+1&,1,function!=n&]/;!MatchQ[function,_Function]
 Attributes[RepetendCycleLength]={Listable};
