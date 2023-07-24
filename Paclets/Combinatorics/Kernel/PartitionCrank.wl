@@ -29,15 +29,15 @@ PartitionCrank::usage = "PartitionCrank[x] gives Dyson's crank of the partition 
 PartitionCrank[{1}] = 1;
 
 PartitionCrank\[Mu][\[Lambda]_] :=
-    Count[# > Count[\[Lambda], 1]& /@ \[Lambda], True] /; ResourceFunction[
-        "IntegerPartitionQ"][\[Lambda]]
+    Count[# > Count[\[Lambda], 1]& /@ \[Lambda], True] /; IntegerPartitionQ[
+        \[Lambda]]
 
 PartitionCrank[\[Lambda]_] :=
     If[Count[\[Lambda], 1] > 0,
             PartitionCrank\[Mu][\[Lambda]] - Count[\[Lambda], 1]
             ,
             Max @ \[Lambda]
-        ] /; ResourceFunction["IntegerPartitionQ"][\[Lambda]]
+        ] /; IntegerPartitionQ[\[Lambda]]
 
 (* ::Section::Closed:: *)
 
