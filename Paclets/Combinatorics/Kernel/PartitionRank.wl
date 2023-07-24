@@ -1,57 +1,37 @@
 (* ::Package:: *)
 
 (* ::Section:: *)
-(*Package Header*)
 
+(*Package Header*)
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-
-
 (* ::Text:: *)
-(*Declare your public symbols here:*)
 
+(*Declare your public symbols here:*)
 
 PeterBurbery`Combinatorics`PartitionRank;
 
-
-
 Begin["`Private`"];
 
-
-
 (* ::Section:: *)
+
 (*Definitions*)
 
-
 (* ::Text:: *)
-(*Define your public and private symbols here:*)
 
+(*Define your public and private symbols here:*)
 
 PartitionRank // ClearAll
 
-PartitionRank::usage="PartitionRank[{b1,b2,\[Ellipsis]}] gives the integer corresponding to the Gray code represented by the bits bi.";
+PartitionRank::usage = "PartitionRank[x] gives the difference of the largest part of the partition x and the number of parts of x.\n";
 
-PartitionRank[v:{(0|1)..}]:=iPartitionRank[v]
-
-iPartitionRank[v_]:=If[Length[v]<1.2*2^16(* empirically found threshold *),
-iPartitionRankSmall[v],
-iPartitionRankBig[v]]
-
-iPartitionRankSmall[v_]:=
-With[{n=FromDigits[v,2]},Fold[BitXor,n,BitShiftRight[n,Range[Length[v]-1]]]]
-
-iPartitionRankBig[v_]:=Module[{n=FromDigits[v,2],res},
-res=n;
-Do[n=BitShiftRight[n];
-res=BitXor[res,n],
-{Length[v]-1}];
-res]
-
+PartitionRank[x_] :=
+    First @ x - Length @ x /; IntegerPartitionQ @ x
 
 (* ::Section::Closed:: *)
-(*Package Footer*)
 
+(*Package Footer*)
 
 End[];
 
