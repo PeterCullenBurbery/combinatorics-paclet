@@ -10,7 +10,7 @@ BeginPackage["PeterBurbery`Combinatorics`"];
 
 (*Declare your public symbols here:*)
 
-PeterBurbery`Combinatorics`TupleIndex;
+PeterBurbery`Combinatorics`TupleFromIndex;
 
 Begin["`Private`"];
 
@@ -22,25 +22,42 @@ Begin["`Private`"];
 
 (*Define your public and private symbols here:*)
 
-TupleIndex // ClearAll
+TupleFromIndex // ClearAll
 
-TupleIndex::usage = "TupleIndex[tuple] returns the index of tuple as it would appear in a list of all integer tuples of the same length, sorted by the maximal element.";
+TupleFromIndex::usage = "TupleFromIndex[index, k] returns index from the list of k tuples sorted by maximal element.";
 
-TupleIndex[tuple_List?ListQ] :=
-    Module[{run, max, len, first, div, index},
-        run = {};
-        max = Max[tuple];
-        If[max == 0,
-            index = 1
+TupleFromIndex[index_Integer?IntegerQ, len_Integer?IntegerQ] :=
+    Module[{max, div, left, tuple, switch},
+        tuple = {};
+        max = Floor[N[(index - 1) ^ (1 / len), 300]];
+        div = Table[(max + 1) ^ n - (max) ^ n, {n, len - 1, 1, -1}];
+        left = index - (max) ^ len - 1;
+        switch = False;
+        If[index == 1,
+            tuple = Table[0, {len}]
             ,
-            len = Length[tuple];
-            first = Position[tuple, max][[1, 1]];
-            div = Table[(max + 1) ^ n - (max) ^ n, {n, len - 1, 0, -1
-                }];
-            index = max^len + 1 + FromDigits[Take[tuple, {first + 1, 
-                len}], max + 1] + Drop[tuple, {first + 1, len}] . Take[div, first]
+            Do[
+                If[switch == False,
+                    If[Floor[(left) / div[[k]]] >= max,
+                        switch = True;
+                        tuple = Append[tuple, max]
+                        ,
+                        tuple = Append[tuple, Floor[(left) / div[[k]]
+                            ]];
+                    ];
+                    left = left - tuple[[k]] div[[k]];
+                ]
+                ,
+                {k, 1, len - 1}
+            ];
+            If[switch == False,
+                tuple = Append[tuple, max]
+                ,
+                tuple = Join[tuple, IntegerDigits[left, max + 1, len 
+                    - Length[tuple]]]
+            ]
         ];
-        index
+        tuple
     ]
 
 (* ::Section::Closed:: *)
