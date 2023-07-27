@@ -22,8 +22,19 @@ Begin["`Private`"];
 
 (*Define your public and private symbols here:*)
 
-SayHello[name_?StringQ] :=
-    "Hello " <> name <> "!";
+QExponential // ClearAll
+
+SetAttributes[QExponential, {Listable, NumericFunction}]
+
+QExponential::usage = "QExponential[z, q] gives the q-exponential of z, e_q(z)";
+
+QExponential[z_, q_, Optional[precision_, $MachinePrecision]] :=
+    Sum[z^n / QFactorial[n, q], {n, 0, Infinity}] /. {x_ /; !NumericQ[
+        x] :> N[x, precision]}
+
+(* QExponential[z_, q_, {precision_, accuracy_}] :=
+    Sum[z^n / QFactorial[n, q], {n, 0, Infinity}] /. {x_ /; !NumericQ[
+        x] :> N[x, {precision, accuracy}]} *)
 
 (* ::Section::Closed:: *)
 

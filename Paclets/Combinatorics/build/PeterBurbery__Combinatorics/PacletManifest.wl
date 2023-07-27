@@ -37,7 +37,7 @@
             ,
             "Hash"
             ->
-            "9830a1521270a13171024d04dd1934b5c54b914cecd026f39188629f453501e0"
+            "f645e9cc0f5109c4284558e2f7b062b2b853f71642f32907e517099ee387ea31"
                 
         |>
         ,
@@ -123,12 +123,26 @@
             "File"
             ->
             File[
+                "Kernel\\EnumerateMultisetPartialDerangements copy.wl"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "fec1f90679d068e059d0cc6cd6a2e57ec361f9a82506947d3b1cb2cbb2074b87"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Kernel\\EnumerateMultisetPartialDerangements.wl"
             ]
             ,
             "Hash"
             ->
-            "7d924c53e80c975fe0584e42c1dbdb9d43444827497cf3d7314290f81569bdc3"
+            "1427856f3feb0bbc33f4c8ad57726aaf818b42c5e3e2e9e7620c49c1b00c7d74"
                 
         |>
         ,
@@ -448,6 +462,19 @@
             "File"
             ->
             File[
+                "Kernel\\LehmerCodeFromPermutation.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "b77ab3ffa9b60a6ac3f1825e7cf44e22bdb97fd500486b5ff868062494061121"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Kernel\\LucasNumberU1.wl"
             ]
             ,
@@ -617,12 +644,25 @@
             "File"
             ->
             File[
+                "Kernel\\OrderedTupleFromIndex.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "ced099a28a6e63e3fdac5be9d37c11891386d19b2792d8266a938122d1cd4942"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Kernel\\OrderedTupleIndex.wl"
             ]
             ,
             "Hash"
             ->
-            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            "fd1b39b3a4872a01c5b7b1edc548a182263e63571c2049c31071079a9a718ae7"
                 
         |>
         ,
@@ -700,7 +740,7 @@
             ,
             "Hash"
             ->
-            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            "8923b678e55b1c5a004cc6533bda98e4311a89b0f56ad0bdfa8c1a28bd149f49"
                 
         |>
         ,
@@ -726,7 +766,7 @@
             ,
             "Hash"
             ->
-            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            "e59fc52bdf08f0f82626b41b75c4c2344596a6d7698761a08affdd54672bcf78"
                 
         |>
         ,
@@ -778,7 +818,7 @@
             ,
             "Hash"
             ->
-            "3a6c34fc5f5284f4620b27a3f5f9510c81feafd45f117dfc6a8994639e964195"
+            "9d94306758e203f740360c0153d8dddf98b1325b8a40814ea8e86069c6aa70f1"
                 
         |>
         ,
@@ -805,6 +845,19 @@
             "Hash"
             ->
             "3aeef96b40018a2d25109eddf7f03ce5d2a3272ea16543f021dd640b2174ca94"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\PermutationIndex.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "d930e70fab7538bcd82823fa3c4abc3149acb87c69af6deddd719e327cc39070"
                 
         |>
         ,
@@ -908,7 +961,7 @@
             ,
             "Hash"
             ->
-            "4ef9cf3142a8ebd88bae71b4852991eaf85f51ab97fcd62be02c709405b8fd37"
+            "5234bde96b46ca7d8cdfae0f5583224a9f823de200bf457d5f30d5d4cd18e25f"
                 
         |>
         ,
@@ -921,7 +974,20 @@
             ,
             "Hash"
             ->
-            "cc07833edda2095501e8533af92a30bc6e8aac390f7080952e5860ccef068583"
+            "4eb096127f366e42efc9f4fb79f535df7a93ccf4c2ae7c100975ce1bcf3da6c5"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\RandomSelfConjugatePartition.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "54c94a28c6c4b51c661bf66c505e9a9858411a735e86f7ad65381e53c6007071"
                 
         |>
         ,
@@ -942,12 +1008,38 @@
             "File"
             ->
             File[
+                "Kernel\\RationalNumberRepeatingDecimalPeriod.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "84f1e59f196aeade2b944ee86eca4542c2e694a7e319938a1ae696a9cf529751"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Kernel\\ReflexiveGraphQ.wl"
             ]
             ,
             "Hash"
             ->
             "dc0d17d02921fa916a73e03f9c5cfeaf4f4137c31be4205064b1eef360b7c74b"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\RepeatingDecimalPeriod.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
                 
         |>
         ,
@@ -1007,6 +1099,19 @@
             "File"
             ->
             File[
+                "Kernel\\SelfConjugatePartitionQ.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "9dff124a9c006c0538789da03d03d3536e4e0449063b6ae5e6561de01b2127e5"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Kernel\\SetPartitions.wl"
             ]
             ,
@@ -1038,7 +1143,7 @@
             ,
             "Hash"
             ->
-            "a0ec494ad265db4d14c1efaa6aa4ea6411d13527a6bb4d21cc138150aecaafa8"
+            "c3ed6d01fff355d1e26926adcd7d570fef5c36993411907da77148ac1308ea3e"
                 
         |>
         ,
@@ -1052,6 +1157,32 @@
             "Hash"
             ->
             "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\SubsetFromIndex.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "a059d85730cc8cddf82b86d23eb2099cc563d8046dfb5c4ff7655952c8d1834f"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\SubsetIndex.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "65b1893b00f61778bf79bf63406b0a071ffd2d6e1a2a8629d73880b28143410d"
                 
         |>
         ,
@@ -1091,6 +1222,19 @@
             "Hash"
             ->
             "e789117d21127b4ccf956331bd5011ea26888decf62ab06af656c8dfaa932121"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\TableauxToPermutationw.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "7362dc564dd67791b8878824349623acef8c78a94621163f271220c7f1ee8cae"
                 
         |>
         ,
@@ -1150,6 +1294,32 @@
             "File"
             ->
             File[
+                "Kernel\\TupleFromIndex.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "7a999ff6dcc07b2a7ffe7021dba759164c6c1368f6be4b7cd7c5d3d8c308b0aa"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\TupleIndex.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "bd5cd59d8b7e09d473d66fcc9b9d614d045b473f73d5329d40f889bc01fb5ffa"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Kernel\\UnorderedTuples.wl"
             ]
             ,
@@ -1202,55 +1372,12 @@
             "File"
             ->
             File[
-                "Documentation\\English\\Guides\\CombinatorialFunctions.nb"
-                    
+                "Documentation\\English\\Guides\\Combinatorics.nb"
             ]
             ,
             "Hash"
             ->
-            "83313bf94f39bcbca4d18c0fe9c98be023e6c4bd2794aa009c8329925c7afd77"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Documentation\\English\\Guides\\CombinatorialFunctionsRevision.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "8124e921a6deb70671328505c6e64928a5aeb57b52043fa721c235402aea0846"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Documentation\\English\\Guides\\NewCombinatorialFunctions.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "0692af13eaecf05c5b9f2ffd4b3ad613ee53b522e02d0d2408bda3ed0b361a63"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Documentation\\English\\Guides\\TuplesPermutationsAndSubsets.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "22bd970a66199ae68789d75d3bab9c50cce5ba96a8691bf88eabf608b17f9d1f"
+            "2fd46922ba51e1daf87a977b33f579de1dd9259c626838987e3be44177c69c33"
                 
         |>
         ,
@@ -1264,7 +1391,7 @@
             ,
             "Hash"
             ->
-            "25ffa706ca24a4776977470b0eb01a8a557fc09f50e193e196a70d7574c0a996"
+            "d51dce7cc71a7ae593b58ddb3be3145bd1bf81e2655c435f9e6e12524571e890"
                 
         |>
         ,
@@ -1278,7 +1405,7 @@
             ,
             "Hash"
             ->
-            "b109853d40986b1c7c33e2d8ff9c259d82c9a33c85652a89f5240f76fb176eb5"
+            "28b911d51670921119fd33169f24d11f4aa88749bbbcb6b458363f4d03e6d27f"
                 
         |>
         ,
@@ -1292,7 +1419,7 @@
             ,
             "Hash"
             ->
-            "278cd73fead83281f7043cd794c53aa7cd46427c6a64d6fba32d0caf2dedacd4"
+            "395b131378d8c0e76179a70798c44607fe1b83155ec5d3219cdc7f33991dd234"
                 
         |>
         ,
@@ -1306,35 +1433,7 @@
             ,
             "Hash"
             ->
-            "68ca98f14cb8d1c8a0b2e7abe2c3df9581123354a569cf6ef1056b593e1d2b50"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Documentation\\English\\ReferencePages\\Symbols\\DiscreteInverseEqual.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "40b624dc00f630f1cf97364622f3bfc151fb7981c13a718ba465867e9d5182c5"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Documentation\\English\\ReferencePages\\Symbols\\DiscreteInverseLessThan.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "eac36a62842060bb28300dead0836e554089a9398ffcd5c7236fb6e751ec18fc"
+            "cb2b327658c394fe3668a638b36462e812b4ec7bb1f45e9c9146fc914732a478"
                 
         |>
         ,
@@ -1348,7 +1447,7 @@
             ,
             "Hash"
             ->
-            "3524bb17f30298d40e9bb42533123ffc41d0882039691b898521a0a80abf0c71"
+            "4befa019a702c85cd3b5239690fbec2b51f14ed1b5538c6c3ea5b5499246c755"
                 
         |>
         ,
@@ -1362,7 +1461,7 @@
             ,
             "Hash"
             ->
-            "b9994f7465d4cec186a83ae3ddeac4c6232f9e88f35dbec3a2db8ab37c26caa0"
+            "3b84905ada4ee1675895b3d7cacb3d1e372c6ef5e1e522873a46af86ba1f6c7b"
                 
         |>
         ,
@@ -1376,7 +1475,7 @@
             ,
             "Hash"
             ->
-            "833c2e0f9c180a3a08ddbdebf89fe3d7bde7bd990d0659f9e450653b33127708"
+            "5700084ceb42248e4413df155651fb8a9d8746182245a23eea87db5955d22af9"
                 
         |>
         ,
@@ -1390,7 +1489,7 @@
             ,
             "Hash"
             ->
-            "8d7a430b82fb260a66e13b0ba016b7509bc208dd035980c60402f024b32876e5"
+            "b140263d519606797e5ca637e0edec879d104444bfcd862638de547a2bf9a1a5"
                 
         |>
         ,
@@ -1404,7 +1503,7 @@
             ,
             "Hash"
             ->
-            "25d9de304a85979ddb844b50f4efee6675b442f20282d075226ef38a8ec9b60a"
+            "c0758a37fb60c714113bb7fa058d5537608eef7e3e8069307311ddac0dcfbe07"
                 
         |>
         ,
@@ -1418,7 +1517,7 @@
             ,
             "Hash"
             ->
-            "b0b754dc386c46c96a4591eb043a5408a093399423884d03d5cb5ccd1ceca87c"
+            "5cdd30b1e825227130add2c2c282f94ded89d1ff3e8fd9482f13197d27dfdb19"
                 
         |>
         ,
@@ -1432,7 +1531,7 @@
             ,
             "Hash"
             ->
-            "589522d0672d3ffb63774447bb681171a1abf899b6f0daa315417c99e3d0960a"
+            "eee4e6afcdb4fb4da2eab1e970d87ab3080ccdcbf82f5f16925bd1e2bba25eea"
                 
         |>
         ,
@@ -1446,7 +1545,7 @@
             ,
             "Hash"
             ->
-            "636bbd6d1946d3449c0e61772dedef29749a48014111d3abfbed23a5690572a8"
+            "4072ee45b0f4d0a14ebf93c2dcbb6d6edaecbe44ba2f1fc17309a33d09504f58"
                 
         |>
         ,
@@ -1460,7 +1559,7 @@
             ,
             "Hash"
             ->
-            "80c6cc03226ae5160d2852558c5452fed0891ae5ccae5fc808fb1ea47de24662"
+            "1bf0fb21ae2da6e387355ce05514ae0257e997ec148735f484ebe25ef14fa4ad"
                 
         |>
         ,
@@ -1474,7 +1573,7 @@
             ,
             "Hash"
             ->
-            "a4885bbdd2da701e357447edb41df1ef1cde2857a1fc4a8dfbaa72e85d21715d"
+            "546600c5f95341af1fac2e71d09b69c293253cd0fb9cc005487932e16b0e46d7"
                 
         |>
         ,
@@ -1488,7 +1587,7 @@
             ,
             "Hash"
             ->
-            "c02920966d650eafb75524cb537967192405303989022b367c4839d609a37a05"
+            "6f0b8298f49256fe8b4fa5c4e968a8d6e99d25b92298fe6063a23fb622bd17eb"
                 
         |>
         ,
@@ -1502,7 +1601,7 @@
             ,
             "Hash"
             ->
-            "b636025d7ad6852a7b3239eb3a4e2ea6b988446d311fcea24ca7d302550a204b"
+            "8e44830e51e845699c039139d42cb9a4ab6f3581e86ed0438033ad9a477130b5"
                 
         |>
         ,
@@ -1516,7 +1615,7 @@
             ,
             "Hash"
             ->
-            "c79fb4d614fdec273a9d4f62c20c3f40629f993637ebe87f6e796b924378ec46"
+            "dfd877b5aa69fc767e09c34df99e9e9c6dc822b7c55437876be0880b92d880ba"
                 
         |>
         ,
@@ -1530,7 +1629,7 @@
             ,
             "Hash"
             ->
-            "bc731b5065636df0a895cfd9c76b5d9438d9429e288df9298151bf6ac1d231b7"
+            "bf5ef925146da04df1fb7e82b9292fb0f9d4261dcc050560c595f38d1d176a52"
                 
         |>
         ,
@@ -1544,7 +1643,7 @@
             ,
             "Hash"
             ->
-            "5d66cc4eeb6cbdee8ea27744efd9f9abfe7b222b3ece32b1881aaf925b75019f"
+            "253d4f8aea94f1e0ee35548c85ecabe77ed7ca45533e279cc4cefb8826497bf7"
                 
         |>
         ,
@@ -1558,7 +1657,7 @@
             ,
             "Hash"
             ->
-            "c36063fa5caf30846645bcab776f1f5e66e609a25b3265b7e065d22e9a1eb9b7"
+            "a1e329c8d0af60d595fb207d6158317822ffeea6eef68fb41647342ba57ba65e"
                 
         |>
         ,
@@ -1572,7 +1671,7 @@
             ,
             "Hash"
             ->
-            "4ce3ccd0292ee9ad77ab8861883c3c773a061b76fa0fcea07e6d48cfabd11d0e"
+            "5451dc31fc96910a88aef0acea8b8d9e395aaefc1e323e725ae986d3be7cf0a2"
                 
         |>
         ,
@@ -1586,7 +1685,7 @@
             ,
             "Hash"
             ->
-            "5528f0efeda3186a45a43022380809182152500aebf67dfdf6c07acdc7823289"
+            "adbca7d33dddfadb0ccd66f91a4c3efe72e3eeae520e083c545f2f4960ed0ded"
                 
         |>
         ,
@@ -1600,7 +1699,7 @@
             ,
             "Hash"
             ->
-            "c33e083bec2142189d7dc1595a65891d1cbc6e141d9945238fb2d488b93d998e"
+            "d1a697f95e24c3d1d5d9cdd70efcc1939e4b8fa395cefb12275f5c125fed7543"
                 
         |>
         ,
@@ -1614,7 +1713,7 @@
             ,
             "Hash"
             ->
-            "ed0d8ca395bd9437cde02748a1a55dce158142d096fdec5eb37cdc3cdc50efe0"
+            "d319d3301e90095eb618b9e1f5e2a576bdfd49ee4b60f46e3598352e8f4ff758"
                 
         |>
         ,
@@ -1628,7 +1727,7 @@
             ,
             "Hash"
             ->
-            "6274ab01939c469349da9dd4d2ca68e6b1a51a883c723815ce8257dc81b04aff"
+            "b09786407a1b2a651b32696dff9ddb40929fd4116542cbff43330543491b5315"
                 
         |>
         ,
@@ -1642,7 +1741,7 @@
             ,
             "Hash"
             ->
-            "14b3b583ebd7d601ac697a27d68b672b27f31611931902065e8eb185c0ec25a6"
+            "3cf79bbc2e998aade9694bc427adbc0e4dbc80c5c62ec363d0a71ea288e04f47"
                 
         |>
         ,
@@ -1656,7 +1755,7 @@
             ,
             "Hash"
             ->
-            "fed19092efd003b394ad5892adadaa55fc7aea9d937928764fca2d21629af34e"
+            "135f3e03121147fff8bb0225aa7b9f7c987f7ab590848fa5f4a88a5bcc2d9b1a"
                 
         |>
         ,
@@ -1670,7 +1769,21 @@
             ,
             "Hash"
             ->
-            "c2f464b1fe7db7aa09a4bff0ee2cf5da7da60b6de9d1a2715c0da26a6c2ce857"
+            "12d4b4ae5725046f03c7ca61f2e449918369c25d99f35c5c79002b6afa6048cb"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\LehmerCodeFromPermutation.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "bbc2fbb4086812d31da66a3174192295df1fd806a08f99fddcc55d6232ccc211"
                 
         |>
         ,
@@ -1684,7 +1797,7 @@
             ,
             "Hash"
             ->
-            "2f397bd41fe0fc001f2ef69b5547040ff4b5f81c9a1cebb1872ae679e9d0af8d"
+            "1f1183dc3ca791604731c3649e8eeb75fc45f8cc0fdf4caa98c9cb59a141df97"
                 
         |>
         ,
@@ -1698,7 +1811,7 @@
             ,
             "Hash"
             ->
-            "c311d459cbf6fc35b469ff3d188c1920a50fda1c1cb8f34054b16155e97f3d64"
+            "24763eafe31d25cfb4257badcfd97d88c7bc18a3528192f299f2c84ad951543a"
                 
         |>
         ,
@@ -1712,7 +1825,7 @@
             ,
             "Hash"
             ->
-            "7edbb1d60f7e0aaf8ef5a7e1eff325a7bd7eab34b585c20998f502f5bbc56e8e"
+            "12683f3771ae2a1eaec2e410805376122a08ccfdad4bcaad75c280a9bef23173"
                 
         |>
         ,
@@ -1726,7 +1839,7 @@
             ,
             "Hash"
             ->
-            "fa0d4786eae729af19de0b339f9b9f849b3a434b201660ded7b882d1df41f730"
+            "bb424d6d1057c664c9ec7dce9362ad131ecf2448acd3b4407f4da74db39ed612"
                 
         |>
         ,
@@ -1740,7 +1853,7 @@
             ,
             "Hash"
             ->
-            "b1b984e743de36024e824f7a1f95d7392f5b86a671a4530a73328a27d65e50db"
+            "92932d4e56410c98f4e4e9d68904446f238c2ff9b75b1e3809c5b08126b4dbfa"
                 
         |>
         ,
@@ -1754,21 +1867,7 @@
             ,
             "Hash"
             ->
-            "5aa1a5d05bfeab9f98e8d2a4143a706346cddbed9e13bcc155c175d05b7a65d1"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Documentation\\English\\ReferencePages\\Symbols\\NDigitNumbers.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "47fb784392572886df24b2f6a311012befaa8d630432b584832ec9bb5bee44ca"
+            "82ec61f2d46b922670a9dbb7ee97c751dd93024314530c01a63756cc95f1692a"
                 
         |>
         ,
@@ -1782,7 +1881,7 @@
             ,
             "Hash"
             ->
-            "51fb53d461c9c8b6657b7d432b45b117464128b47380bbaf768ef3c4a00d652c"
+            "fc150a36f6848bb083ca7bd50d1ca67cb76da841933db008b0b1f7a779c677a8"
                 
         |>
         ,
@@ -1796,7 +1895,7 @@
             ,
             "Hash"
             ->
-            "0f956295e78b55865358874c6aaca05ab04273701dc4fa26419a83bc855b0b76"
+            "3f645712c976d03e2b563975c15f3ca7adfed43b1f9339c1790ce620d6ab7b67"
                 
         |>
         ,
@@ -1810,7 +1909,7 @@
             ,
             "Hash"
             ->
-            "4691595640f6da5d22924e505c4845902f7b2e6887337e7a20b1bc162cc40f7c"
+            "3b790be9c247a93267410eecc9d7f13fd92b9a23bd4b31d605fd445009fd8ec7"
                 
         |>
         ,
@@ -1824,7 +1923,7 @@
             ,
             "Hash"
             ->
-            "f923e1a5272ab5a24647f8b50e730fc0ddc7fe7c8d76948b0f3d95734a254839"
+            "4766a3af9ceafea6c055e7c989ef6160029527e10fd344fc0305581d772221df"
                 
         |>
         ,
@@ -1838,7 +1937,7 @@
             ,
             "Hash"
             ->
-            "abc0cb5fca9cb9cefb3b356f2ab742e3306aad9b7d1afa03110ed1a79abcfaf6"
+            "64cb628f0e2a610e70698bedbec1712fec27edcad3a615eae7da462ac2de2b01"
                 
         |>
         ,
@@ -1852,7 +1951,7 @@
             ,
             "Hash"
             ->
-            "e4c0c1d5b8ce1adbd6bf35a10b5e634bdd698008c8e1d36452ff99e9d6e80ad2"
+            "9e88f01f308c93f7902d25dad90e055f2211256fed34a426124973dc54eb2244"
                 
         |>
         ,
@@ -1860,7 +1959,59 @@
             "File"
             ->
             File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\EnumerateMultisetPartialDerangements.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\NumberOfTableaux.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\OrderedTupleFromIndex.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\PermutationFromIndex.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\PermutationIndex.nb"
                     
             ]
             ,
@@ -1886,13 +2037,131 @@
             "File"
             ->
             File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\QExponential.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\QMultinomial.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\SelfConjugatePartitionQ.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\SubsetFromIndex.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\SubsetIndex.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\TableauxToPermutation.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\TupleFromIndex.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\TupleIndex.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            $Failed
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Documentation\\English\\ReferencePages\\Symbols\\PartialOrderGraphQ.nb"
                     
             ]
             ,
             "Hash"
             ->
-            "a4ea3164abd45797fcb1a7e296819f8eb8e81d1f374ce10af98cc0d39565bdc5"
+            "3a268811bef323214dc555d843226b1b0c477eab5a5d11b7ea287581cfe426f8"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\PartitionCrank.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "f86829d437d69c5b7f3b8fccfb118a30e042488c1025ff144555ced9dc72b5c6"
                 
         |>
         ,
@@ -1906,7 +2175,21 @@
             ,
             "Hash"
             ->
-            "19da78057d14324d06ed7e7e1e24bdefc37f4e6a8e99d12dc96ca6ccd156ce62"
+            "56195be3d7c1dbf6a016cef5f3de7137a9303d780525f08e51d1c829e218c494"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\PartitionRank.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "1a738acb926d67eebd59ff3bc0e67021d8a64077cde87cb0750ec8b6f0c0c066"
                 
         |>
         ,
@@ -1920,7 +2203,7 @@
             ,
             "Hash"
             ->
-            "aeebd1a2f0b83afb21def6f01e6b3bae8dd30847ff67222ce2daed8545d5a340"
+            "24020fb0d909c18d5e363743c32d035d861792d4685f8e0c5fe5f30251f13356"
                 
         |>
         ,
@@ -1934,7 +2217,7 @@
             ,
             "Hash"
             ->
-            "445b9710a7777a95c83c529784bd24b06c15615d8ea4375313f04ac1fdce6470"
+            "5765d81cd885af53116f2794f17669fd1d26c0ae165d615288bb682f4cff1c64"
                 
         |>
         ,
@@ -1948,7 +2231,7 @@
             ,
             "Hash"
             ->
-            "9701d81e280f941652162382a50b7dfca575191be1f3ae6e19dab68a97be2b73"
+            "af1259cca6a6aedbd2857e9e47d6368cb3d433f2a48785cd2c87ec80b8efa27e"
                 
         |>
         ,
@@ -1962,7 +2245,7 @@
             ,
             "Hash"
             ->
-            "d492e66af23dc8ad02455a5b21e26c3d6e62eebac999979acfb89167531f1d27"
+            "afcb8965af4ee090678f0572b05ff6dda8c4515c0523aee7a9471d81e81d2bf2"
                 
         |>
         ,
@@ -1976,7 +2259,7 @@
             ,
             "Hash"
             ->
-            "7793c60f361366426d93b838f42b40c97c17c564c4fad9fa743e02d234a09b3a"
+            "eee433dbc186797d8c375ac9a9813e6fd36bfc5cb38bb2feb0430738dd2f7225"
                 
         |>
         ,
@@ -1990,7 +2273,7 @@
             ,
             "Hash"
             ->
-            "f7efcd3224b26734fcec686215f830b383181e18f2ac5777079de8628ca7967a"
+            "4298a977ea0dd389c631c3a1b346ebc7a3ebde8be7425beab35597bb886ab0a7"
                 
         |>
         ,
@@ -2004,7 +2287,7 @@
             ,
             "Hash"
             ->
-            "987f34461d24edcee6ccd0e8872b0570b1140644e53f130d1ff8c39227ba2878"
+            "5c48c0a160b9ac28fd7fcaceeb3a3816d4392c3f85f153482e752ef1ca86d87d"
                 
         |>
         ,
@@ -2018,7 +2301,7 @@
             ,
             "Hash"
             ->
-            "784b2e00c53c47f57a8fc3910a9383a69f49f31839f6533f51fb841af02797da"
+            "ee8c5c9ed6a43903e7b12a49816ba2f4cb4bba5e896954668674b49dcce24096"
                 
         |>
         ,
@@ -2032,7 +2315,7 @@
             ,
             "Hash"
             ->
-            "a053a1aa24fa0e45aa3bc13776eeda2fe0774281ce2718a5aeae326d93911ee7"
+            "629dd99cc50f5aca839acd9851a39142c66cea7858fe2e77beda6b9ff7e5a5b2"
                 
         |>
         ,
@@ -2046,7 +2329,7 @@
             ,
             "Hash"
             ->
-            "11ed56b4d5819af3f77b9769d79ad1235941f2c89082de939a98988bf14ec514"
+            "c3fa13a4b7cfa937795c499ed9f8d131bd85f8e20983008c7e3a81dc37d5d813"
                 
         |>
         ,
@@ -2060,7 +2343,21 @@
             ,
             "Hash"
             ->
-            "68b48d263424eba8d71edcc7b93897246fb68d2251bbf0e8463c5d545d9443e6"
+            "4b50f3f5681cd0858b181560257f93235b59a804391682110107cc221b63167e"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\QExponential.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "270eb94ae36fd1919ba06f1ddd14366a48ce1ccebeeaa42774f30c6cc4a5a080"
                 
         |>
         ,
@@ -2074,7 +2371,7 @@
             ,
             "Hash"
             ->
-            "3b63703ccc416b83a8d4e751d7687b4557a5282bd918974449cb8909ecfa0ecc"
+            "03a0d0349dd82623b4d75cdc3576499617fb1d473e7d18458a3f6f316e46e812"
                 
         |>
         ,
@@ -2088,7 +2385,21 @@
             ,
             "Hash"
             ->
-            "f141bb410a02b3923a6489cdd3d0dd9eb7b73114cba8129a62b8cf18278c73de"
+            "a474ae2bc94191f96b716d368806cf145a54925fbca4587cba5331f9ef528d40"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\RationalNumberRepeatingDecimalPeriod.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "78f89c61ff9770efef231a4d22b7e3b2e0f9d98c650bc58e41fdedcf8fed9e82"
                 
         |>
         ,
@@ -2102,7 +2413,7 @@
             ,
             "Hash"
             ->
-            "04d87fa004321c87bfbdd4ef49dacfe93b67c640a3f8dfe858a7ece84fd7d512"
+            "096d9cea1ec682fd08af0d537503f5a9645d926ad2ae0c58d48605d26aa8a4d7"
                 
         |>
         ,
@@ -2116,7 +2427,7 @@
             ,
             "Hash"
             ->
-            "659f8c45aa6cfcfcd8f5e1c2ec4c6284becb2d8f2c7d613946e1debd47c6c97c"
+            "603b0ec71afe02b2eaa9ba180de3cba0530cb5ea6fdee3b3f341d214ca12efb8"
                 
         |>
         ,
@@ -2130,7 +2441,7 @@
             ,
             "Hash"
             ->
-            "cf700ad17646a8548bd1c2a53b16939bc9d5dc08e67ec9a5ec5040f5e4a917ce"
+            "6a67cf9c94e8fbbd351a93ec026d905b3b37cd2da634d0721326b155d2a64716"
                 
         |>
         ,
@@ -2144,7 +2455,7 @@
             ,
             "Hash"
             ->
-            "db3c3d12256a64cd906a1aefee3d7dcb6b1e745096efc601ff2eeea50564d58b"
+            "f7f60de3ce7735a05eb7d4d1467a6948ccf0a813b1a5211816c576941e624353"
                 
         |>
         ,
@@ -2158,7 +2469,7 @@
             ,
             "Hash"
             ->
-            "720e0eb8025546e2337fb8bbd5afe6efe7f19bc5cbc632390c88920be2b71360"
+            "2ee2618d3386d7032fd3b74354107fe04fd53d0e078ff1e1f80c0ec8ce2645d2"
                 
         |>
         ,
@@ -2172,7 +2483,21 @@
             ,
             "Hash"
             ->
-            "52efd03343cd7438b994b14bd38c2b9843cfa33ec166e35324addb1715ba944f"
+            "07bce4b1739dd0f55e5995fd399bfef79730a5071f0cdd0f249f9c217c037569"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\SelfConjugatePartitionQ.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "02abc740cb84e943a9df4c59307545aff75291069486ac97be8de13db11ced77"
                 
         |>
         ,
@@ -2200,7 +2525,7 @@
             ,
             "Hash"
             ->
-            "d1b52581138168f66b56275269e5f3f09f0c1e370f940aeb05890c4a69f9fdab"
+            "740aa6106dcba7f828e72d769e89c36231fae25b25674cab7bf18a04088b297d"
                 
         |>
         ,
@@ -2214,7 +2539,7 @@
             ,
             "Hash"
             ->
-            "f72fc4f5c86128c189455d33739893b9f5b4b70673561ec30aa2a2d263a1aece"
+            "06800347ff32afa512f4ce4c9c4f6216ea316dff75a764d0cd2b7d55c149df86"
                 
         |>
         ,
@@ -2228,7 +2553,7 @@
             ,
             "Hash"
             ->
-            "2ec35d370997e1c0323bb6fe7605494c1cdd253b9bf6a846912be8730f1ebcd2"
+            "ed9d995bb5a78f2c9ba9ec60147750060134b9f0afec2a4640b70ce48737fab0"
                 
         |>
         ,
@@ -2242,7 +2567,7 @@
             ,
             "Hash"
             ->
-            "27ef2dc8b1f4219d3233bf6d82f0196518faab5ad749ab1c1fe2d8cdb5af3d20"
+            "ef18c9b100fcd48386ce274cc19dd5caccafe549b75ec364459657597b7f6b43"
                 
         |>
         ,
@@ -2256,7 +2581,7 @@
             ,
             "Hash"
             ->
-            "5eefa6cf62a09ba03968c3ec6e79f45276e5aea13c9d86656c29072dee7c1e1f"
+            "f474c0251be9bbbab3dbc0b2445e6e85f54ca5750b25e9b54b04b78ca8cb00a7"
                 
         |>
         ,
@@ -2270,7 +2595,7 @@
             ,
             "Hash"
             ->
-            "ab31147675ef12bed2beeb520a86267701487db15da07530943d7cfdb801ac5f"
+            "d5a54c256e36fdc6e5ef7ca07becb389a991a204a2a33dcd000321e12f4432da"
                 
         |>
         ,
@@ -2284,7 +2609,7 @@
             ,
             "Hash"
             ->
-            "e91aa92274151f2c4d07f1898ca35a23da74fd36a4d6afd93a4bdce552bd0f54"
+            "0d415b8fe4739e5eaaa7dfb64d65c4d7c02dd63ac55328f9aaee646eac12f505"
                 
         |>
         ,
@@ -2298,7 +2623,7 @@
             ,
             "Hash"
             ->
-            "c4a01e048c669fa337d770680dea9dd372ebd28638ab39b6cf6f50cbdf44685b"
+            "fcfe6f7707bc2d566a5b1bf2c4df3858f441de1ab755c3bf3bdf27a49418d4e3"
                 
         |>
         ,
@@ -2312,7 +2637,7 @@
             ,
             "Hash"
             ->
-            "c121777d67da763d264cdc5cdae2c2a9b05e59d025d8503ebc5ff6e00cfa1af7"
+            "7477446f207e4225009acb5239359a8fbaaa319a42c00af135b47722ebdfe1a8"
                 
         |>
         ,
@@ -2326,7 +2651,7 @@
             ,
             "Hash"
             ->
-            "2103ddee5b428f52c38521bb970ef04857c50bd67831e802ae7abf52f0fbdcb0"
+            "49250cdb85e98ea0b813d93a3a4789a2d84edb09828f84dcf9205b2796bde023"
                 
         |>
         ,
@@ -2340,7 +2665,7 @@
             ,
             "Hash"
             ->
-            "e8e1f275313ded713a0fde45ad016594a369deebfaabb76a1d2199e1251b800d"
+            "9a898555d3594045737b8f8cf58944092f51d07ab103c966aeb4756185184e48"
                 
         |>
         ,
@@ -2354,7 +2679,7 @@
             ,
             "Hash"
             ->
-            "0f16fdc77f9e56e95726781a1be4913b25d621fdfd5cb60caad3cc5cef983221"
+            "20501e403658b39fed93c802407a988bb4632789def4e331a71d10996e019c7a"
                 
         |>
         ,
@@ -2368,7 +2693,7 @@
             ,
             "Hash"
             ->
-            "533f62f324bab1df3b9ea90ee4d71452a7bc3cbed4f7491719e978cd214f1a86"
+            "93d052952f092e2568db0292160cdd55435a6ec0f585718ec19bb6cf977474c2"
                 
         |>
         ,
@@ -2382,7 +2707,7 @@
             ,
             "Hash"
             ->
-            "e2a8f6cb46250647c3d65b6665a95abb11a476a20528b965c60bbaff88ee4336"
+            "f008950f8c2b7d72c9774332c42b4ba1f325cca24eb9e9f1e3774f417e5272d2"
                 
         |>
     }
