@@ -6,10 +6,6 @@
 
 <<PeterBurbery`Combinatorics`DescendingSublists`;
 
-<<PeterBurbery`Combinatorics`DiscreteInverseEqual`;
-
-<<PeterBurbery`Combinatorics`DiscreteInverseLessThan`;
-
 <<PeterBurbery`Combinatorics`DivisorHasseDiagram`;
 
 <<PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`;
@@ -135,8 +131,6 @@
 <<PeterBurbery`Combinatorics`RationalNumberRepeatingDecimalPeriod`;
 
 <<PeterBurbery`Combinatorics`ReflexiveGraphQ`;
-
-<<PeterBurbery`Combinatorics`RepetendCycleLength`;
 
 <<PeterBurbery`Combinatorics`SecantNumber`;
 
