@@ -5,11 +5,11 @@ PacletObject[
     "Name" -> "PeterBurbery/Combinatorics",
     "Description" -> "Combinatorics functions for subsets, tuples, and permutations",
     "Creator" -> "Peter Cullen Burbery",
-    "License" -> "MIT",
+    "License" -> "BSD-3-Clause",
     "PublisherID" -> "PeterBurbery",
     "Version" -> "2.0.1",
     "WolframVersion" -> "13.3+",
-    "Loading" -> "Startup",
+    "PrimaryContext" -> "PeterBurbery`Combinatorics`",
     "Extensions" -> {
       {
         "Kernel",
@@ -110,6 +110,7 @@ PacletObject[
         }
       },
       {"Documentation", "Language" -> "English"}
-    }
+    },
+    "Loading" -> "Startup"
   |>
 ]
