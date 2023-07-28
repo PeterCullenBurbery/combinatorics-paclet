@@ -33,6 +33,9 @@ RationalNumberRepeatingDecimalPeriod[n_Rational] :=
     First[RealDigits[n]] /. {{___, list_?ListQ} :> Length[list], list_
         ?ListQ -> 0}
 
+RationalNumberRepeatingDecimalPeriod[n_Integer?IntegerQ] :=
+    0
+
 (* ::Section::Closed:: *)
 
 (*Package Footer*)

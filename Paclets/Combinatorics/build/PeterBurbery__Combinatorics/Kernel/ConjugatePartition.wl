@@ -2,7 +2,7 @@
 
 BeginPackage["PeterBurbery`Combinatorics`"]
 
-PeterBurbery`Combinatorics`ConjugatePartition
+PeterBurbery`Combinatorics`ConjugatePartition;
 
 Begin["`Private`"]
 

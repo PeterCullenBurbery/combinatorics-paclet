@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Peter Cullen Burbery",
     "License" -> "BSD-3-Clause",
     "PublisherID" -> "PeterBurbery",
-    "Version" -> "2.0.1",
+    "Version" -> "2.0.3",
     "WolframVersion" -> "13.3+",
     "PrimaryContext" -> "PeterBurbery`Combinatorics`",
     "Extensions" -> {
@@ -25,8 +25,6 @@ PacletObject[
           "PeterBurbery`Combinatorics`CentralBinomialCoefficient",
           "PeterBurbery`Combinatorics`ConjugatePartition",
           "PeterBurbery`Combinatorics`DescendingSublists",
-          "PeterBurbery`Combinatorics`DiscreteInverseEqual",
-          "PeterBurbery`Combinatorics`DiscreteInverseLessThan",
           "PeterBurbery`Combinatorics`DivisorHasseDiagram",
           "PeterBurbery`Combinatorics`DominatingIntegerPartitionQ",
           "PeterBurbery`Combinatorics`DurfeeSquare",
@@ -86,7 +84,6 @@ PacletObject[
           "PeterBurbery`Combinatorics`RandomYoungTableau",
           "PeterBurbery`Combinatorics`RationalNumberRepeatingDecimalPeriod",
           "PeterBurbery`Combinatorics`ReflexiveGraphQ",
-          "PeterBurbery`Combinatorics`RepetendCycleLength",
           "PeterBurbery`Combinatorics`SecantNumber",
           "PeterBurbery`Combinatorics`SelectPermutations",
           "PeterBurbery`Combinatorics`SelectSubsets",
@@ -111,6 +108,6 @@ PacletObject[
       },
       {"Documentation", "Language" -> "English"}
     },
-    "Loading" -> "Startup"
+    "Loading" -> "StartUp"
   |>
 ]

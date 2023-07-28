@@ -1,10 +1,26 @@
 (* ::Package:: *)
 
-BeginPackage["PeterBurbery`Combinatorics`"]
+(* ::Section:: *)
 
-PeterBurbery`Combinatorics`CentralBinomialCoefficient
+(*Package Header*)
 
-Begin["`Private`"]
+BeginPackage["PeterBurbery`Combinatorics`"];
+
+(* ::Text:: *)
+
+(*Declare your public symbols here:*)
+
+PeterBurbery`Combinatorics`CentralBinomialCoefficient;
+
+Begin["`Private`"];
+
+(* ::Section:: *)
+
+(*Definitions*)
+
+(* ::Text:: *)
+
+(*Define your public and private symbols here:*)
 
 CentralBinomialCoefficient // ClearAll
 
@@ -16,9 +32,10 @@ CentralBinomialCoefficient::usage = "CentralBinomialCoefficient[n] calculates th
 CentralBinomialCoefficient[n_] :=
     Binomial[2 n, n]
 
-End[]
+(* ::Section::Closed:: *)
 
-EndPackage[]
+(*Package Footer*)
 
+End[];
 
-
+EndPackage[];
