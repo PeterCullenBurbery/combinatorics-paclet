@@ -3,7 +3,7 @@
 PacletObject[<|"Name" -> "PeterBurbery/Combinatorics", "Description" 
   -> "Combinatorics functions for subsets, tuples, and permutations", "Creator"
    -> "Peter Cullen Burbery", "License" -> "BSD-3-Clause", "PublisherID"
-   -> "PeterBurbery", "Version" -> "2.0.12", "WolframVersion" -> "13.3+",
+   -> "PeterBurbery", "Version" -> "2.0.13", "WolframVersion" -> "13.3+",
    "PrimaryContext" -> "PeterBurbery`Combinatorics`", "Extensions" -> {
   {"Kernel", "Root" -> "Kernel", "Context" -> {{"PeterBurbery`Combinatorics`",
    "Combinatorics.wl"}}, "Symbols" -> {"PeterBurbery`Combinatorics`CanonicalMultiset",

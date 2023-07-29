@@ -37,7 +37,7 @@
             ,
             "Hash"
             ->
-            "d1cf103851167fb68f64b512874cf0fca81d497e9fd81b6b9387b43f8721f140"
+            "2482f77034c998979ce96ee2580c920e105e31ec5a64bf0533d83d3345f5c33b"
                 
         |>
         ,
@@ -1181,7 +1181,7 @@
             ,
             "Hash"
             ->
-            "21f7a8eb96bfe8bb24a388eb166bf6dce7d5f8d23c0b5969e3e43b592173439b"
+            "84f9b2612bbfeb510fa724b95f1e1e9f8ddf42cf1f0814f7f3ff037c55a83340"
                 
         |>
         ,
@@ -1327,7 +1327,7 @@
             ,
             "Hash"
             ->
-            "be007d88df1c8513a404c75d589d0af795bc038e60f229c538aecd49a024debf"
+            "6833db864582e7364f67cbc2971211379ec14ec893b74fe037ce8d17dd79a47d"
                 
         |>
         ,
@@ -1355,7 +1355,7 @@
             ,
             "Hash"
             ->
-            "6ab3d332376c9e0a44bc062f1566ceb3b099bc22c6f3a5270acf03fdbb5f7345"
+            "f81dafdbd3366e428260809f3e324a8e0027315394f3929ded7fc743b4c118b6"
                 
         |>
         ,
@@ -1425,7 +1425,7 @@
             ,
             "Hash"
             ->
-            "3b1fadcfb7f4d975b3308e4e5c2a1e797d0b511857b02ef100dfe1b0835e679b"
+            "812df748ab43e50606a793142a548170cd808ae27af515b715b5e353c08e1f1c"
                 
         |>
         ,
@@ -1439,7 +1439,7 @@
             ,
             "Hash"
             ->
-            "a138f72d31ae46c5759398e41caf37a99fd5624785a29282f9d374a6febac0e2"
+            "6bc705c3edb3bb8ec82af718542bf4d030f6e0823d82feab64a4bc872320471c"
                 
         |>
         ,
@@ -1453,7 +1453,7 @@
             ,
             "Hash"
             ->
-            "2543eeb4a7f9fe3db6e922faf575861ee00fb3505106834c17a39114d4d5cb16"
+            "7b524857c9defe9e90d5667b83267997d4cb5db8edcdad9046a5d12d49b24d97"
                 
         |>
         ,
@@ -1467,7 +1467,7 @@
             ,
             "Hash"
             ->
-            "9ed3c35498566088e465f51bfc00fdd8faed7972d36b20737876243f03417d3c"
+            "bc49830d970e7c4546bbb502a3093d2d7afe9ee17edcdb33f9936248970155dd"
                 
         |>
         ,
@@ -1523,7 +1523,7 @@
             ,
             "Hash"
             ->
-            "f079ce25716c4f2a30847e1f11c8821a2ae178dd8476e960d5b430d0d44b7a6b"
+            "d8ba36f8778fcd02b5b865851b89485c87bd0e1674e864f67d1f5302d638d735"
                 
         |>
         ,
@@ -1537,7 +1537,7 @@
             ,
             "Hash"
             ->
-            "e9b226c5d8143280a187fdcfeee716ed790e88971caa8e63441a9c1216949674"
+            "06509d76ca2b7a35a9c9de28f9021ffe559db81d3365d75a36fcc332b99684d5"
                 
         |>
         ,
@@ -1621,7 +1621,7 @@
             ,
             "Hash"
             ->
-            "90f040e80e9bd0fb715f3c26fcb13a5e390a2b32a722dba8a4db63f81c3b9f2d"
+            "d157b0963579f888ef320d7714ffe2b3845dbae78cdc008e3cb40a43d75c3173"
                 
         |>
         ,
@@ -1649,7 +1649,7 @@
             ,
             "Hash"
             ->
-            "04b3c35f68904e08e39657e9b3d658555dbb77d2d25b050fa90b2fb019cd2f61"
+            "dd35292761ec1374ad522312205a8d58274b7da500fec428de937b7ca11c0965"
                 
         |>
         ,
@@ -1705,7 +1705,7 @@
             ,
             "Hash"
             ->
-            "1f3a558e3ea9da54ba3949a2c46de8e41c3105b37bd1a15d8d1195b5ff54dc00"
+            "bba167a329d365affdc99722401302bea43df6e62bc7707479b9c13da33558be"
                 
         |>
         ,
@@ -1733,7 +1733,7 @@
             ,
             "Hash"
             ->
-            "7126d3f2ac2f75ce84f92940fefda56c20ae1ee78857f0fd0f92c34b67b29245"
+            "461745f380ebdc63ae7360ded092892985bdfc1307f9b399329a9137df951739"
                 
         |>
         ,
@@ -1747,7 +1747,7 @@
             ,
             "Hash"
             ->
-            "cff3ecabb2894266e6e8d1768f740f31f043fbe7a02477f0cde5318827bf4b25"
+            "37b430f66be3d2a80a4ac9dde22ff79f4730e865c0c757aaa415ab8cd1aa27b8"
                 
         |>
         ,
@@ -1775,7 +1775,7 @@
             ,
             "Hash"
             ->
-            "7aa1536873fee093e75812ba5089d725e6fda3db020a822f5ff5ec2927e67f7c"
+            "1307a0822c27cb633a038aaa3ae390151866c3dbd66b925ce4cee7ebf0245a0c"
                 
         |>
         ,
@@ -2209,7 +2209,7 @@
             ,
             "Hash"
             ->
-            "b5ea4410f7dbfb200febd55e9ff2ff97a0d90af6b7080588747611eb291b42b0"
+            "6da0a953ca268e0321e697c1f08c88551e2847e4be6452062d84987fbdc12e18"
                 
         |>
         ,
@@ -2251,7 +2251,7 @@
             ,
             "Hash"
             ->
-            "29aba7d0c6b402457782d1534ece277fd4df702f947b5885ca23e759a47a8e35"
+            "213a6ada27754568da8c5da9b05970e59c115e487eb7c38cfb1c1c9b3dafac1d"
                 
         |>
         ,
@@ -2405,7 +2405,7 @@
             ,
             "Hash"
             ->
-            "073238b47a7948485d1a956daaaef9a5894d059a1a0de8924aa7ece5a8207f01"
+            "95fc36f11a86cd18caff9a367ba419ebcc415178784b11fcb57b316c397aa5c6"
                 
         |>
         ,
@@ -2447,7 +2447,7 @@
             ,
             "Hash"
             ->
-            "eba55bcbd5bccde3cc4b9efceba9d9f093c3f7e2acb0c150d0515dec90801599"
+            "310ac02db6c133c2c3306f57f750e916f36eed9180af7d86e069b2636ebdcb6e"
                 
         |>
         ,
@@ -2587,7 +2587,7 @@
             ,
             "Hash"
             ->
-            "0d1d9e5d7593fb02a92f5a2253898bfee56569c03934453680b0054058f85336"
+            "479bc1ef948875068d2057d4836bd0823eab229dbd753f3c7c1154ac7138e3b3"
                 
         |>
         ,
@@ -2609,13 +2609,27 @@
             "File"
             ->
             File[
+                "Documentation\\English\\Tutorials\\CombinatoricsCopy.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "b582c44bfde4fbbdaade39bb2dd08143c782c0aa7ebe9d0b88ee6dabadc9e5af"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Documentation\\English\\Tutorials\\Combinatorics.nb"
                     
             ]
             ,
             "Hash"
             ->
-            "44d55d26e0abcb5dd95b5c6a5f29b5891dd9153c7ab1240f6b4e56fb2176ce77"
+            "eb3c1bccece9d4fa295727eefe73ce483e62be550b8656d42e57a511f0f13725"
                 
         |>
         ,

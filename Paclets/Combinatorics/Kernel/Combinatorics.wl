@@ -1623,6 +1623,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -2028,20 +2029,29 @@ IdenticalGraphsQ[g__] :=
 IdenticalGraphsQ[g__] :=
     False /; !SameQ @@ (UndirectedGraphQ /@ {g})
 
-IdenticalGraphsQ[g__] :=
-    SameQ @@
-        (
-            List @@@
-                    (
-                            Sort[
-                                If[UndirectedGraphQ[#],
-                                        Sort
-                                        ,
-                                        Identity
-                                    ] /@ EdgeList[#]
-                            ]&
-                        ) /@ {g} \.00
-        )
+IdenticalGraphsQ[Pattern[g, BlankSequence[]]] :=
+    Apply[
+        SameQ
+        ,
+        List @@@
+            Map[
+                Function[
+                    Sort[
+                        Map[
+                            If[UndirectedGraphQ[#],
+                                Sort
+                                ,
+                                Identity
+                            ]
+                            ,
+                            EdgeList @ #
+                        ]
+                    ]
+                ]
+                ,
+                {g}
+            ]
+    ];
 
 TransitiveGraphQ[g_Graph] :=
     IdenticalGraphsQ[g, TransitiveClosure[g]]
