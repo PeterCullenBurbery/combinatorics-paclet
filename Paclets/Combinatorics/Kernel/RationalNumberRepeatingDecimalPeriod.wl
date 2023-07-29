@@ -36,6 +36,7 @@ RationalNumberRepeatingDecimalPeriod[n_Rational] :=
 RationalNumberRepeatingDecimalPeriod[n_Integer?IntegerQ] :=
     0
 
+
 (* ::Section::Closed:: *)
 
 (*Package Footer*)

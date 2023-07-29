@@ -1298,9 +1298,547 @@ QMultinomial[numbers__, q_] :=
             q]};
         qGammaApplied /. replacementRules
     ]
+RandomSelfConjugatePartition // ClearAll
+
+RandomSelfConjugatePartition::usage = "RandomSelfConjugatePartition[poset] determines if the coordinates in poset are partially ordered.";
+
+RandomSelfConjugatePartition[poset_] :=
+    Module[{sortedlast, sortedfirst, gatherfirst, gatherlast},
+        If[!MatrixQ[poset, IntegerQ],
+            Return[False, Module]
+        ];
+        sortedlast = GatherBy[Sort[poset], Last];
+        sortedfirst = GatherBy[Sort[poset], First];
+        gatherfirst = GatherBy[Reverse[Flatten[Position[sortedlast, #
+            ]& /@ poset, 1], 2], First];
+        gatherlast = GatherBy[Flatten[Position[sortedfirst, #]& /@ poset,
+             1], Last];
+        sortedlast === gatherlast && sortedfirst === gatherfirst
+    ]
+    
+
+RandomYoungTableau//ClearAll
+
+RandomYoungTableau::usage="RandomYoungTableau[p] generates a random Young tableau of shape p.\nRandomYoungTableau[p,n] generates n random Young tableaux of shape p.";
+
+RandomYoungTableau[shape_,n_Integer?NonNegative]/;IntegerPartitionQ[shape]:=Table[RandomYoungTableau[shape],{n}]
+
+RandomYoungTableau[shape_]/;IntegerPartitionQ[shape]:=Module[{p=shape,h,i,j,n,res,y},
+n=Total[shape];y=ArrayPad[ConjugatePartition[p],{0,n-Max[p]}];
+Do[
+While[
+i=RandomInteger[{1,First[y]}];
+j=RandomInteger[{1,First[p]}];
+(i>y[[j]])||(j>p[[i]])
+];
+While[
+If[(h=y[[j]]+p[[i]]-i-j)!=0,
+If[RandomChoice[{True,False}],
+i=RandomInteger[{i,y[[j]]}],
+j=RandomInteger[{j,p[[i]]}]
+]
+];
+h!=0];
+p[[i]]--;y[[j]]--;
+y[[m]]=i,
+{m,n,1,-1}];
+res=Table[Flatten[Position[y,k]],{k,Length[Union[y]]}];
+res/;TableauQ[res]]
+RationalNumberRepeatingDecimalPeriod // ClearAll
+
+SetAttributes[RationalNumberRepeatingDecimalPeriod, {NumericFunction,
+     Listable}];
+
+RationalNumberRepeatingDecimalPeriod::usage = "RationalNumberRepeatingDecimalPeriod[rational] returns the period of the repeating decimal for rational.";
+
+RationalNumberRepeatingDecimalPeriod[n_Rational] :=
+    First[RealDigits[n]] /. {{___, list_?ListQ} :> Length[list], list_
+        ?ListQ -> 0}
+
+RationalNumberRepeatingDecimalPeriod[n_Integer?IntegerQ] :=
+    0
 
 
-(* ::Section::Closed:: *)
+
+ReflexiveGraphQ//ClearAll
+
+ReflexiveGraphQ::usage="ReflexiveGraphQ[g] yields True if the graph g is reflexive and False otherwise.";
+
+ReflexiveGraphQ[g_Graph]:=False/;VertexCount[g]==0
+
+ReflexiveGraphQ[g_Graph]:=Module[{e=List@@@EdgeList[g],i},Apply[And,Table[MemberQ[e,{i,i}],{i,VertexList[g]}]]]
+
+SecantNumber // ClearAll
+
+SetAttributes[SecantNumber, {NumericFunction, Listable}]
+
+SecantNumber::usage = "SecantNumber[n] calculates the nth secant number.";
+
+SecantNumber[n_] :=
+    Abs[EulerE[2 n]]
+
+
+ClearAll[iSelectPermutations,SelectPermutations]
+
+SelectPermutations::usage="SelectPermutations[list, crit] generates a list of all possible permutations of the elements in list satisfying crit.\nSelectPermutations[list, n, crit] gives all permutations containing at most n elements satisfying crit.\nSelectPermutations[list, {n}, crit] gives all permutations containing exactly n elements satisfying crit.\nSelectPermutations[\[Ellipsis], crit, m] gives at most m results.";
+
+iSelectPermutations[list_,nlist_List,crit_,m_:\[Infinity]]:=Module[{vars,its,len=Length[list],begin,end,val,found=0,result,broken=False,rules,minindex},
+result=Reap[
+Do[
+If[!broken,
+Which[numvar>0,
+vars=Table[Unique["i"],numvar];
+begin=ConstantArray[1,Length[vars]];
+end=ConstantArray[len,Length[vars]];
+its=Transpose[{vars,begin,end}];
+
+minindex=GatherBy[Transpose[{List@@list,Range[Length[list]]}],First];
+minindex={#[[1,1]],#[[All,2]]}&/@minindex;
+minindex=Association[Rule@@@minindex];
+
+If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free *)
+Do[
+If[Unequal@@vars,
+val=Part[list,vars];
+If[TrueQ[crit[val]],
+found++;
+If[found>m,broken=True;Break[]];
+Sow[val];
+]
+]
+,
+Evaluate[Sequence@@its]
+]
+,
+Do[
+If[Unequal@@vars,
+val=Part[list,vars];
+rules=Transpose[{vars,List@@val}];
+rules=GatherBy[rules,Last];
+rules={#[[1,2]],#[[All,1]]}&/@rules;
+rules=(Take[minindex[#1],UpTo[Length[#2]]]===#2)&@@@rules;
+rules=And@@rules;
+If[rules,
+If[TrueQ[crit[val]],
+found++;
+If[found>m,broken=True;Break[]];
+Sow[val];
+]
+]
+]
+,
+Evaluate[Sequence@@its]
+]
+]
+,
+numvar==0,
+val={};
+If[TrueQ[crit[val]],
+found++;
+If[found>m,broken=True;Break[]];
+Sow[val];
+]
+]
+]
+,
+{numvar,nlist}
+]
+];
+First[result[[2]],{}]
+]
+SelectPermutations[list:_[___],crit_]:=iSelectPermutations[list,{Length[list]},crit]
+SelectPermutations[list:_[___],n_Integer?NonNegative,crit_,m_:\[Infinity]]:=iSelectPermutations[list,Range[n],crit,m]
+SelectPermutations[list:_[___],{n_Integer?NonNegative},crit_,m_:\[Infinity]]:=iSelectPermutations[list,{n},crit,m]
+SelectPermutations[list:_[___],{nmin_Integer?NonNegative,nmax_Integer?NonNegative},crit_,m_:\[Infinity]]:=iSelectPermutations[list,Range[nmin,nmax],crit,m]
+SelectPermutations[list:_[___],{nmin_Integer?NonNegative,nmax_Integer?NonNegative,dstep_Integer},crit_,m_:\[Infinity]]:=iSelectPermutations[list,Range[nmin,nmax,dstep],crit,m]
+
+
+ClearAll[SelectSubsets,expandn,iSelectSubsets]
+SelectSubsets::usage="SelectSubsets[list, crit] gives a list of all possible subsets of list that satisfy the criterion crit.\nSelectSubsets[list, n, crit] gives all subsets containing at most n elements that satisfy crit.\nSelectSubsets[list, {n}, crit] gives all subsets containing exactly n elements that satisfy crit.\nSelectSubsets[list, {nmin, nmax}, crit] gives all subsets containing between nmin and nmax elements that satisfy crit.\nSelectSubsets[list, nspec, crit, s] limits the results to the first s subsets.";
+
+iSelectSubsets[list_List,n_List,crit_,m_:\[Infinity]]:=Module[{vars,its,len=Length[list],begin,end,val,found=0,result,broken=False},
+result=Reap[
+Table[
+If[!broken,
+Which[numvar>0,
+vars=Table[Unique["i"],numvar];
+begin=Prepend[Most[vars]+1,1];
+end=Range[len-numvar+1,len];
+its=Transpose[{vars,begin,end}];
+
+Do[
+val=Part[list,vars];
+If[TrueQ[crit[val]],
+found++;
+If[found>m,broken=True;Break[]];
+Sow[val];
+]
+,
+Evaluate[Sequence@@its]
+]
+,
+numvar==0,
+val={};
+If[TrueQ[crit[val]],
+found++;
+If[found>m,broken=True;Break[]];
+Sow[val];
+]
+]
+]
+,
+{numvar,n}
+];
+];
+First[result[[2]],{}]
+]
+expandn[list_,All]:=expandn[list,Length[list]]
+expandn[list_,n_Integer?NonNegative]:=Range[0,n]
+expandn[list_,{n_Integer?NonNegative}]:={n}
+expandn[list_,{nmin_Integer?NonNegative,nmax_Integer?NonNegative}]:=Range[nmin,nmax]
+expandn[list_,{nmin_Integer?NonNegative,nmax_Integer?NonNegative,dn_Integer}]:=Range[nmin,nmax,dn]
+SelectSubsets[list_List,crit_]:=iSelectSubsets[list,expandn[list,All],crit]
+SelectSubsets[list_List,n_,crit_]:=iSelectSubsets[list,expandn[list,n],crit]
+SelectSubsets[list_List,n_,crit_,m_:\[Infinity]]:=iSelectSubsets[list,expandn[list,n],crit,m]
+
+
+SelectTuples//ClearAll
+
+SelectTuples::usage="SelectTuples[list, n, crit] generates a list of n-tuples of elements from list that satisfy crit.\nSelectTuples[{list1, list2, \[Ellipsis]}, crit] generates a list of all possible tuples whose ith element is from listi that satisfy crit.\nSelectTuples[\[Ellipsis], crit, m] picks at most the first m tuples that satisfy crit.";
+
+SelectTuples[list_List,n_Integer?NonNegative,crit_,m_:\[Infinity]]:=Module[{len=Length[list],vars,val,its,result,found=0},
+vars=Table[Unique["i"],n];
+its={#,len}&/@vars;
+result=Reap[
+Do[
+val=Part[list,vars];
+If[TrueQ[crit[val]],
+found++;
+If[found>m,Break[]];
+Sow[val];
+]
+,
+Evaluate[Sequence@@its]
+];
+];
+First[result[[2]],{}]
+]
+SelectTuples[list:{_List...},crit_,m_:\[Infinity]]:=Module[{n=Length[list],lens=Length/@list,vars,val, its,result,found=0},
+vars=Table[Unique["i"],n];
+its=Transpose[{vars,lens}];
+result=Reap[
+Do[
+val=MapThread[Part,{list,vars}];
+If[TrueQ[crit[val]],
+found++;
+If[found>m,Break[]];
+Sow[val];
+]
+,
+Evaluate[Sequence@@its]
+];
+];
+First[result[[2]],{}]
+]
+
+
+SelfConjugatePartitionQ // ClearAll
+
+SelfConjugatePartitionQ::usage = "SelfConjugatePartitionQ[partition] returns True when partition is self-conjugate.";
+
+SelfConjugatePartitionQ[partition_?IntegerPartitionQ] :=
+    partition === ConjugatePartition[partition]
+
+
+
+SignedLahNumber//ClearAll
+
+SetAttributes[SignedLahNumber,{Listable,NumericFunction}]
+
+SignedLahNumber::usage="SignedLahNumber[n,k] gives the signed Lah number L(n,k).";
+
+SignedLahNumber[n_,k_]:=(-1)^n Binomial[n-1,k-1] n!/k!
+
+
+standardTableauxAux // ClearAll
+
+standardTableauxAux[incompleteList_, idxToFill_, affectedByList_, minIndTable_,
+     maxIndTable_] :=
+    Module[{aux, minIndTables, possibilities, possibleFillings, result
+        },
+        If[Abs[maxIndTable - minIndTable] =!= maxIndTable - minIndTable,
+            
+            Return[{}, Module]
+        ];
+        possibleFillings = Complement[Range[minIndTable[[idxToFill]],
+             maxIndTable[[idxToFill]]], Take[incompleteList, idxToFill - 1]];
+        possibilities =
+            Table[
+                aux = incompleteList;
+                aux[[idxToFill]] = i;
+                aux
+                ,
+                {i, possibleFillings}
+            ];
+        minIndTables =
+            Table[
+                aux = minIndTable;
+                aux[[affectedByList[[idxToFill]]]] = Table[Max[aux[[el
+                    ]], i + 1], {el, affectedByList[[idxToFill]]}];
+                aux
+                ,
+                {i, possibleFillings}
+            ];
+        If[idxToFill == Length[incompleteList],
+            possibilities
+            ,
+            result = Table[standardTableauxAux[possibilities[[i]], idxToFill
+                 + 1, affectedByList, minIndTables[[i]], maxIndTable], {i, Length[possibleFillings
+                ]}];
+            Flatten[result, 1]
+        ]
+    ]
+
+StandardYoungTableaux // ClearAll
+
+StandardYoungTableaux::usage = "StandardYoungTableaux[p] generates a list of all standard Young tableaux with shape corresponding to the integer partition p.";
+
+StandardYoungTableaux[partition_] /; IntegerPartitionQ[partition] :=
+    Module[{n = Total[partition], affectedByList, canonicalTableaux, 
+        canonicalTableauxT, minIndTable, maxIndTable, partitionT},
+        partitionT = ConjugatePartition[partition];
+        canonicalTableaux = Internal`PartitionRagged[Range[n], partition
+            ];
+        canonicalTableauxT = Flatten[canonicalTableaux, {{2}, {1}}];
+        affectedByList = ConstantArray[{}, n];
+        Do[AppendTo[affectedByList[[canonicalTableaux[[i, j - 1]]]], 
+            canonicalTableaux[[i, j]]], {i, Length[partition]}, {j, 2, partition[[
+            i]]}];
+        Do[AppendTo[affectedByList[[canonicalTableauxT[[i, j - 1]]]],
+             canonicalTableauxT[[i, j]]], {i, Length[partitionT]}, {j, 2, partitionT
+            [[i]]}];
+        minIndTable = ConstantArray[1, n];
+        maxIndTable = Flatten[Table[Total[Take[partition, i - 1]] + Total[
+            Take[partitionT, j - 1]] - (i - 1) (j - 1) + 1, {i, Length[partition]
+            }, {j, partition[[i]]}]];
+        Internal`PartitionRagged[#, partition]& /@ standardTableauxAux[
+            ConstantArray[0, n], 1, affectedByList, minIndTable, maxIndTable]
+    ]
+SubsetFromIndex // ClearAll
+
+SubsetFromIndex::usage = "SubsetFromIndex[index, len] returns a subset of length len with given index.";
+
+SubsetFromIndex[index_Integer, len_Integer] :=
+    Module[{subset, total, x},
+        subset = Table[0, {len}];
+        total = index;
+        Do[
+            subset[[in]] = Ceiling[x /. Flatten[NSolve[{Product[(x - 
+                n + 1) / n, {n, 1, in}] == total, x > 0}, x]]] - 1;
+            total = total - Binomial[subset[[in]], in]
+            ,
+            {in, len, 1, -1}
+        ];
+        subset
+    ];
+SubsetIndex // ClearAll
+
+SubsetIndex::usage = "SubsetIndex[list] gives the index of subset list.";
+
+SubsetIndex[subset_List] :=
+    (Total[MapIndexed[Binomial[#1, #2[[1]]]&, subset]] + 1)
+
+
+TableauQ//ClearAll
+
+TableauQ::usage="TableauQ[t] determines if t is a Young tableau.";
+
+TableauQ[{}]=True;
+TableauQ[t_]:=MatchQ[t,{{__Integer?Positive}..}]&&AllTrue[Differences/@t,Positive,2]&&AllTrue[Differences[Map[Length,t]],NonPositive]&&
+With[{tt=Flatten[t,{{2},{1}}]},
+AllTrue[Differences/@tt,Positive,2]&&
+AllTrue[Differences[Map[Length,tt]],NonPositive]];
+
+
+TableauToPoset//ClearAll
+
+TableauToPoset::usage="TableauToPoset[young] converts the Young tableau young to a partially ordered set of coordinates.";
+
+TableauToPoset[young_]/;TableauQ[young]:= Reverse[Sort[Flatten[MapIndexed[{#1,#2}&,young,{2}],1]][[All,-1]],2]
+
+
+
+
+TableauxToPermutation // ClearAll
+
+SetAttributes[TableauxToPermutation, {NumericFunction}]
+
+TableauxToPermutation::usage = "TableauxToPermutation[t1, t2] returns the permutation list corresponding to the Young tableaux t1 and t2.";
+
+TableauxToPermutation[p1_, q1_] /; Map[Length, p1] === Map[Length, q1
+    ] :=
+    Module[{p = p1, q = q1, row, firstrow, col, item},
+        Reverse[
+            Table[
+                firstrow = First[p];
+                row = Position[q, Max[q]][[1, 1]];
+                item = Last[p[[row]]];
+                col = Length[p[[row]]];
+                If[col == 1,
+                    p = Most[p]
+                    ,
+                    p[[row]] = Most[p[[row]]]
+                ];
+                Do[
+                    While[p[[rowi, col]] <= item && Length[p[[rowi]]]
+                         > col, col++];
+                    If[item < p[[rowi, col]],
+                        col--
+                    ];
+                    {item, p[[rowi, col]]} = {p[[rowi, col]], item}
+                    ,
+                    {rowi, row - 1, 1, -1}
+                ];
+                q[[row]] = Most[q[[row]]];
+                If[p === {},
+                    First[firstrow]
+                    ,
+                    First[Complement[firstrow, First[p]]]
+                ]
+                ,
+                {Total[Map[Length, p1]]}
+            ]
+        ]
+    ]
+
+TangentNumber // ClearAll
+
+SetAttributes[TangentNumber, {NumericFunction, Listable}]
+
+TangentNumber::usage = 
+  "TangentNumber[n] calculates the nth tangent number.";
+
+TangentNumber[n_] := (2^(-1 + 2 n) (-1 + 4^n) Abs[BernoulliB[2 n]])/n
+
+
+
+ToInversionVector//ClearAll
+
+ToInversionVector::usage="ToInversionVector[p] gives the inversion vector of the permutation list p.";
+
+ToInversionVector[p_?PermutationListQ]:=Table[Length@Select[Take[p,InversePermutation[p][[i]]],#1>i&],{i,Length[p]}]
+
+
+
+ClearAll[TransitiveGraphQ,IdenticalGraphsQ,TransitiveClosure]
+
+TransitiveGraphQ::usage="TransitiveGraphQ[g] yields True if the graph g is transitive and False otherwise.";
+
+IdenticalGraphsQ[g__]:=True/;AllTrue[{g},EmptyGraphQ]&&SameQ@@(VertexList/@{g})
+IdenticalGraphsQ[g__]:=False/;!SameQ@@(UndirectedGraphQ/@{g})
+
+IdenticalGraphsQ[g__]:=SameQ@@(List@@@(Sort[If[UndirectedGraphQ[#],Sort,Identity]/@EdgeList[#]]&)/@{g}\.00)
+
+TransitiveGraphQ[g_Graph]:=IdenticalGraphsQ[g,TransitiveClosure[g]]
+
+TransitiveClosure[g_Graph]:=g/;EmptyGraphQ[g]
+
+TransitiveClosure[g_Graph]:=AdjacencyGraph[VertexList[g],TC[Normal@AdjacencyMatrix[g]],DirectedEdges->DirectedGraphQ[g]]
+
+TC=Compile[{{e,_Integer,2}},Module[{ne=e,n=Length[e],i,j,k},Do[If[ne[[j,i]]!=0,Do[If[ne[[i,k]]!=0,ne[[j,k]]=1],{k,n}]],{i,n},{j,n}];
+ne]];
+
+
+TransposeTableau // ClearAll
+
+TransposeTableau::usage = 
+  "TransposeTableau[t] returns the transpose of the Young tableau t.";
+
+TransposeTableau[tb_List]:=Flatten[tb,{{2},{1}}]
+
+
+TupleFromIndex // ClearAll
+
+TupleFromIndex::usage = "TupleFromIndex[index, k] returns index from the list of k tuples sorted by maximal element.";
+
+TupleFromIndex[index_Integer?IntegerQ, len_Integer?IntegerQ] :=
+    Module[{max, div, left, tuple, switch},
+        tuple = {};
+        max = Floor[N[(index - 1) ^ (1 / len), 300]];
+        div = Table[(max + 1) ^ n - (max) ^ n, {n, len - 1, 1, -1}];
+        left = index - (max) ^ len - 1;
+        switch = False;
+        If[index == 1,
+            tuple = Table[0, {len}]
+            ,
+            Do[
+                If[switch == False,
+                    If[Floor[(left) / div[[k]]] >= max,
+                        switch = True;
+                        tuple = Append[tuple, max]
+                        ,
+                        tuple = Append[tuple, Floor[(left) / div[[k]]
+                            ]];
+                    ];
+                    left = left - tuple[[k]] div[[k]];
+                ]
+                ,
+                {k, 1, len - 1}
+            ];
+            If[switch == False,
+                tuple = Append[tuple, max]
+                ,
+                tuple = Join[tuple, IntegerDigits[left, max + 1, len 
+                    - Length[tuple]]]
+            ]
+        ];
+        tuple
+    ]
+
+TupleIndex // ClearAll
+
+TupleIndex::usage = "TupleIndex[tuple] returns the index of tuple as it would appear in a list of all integer tuples of the same length, sorted by the maximal element.";
+
+TupleIndex[tuple_List] :=
+    Module[{run, max, len, first, div, grow, switch, index},
+        run = {};
+        max = Max[tuple];
+        If[max == 0,
+            index = 1
+            ,
+            len = Length[tuple];
+            first = Position[tuple, max][[1, 1]];
+            div = Table[(max + 1) ^ n - (max) ^ n, {n, len - 1, 0, -1
+                }];
+            index = max^len + 1 + FromDigits[Take[tuple, {first + 1, 
+                len}], max + 1] + Drop[tuple, {first + 1, len}] . Take[div, first]
+        ];
+        index
+    ];
+
+
+UnsignedLahNumber//ClearAll
+
+SetAttributes[UnsignedLahNumber,{Listable,NumericFunction}]
+
+UnsignedLahNumber::usage="UnsignedLahNumber[n,k] gives the unsigned Lah number L(n,k)."
+
+UnsignedLahNumber[n_,k_]:=Binomial[n-1,k-1] n!/k!
+
+ZeckendorfRepresentation//ClearAll
+
+SetAttributes[ZeckendorfRepresentation,{Listable,NumericFunction}]
+
+ZeckendorfRepresentation::usage="ZeckendorfRepresentation[n] gives the 0-1 list that indicates the unique nonconsecutive Fibonacci numbers that sum to the non-negative integer n.";
+
+ZeckendorfRepresentation[(n_Integer)?(#1 >= 0 & )] := Module[{i, k, l, m, addon, r}, k = 0; If[n == 0, r = {0}, If[n == 1, r = {1}, l = LeadingIndex[n]; m = n - Fibonacci[l]; k = LeadingIndex[m]; addon = Flatten[{1, Table[0, {i, k + 2, l}]}]; r = Flatten[{addon, ZeckendorfRepresentation[m]}]]]; r]
+
+LeadingIndex[(n_Integer)?(#1 >= 0 & )] := Module[{k}, If[n == 0, k = 2, For[k = 2, Fibonacci[k] <= n, k++]; k--; ]; k]
+
+
+
+
+(* ::Section:: *)
 (*Package Footer*)
 
 
