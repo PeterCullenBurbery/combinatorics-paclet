@@ -37,7 +37,7 @@
             ,
             "Hash"
             ->
-            "ed9c6a2cf8c034230c0d1fb71e9edf05bdef22f947afc2f5ce946f53ebc1679c"
+            "aeb0ec470a27084b8c4af86384316bfa46b05a41f6bff6148329cee11b695754"
                 
         |>
         ,
@@ -539,38 +539,12 @@
             "File"
             ->
             File[
-                "Kernel\\MultisetPartialDerangements copy.wl"
-            ]
-            ,
-            "Hash"
-            ->
-            "83e94865f9f87c9a7a89ec5f014ba1faa92ba8f1f1cf73c039d4302a6a0f4db4"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
                 "Kernel\\MultisetPartialDerangements.wl"
             ]
             ,
             "Hash"
             ->
             "640d131b904443b776015964e28a0a630e0c4aab482ed845cb2a8f07c538886e"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Kernel\\MultisetSupport.wl"
-            ]
-            ,
-            "Hash"
-            ->
-            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
                 
         |>
         ,
@@ -669,32 +643,6 @@
             "File"
             ->
             File[
-                "Kernel\\PartialDerangements copy.wl"
-            ]
-            ,
-            "Hash"
-            ->
-            "0b897685ebdc542143c92df0c3a280890819b649891b401876e959a544de4bdd"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Kernel\\PartialDerangements.wl"
-            ]
-            ,
-            "Hash"
-            ->
-            "0b897685ebdc542143c92df0c3a280890819b649891b401876e959a544de4bdd"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
                 "Kernel\\PartialOrderGraphQ.wl"
             ]
             ,
@@ -740,19 +688,6 @@
             "Hash"
             ->
             "e59fc52bdf08f0f82626b41b75c4c2344596a6d7698761a08affdd54672bcf78"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Kernel\\PellNumber.wl"
-            ]
-            ,
-            "Hash"
-            ->
-            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
                 
         |>
         ,
