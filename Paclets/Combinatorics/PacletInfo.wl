@@ -3,7 +3,7 @@
 PacletObject[<|"Name" -> "PeterBurbery/Combinatorics", "Description" 
   -> "Combinatorics functions for subsets, tuples, and permutations", "Creator"
    -> "Peter Cullen Burbery", "License" -> "BSD-3-Clause", "PublisherID"
-   -> "PeterBurbery", "Version" -> "2.0.13", "WolframVersion" -> "13.3+",
+   -> "PeterBurbery", "Version" -> "2.0.15", "WolframVersion" -> "13.3+",
    "PrimaryContext" -> "PeterBurbery`Combinatorics`", "Extensions" -> {
   {"Kernel", "Root" -> "Kernel", "Context" -> {{"PeterBurbery`Combinatorics`",
    "Combinatorics.wl"}}, "Symbols" -> {"PeterBurbery`Combinatorics`CanonicalMultiset",
@@ -49,4 +49,4 @@ PacletObject[<|"Name" -> "PeterBurbery/Combinatorics", "Description"
    "PeterBurbery`Combinatorics`TransposeTableau", "PeterBurbery`Combinatorics`TupleFromIndex",
    "PeterBurbery`Combinatorics`TupleIndex", "PeterBurbery`Combinatorics`UnsignedLahNumber",
    "PeterBurbery`Combinatorics`ZeckendorfRepresentation"}}, {"Documentation",
-   "Language" -> "English"}}, "Loading" -> "StartUp"|>]
+   "Language" -> "English"}}, "Loading" -> "Startup"|>]
