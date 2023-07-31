@@ -920,6 +920,13 @@ PermutationCountByInversions[n_Integer, k_Integer?Positive] :=
 
 (*https://resources.wolframcloud.com/FunctionRepository/resources/PermutationCountByInversions*)
 
+PermutationDescents // ClearAll
+
+PermutationDescents::usage = "PermutationDescents[perm] gives the indices i where p_i>p_{i+1}, where the permutation p={p_1,p_2,...,p_n} is given as a list of integers.";
+
+PermutationDescents[p_] :=
+    Reverse[Length @ p - PermutationAscents @ Reverse @ p]
+
 PermutationFromIndex // ClearAll
 
 PermutationFromIndex[index_Integer?IntegerQ, lengthInput_Integer?IntegerQ
@@ -1261,6 +1268,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
                                     
                                     
                                     
