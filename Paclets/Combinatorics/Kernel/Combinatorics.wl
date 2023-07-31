@@ -1276,6 +1276,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     
                                     
                                     
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
