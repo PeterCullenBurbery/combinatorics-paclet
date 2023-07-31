@@ -2,19 +2,15 @@
 
 (**)
 
-
-
 (* ::Section:: *)
-(*Package Header*)
 
+(*Package Header*)
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-
-
 (* ::Text:: *)
-(*Declare your public symbols here:*)
 
+(*Declare your public symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset;
 
@@ -192,15 +188,13 @@ PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-
-
 (* ::Section:: *)
+
 (*Definitions*)
 
-
 (* ::Text:: *)
-(*Define your public and private symbols here:*)
 
+(*Define your public and private symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -343,8 +337,12 @@ EulerianNumber::usage = "EulerianNumber[n, k] gives the number of permutations o
 
 EulerianNumber[n_, k_] :=
     Module[{x},
-        SeriesCoefficient[(1 - x) ^ (n + 1) PolyLog[-n, x], {x, 0, k 
-            - 1}]
+        SeriesCoefficient[
+            (1 - x) ^ (n + 1) PolyLog[-n, x]
+            ,
+            {
+                x, 0, k(*It might fix it to have k-1*) }
+        ]
     ]
 
 EulerianNumberOfTheSecondKind // ClearAll
@@ -1286,6 +1284,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     
                                     
                                     
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -1860,11 +1859,9 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-
-
 (* ::Section:: *)
-(*Package Footer*)
 
+(*Package Footer*)
 
 End[]
 

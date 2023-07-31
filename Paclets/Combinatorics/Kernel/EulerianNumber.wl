@@ -33,7 +33,7 @@ EulerianNumber::usage = "EulerianNumber[n, k] gives the number of permutations o
 EulerianNumber[n_, k_] :=
     Module[{x},
         SeriesCoefficient[(1 - x) ^ (n + 1) PolyLog[-n, x], {x, 0, k 
-            - 1}]
+            (*It might fix it to have k-1*)}]
     ]
 
 (*I created the definition below*)
