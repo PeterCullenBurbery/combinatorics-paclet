@@ -313,7 +313,15 @@ EnumerateMultisetPartialDerangements[multiset_, Optional[nfixed_Integer
      ? (IntegerQ[#] && # \[Element] NonNegativeIntegers&), 0]] /; nfixed <=
      Length[multiset] :=
     Abs @ Total @ KeyValueMap[#2 DerangementsCount @ #&] @ vCounts[multiset,
-         nfixed]
+         nfixed] /; Not[DuplicateFreeQ[multiset]]
+
+EnumerateMultisetPartialDerangements[set_?DuplicateFreeQ] :=
+    Subfactorial[Length[set]]
+
+EnumerateMultisetPartialDerangements[set_?DuplicateFreeQ, nfixed_Integer
+     ? (IntegerQ[#] && # \[Element] NonNegativeIntegers&)] /; nfixed <= Length[
+    set] :=
+    Binomial[Length[set], nfixed] Subfactorial[Length[set] - nfixed]
 
 EulerianCatalanNumber // ClearAll
 
@@ -335,8 +343,8 @@ EulerianNumber::usage = "EulerianNumber[n, k] gives the number of permutations o
 
 EulerianNumber[n_, k_] :=
     Module[{x},
-        SeriesCoefficient[(1 - x) ^ (n + 1) PolyLog[-n, x], {x, 0, k}
-            ]
+        SeriesCoefficient[(1 - x) ^ (n + 1) PolyLog[-n, x], {x, 0, k 
+            - 1}]
     ]
 
 EulerianNumberOfTheSecondKind // ClearAll
@@ -1270,6 +1278,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
                                     
                                     
                                     
