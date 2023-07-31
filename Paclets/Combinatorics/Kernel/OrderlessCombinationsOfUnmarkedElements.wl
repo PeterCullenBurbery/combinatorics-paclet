@@ -28,7 +28,9 @@ OrderlessCombinationsOfUnmarkedElements::usage = "OrderlessCombinationsOfUnmarke
 
 OrderlessCombinationsOfUnmarkedElements[set_, nspec_] :=
   Keys[GroupBy[PeterBurbery`Combinatorics`CanonicalMultiset][PeterBurbery`Combinatorics`OrderlessCombinations[
-    set, nspec]]]
+    set, nspec]]]                 (*CanonicalMultiset /@ 
+DeleteDuplicatesBy[CanonicalMultiset][
+ OrderlessCombinations[{"dog", "cat", "bird"}, 3]] also works*)
 
 (* ::Section::Closed:: *)
 

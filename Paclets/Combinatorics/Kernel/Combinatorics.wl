@@ -2,15 +2,19 @@
 
 (**)
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Package Header*)
+
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-(* ::Text:: *)
 
+
+(* ::Text:: *)
 (*Declare your public symbols here:*)
+
 
 PeterBurbery`Combinatorics`CanonicalMultiset;
 
@@ -186,13 +190,15 @@ PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Definitions*)
 
-(* ::Text:: *)
 
+(* ::Text:: *)
 (*Define your public and private symbols here:*)
+
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -314,7 +320,8 @@ SetAttributes[EulerianCatalanNumber, {NumericFunction, Listable}]
 EulerianCatalanNumber::usage = "EulerianCatalanNumber[n] calculates the nth Eulerian Catalan number.";
 
 EulerianCatalanNumber[n_] :=
-    1 / (n + 1) PeterBurbery`Combinatorics`EulerianNumber[2 n + 1, n]
+    1 / (n + 1) PeterBurbery`Combinatorics`EulerianNumber[2 n + 1, n 
+        + 1](*Although this is different from the definition of 1/n+1*EulerianNumber[2n+1,n], we need to use n+1 instead of n for the second argument*)
 
 EulerianNumber // ClearAll
 
@@ -1258,6 +1265,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     
                                     
                                     
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -1832,9 +1840,11 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Package Footer*)
+
 
 End[]
 
