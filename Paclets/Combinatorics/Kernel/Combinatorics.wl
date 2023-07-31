@@ -2,15 +2,19 @@
 
 (**)
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Package Header*)
+
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-(* ::Text:: *)
 
+
+(* ::Text:: *)
 (*Declare your public symbols here:*)
+
 
 PeterBurbery`Combinatorics`CanonicalMultiset;
 
@@ -188,13 +192,15 @@ PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Definitions*)
 
-(* ::Text:: *)
 
+(* ::Text:: *)
 (*Define your public and private symbols here:*)
+
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -337,12 +343,8 @@ EulerianNumber::usage = "EulerianNumber[n, k] gives the number of permutations o
 
 EulerianNumber[n_, k_] :=
     Module[{x},
-        SeriesCoefficient[
-            (1 - x) ^ (n + 1) PolyLog[-n, x]
-            ,
-            {
-                x, 0, k(*It might fix it to have k-1*) }
-        ]
+        SeriesCoefficient[(1 - x) ^ (n + 1) PolyLog[-n, x], {x, 0, k(*
+            It might fix it to have k-1*)}]
     ]
 
 EulerianNumberOfTheSecondKind // ClearAll
@@ -350,7 +352,7 @@ EulerianNumberOfTheSecondKind // ClearAll
 SetAttributes[EulerianNumberOfTheSecondKind, {Listable, NumericFunction
     }]
 
-EulerianNumberOfTheSecondKind::usage = "EulerianNumberOfTheSecondKind[n, m]number of all such permutations of the multiset where there are two of every element with exactly km ascents.";
+EulerianNumberOfTheSecondKind::usage = "EulerianNumberOfTheSecondKind[n, m]number of all such permutations of the multiset {1,1,2,2,...,n,n}, where there are two of every element with exactly m ascents.";
 
 EulerianNumberOfTheSecondKind[n_, m_] :=
     0 /; Or @@ {m >= n, n === 0}
@@ -1285,6 +1287,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     
                                     
                                     
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -1859,9 +1862,11 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Package Footer*)
+
 
 End[]
 
