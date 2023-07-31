@@ -116,6 +116,8 @@ PeterBurbery`Combinatorics`PermutationAscents;
 
 PeterBurbery`Combinatorics`PermutationCountByInversions;
 
+PeterBurbery`Combinatorics`PermutationDescents;
+
 PeterBurbery`Combinatorics`PermutationFromIndex;
 
 PeterBurbery`Combinatorics`PermutationFromLehmerCode;
