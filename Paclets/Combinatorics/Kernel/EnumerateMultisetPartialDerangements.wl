@@ -47,6 +47,11 @@ EnumerateMultisetPartialDerangements[multiset_, Optional[nfixed_Integer
 EnumerateMultisetPartialDerangements[set_?DuplicateFreeQ] :=
     Subfactorial[Length[set]]
 
+EnumerateMultisetPartialDerangements[set_?DuplicateFreeQ, nfixed_Integer
+     ? (IntegerQ[#] && # \[Element] NonNegativeIntegers&)] /; nfixed <= Length[
+    set] :=
+    Binomial[Length[set], nfixed] Subfactorial[Length[set] - nfixed]
+
 (* ::Section::Closed:: *)
 
 (*Package Footer*)
