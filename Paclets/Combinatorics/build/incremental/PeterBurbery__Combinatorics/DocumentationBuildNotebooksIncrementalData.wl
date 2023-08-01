@@ -36,16 +36,16 @@
    "FileHash" -> "wL6AJBOaMjRLcbaS5Gw4/bDPQJL/i2QEi+tNyS8wqNU="|>, 
  "English\\ReferencePages\\Symbols\\EulerianCatalanNumber.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.1753257, "Seconds"]|>], 
-   "FileHash" -> "Sgr1rHfsQEoMjpVw5rHTakybNiFpdtBn5DcUg+21NuA="|>, 
+      "Time" -> Quantity[1.9429912, "Seconds"]|>], 
+   "FileHash" -> "xQ0Po3F9/q0d4L8JN/dEzf6UXU60Gcd45CUs4qPDAg0="|>, 
  "English\\ReferencePages\\Symbols\\EulerianNumber.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[2.8422836, "Seconds"]|>], 
-   "FileHash" -> "W73JYxKT5lQx6gmue+RXMz3ykfmX3ZrdKKvvuYYOZAw="|>, 
+      "Time" -> Quantity[3.8420013, "Seconds"]|>], 
+   "FileHash" -> "yf2T0uhaWGpI1CqSMxO+KfNaX/kwgwANjhYzLGGVTzg="|>, 
  "English\\ReferencePages\\Symbols\\EulerianNumberOfTheSecondKind.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.1570406, "Seconds"]|>], 
-   "FileHash" -> "Tfj3jRywpM8bCCpxO79MhAhgrq1jdcPDqMPq/JtmcMM="|>, 
+      "Time" -> Quantity[1.4875206, "Seconds"]|>], 
+   "FileHash" -> "dQrudG35ogN4O1gXpsc3OoMIVN4SjDsJE5SvhdK4KNs="|>, 
  "English\\ReferencePages\\Symbols\\FerrersDiagram.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.2803005, "Seconds"]|>], 
@@ -200,8 +200,8 @@ b" -> <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build",
    "FileHash" -> "UHCJDVuwB+iHxfBJjl90TK9z3RKDgdVinDb4N1hO3qE="|>, 
  "English\\ReferencePages\\Symbols\\PermutationIndex.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.6886828, "Seconds"]|>], 
-   "FileHash" -> "O9MOXIPwq/rU2jlDts+Cjcvo7ya4oS6C4SrkAs5gACE="|>, 
+      "Time" -> Quantity[2.3692115, "Seconds"]|>], 
+   "FileHash" -> "2IzMZIDmr3Ss4SnQqv6xvmwy4j9b1Ze/o05Ri1OqnZU="|>, 
  "English\\ReferencePages\\Symbols\\PermutationMajorIndex.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.4965115, "Seconds"]|>], 
@@ -224,8 +224,8 @@ b" -> <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build",
    "FileHash" -> "KSta7AoBAlWZNSSIBuaSP2OTwo7ajxlXcKsTazDyN2c="|>, 
  "English\\ReferencePages\\Symbols\\Primorial.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[2.4642394, "Seconds"]|>], 
-   "FileHash" -> "JuvniBX6lmSJtCeXglT2PJAx1aW0rNDx5sQm/EzP8xs="|>, 
+      "Time" -> Quantity[2.2300849, "Seconds"]|>], 
+   "FileHash" -> "tPdwgAJtRPy/L8c2Uq8TdBUVTkYD1J0h1Rpn9Xo38/8="|>, 
  "English\\ReferencePages\\Symbols\\QExponential.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[3.3602155, "Seconds"]|>], 
@@ -328,8 +328,8 @@ b" -> <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build",
    "FileHash" -> "vVtNS9Lxcb5fG0IC7PfzrWkQP0gpHT88BXc2sFBeW4o="|>, 
  "English\\Tutorials\\Combinatorics.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[24.4089313, "Seconds"]|>], 
-   "FileHash" -> "CpEppdeXTOBleWF+ZYgu1qOFzN4dYy/pjPfl+C/IcEE="|>, 
+      "Time" -> Quantity[39.7274584, "Seconds"]|>], 
+   "FileHash" -> "UeGxOKrJ0TLxjahlM2mcdcf1tPhiXF/YLFyeoAfpFUM="|>, 
  "English\\Guides\\FunctionsIunderstandincombinatorics.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[0.7607852, "Seconds"]|>], 

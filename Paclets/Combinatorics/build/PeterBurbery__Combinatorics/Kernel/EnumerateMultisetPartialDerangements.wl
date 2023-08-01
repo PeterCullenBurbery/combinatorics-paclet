@@ -1,31 +1,26 @@
 (* ::Package:: *)
 
 (* ::Section:: *)
-(*Package Header*)
 
+(*Package Header*)
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-
-
 (* ::Text:: *)
-(*Declare your public symbols here:*)
 
+(*Declare your public symbols here:*)
 
 PeterBurbery`Combinatorics`EnumerateMultisetPartialDerangements;
 
 Begin["`Private`"];
 
-
-
 (* ::Section:: *)
+
 (*Definitions*)
 
-
 (* ::Text:: *)
+
 (*Define your public and private symbols here:*)
-
-
 
 EnumerateMultisetPartialDerangements // ClearAll
 
@@ -43,16 +38,23 @@ vCounts[lst_, nfixed_] :=
 
 EnumerateMultisetPartialDerangements::usage = "EnumerateMultisetPartialDerangements[multiset] enumerates the number of derangements of a multiset with 0 fixed points.EnumerateMultisetPartialDerangements[multiset, nfixed] enumerates the number of partial derangements of a multiset with nfixed fixed points.";
 
-EnumerateMultisetPartialDerangements[multiset_, Optional[nfixed_Integer ? (IntegerQ[
-    #] && # \[Element] NonNegativeIntegers&),0]] /; nfixed <= Length[multiset
-    ] :=
+EnumerateMultisetPartialDerangements[multiset_, Optional[nfixed_Integer
+     ? (IntegerQ[#] && # \[Element] NonNegativeIntegers&), 0]] /; nfixed <=
+     Length[multiset] :=
     Abs @ Total @ KeyValueMap[#2 DerangementsCount @ #&] @ vCounts[multiset,
-         nfixed]
+         nfixed] /; Not[DuplicateFreeQ[multiset]]
 
+EnumerateMultisetPartialDerangements[set_?DuplicateFreeQ] :=
+    Subfactorial[Length[set]]
+
+EnumerateMultisetPartialDerangements[set_?DuplicateFreeQ, nfixed_Integer
+     ? (IntegerQ[#] && # \[Element] NonNegativeIntegers&)] /; nfixed <= Length[
+    set] :=
+    Binomial[Length[set], nfixed] Subfactorial[Length[set] - nfixed]
 
 (* ::Section::Closed:: *)
-(*Package Footer*)
 
+(*Package Footer*)
 
 End[];
 
