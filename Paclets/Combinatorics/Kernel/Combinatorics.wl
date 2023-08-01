@@ -2,19 +2,15 @@
 
 (**)
 
-
-
 (* ::Section:: *)
-(*Package Header*)
 
+(*Package Header*)
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-
-
 (* ::Text:: *)
-(*Declare your public symbols here:*)
 
+(*Declare your public symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset;
 
@@ -89,6 +85,8 @@ PeterBurbery`Combinatorics`MultisetAssociation;
 PeterBurbery`Combinatorics`MultisetCardinality;
 
 PeterBurbery`Combinatorics`MultisetPartialDerangements;
+
+PeterBurbery`Combinatorics`MultisetStrictAscents;
 
 PeterBurbery`Combinatorics`NarayanaNumber;
 
@@ -194,15 +192,13 @@ PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-
-
 (* ::Section:: *)
+
 (*Definitions*)
 
-
 (* ::Text:: *)
-(*Define your public and private symbols here:*)
 
+(*Define your public and private symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -731,6 +727,13 @@ MultisetPartialDerangements[set_, Optional[numberOfFixedPoints_, 0],
 
 MultisetPartialDerangements[args___] :=
     Null /; CheckArguments[MultisetPartialDerangements[args], {1, 3}]
+
+MultisetStrictAscents // ClearAll
+
+MultisetStrictAscents::usage = "MultisetStrictAscents[perm] finds the ascents of the permutation of a multiset perm";
+
+MultisetStrictAscents[multiset_] :=
+    Position[Less[#1, #2]& @@@ Partition[multiset, 2, 1], True]
 
 NarayanaNumber // ClearAll
 
@@ -1297,6 +1300,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     
                                     
                                     
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -1587,6 +1591,8 @@ StandardYoungTableaux[partition_] /; IntegerPartitionQ[partition] :=
     ]
 
 StirlingPermutations // ClearAll
+
+SetAttributes[StirlingPermutations, {Listable}]
 
 StirlingPermutations::usage = "StirlingPermutations[n] generates all Stirling permutations of order n.";
 
@@ -1885,11 +1891,9 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-
-
 (* ::Section:: *)
-(*Package Footer*)
 
+(*Package Footer*)
 
 End[]
 
