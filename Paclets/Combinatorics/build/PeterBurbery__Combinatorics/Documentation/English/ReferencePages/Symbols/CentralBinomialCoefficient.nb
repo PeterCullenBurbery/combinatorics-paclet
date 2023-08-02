@@ -1,0 +1,624 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23453,        614]
+NotebookOptionsPosition[     18997,        524]
+NotebookOutlinePosition[     21255,        579]
+CellTagsIndexPosition[     21170,        574]
+WindowTitle->CentralBinomialCoefficient
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ COMBINATORICS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "f85daffd-5d17-4390-aaf2-01fdccd769c4"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "f2c8c9f6-4513-46d4-9321-9042fe942f38"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "See Also",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "a38330cd-6356-4c4e-8d5f-f1102ee583e6"]
+         }],ExpressionUUID->"dcbb68e9-690b-49c8-a3e1-96bf49eba81c"],
+         StripOnInput->False],{
+        "\"Binomial\"" :> Documentation`HelpLookup["paclet:ref/Binomial"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"SeeAlso"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "5b6885b6-458a-4554-95da-0b28ea4b435c"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "1764232d-7ff3-41b7-9ba4-a0bbe22315eb"]
+         }],ExpressionUUID->"204c37c3-22c8-4757-9e57-36d998c16b55"],
+         StripOnInput->False],{
+        "\"Combinatorics\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/guide/Combinatorics"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "c94766b0-934a-4330-92b6-1e919f81bee5"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "42b1523c-84bb-4e1c-813c-6529523518d1"]
+         }],ExpressionUUID->"c1daa0a4-2ca4-4eb4-8fea-d315f46aa0ed"],
+         StripOnInput->False],{
+        "\"PeterBurbery/Combinatorics/ref/CentralBinomialCoefficient\"" :> 
+         None, "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/Combinatorics/ref/\
+CentralBinomialCoefficient"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+Combinatorics/ref/CentralBinomialCoefficient.html"], StandardForm]], "Input", 
+                 TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$94784], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/Combinatorics/ref/CentralBinomialCoefficient" <> 
+               ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "27f7fd55-7756-4fa4-96b5-a3a374f02cae"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "2af55147-704e-4b6f-abc4-2c55a3e5d450"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"85a5d5ab-c221-45f4-852a-fe6c92004577"],
+
+Cell["PeterBurbery`Combinatorics`", "ContextNameCell",ExpressionUUID->"cfc3a534-33ff-4fd1-a42c-4bc36f406217"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "CentralBinomialCoefficient", "ObjectName",ExpressionUUID->
+      "bdc2f4ac-efcc-4bd2-a12d-f4f6dca13282"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"d11a7b0c-ddd2-4379-9719-52f553a9375a"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "442d4a8a-53e6-4943-b01b-86f8c5f3fcce"]
+    }],ExpressionUUID->"79d96f9b-e5fc-4d32-a1f7-71c5c57ca30b"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"45b600d8-d178-48ea-84c6-\
+de354d98611e"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["CentralBinomialCoefficient"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/\
+CentralBinomialCoefficient", "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["n", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "03a60729-e610-47fb-b4e4-94ad08627f37"],
+     "\[LineSeparator]calculates the ",
+     Cell[BoxData[
+      StyleBox["n", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "2395d730-ab35-4cbd-979a-4fd6bc57af20"],
+     "th central binomial coefficient."
+    }],ExpressionUUID->"2c90e99c-b190-42fd-8c0a-1567709f6195"]}
+  }]], "Usage",
+ CellID->24439693,ExpressionUUID->"2e97ca6f-ae79-40eb-86fb-e82c3103fd52"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"7d74dc90-8ca9-48a4-81c0-974aedd9aaf8"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"69ff6f10-2dde-4e0b-9dc0-9914504186e9"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"faa38978-df0d-400c-b443-3873a2972aa9"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"4d22a898-1b34-41d7-a7e9-8facd795d3a3"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->275221166,ExpressionUUID->"6de99141-1395-4ecc-b27f-d210b9eab57d"],
+
+Cell[TextData[{
+ "The ",
+ Cell[BoxData["nth"], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "7983fa13-22da-4999-af2d-19df316c57ad"],
+ " central binomial coefficient is defined as ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"(", GridBox[{
+      {
+       RowBox[{"2", "n"}]},
+      {"n"}
+     }], ")"}], "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"2", "n"}], ")"}], "!"}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"n", "!"}], ")"}], "2"]], "=", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["2", "n"], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", "n"}], "-", "1"}], ")"}], "!!"}]}], 
+     RowBox[{"n", "!"}]]}]}]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "ac16ffda-3f15-4b2c-a22f-271d40a0ef77"],
+ " where ",
+ Cell[BoxData[
+  RowBox[{"(", GridBox[{
+     {"n"},
+     {"k"}
+    }], ")"}]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "077e8787-56fa-4fc8-800f-4810c0b276fc"],
+ " is a binomial coefficient, ",
+ Cell[BoxData[
+  RowBox[{"n", "!"}]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "c2cebc36-1790-42e9-bb5d-e9dcdcf32fd5"],
+ " is a factorial, and ",
+ Cell[BoxData[
+  RowBox[{"n", "!!"}]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "3d1cc152-795d-4293-bf47-d0126485a98b"],
+ " is a double factorial."
+}], "Notes",
+ CellID->145599536,ExpressionUUID->"0445c85d-b59e-4078-b2ca-975249fc2812"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"7d266772-18a2-4598-8560-501e4800b250"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"a3808a31-eef8-42f5-8bb8-23273570195a"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "9662d4a1-4114-48ae-b422-f7b6984a2bf2"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->214831602,ExpressionUUID->"20c51c0b-505b-43fa-8aee-299c917fd4a8"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`Combinatorics`\>\"", "]"}]], "Input",\
+ "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->328941032,ExpressionUUID->"a7a95bfa-5ac5-4b8e-9b5b-15c56f7bf20c"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"e528f6da-da0c-4999-bd5d-73601f20a5b7"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"ed8da4d1-7261-4734-bdc3-97451d79348c"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "a64d39f0-12f5-4846-b4fd-ce25e51ad5d0"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->75748911,ExpressionUUID->"99c78dcc-e709-45ae-b3e3-419db6485065"],
+
+Cell["Compute the central binomial coefficient:", "ExampleText",
+ CellID->149785473,ExpressionUUID->"ce0e8649-f1ed-4f00-afe9-9ed43fa32c1a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CentralBinomialCoefficient", "[", 
+  RowBox[{"Range", "[", "21", "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->148243797,ExpressionUUID->"235829fd-2ed2-4a51-8b53-85d271597442"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "2", ",", "6", ",", "20", ",", "70", ",", "252", ",", "924", ",", "3432", 
+   ",", "12870", ",", "48620", ",", "184756", ",", "705432", ",", "2704156", 
+   ",", "10400600", ",", "40116600", ",", "155117520", ",", "601080390", ",", 
+   "2333606220", ",", "9075135300", ",", "35345263800", ",", "137846528820", 
+   ",", "538257874440"}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->249745638,ExpressionUUID->"9e057074-2aeb-41d2-a562-5f79e99a05d7"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[Cell[BoxData[
+        TemplateBox[{
+          Cell[
+           TextData["Binomial"]], "paclet:ref/Binomial"},
+         "RefLink",
+         BaseStyle->{"InlineFormula"}]], "InlineFormula",
+        FontFamily->"Source Sans Pro",ExpressionUUID->
+        "7ff7ba59-3d51-403d-8728-050aa7f7d0ee"]], "SeeAlso",ExpressionUUID->
+        "95c6f18a-84b0-4267-bd08-df8d1fab1bf3"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"80531d86-4788-467c-b053-\
+5a0c7050e1a1"],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Combinatorics"]], 
+           "paclet:PeterBurbery/Combinatorics/guide/Combinatorics"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "785bfe77-15b5-49a2-83c9-6fdd50c58587"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"2df83dac-af1c-4c7a-b477-\
+30e72dd3c49c"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        TemplateBox[{
+          Cell[
+           TextData[
+            Cell[
+             TextData[{
+               Cell[
+                BoxData[
+                 DynamicBox[
+                  FEPrivate`ImportImage[
+                   
+                   FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+                    "RelatedLinks-MathWorld.png"]]]]], 
+               Cell[
+                BoxData[
+                 TemplateBox[{4}, "Spacer1"]]], 
+               "Wolfram MathWorld \[LongDash] Central Binomial \
+Coefficient"}]]]], 
+          "https://mathworld.wolfram.com/CentralBinomialCoefficient.html"},
+         "WebLink",
+         BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+        "bf705f99-333a-4a2a-b801-cba45f66a7b1"]], "RelatedLinks",
+        ExpressionUUID->"54d949d8-cc1c-4b0e-a1ce-e687c0ec7664"]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], 
+                 "OEIS \[LongDash] A000984 Central binomial coefficients: \
+binomial(2*n,n) = (2*n)!/(n!)^2."}]]]], "https://oeis.org/A000984"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "2f80bfeb-2951-4c6c-86dc-8712150488d9"]}]],ExpressionUUID->
+        "0dd96914-e62e-44dd-8d15-862e8e08f6fd"]], "RelatedLinks",
+        ExpressionUUID->"b8610534-1bba-48fa-b72b-d385e948ab06"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"396553e7-5db7-444c-882e-\
+29cf31bc7c7f"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"ff209862-78b5-4705-a1e4-742c4b8f752b"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"CentralBinomialCoefficient",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "NotesSection" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2023, 7, 29, 17, 27, 26.2927383}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`Combinatorics`", "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Peter Burbery/ Combinatorics Symbol", "language" -> "en", "paclet" -> 
+    "PeterBurbery/Combinatorics", "status" -> "None", "summary" -> 
+    "CentralBinomialCoefficient[n] calculates the nth central binomial \
+coefficient.", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "CentralBinomialCoefficient", "titlemodifier" -> "", "metadescription" -> 
+    "", "windowtitle" -> "CentralBinomialCoefficient", "type" -> "Symbol", 
+    "uri" -> "PeterBurbery/Combinatorics/ref/CentralBinomialCoefficient"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (June 3, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"b275923e-1862-4354-a06e-8948a9a97177"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[11189, 308, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"20c51c0b-505b-43fa-8aee-299c917fd4a8",
+   CellTags->"PrimaryExamplesSection",
+   CellID->214831602]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 20970, 567}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[598, 21, 5372, 131, 56, "AnchorBarGrid",ExpressionUUID->"85a5d5ab-c221-45f4-852a-fe6c92004577",
+ CellID->1],
+Cell[5973, 154, 109, 0, 23, "ContextNameCell",ExpressionUUID->"cfc3a534-33ff-4fd1-a42c-4bc36f406217"],
+Cell[CellGroupData[{
+Cell[6107, 158, 569, 14, 56, "ObjectNameGrid",ExpressionUUID->"45b600d8-d178-48ea-84c6-de354d98611e"],
+Cell[6679, 174, 920, 22, 111, "Usage",ExpressionUUID->"2e97ca6f-ae79-40eb-86fb-e82c3103fd52",
+ CellID->24439693]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7636, 201, 1919, 48, 37, "NotesSection",ExpressionUUID->"6de99141-1395-4ecc-b27f-d210b9eab57d",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->275221166],
+Cell[9558, 251, 1504, 51, 70, "Notes",ExpressionUUID->"0445c85d-b59e-4078-b2ca-975249fc2812",
+ CellID->145599536]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[11189, 308, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"20c51c0b-505b-43fa-8aee-299c917fd4a8",
+ CellTags->"PrimaryExamplesSection",
+ CellID->214831602],
+Cell[12612, 347, 217, 4, 26, "Input",ExpressionUUID->"a7a95bfa-5ac5-4b8e-9b5b-15c56f7bf20c",
+ CellID->328941032],
+Cell[CellGroupData[{
+Cell[12854, 355, 1397, 36, 30, "ExampleSection",ExpressionUUID->"99c78dcc-e709-45ae-b3e3-419db6485065",
+ CellID->75748911],
+Cell[14254, 393, 139, 1, 38, "ExampleText",ExpressionUUID->"ce0e8649-f1ed-4f00-afe9-9ed43fa32c1a",
+ CellID->149785473],
+Cell[CellGroupData[{
+Cell[14418, 398, 261, 5, 26, "Input",ExpressionUUID->"235829fd-2ed2-4a51-8b53-85d271597442",
+ CellID->148243797],
+Cell[14682, 405, 493, 9, 51, "Output",ExpressionUUID->"9e057074-2aeb-41d2-a562-5f79e99a05d7",
+ CellID->249745638]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[15417, 423, 771, 20, 114, "SeeAlsoSection",ExpressionUUID->"80531d86-4788-467c-b053-5a0c7050e1a1"],
+Cell[16191, 445, 740, 19, 114, "MoreAboutSection",ExpressionUUID->"2df83dac-af1c-4c7a-b477-30e72dd3c49c"],
+Cell[16934, 466, 1978, 54, 70, "RelatedLinksSection",ExpressionUUID->"396553e7-5db7-444c-882e-29cf31bc7c7f"],
+Cell[18915, 522, 78, 0, 70, "FooterCell",ExpressionUUID->"ff209862-78b5-4705-a1e4-742c4b8f752b"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

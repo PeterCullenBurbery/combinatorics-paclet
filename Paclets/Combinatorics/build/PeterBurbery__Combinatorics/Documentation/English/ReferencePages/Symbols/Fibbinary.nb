@@ -1,0 +1,1203 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     43280,       1193]
+NotebookOptionsPosition[     35773,       1036]
+NotebookOutlinePosition[     38200,       1096]
+CellTagsIndexPosition[     38114,       1091]
+WindowTitle->Fibbinary
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ COMBINATORICS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "d0195a78-220b-4adc-9a10-c74b48956e6a"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "b44c91ee-1140-4d1d-92de-2647641d5f76"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "See Also",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "55666b50-9fab-4617-ada5-99a15df9bcdf"]
+         }],ExpressionUUID->"61b9a24f-57f6-4f03-abbc-949e7d38d264"],
+         StripOnInput->False],{
+        "\"Fibonacci\"" :> Documentation`HelpLookup["paclet:ref/Fibonacci"], 
+         "\"IntegerPartitions\"" :> 
+         Documentation`HelpLookup["paclet:ref/IntegerPartitions"], Delimiter, 
+         StyleBox[
+          "\"Functions\"", "SeeAlsoSection", FontSize -> 14, FontSlant -> 
+           "Italic", StripOnInput -> False] :> 
+         NotebookFind[EvaluationNotebook[], "SeeAlsoSection", All, CellStyle],
+          StyleBox[
+          "\"ZeckendorfRepresentation\"", "SeeAlsoRelated", StripOnInput -> 
+           False] :> Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/ZeckendorfRepresentation"], 
+         StyleBox[
+          "\"FibonacciEncode\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/FibonacciEncode"], 
+         StyleBox[
+          "\"InverseFibonacci\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/InverseFibonacci"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"SeeAlso"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "0efb5a21-809a-4c3c-9571-15cdfe252529"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "177ad1f4-1065-43f2-8263-5e91b2e34508"]
+         }],ExpressionUUID->"2d8a92f7-776a-4af7-bb9a-2f809d2d46db"],
+         StripOnInput->False],{
+        "\"Combinatorics\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/guide/Combinatorics"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "3ee2f046-ee3f-41ea-b677-e9eb8bd119bb"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "6462560a-7e24-4088-be8e-5911d14c4e50"]
+         }],ExpressionUUID->"133d7ab7-d7e8-4d3e-86ab-da8109f2cd9b"],
+         StripOnInput->False],{
+        "\"PeterBurbery/Combinatorics/ref/Fibbinary\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{Cell["PeterBurbery/Combinatorics/ref/Fibbinary"]}, 
+               Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+Combinatorics/ref/Fibbinary.html"], StandardForm]], "Input", 
+                 TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$102326], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/Combinatorics/ref/Fibbinary" <> ".html"], 
+              None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "3b89ec17-6ab5-4d3e-8f65-bc9f73e8ba77"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "7985b234-ae49-4a37-8f0d-4ed9809b6791"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"3f4114a5-88cf-48d0-b978-1f4a3190c430"],
+
+Cell["PeterBurbery`Combinatorics`", "ContextNameCell",ExpressionUUID->"5951e643-da84-4942-9407-ad37754b0e69"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "Fibbinary", "ObjectName",ExpressionUUID->
+      "b33fffbf-6866-4cf8-9241-0efc9f53fbf8"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"6535f499-c2a7-4cc5-8d98-c884d0d253dd"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "cf227976-5116-4a46-8707-b1302d842621"]
+    }],ExpressionUUID->"d789fffe-ac5a-475f-9c19-b2cc32beb64d"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"fad16820-af20-4b0e-b776-\
+b470455c0a7e"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["Fibbinary"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/Fibbinary", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["n", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "0ef6ee5f-e86c-4850-8578-cbb5ec2df9ef"],
+     "\[LineSeparator]gives the nth fibbinary number. "
+    }],ExpressionUUID->"95b31c23-725d-44e9-b644-674cdf32cb57"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["Fibbinary"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/Fibbinary", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{"{", 
+        StyleBox["n", "TI"], "}"}], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "1d595df9-d30d-4920-8dcc-a62d1c66b338"],
+     "\[LineSeparator]gives a list of fibbinary numbers less than or equal to \
+n."
+    }],ExpressionUUID->"998474cc-7bc8-43d5-bba6-fc08c1a6742c"]}
+  }]], "Usage",
+ CellID->198099882,ExpressionUUID->"4383adc7-a120-4517-bca5-19d61dc1bc83"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"1aa1f1cd-0b59-40f1-8cbf-3e67cf38908f"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"f78ac3be-831c-4b65-afe8-a2ca65aa54bb"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"e0bec774-f380-4481-83c9-44e2dab6c842"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"1e192ef4-03de-45e0-b132-574819203ec9"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->49751648,ExpressionUUID->"38ea6eb2-8d62-4c4b-bd18-3afad4d3bbd3"],
+
+Cell["\<\
+Fibbinary numbers are the positive integers whose binary representation \
+contains no consecutive ones.\
+\>", "Notes",
+ CellID->1003955794,ExpressionUUID->"0270e476-520a-46c9-9644-881cd3c73652"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"b587b332-313a-4fdc-9454-7d1647475ba2"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"35eaa38c-638f-4d77-8c49-f172b753a594"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(4)", "ExampleCount",ExpressionUUID->
+  "61472205-06a8-4354-9b37-7543bb7b86dd"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->23182524,ExpressionUUID->"86c40f08-acdd-4aae-be16-87675640bb89"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`Combinatorics`\>\"", "]"}]], "Input",\
+ "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->169479089,ExpressionUUID->"167978c0-844f-4346-b9f1-93592a3477de"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"e644f341-bf7d-4045-a89b-d7ae8270cc1e"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"64847ed2-a287-4791-b205-cc79dc38522c"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount",ExpressionUUID->
+  "b6826548-6765-4f37-869c-9fb3a7cc6c05"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->14024493,ExpressionUUID->"3888eff9-066b-43b0-aeef-a7b09bac860b"],
+
+Cell["First one hundred fibbinaries:", "ExampleText",
+ CellID->6065172,ExpressionUUID->"a360b9fe-8312-4c46-a367-c7571c3139fe"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Fibbinary", "[", "n", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "100"}], "}"}]}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->873576838,ExpressionUUID->"e747c20e-7d7e-462e-a848-fc73a2ecdb32"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "2", ",", "4", ",", "5", ",", "8", ",", "9", ",", "10", ",", "16",
+    ",", "17", ",", "18", ",", "20", ",", "21", ",", "32", ",", "33", ",", 
+   "34", ",", "36", ",", "37", ",", "40", ",", "41", ",", "42", ",", "64", 
+   ",", "65", ",", "66", ",", "68", ",", "69", ",", "72", ",", "73", ",", 
+   "74", ",", "80", ",", "81", ",", "82", ",", "84", ",", "85", ",", "128", 
+   ",", "129", ",", "130", ",", "132", ",", "133", ",", "136", ",", "137", 
+   ",", "138", ",", "144", ",", "145", ",", "146", ",", "148", ",", "149", 
+   ",", "160", ",", "161", ",", "162", ",", "164", ",", "165", ",", "168", 
+   ",", "169", ",", "170", ",", "256", ",", "257", ",", "258", ",", "260", 
+   ",", "261", ",", "264", ",", "265", ",", "266", ",", "272", ",", "273", 
+   ",", "274", ",", "276", ",", "277", ",", "288", ",", "289", ",", "290", 
+   ",", "292", ",", "293", ",", "296", ",", "297", ",", "298", ",", "320", 
+   ",", "321", ",", "322", ",", "324", ",", "325", ",", "328", ",", "329", 
+   ",", "330", ",", "336", ",", "337", ",", "338", ",", "340", ",", "341", 
+   ",", "512", ",", "513", ",", "514", ",", "516", ",", "517", ",", "520", 
+   ",", "521", ",", "522", ",", "528", ",", "529", ",", "530", ",", "532"}], 
+  "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->108178827,ExpressionUUID->"31eff62c-aa5c-4dc4-974e-58d457f2eaa9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "8a74fe82-87b6-4555-a3e4-983255a4ec5f"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->283674660,ExpressionUUID->"d8dec297-039d-4c25-ae4f-0b9985b4ffdf"],
+
+Cell["Fibbinaries less than or equal to 50, represented in base 2:", \
+"ExampleText",
+ CellID->177604608,ExpressionUUID->"3d7bbc2d-bab2-4169-bea3-3af40615cc46"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"BaseForm", "[", 
+     RowBox[{"#", ",", "2"}], "]"}], "&"}], "/@", 
+   RowBox[{"Fibbinary", "[", 
+    RowBox[{"{", "50", "}"}], "]"}]}], "//", "Column"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->23813941,ExpressionUUID->"0198331b-3cf5-4668-a6c6-0f0dafb4d5ca"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       1,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       2,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       4,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"101\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       5,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       8,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1001\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       9,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"1010\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       10,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       16,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10001\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       17,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10010\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       18,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10100\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       20,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"10101\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       21,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       32,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100001\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       33,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100010\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       34,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100100\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       36,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"100101\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       37,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"101000\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       40,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"101001\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       41,
+       Editable->False],
+      BaseForm[#, 2]& ]},
+    {
+     TagBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\<\"101010\"\>", "\<\"2\"\>"],
+        ShowStringCharacters->False],
+       42,
+       Editable->False],
+      BaseForm[#, 2]& ]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->247673644,ExpressionUUID->"2fe00b99-e94c-4fb8-ac8a-e0caefa59bc4"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "488dcbf3-80ae-4d9c-9b0c-e280a85747d0"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->251409009,ExpressionUUID->"b8756bd2-0673-468d-aec0-bdf8e2b603d6"],
+
+Cell["Plot of fibbinaries less than 150 in base 2:", "ExampleText",
+ CellID->796428496,ExpressionUUID->"c2e9b3eb-25ec-438c-a2ca-081d002848e6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"IntegerDigits", "[", 
+   RowBox[{
+    RowBox[{"Fibbinary", "[", 
+     RowBox[{"{", "150", "}"}], "]"}], ",", "2"}], "]"}], "//", 
+  "ArrayPlot"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->3958192,ExpressionUUID->"d53e3035-5ef6-4603-b54a-bf0a1623e083"],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1:eJzllMENQjEMQyvBgTVYgBXYgRGQOLM6I/AXQK6aH/ySH6nqoY1jN26uz/fj
+dRpj3LZ12dZ5qPjc99mj+Nn5UXw3fze/6vh0ftn1s/ll41fnF63vznfrp/vf
+rZ9e3+3vKD5dvxuf/j7RfPqu9Knz7vuv6J6vgs4/q+80/ln4Ktz8juJ/2tzb
+m38UP4ufCop+uv/d+un9p/4PFVX0V+9/9/lHfR8Vbl1V/O/OV7h0/dn+rq6f
+3n/q/1D3VFD0V+9/9/lHfR91T4Vbd5X+u/LVvdnz1fpV5pvb/1n4Cmf2PIvf
+UfxPn29V//8sf7d+ur/d+rv3fzV/lh9dP72/Lv3/4u/ST+G/fv4F3j8BqQ==
+
+   "], {{0, 0}, {8, 46}}, {0, 1}],
+  Frame->Automatic,
+  FrameLabel->{None, None},
+  FrameTicks->{{None, None}, {None, None}},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->218517,ExpressionUUID->"bbc684cd-9cda-4eff-8b73-86050d2be8e7"]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+  ExpressionUUID->"08f3d40d-3d3c-49da-9541-cde985de9d03"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"54b477ed-2ac8-4ded-9e66-98e6a57b127a"],
+ "Properties & Relations",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "365a5993-b879-4403-9368-e58a6ee73887"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->63096976,ExpressionUUID->"df45dce9-5d17-4190-a42b-9e219b93c23c"],
+
+Cell["Fibbinaries are related to the Zeckendorf representation:", \
+"ExampleText",
+ CellID->30322645,ExpressionUUID->"ef597410-dffe-4e8d-994e-c4a2f3a1f0fa"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Fibbinary", "[", "12", "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->229524168,ExpressionUUID->"10823d96-bb9b-437a-b2c8-fe216ecd30d4"],
+
+Cell[BoxData["21"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->165123211,ExpressionUUID->"76983ae4-075a-4f6f-bf15-a2d7f4b6b1e8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"IntegerDigits", "[", 
+  RowBox[{
+   RowBox[{"Fibbinary", "[", "12", "]"}], ",", "2"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->160325369,ExpressionUUID->"ad69d79b-9ec7-4958-9372-5ac5e23c262e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "0", ",", "1", ",", "0", ",", "1"}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->15839941,ExpressionUUID->"593e547e-d505-45ad-9222-67ca31228236"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ZeckendorfRepresentation", "[", "12", "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[3]:=",
+ CellID->621710244,ExpressionUUID->"7de9f733-475f-4d9f-a979-e6fed17bf27f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "0", ",", "1", ",", "0", ",", "1"}], "}"}]], "Output",
+ CellLabel->"Out[3]=",
+ CellID->847029850,ExpressionUUID->"f7d73fda-935d-4f64-ac0b-40408c8f2ff4"]
+}, Open  ]],
+
+Cell["Adding the following integers gives 12:", "ExampleText",
+ CellID->136163236,ExpressionUUID->"c085b9a3-decc-41c7-8ee7-e2fd8606223a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Pick", "[", 
+  RowBox[{
+   RowBox[{"Fibonacci", "[", 
+    RowBox[{"Range", "[", 
+     RowBox[{"2", ",", "6"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0", ",", "1", ",", "0", ",", "1"}], "}"}], ",", "1"}], 
+  "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[4]:=",
+ CellID->60809439,ExpressionUUID->"3566b35b-0082-4c81-aceb-ecbf1f44b8af"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "3", ",", "8"}], "}"}]], "Output",
+ CellLabel->"Out[4]=",
+ CellID->242376423,ExpressionUUID->"f1f6e695-196a-4008-8588-871bbf82792e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "[", "%", "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[5]:=",
+ CellID->79838568,ExpressionUUID->"a476eb8f-400b-44ea-9dec-3d1b3ca0c0d9"],
+
+Cell[BoxData["12"], "Output",
+ CellLabel->"Out[5]=",
+ CellID->627500522,ExpressionUUID->"dd89c363-3e14-4c23-bd18-93a149a6eac6"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[{
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["ZeckendorfRepresentation"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/ZeckendorfRepresentation", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",ExpressionUUID->
+         "a40abe78-f0c3-4450-92e3-bd4c26e5b126"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["FibonacciEncode"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/FibonacciEncode", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"0ca49ea0-71d6-4671-838d-e6f01123c169",ExpressionUUID->
+         "ae1ec07c-e978-458f-aeb4-681673bb96bb"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["InverseFibonacci"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/InverseFibonacci", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"e261561d-8fd2-4b2a-beeb-e504e6609c03",ExpressionUUID->
+         "4c5c7419-5076-4fd2-8b1e-126a130cdda0"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Fibonacci"]], "paclet:ref/Fibonacci"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"d490f23b-3406-4c85-92c9-a7d8ffaeace7",ExpressionUUID->
+         "2e414607-445c-4fb5-82b6-9c2b4ee58780"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["IntegerPartitions"]], "paclet:ref/IntegerPartitions"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"4e4aa41c-858c-44c0-8437-ee8b6eb28c06",ExpressionUUID->
+         "c2a8bc86-3700-4b66-a90f-e517a73304f4"]
+       }], "SeeAlso",ExpressionUUID->"779f5925-ac39-4b27-bb1d-548370793455"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"2bf81f22-bfa8-4cf5-be68-\
+8a3310175af6"],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Combinatorics"]], 
+           "paclet:PeterBurbery/Combinatorics/guide/Combinatorics"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "74fca0f3-e317-4946-b5f1-f32f51729ef0"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"295f0c3f-f38f-479a-946f-\
+5d3a368fc988"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], 
+                 "Wikipedia\[LongDash]Fibbinary number"}]]]], 
+            "https://en.wikipedia.org/wiki/Fibbinary_number"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "2d979250-367f-44ec-b90b-b4d994f54929"]}]],ExpressionUUID->
+        "cb5dcd4c-60c3-4f99-a9f4-59765412c7d2"]], "RelatedLinks",
+        ExpressionUUID->"a02c060e-2c88-443d-8092-7b8e03027fe4"]},
+      {Cell[TextData[Cell[BoxData[
+        TemplateBox[{
+          Cell[
+           TextData[
+            Cell[
+             TextData[{
+               Cell[
+                BoxData[
+                 DynamicBox[
+                  FEPrivate`ImportImage[
+                   
+                   FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+                    "RelatedLinks-FunctionRepository.png"]]]]], 
+               Cell[
+                BoxData[
+                 TemplateBox[{4}, "Spacer1"]]], 
+               "ZeckendorfRepresentation"}]]]], 
+          "https://resources.wolframcloud.com/FunctionRepository/resources/\
+ZeckendorfRepresentation"},
+         "WebLink",
+         BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+        "616bb6fa-3082-4ec3-a652-a044a2891fb1"]], "RelatedLinks",
+        ExpressionUUID->"75b6ddc8-9240-4770-8dd2-f4e62dece2c5"]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], 
+                 "David Eppstein\[LongDash]Generating fibbinary numbers, \
+three ways"}]]]], 
+            "https://11011110.github.io/blog/2021/10/02/generating-fibbinary-\
+numbers.html"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "572c069c-0cd4-49c6-8ca7-aade1b60ff9e"]}]],ExpressionUUID->
+        "889dc2b8-47b2-4a26-80e0-f707e1df460c"]], "RelatedLinks",
+        ExpressionUUID->"6a4583f7-108b-4697-8ff4-60a7060638f9"]},
+      {Cell[TextData[{
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData[
+             Cell[
+              TextData[{
+                Cell[
+                 BoxData[
+                  DynamicBox[
+                   FEPrivate`ImportImage[
+                    
+                    FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+                    "RelatedLinks-FunctionRepository.png"]]]]], 
+                Cell[
+                 BoxData[
+                  TemplateBox[{4}, "Spacer1"]]], "Fibbinary"}]]]], 
+           "https://resources.wolframcloud.com/FunctionRepository/resources/\
+Fibbinary/"},
+          "WebLink",
+          BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+         "e4e99f90-2451-46e9-816a-d534bfaa748b"],
+        " Resource Function created by Wolfram Staff, based on work by J\
+\[ODoubleDot]rg Arndt, Robert G. Wilson and Eric W. Weisstein"
+       }], "RelatedLinks",ExpressionUUID->
+        "3e78aa8f-f1eb-48d0-8d45-d08405c2e3d6"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"f898141c-2f5b-4102-86c1-\
+cc382de09d8f"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"b226d01d-a185-4428-935d-0a74662e3720"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Fibbinary",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, 
+    "ExampleSection" -> {"0" -> Open, "2" -> Closed}, "NotesSection" -> 
+    Closed}, "NewStyles" -> True, "CitationPopupData" -> $Failed, 
+  "ShowCitation" -> False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 7, 29, 17, 27, 45.3910628}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`Combinatorics`", 
+    "keywords" -> {
+     "base 2 representation", "binary representation", "bitwise operations", 
+      "Fibonacci number", "fibbinary", "integer sequence", 
+      "Zeckendorf representation"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Peter Burbery/ Combinatorics Symbol", "language" -> "en", "paclet" -> 
+    "PeterBurbery/Combinatorics", "status" -> "None", "summary" -> 
+    "Fibbinary[n] gives the nth fibbinary number. Fibbinary[{n}] gives a list \
+of fibbinary numbers less than or equal to n.", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "Fibbinary", "titlemodifier" -> "", 
+    "metadescription" -> "", "windowtitle" -> "Fibbinary", "type" -> "Symbol",
+     "uri" -> "PeterBurbery/Combinatorics/ref/Fibbinary"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (June 3, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"365e8318-fc6a-4703-bef0-506ea426b8ce"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[11188, 290, 1419, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"86c40f08-acdd-4aae-be16-87675640bb89",
+   CellTags->"PrimaryExamplesSection",
+   CellID->23182524]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 37915, 1084}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[581, 21, 6267, 148, 56, "AnchorBarGrid",ExpressionUUID->"3f4114a5-88cf-48d0-b978-1f4a3190c430",
+ CellID->1],
+Cell[6851, 171, 109, 0, 23, "ContextNameCell",ExpressionUUID->"5951e643-da84-4942-9407-ad37754b0e69"],
+Cell[CellGroupData[{
+Cell[6985, 175, 552, 14, 56, "ObjectNameGrid",ExpressionUUID->"fad16820-af20-4b0e-b776-b470455c0a7e"],
+Cell[7540, 191, 1359, 34, 188, "Usage",ExpressionUUID->"4383adc7-a120-4517-bca5-19d61dc1bc83",
+ CellID->198099882]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8936, 230, 1918, 48, 37, "NotesSection",ExpressionUUID->"38ea6eb2-8d62-4c4b-bd18-3afad4d3bbd3",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->49751648],
+Cell[10857, 280, 204, 4, 70, "Notes",ExpressionUUID->"0270e476-520a-46c9-9644-881cd3c73652",
+ CellID->1003955794]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[11188, 290, 1419, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"86c40f08-acdd-4aae-be16-87675640bb89",
+ CellTags->"PrimaryExamplesSection",
+ CellID->23182524],
+Cell[12610, 329, 217, 4, 26, "Input",ExpressionUUID->"167978c0-844f-4346-b9f1-93592a3477de",
+ CellID->169479089],
+Cell[CellGroupData[{
+Cell[12852, 337, 1397, 36, 30, "ExampleSection",ExpressionUUID->"3888eff9-066b-43b0-aeef-a7b09bac860b",
+ CellID->14024493],
+Cell[14252, 375, 126, 1, 38, "ExampleText",ExpressionUUID->"a360b9fe-8312-4c46-a367-c7571c3139fe",
+ CellID->6065172],
+Cell[CellGroupData[{
+Cell[14403, 380, 318, 8, 26, "Input",ExpressionUUID->"e747c20e-7d7e-462e-a848-fc73a2ecdb32",
+ CellID->873576838],
+Cell[14724, 390, 1378, 21, 81, "Output",ExpressionUUID->"31eff62c-aa5c-4dc4-974e-58d457f2eaa9",
+ CellID->108178827]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16139, 416, 242, 5, 13, "ExampleDelimiter",ExpressionUUID->"d8dec297-039d-4c25-ae4f-0b9985b4ffdf",
+ CellID->283674660],
+Cell[16384, 423, 160, 2, 38, "ExampleText",ExpressionUUID->"3d7bbc2d-bab2-4169-bea3-3af40615cc46",
+ CellID->177604608],
+Cell[CellGroupData[{
+Cell[16569, 429, 372, 10, 70, "Input",ExpressionUUID->"0198331b-3cf5-4668-a6c6-0f0dafb4d5ca",
+ CellID->23813941],
+Cell[16944, 441, 4559, 188, 328, "Output",ExpressionUUID->"2fe00b99-e94c-4fb8-ac8a-e0caefa59bc4",
+ CellID->247673644]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21552, 635, 242, 5, 70, "ExampleDelimiter",ExpressionUUID->"b8756bd2-0673-468d-aec0-bdf8e2b603d6",
+ CellID->251409009],
+Cell[21797, 642, 142, 1, 70, "ExampleText",ExpressionUUID->"c2e9b3eb-25ec-438c-a2ca-081d002848e6",
+ CellID->796428496],
+Cell[CellGroupData[{
+Cell[21964, 647, 338, 9, 70, "Input",ExpressionUUID->"d53e3035-5ef6-4603-b54a-bf0a1623e083",
+ CellID->3958192],
+Cell[22305, 658, 1152, 26, 261, "Output",ExpressionUUID->"bbc684cd-9cda-4eff-8b73-86050d2be8e7",
+ CellID->218517]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[23618, 693, 1428, 37, 70, "ExampleSection",ExpressionUUID->"df45dce9-5d17-4190-a42b-9e219b93c23c",
+ CellID->63096976],
+Cell[25049, 732, 156, 2, 70, "ExampleText",ExpressionUUID->"ef597410-dffe-4e8d-994e-c4a2f3a1f0fa",
+ CellID->30322645],
+Cell[CellGroupData[{
+Cell[25230, 738, 212, 4, 70, "Input",ExpressionUUID->"10823d96-bb9b-437a-b2c8-fe216ecd30d4",
+ CellID->229524168],
+Cell[25445, 744, 127, 2, 35, "Output",ExpressionUUID->"76983ae4-075a-4f6f-bf15-a2d7f4b6b1e8",
+ CellID->165123211]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25609, 751, 276, 6, 70, "Input",ExpressionUUID->"ad69d79b-9ec7-4958-9372-5ac5e23c262e",
+ CellID->160325369],
+Cell[25888, 759, 200, 4, 35, "Output",ExpressionUUID->"593e547e-d505-45ad-9222-67ca31228236",
+ CellID->15839941]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26125, 768, 227, 4, 70, "Input",ExpressionUUID->"7de9f733-475f-4d9f-a979-e6fed17bf27f",
+ CellID->621710244],
+Cell[26355, 774, 201, 4, 35, "Output",ExpressionUUID->"f7d73fda-935d-4f64-ac0b-40408c8f2ff4",
+ CellID->847029850]
+}, Open  ]],
+Cell[26571, 781, 137, 1, 70, "ExampleText",ExpressionUUID->"c085b9a3-decc-41c7-8ee7-e2fd8606223a",
+ CellID->136163236],
+Cell[CellGroupData[{
+Cell[26733, 786, 417, 11, 70, "Input",ExpressionUUID->"3566b35b-0082-4c81-aceb-ecbf1f44b8af",
+ CellID->60809439],
+Cell[27153, 799, 181, 4, 35, "Output",ExpressionUUID->"f1f6e695-196a-4008-8588-871bbf82792e",
+ CellID->242376423]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27371, 808, 206, 4, 70, "Input",ExpressionUUID->"a476eb8f-400b-44ea-9dec-3d1b3ca0c0d9",
+ CellID->79838568],
+Cell[27580, 814, 127, 2, 35, "Output",ExpressionUUID->"dd89c363-3e14-4c23-bd18-93a149a6eac6",
+ CellID->627500522]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[27949, 825, 3210, 83, 70, "SeeAlsoSection",ExpressionUUID->"2bf81f22-bfa8-4cf5-be68-8a3310175af6"],
+Cell[31162, 910, 740, 19, 70, "MoreAboutSection",ExpressionUUID->"295f0c3f-f38f-479a-946f-5d3a368fc988"],
+Cell[31905, 931, 3783, 101, 70, "RelatedLinksSection",ExpressionUUID->"f898141c-2f5b-4102-86c1-cc382de09d8f"],
+Cell[35691, 1034, 78, 0, 70, "FooterCell",ExpressionUUID->"b226d01d-a185-4428-935d-0a74662e3720"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
