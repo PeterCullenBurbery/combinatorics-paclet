@@ -164,6 +164,8 @@ PeterBurbery`Combinatorics`SignedLahNumber;
 
 PeterBurbery`Combinatorics`StandardYoungTableaux;
 
+PeterBurbery`Combinatorics`StirlingPermutations;
+
 PeterBurbery`Combinatorics`SubsetFromIndex;
 
 PeterBurbery`Combinatorics`SubsetIndex;
@@ -343,8 +345,13 @@ EulerianNumber::usage = "EulerianNumber[n, k] gives the number of permutations o
 
 EulerianNumber[n_, k_] :=
     Module[{x},
-        SeriesCoefficient[(1 - x) ^ (n + 1) PolyLog[-n, x], {x, 0, k(*
-            It might fix it to have k-1*)}]
+        SeriesCoefficient[
+            (1 - x) ^ (n + 1) PolyLog[-n, x]
+            ,
+            {
+                x, 0, k                                 (*
+It might fix it to have k-1*) }
+        ]
     ]
 
 EulerianNumberOfTheSecondKind // ClearAll
@@ -1288,6 +1295,8 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     
                                     
                                     
+                                    
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -1576,6 +1585,20 @@ StandardYoungTableaux[partition_] /; IntegerPartitionQ[partition] :=
         Internal`PartitionRagged[#, partition]& /@ standardTableauxAux[
             ConstantArray[0, n], 1, affectedByList, minIndTable, maxIndTable]
     ]
+
+StirlingPermutations // ClearAll
+
+StirlingPermutations::usage = "StirlingPermutations[n] generates all Stirling permutations of order n.";
+
+StirlingPermutations[1] = {{1, 1}};
+
+StirlingPermutations[k_Integer?IntegerQ /; !(k < 1)] :=
+    Join @@
+        (
+            Function[x,
+                    Flatten[Insert[x, {k, k}, #]]& /@ Range[2 k - 1]
+                ] /@ StirlingPermutations[k - 1]
+        )
 
 SubsetFromIndex // ClearAll
 

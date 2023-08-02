@@ -37,7 +37,7 @@
             ,
             "Hash"
             ->
-            "ca117e8c4b7890dcd2b364146391e3441b9253d07d4b4b07cce036aa99b81315"
+            "928254fe2e67d65b4a44a8e2cbd1bb3cd2ca4295a636d14d01b6e746570f6ad8"
                 
         |>
         ,
@@ -1085,6 +1085,19 @@
             "File"
             ->
             File[
+                "Kernel\\StirlingPermutation.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "5151c51d670651df219d1be992f69bfa86675c53780ceb7702940b344e78024a"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Kernel\\StringFunction.wl"
             ]
             ,
@@ -1395,7 +1408,7 @@
             ,
             "Hash"
             ->
-            "6a3c66395f8847155d56208f6477734b63c45ce925a647eee2c9713d63c85782"
+            "fe171026af9bd20f620159d81f6785cb9d88d60d7398e84be6f8a7369ed6ecb3"
                 
         |>
         ,
@@ -1577,7 +1590,7 @@
             ,
             "Hash"
             ->
-            "1b79fd1cf9ff1f69bbd6e3484ceeab5db59dbcc07582af49636e2b9148411fcb"
+            "a4102a61ba87a78058be2a8c9e0240e79db4e8a8d13df03def508fe6e73b9a75"
                 
         |>
         ,
@@ -1661,7 +1674,7 @@
             ,
             "Hash"
             ->
-            "c1ed8b95a17e00c9e3cff00416f1133d9e7529cc52a84068f573f89ef01d385a"
+            "7c88b2728b25990d98cbad68a33601529fb0f23d285aff2401cd3e4d4a15a6ac"
                 
         |>
         ,
@@ -1689,7 +1702,7 @@
             ,
             "Hash"
             ->
-            "f2ebafe18f00524cbd1d62a627e1c8493d92e7cd37f88119192c680804cc7e68"
+            "9dbc99a05eb488214fb4952b579d74ddbfb5d1198dee86597bbb8b33dfcb19ad"
                 
         |>
         ,
@@ -2640,7 +2653,7 @@
             ,
             "Hash"
             ->
-            "e27bdaacc9e621b96997f497a60913db7673b52e03e96323d6e0e93cb332e5dc"
+            "ba4ee513465486d86b1bac7af59ae3e1f77e09fa4945d64b851ab59fe7d02b44"
                 
         |>
         ,
