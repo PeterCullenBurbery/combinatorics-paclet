@@ -1,0 +1,2573 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     80303,       2563]
+NotebookOptionsPosition[     68694,       2319]
+NotebookOutlinePosition[     73393,       2425]
+CellTagsIndexPosition[     73246,       2418]
+WindowTitle->StandardYoungTableaux
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ COMBINATORICS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "d79c7862-fb39-4496-b174-263e34793182"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "e0953419-2b9a-4224-9685-e74340a816e5"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "See Also",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "2042a586-78d0-41cb-952e-b5fb59f46d36"]
+         }],ExpressionUUID->"ce4a7aaa-7303-43d7-b7b2-e1eb1327c929"],
+         StripOnInput->False],{
+        "\"IntegerPartitions\"" :> 
+         Documentation`HelpLookup["paclet:ref/IntegerPartitions"], 
+         "\"Permutations\"" :> 
+         Documentation`HelpLookup["paclet:ref/Permutations"], Delimiter, 
+         StyleBox[
+          "\"Functions\"", "SeeAlsoSection", FontSize -> 14, FontSlant -> 
+           "Italic", StripOnInput -> False] :> 
+         NotebookFind[EvaluationNotebook[], "SeeAlsoSection", All, CellStyle],
+          StyleBox[
+          "\"ConjugatePartition\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/ConjugatePartition"], 
+         StyleBox[
+          "\"IntegerPartitionQ\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/IntegerPartitionQ"], 
+         StyleBox[
+          "\"FerrersDiagram\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/FerrersDiagram"], 
+         StyleBox["\"HookLengths\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/HookLengths"], 
+         StyleBox[
+          "\"NumberOfTableaux\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/NumberOfTableaux"], 
+         StyleBox["\"TableauQ\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/TableauQ"], 
+         StyleBox[
+          "\"TransposeTableau\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/TransposeTableau"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"SeeAlso"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "474268be-f3be-4201-8572-0f3d2c1f25dc"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "b291d0e6-726d-4548-8f28-5e57900c2804"]
+         }],ExpressionUUID->"a5a330eb-f930-4bb2-a900-04d681e90816"],
+         StripOnInput->False],{
+        "\"Combinatorics\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/guide/Combinatorics"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "7e639552-7040-48c8-9200-9880666540c6"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "9665322a-a98a-4ec5-86f0-363496603991"]
+         }],ExpressionUUID->"8313c278-9061-4621-84a7-26d58213df12"],
+         StripOnInput->False],{
+        "\"PeterBurbery/Combinatorics/ref/StandardYoungTableaux\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/Combinatorics/ref/StandardYoungTableaux"]}, 
+               Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+Combinatorics/ref/StandardYoungTableaux.html"], StandardForm]], "Input", 
+                 TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$137874], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/Combinatorics/ref/StandardYoungTableaux" <> 
+               ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "81e18eec-5e9f-4cc4-b778-32e1a500c1a5"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "dafde87d-b9de-43ef-a5a5-d24ff8a11c27"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"7b3d2b02-fae4-4a2b-98c8-0fd74bc83022"],
+
+Cell["PeterBurbery`Combinatorics`", "ContextNameCell",ExpressionUUID->"e6f3e901-7622-4ac0-bd9f-0aaf7db1bd5f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "StandardYoungTableaux", "ObjectName",ExpressionUUID->
+      "749329c6-aef5-44ac-b959-0c4178136e2e"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"3f2d17c4-4471-43a8-969d-d151e62ea494"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "85780c38-81ad-4aca-af6c-0a96a74ace11"]
+    }],ExpressionUUID->"9be85107-bbe3-4c4e-a0a4-5ca6fbf16c60"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"d9ab347d-4eba-449e-8ab8-\
+d716a6d4cf24"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["StandardYoungTableaux"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/StandardYoungTableaux", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["p", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "70f27991-7047-48fc-b306-e012ed1d3dc0"],
+     "\[LineSeparator]generates a list of all standard Young tableaux with \
+shape corresponding to the integer partition ",
+     Cell[BoxData[
+      StyleBox["p", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "74408c34-bfd5-4816-b287-c9ff4e0cb792"],
+     "."
+    }],ExpressionUUID->"06d26a8a-36eb-41c0-a72b-c06e7ec50136"]}
+  }]], "Usage",
+ CellID->342095628,ExpressionUUID->"425bcede-fe43-47cd-8ff7-8f818fb4c580"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"5cac8fff-7593-42b3-8e7f-f3200de45dca"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"dd0d126d-880a-480c-ac77-9bf375579e3e"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"5b8631db-7550-4475-846a-5de9daf02352"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"a699cde8-3c4d-44a8-8906-07c01c50c6fc"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->39839215,ExpressionUUID->"2af2e14c-03d1-4845-a07a-c990f61a2c73"],
+
+Cell["\<\
+A standard Young tableau is a Young tableau in which the numbers form an \
+increasing sequence along each line and along each column.\
+\>", "Notes",
+ CellEventActions->{Inherited, {"KeyDown", "\t"} :> Replace[SelectionMove[
+       SelectedNotebook[], After, Cell]; NotebookFind[
+       SelectedNotebook[], "TabNext", Next, CellTags, AutoScroll -> True, 
+       WrapAround -> True], Blank[NotebookSelection] :> SelectionMove[
+       SelectedNotebook[], All, CellContents, AutoScroll -> True]], 
+   PassEventsDown -> False, PassEventsUp -> False},
+ CellTags->{"DefaultContent", "TabNext"},
+ CellID->697898357,ExpressionUUID->"3d7d337d-24cc-4a74-9adc-0ae62b98d046"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"23c24179-0ade-4146-8a4a-60537360bad3"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"7600794c-6620-48d0-a14d-62227609c62f"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(5)", "ExampleCount",ExpressionUUID->
+  "7a10abc6-cda7-489d-90d5-5d2e47087b83"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->151002724,ExpressionUUID->"c5d53b14-962a-4b7f-ab87-78ceb0f84eef"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`Combinatorics`\>\"", "]"}]], "Input",\
+ "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->393293441,ExpressionUUID->"3f083ed1-dae6-41a1-bb86-95f4fcb1d8ab"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"cdba7b9e-9c5c-4471-97ca-f3f3766d051a"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"e99b7eed-5f2e-4f71-a060-2ce33b08bba3"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "2e85d0dc-97dc-4cae-bfb9-bd35881d223a"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->200020221,ExpressionUUID->"38586300-e15c-4e71-8fcf-b0697b617b10"],
+
+Cell["\<\
+The standard Young tableaux corresponding to the integer partition (2,1,1):\
+\>", "ExampleText",
+ CellTags->"DefaultContent",
+ CellID->26526723,ExpressionUUID->"11dfeee9-1dfd-4f1c-adcb-dc600ea03abd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StandardYoungTableaux", "[", 
+  RowBox[{"{", 
+   RowBox[{"2", ",", "1", ",", "1"}], "}"}], "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellTags->"DefaultContent",
+ CellLabel->"In[1]:=",
+ CellID->778772053,ExpressionUUID->"5ba26860-1086-42eb-9823-178c00ca9364"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", "3", "}"}], ",", 
+     RowBox[{"{", "4", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", "2", "}"}], ",", 
+     RowBox[{"{", "4", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", "2", "}"}], ",", 
+     RowBox[{"{", "3", "}"}]}], "}"}]}], "}"}]], "Output",
+ CellTags->"DefaultContent",
+ CellLabel->"Out[1]=",
+ CellID->1169545,ExpressionUUID->"4bdd2287-3030-43bf-b73b-13365987a593"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "1"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+  ExpressionUUID->"ac5ff854-f372-49e1-b711-feca76f364ac"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"81771dfb-4726-4d1e-85ae-9b70d50d8afb"],
+ "Scope",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "f6345a20-bb50-4459-9434-e27c64e14f81"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->95962374,ExpressionUUID->"0da596e0-34bc-4099-ba9f-344966ea2fb2"],
+
+Cell["\<\
+Visualize all the standard Young tableaux with shape (3,2,1,1):\
+\>", "ExampleText",
+ CellTags->"DefaultContent",
+ CellID->731984921,ExpressionUUID->"d2756e7e-6838-4885-aa99-f5e0824c62cb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Grid", "[", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{"Function", "[", 
+       RowBox[{"x", ",", 
+        RowBox[{"Item", "[", 
+         RowBox[{"x", ",", 
+          RowBox[{"Frame", "\[Rule]", "True"}]}], "]"}]}], "]"}], ",", "#", 
+      ",", 
+      RowBox[{"{", "2", "}"}]}], "]"}], "]"}], "&"}], "/@", 
+  RowBox[{"StandardYoungTableaux", "[", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "2", ",", "1", ",", "1"}], "}"}], "]"}]}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellTags->"DefaultContent",
+ CellLabel->"In[1]:=",
+ CellID->101632005,ExpressionUUID->"997f18cf-53bc-4b84-9d29-fa2d650367ea"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {
+       ItemBox["1",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["5",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["7",
+        Frame->True,
+        StripOnInput->False]},
+      {
+       ItemBox["2",
+        Frame->True,
+        StripOnInput->False], 
+       ItemBox["6",
+        Frame->True,
+        StripOnInput->False], ""},
+      {
+       ItemBox["3",
+        Frame->True,
+        StripOnInput->False], "", ""},
+      {
+       ItemBox["4",
+        Frame->True,
+        StripOnInput->False], "", ""}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"]}], "}"}]], "Output",
+ CellTags->"DefaultContent",
+ CellLabel->"Out[1]=",
+ CellID->172639929,ExpressionUUID->"17f11ea5-a5bc-4879-8950-4972fba9feb9"]
+}, Open  ]],
+
+Cell["Count the standard Young tableaux:", "ExampleText",
+ CellTags->"DefaultContent",
+ CellID->724950243,ExpressionUUID->"11abc62f-eb87-45fa-aec6-988d399b07b9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "%", "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->664361209,ExpressionUUID->"ef46bbe9-7d57-417c-911d-edad165ea47d"],
+
+Cell[BoxData["35"], "Output",
+ CellLabel->"Out[2]=",
+ CellID->650267409,ExpressionUUID->"8c576b53-49f4-487d-9998-ff4787ea176a"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "1"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "3"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+  ExpressionUUID->"18c01266-dbd6-40b8-a259-852386fa66a1"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"b36896a5-e215-4f03-b4b8-9b1495050421"],
+ "Properties & Relations",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount",ExpressionUUID->
+  "1a3ee4b0-7968-449a-82e1-78563c421060"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->304283253,ExpressionUUID->"85200f06-89f8-481b-8752-0c5d60116c51"],
+
+Cell[TextData[{
+ "All the results of ",
+ Cell[BoxData[
+  StyleBox["StandardYoungTableaux", "InlineResourceFunction"]], "Text", 
+  "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "cdb0568b-3ec5-4aac-aede-10202f89e01a"],
+ " satisfy the resource function TableauQ:"
+}], "ExampleText",
+ CellTags->"DefaultContent",
+ CellID->316396857,ExpressionUUID->"dc37b8f6-a07d-4641-834d-1a702f0b6c63"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"yt", "=", 
+  RowBox[{"StandardYoungTableaux", "[", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "3"}], "}"}], "]"}]}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->840584461,ExpressionUUID->"9f0da4d4-fb5c-4485-813c-27eee278d270"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", "6", ",", "7"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "6", ",", "7"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3", ",", "6"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "5", ",", "7"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3", ",", "7"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "5", ",", "6"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "4", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "6", ",", "7"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "4", ",", "6"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "5", ",", "7"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "4", ",", "7"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "5", ",", "6"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "5", ",", "6"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "4", ",", "7"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "5", ",", "7"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "4", ",", "6"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3", ",", "4", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "6", ",", "7"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3", ",", "4", ",", "6"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "5", ",", "7"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3", ",", "4", ",", "7"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "5", ",", "6"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3", ",", "5", ",", "6"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "4", ",", "7"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3", ",", "5", ",", "7"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "4", ",", "6"}], "}"}]}], "}"}]}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->516911914,ExpressionUUID->"8c97b58f-ca46-4d60-9af9-9653af3f16ef"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableauQ", "/@", "yt"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->323164252,ExpressionUUID->"540b0dc8-89ed-4fae-a663-35fcb2e1187a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "True", ",", "True", ",", "True", ",", "True", ",", "True", ",", "True", 
+   ",", "True", ",", "True", ",", "True", ",", "True", ",", "True", ",", 
+   "True", ",", "True", ",", "True"}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->34031631,ExpressionUUID->"e007ee58-c3f0-48a4-b129-aaed7191c0b1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "9ccc72fd-5286-403b-ac9b-f7d8d7ac18ca"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->14107562,ExpressionUUID->"60ccb437-706c-4f81-b6f9-95bed056956b"],
+
+Cell["\<\
+Count the number of standard Young tableaux of a given shape:\
+\>", "ExampleText",
+ CellTags->"DefaultContent",
+ CellID->964994180,ExpressionUUID->"2747357a-170c-4ecd-b655-f17283bc5af9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"yt", "=", 
+  RowBox[{"StandardYoungTableaux", "[", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "2"}], "}"}], "]"}]}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->266013155,ExpressionUUID->"9923d261-ff7e-4045-ada3-7d75a3df4479"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "5"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "5"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "4"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "5"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "4"}], "}"}]}], "}"}]}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->274651301,ExpressionUUID->"88f648f8-c5d5-4270-b463-4c11fbcd79d8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "%", "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->744225388,ExpressionUUID->"3757882e-4fb9-45a5-93f5-d1b9ac808017"],
+
+Cell[BoxData["5"], "Output",
+ CellLabel->"Out[2]=",
+ CellID->595946706,ExpressionUUID->"70c6c9c4-edce-4f8c-b40b-1ae06e96ba1b"]
+}, Open  ]],
+
+Cell["\<\
+This is the same as the result of the resource function NumberOfTableaux:\
+\>", "ExampleText",
+ CellTags->"DefaultContent",
+ CellID->677400769,ExpressionUUID->"4c558fe2-e769-4cbf-a577-90123198b03a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NumberOfTableaux", "[", 
+  RowBox[{"{", 
+   RowBox[{"3", ",", "2"}], "}"}], "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[3]:=",
+ CellID->411871654,ExpressionUUID->"8c5627c1-c52d-4f20-a184-5a4160de0b30"],
+
+Cell[BoxData["5"], "Output",
+ CellLabel->"Out[3]=",
+ CellID->74448443,ExpressionUUID->"fc6344c2-7ebf-4c77-bbeb-58ff2e8f6df4"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "e34160a0-27ad-4c87-8563-bff61b471d07"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->14107563,ExpressionUUID->"1871902d-c0fa-4ed3-9b81-810fb4941235"],
+
+Cell["\<\
+Count all the standard Young tableaux corresponding to all partitions of a \
+given number:\
+\>", "ExampleText",
+ CellTags->"DefaultContent",
+ CellID->793738414,ExpressionUUID->"ca7c537f-b55c-4b01-b4d7-c3fadd4ff6f6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Flatten", "[", 
+  RowBox[{
+   RowBox[{"StandardYoungTableaux", "/@", 
+    RowBox[{"IntegerPartitions", "[", "5", "]"}]}], ",", "1"}], 
+  "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->351892793,ExpressionUUID->"92df54e5-209f-44db-aa17-78698bb3ed16"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5"}], "}"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", "5", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", "4", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "4", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", "3", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3", ",", "4", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", "2", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "5"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "5"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "4"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "5"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "4"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", "4", "}"}], ",", 
+     RowBox[{"{", "5", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", "3", "}"}], ",", 
+     RowBox[{"{", "5", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", "3", "}"}], ",", 
+     RowBox[{"{", "4", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", "2", "}"}], ",", 
+     RowBox[{"{", "5", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", "2", "}"}], ",", 
+     RowBox[{"{", "4", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "4", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", "2", "}"}], ",", 
+     RowBox[{"{", "3", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", "5", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", "4", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", "5", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", "4", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", "3", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", "3", "}"}], ",", 
+     RowBox[{"{", "4", "}"}], ",", 
+     RowBox[{"{", "5", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", "2", "}"}], ",", 
+     RowBox[{"{", "4", "}"}], ",", 
+     RowBox[{"{", "5", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", "2", "}"}], ",", 
+     RowBox[{"{", "3", "}"}], ",", 
+     RowBox[{"{", "5", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", "2", "}"}], ",", 
+     RowBox[{"{", "3", "}"}], ",", 
+     RowBox[{"{", "4", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", "1", "}"}], ",", 
+     RowBox[{"{", "2", "}"}], ",", 
+     RowBox[{"{", "3", "}"}], ",", 
+     RowBox[{"{", "4", "}"}], ",", 
+     RowBox[{"{", "5", "}"}]}], "}"}]}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->363357390,ExpressionUUID->"393c39fc-732d-4779-991b-da51ea75e378"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "%", "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->990503166,ExpressionUUID->"56569648-0830-4899-804c-1b989cdd2d56"],
+
+Cell[BoxData["26"], "Output",
+ CellLabel->"Out[2]=",
+ CellID->61086065,ExpressionUUID->"d23dc047-c156-432c-8392-64eea07be98b"]
+}, Open  ]],
+
+Cell["\<\
+This is the same as the result of the resource function NumberOfTableaux:\
+\>", "ExampleText",
+ CellTags->"DefaultContent",
+ CellID->677400770,ExpressionUUID->"650599a9-c6a6-4829-a253-fabf3c907e41"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NumberOfTableaux", "[", "5", "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[3]:=",
+ CellID->233497687,ExpressionUUID->"c39a68c7-65d5-4ccc-ba05-f9f0c19487c2"],
+
+Cell[BoxData["26"], "Output",
+ CellLabel->"Out[3]=",
+ CellID->26435928,ExpressionUUID->"7ba6ced5-5345-4e92-8696-a9eb2bf37979"]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "3"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[{
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["IntegerPartitions"]], "paclet:ref/IntegerPartitions"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",ExpressionUUID->
+         "7f640f79-3797-486a-a830-3721c83626bb"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Permutations"]], "paclet:ref/Permutations"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"392293ed-fab1-406b-812b-efb36b3fc107",ExpressionUUID->
+         "1702acb9-f11b-4d00-89b4-6c63d04ab293"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["ConjugatePartition"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/ConjugatePartition", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"2fc2c52f-b346-46b9-a552-dabafd02f183",ExpressionUUID->
+         "ac3f8ba1-6d4c-4db0-ba15-940c8cfb2489"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["IntegerPartitionQ"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/IntegerPartitionQ", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"baac8710-b70b-431b-b095-c68c89491aab",ExpressionUUID->
+         "acc53ea9-70b1-4086-91b0-d06b7d1be509"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["FerrersDiagram"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/FerrersDiagram", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"2b986e1e-c876-4cc3-82d8-ecce8f213af6",ExpressionUUID->
+         "0a1c13a0-133d-4ec5-849a-568fa8a1dfba"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["HookLengths"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/HookLengths", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"aef526b7-1ad0-404f-8f75-322134e5029d",ExpressionUUID->
+         "0befefbd-5c92-4460-9016-d85672f53847"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["NumberOfTableaux"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/NumberOfTableaux", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"7881f7ca-fd5c-46bb-a13c-9eea466121da",ExpressionUUID->
+         "667904e1-ca53-43f2-ab34-88ca524b1764"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["TableauQ"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/TableauQ", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"967f9e62-21aa-4421-8581-82030d415198",ExpressionUUID->
+         "34460b5b-dc46-4240-8654-cbecba7c47c3"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["TransposeTableau"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/TransposeTableau", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"efe72f72-323a-4fe3-afe1-3be0777a4441",ExpressionUUID->
+         "dc4c464d-b606-4a70-861c-a8a8fdef2b7d"]
+       }], "SeeAlso",ExpressionUUID->"eab390cb-587d-4381-83d7-51427571ef9e"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"55c2d463-ae52-4a7f-ba4c-\
+e242b146b540"],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Combinatorics"]], 
+           "paclet:PeterBurbery/Combinatorics/guide/Combinatorics"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "27689ba9-1276-4219-9dd4-d715a604741b"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"696558f0-ffc7-4703-9430-\
+2cc778f7ca71"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        TemplateBox[{
+          Cell[
+           TextData[
+            Cell[
+             TextData[{
+               Cell[
+                BoxData[
+                 DynamicBox[
+                  FEPrivate`ImportImage[
+                   
+                   FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+                    "RelatedLinks-MathWorld.png"]]]]], 
+               Cell[
+                BoxData[
+                 TemplateBox[{4}, "Spacer1"]]], 
+               "Young Tableau\[LongDash]Wolfram MathWorld"}]]]], 
+          "https://mathworld.wolfram.com/YoungTableau.html"},
+         "WebLink",
+         BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+        "bc414642-4836-4fc4-a3f5-adc3ba6e1d3b"]], "RelatedLinks",
+        ExpressionUUID->"07ea8a90-0053-462b-90e7-6820c6cc28b3"]},
+      {Cell[TextData[{
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData[
+             Cell[
+              TextData[{
+                Cell[
+                 BoxData[
+                  DynamicBox[
+                   FEPrivate`ImportImage[
+                    
+                    FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+                    "RelatedLinks-FunctionRepository.png"]]]]], 
+                Cell[
+                 BoxData[
+                  TemplateBox[{4}, "Spacer1"]]], "StandardYoungTableaux"}]]]],
+            "https://resources.wolframcloud.com/FunctionRepository/resources/\
+StandardYoungTableaux/"},
+          "WebLink",
+          BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+         "5e0eb855-d841-49d4-85c6-92a8602dc306"],
+        " Resource Function created by Jan Mangaldan"
+       }], "RelatedLinks",ExpressionUUID->
+        "e647136a-b72e-4c91-9011-e77fc172c756"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"268fb320-1080-47fa-83d9-\
+1fc18d86e33e"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"69c8b528-2cff-4397-9b72-2525d015d658"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"StandardYoungTableaux",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, 
+    "ExampleSection" -> {"0" -> Open, "1" -> Closed, "3" -> Closed}, 
+    "NotesSection" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2023, 7, 29, 17, 29, 32.2995248}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`Combinatorics`", 
+    "keywords" -> {
+     "combinatorics", "compositions", "Ferrers diagram", "partitions", 
+      "Young tableau"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Peter Burbery/ Combinatorics Symbol", "language" -> "en", "paclet" -> 
+    "PeterBurbery/Combinatorics", "status" -> "None", "summary" -> 
+    "StandardYoungTableaux[p] generates a list of all standard Young tableaux \
+with shape corresponding to the integer partition p.", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "StandardYoungTableaux", "titlemodifier" -> 
+    "", "metadescription" -> "", "windowtitle" -> "StandardYoungTableaux", 
+    "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/Combinatorics/ref/StandardYoungTableaux"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (June 3, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"eeeba053-ef41-45c4-aeed-4d283938e91e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "DefaultContent"->{
+  Cell[11326, 285, 672, 11, 70, "Notes",ExpressionUUID->"3d7d337d-24cc-4a74-9adc-0ae62b98d046",
+   CellTags->{"DefaultContent", "TabNext"},
+   CellID->697898357],
+  Cell[15191, 387, 209, 4, 38, "ExampleText",ExpressionUUID->"11dfeee9-1dfd-4f1c-adcb-dc600ea03abd",
+   CellTags->"DefaultContent",
+   CellID->26526723],
+  Cell[15425, 395, 325, 7, 26, "Input",ExpressionUUID->"5ba26860-1086-42eb-9823-178c00ca9364",
+   CellTags->"DefaultContent",
+   CellID->778772053],
+  Cell[15753, 404, 700, 23, 35, "Output",ExpressionUUID->"4bdd2287-3030-43bf-b73b-13365987a593",
+   CellTags->"DefaultContent",
+   CellID->1169545],
+  Cell[18016, 474, 198, 4, 70, "ExampleText",ExpressionUUID->"d2756e7e-6838-4885-aa99-f5e0824c62cb",
+   CellTags->"DefaultContent",
+   CellID->731984921],
+  Cell[18239, 482, 693, 20, 70, "Input",ExpressionUUID->"997f18cf-53bc-4b84-9d29-fa2d650367ea",
+   CellTags->"DefaultContent",
+   CellID->101632005],
+  Cell[18935, 504, 24820, 1055, 234, "Output",ExpressionUUID->"17f11ea5-a5bc-4879-8950-4972fba9feb9",
+   CellTags->"DefaultContent",
+   CellID->172639929],
+  Cell[43770, 1562, 161, 2, 70, "ExampleText",ExpressionUUID->"11abc62f-eb87-45fa-aec6-988d399b07b9",
+   CellTags->"DefaultContent",
+   CellID->724950243],
+  Cell[45891, 1623, 405, 10, 70, "ExampleText",ExpressionUUID->"dc37b8f6-a07d-4641-834d-1a702f0b6c63",
+   CellTags->"DefaultContent",
+   CellID->316396857],
+  Cell[50404, 1764, 196, 4, 70, "ExampleText",ExpressionUUID->"2747357a-170c-4ecd-b655-f17283bc5af9",
+   CellTags->"DefaultContent",
+   CellID->964994180],
+  Cell[52371, 1831, 208, 4, 70, "ExampleText",ExpressionUUID->"4c558fe2-e769-4cbf-a577-90123198b03a",
+   CellTags->"DefaultContent",
+   CellID->677400769],
+  Cell[53306, 1862, 225, 5, 70, "ExampleText",ExpressionUUID->"ca7c537f-b55c-4b01-b4d7-c3fadd4ff6f6",
+   CellTags->"DefaultContent",
+   CellID->793738414],
+  Cell[59247, 2060, 208, 4, 70, "ExampleText",ExpressionUUID->"650599a9-c6a6-4829-a253-fabf3c907e41",
+   CellTags->"DefaultContent",
+   CellID->677400770]},
+ "TabNext"->{
+  Cell[11326, 285, 672, 11, 70, "Notes",ExpressionUUID->"3d7d337d-24cc-4a74-9adc-0ae62b98d046",
+   CellTags->{"DefaultContent", "TabNext"},
+   CellID->697898357]},
+ "PrimaryExamplesSection"->{
+  Cell[12125, 302, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"c5d53b14-962a-4b7f-ab87-78ceb0f84eef",
+   CellTags->"PrimaryExamplesSection",
+   CellID->151002724]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"DefaultContent", 70825, 2367},
+ {"TabNext", 72853, 2407},
+ {"PrimaryExamplesSection", 73046, 2411}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[593, 21, 7098, 164, 56, "AnchorBarGrid",ExpressionUUID->"7b3d2b02-fae4-4a2b-98c8-0fd74bc83022",
+ CellID->1],
+Cell[7694, 187, 109, 0, 23, "ContextNameCell",ExpressionUUID->"e6f3e901-7622-4ac0-bd9f-0aaf7db1bd5f"],
+Cell[CellGroupData[{
+Cell[7828, 191, 564, 14, 56, "ObjectNameGrid",ExpressionUUID->"d9ab347d-4eba-449e-8ab8-d716a6d4cf24"],
+Cell[8395, 207, 973, 23, 111, "Usage",ExpressionUUID->"425bcede-fe43-47cd-8ff7-8f818fb4c580",
+ CellID->342095628]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9405, 235, 1918, 48, 37, "NotesSection",ExpressionUUID->"2af2e14c-03d1-4845-a07a-c990f61a2c73",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->39839215],
+Cell[11326, 285, 672, 11, 70, "Notes",ExpressionUUID->"3d7d337d-24cc-4a74-9adc-0ae62b98d046",
+ CellTags->{"DefaultContent", "TabNext"},
+ CellID->697898357]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[12125, 302, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"c5d53b14-962a-4b7f-ab87-78ceb0f84eef",
+ CellTags->"PrimaryExamplesSection",
+ CellID->151002724],
+Cell[13548, 341, 217, 4, 26, "Input",ExpressionUUID->"3f083ed1-dae6-41a1-bb86-95f4fcb1d8ab",
+ CellID->393293441],
+Cell[CellGroupData[{
+Cell[13790, 349, 1398, 36, 30, "ExampleSection",ExpressionUUID->"38586300-e15c-4e71-8fcf-b0697b617b10",
+ CellID->200020221],
+Cell[15191, 387, 209, 4, 38, "ExampleText",ExpressionUUID->"11dfeee9-1dfd-4f1c-adcb-dc600ea03abd",
+ CellTags->"DefaultContent",
+ CellID->26526723],
+Cell[CellGroupData[{
+Cell[15425, 395, 325, 7, 26, "Input",ExpressionUUID->"5ba26860-1086-42eb-9823-178c00ca9364",
+ CellTags->"DefaultContent",
+ CellID->778772053],
+Cell[15753, 404, 700, 23, 35, "Output",ExpressionUUID->"4bdd2287-3030-43bf-b73b-13365987a593",
+ CellTags->"DefaultContent",
+ CellID->1169545]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[16602, 435, 1411, 37, 30, "ExampleSection",ExpressionUUID->"0da596e0-34bc-4099-ba9f-344966ea2fb2",
+ CellID->95962374],
+Cell[18016, 474, 198, 4, 70, "ExampleText",ExpressionUUID->"d2756e7e-6838-4885-aa99-f5e0824c62cb",
+ CellTags->"DefaultContent",
+ CellID->731984921],
+Cell[CellGroupData[{
+Cell[18239, 482, 693, 20, 70, "Input",ExpressionUUID->"997f18cf-53bc-4b84-9d29-fa2d650367ea",
+ CellTags->"DefaultContent",
+ CellID->101632005],
+Cell[18935, 504, 24820, 1055, 234, "Output",ExpressionUUID->"17f11ea5-a5bc-4879-8950-4972fba9feb9",
+ CellTags->"DefaultContent",
+ CellID->172639929]
+}, Open  ]],
+Cell[43770, 1562, 161, 2, 70, "ExampleText",ExpressionUUID->"11abc62f-eb87-45fa-aec6-988d399b07b9",
+ CellTags->"DefaultContent",
+ CellID->724950243],
+Cell[CellGroupData[{
+Cell[43956, 1568, 224, 4, 70, "Input",ExpressionUUID->"ef46bbe9-7d57-417c-911d-edad165ea47d",
+ CellID->664361209],
+Cell[44183, 1574, 127, 2, 35, "Output",ExpressionUUID->"8c576b53-49f4-487d-9998-ff4787ea176a",
+ CellID->650267409]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "1"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[44459, 1584, 1429, 37, 24, "ExampleSection",ExpressionUUID->"85200f06-89f8-481b-8752-0c5d60116c51",
+ CellID->304283253],
+Cell[45891, 1623, 405, 10, 70, "ExampleText",ExpressionUUID->"dc37b8f6-a07d-4641-834d-1a702f0b6c63",
+ CellTags->"DefaultContent",
+ CellID->316396857],
+Cell[CellGroupData[{
+Cell[46321, 1637, 312, 7, 70, "Input",ExpressionUUID->"9f0da4d4-fb5c-4485-813c-27eee278d270",
+ CellID->840584461],
+Cell[46636, 1646, 2881, 88, 81, "Output",ExpressionUUID->"8c97b58f-ca46-4d60-9af9-9653af3f16ef",
+ CellID->516911914]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49554, 1739, 223, 4, 70, "Input",ExpressionUUID->"540b0dc8-89ed-4fae-a663-35fcb2e1187a",
+ CellID->323164252],
+Cell[49780, 1745, 343, 7, 35, "Output",ExpressionUUID->"e007ee58-c3f0-48a4-b129-aaed7191c0b1",
+ CellID->34031631]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50160, 1757, 241, 5, 70, "ExampleDelimiter",ExpressionUUID->"60ccb437-706c-4f81-b6f9-95bed056956b",
+ CellID->14107562],
+Cell[50404, 1764, 196, 4, 70, "ExampleText",ExpressionUUID->"2747357a-170c-4ecd-b655-f17283bc5af9",
+ CellTags->"DefaultContent",
+ CellID->964994180],
+Cell[CellGroupData[{
+Cell[50625, 1772, 312, 7, 70, "Input",ExpressionUUID->"9923d261-ff7e-4045-ada3-7d75a3df4479",
+ CellID->266013155],
+Cell[50940, 1781, 1026, 34, 35, "Output",ExpressionUUID->"88f648f8-c5d5-4270-b463-4c11fbcd79d8",
+ CellID->274651301]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52003, 1820, 224, 4, 70, "Input",ExpressionUUID->"3757882e-4fb9-45a5-93f5-d1b9ac808017",
+ CellID->744225388],
+Cell[52230, 1826, 126, 2, 35, "Output",ExpressionUUID->"70c6c9c4-edce-4f8c-b40b-1ae06e96ba1b",
+ CellID->595946706]
+}, Open  ]],
+Cell[52371, 1831, 208, 4, 70, "ExampleText",ExpressionUUID->"4c558fe2-e769-4cbf-a577-90123198b03a",
+ CellTags->"DefaultContent",
+ CellID->677400769],
+Cell[CellGroupData[{
+Cell[52604, 1839, 281, 6, 70, "Input",ExpressionUUID->"8c5627c1-c52d-4f20-a184-5a4160de0b30",
+ CellID->411871654],
+Cell[52888, 1847, 125, 2, 35, "Output",ExpressionUUID->"fc6344c2-7ebf-4c77-bbeb-58ff2e8f6df4",
+ CellID->74448443]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53062, 1855, 241, 5, 70, "ExampleDelimiter",ExpressionUUID->"1871902d-c0fa-4ed3-9b81-810fb4941235",
+ CellID->14107563],
+Cell[53306, 1862, 225, 5, 70, "ExampleText",ExpressionUUID->"ca7c537f-b55c-4b01-b4d7-c3fadd4ff6f6",
+ CellTags->"DefaultContent",
+ CellID->793738414],
+Cell[CellGroupData[{
+Cell[53556, 1871, 342, 8, 70, "Input",ExpressionUUID->"92df54e5-209f-44db-aa17-78698bb3ed16",
+ CellID->351892793],
+Cell[53901, 1881, 4941, 163, 111, "Output",ExpressionUUID->"393c39fc-732d-4779-991b-da51ea75e378",
+ CellID->363357390]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58879, 2049, 224, 4, 70, "Input",ExpressionUUID->"56569648-0830-4899-804c-1b989cdd2d56",
+ CellID->990503166],
+Cell[59106, 2055, 126, 2, 35, "Output",ExpressionUUID->"d23dc047-c156-432c-8392-64eea07be98b",
+ CellID->61086065]
+}, Open  ]],
+Cell[59247, 2060, 208, 4, 70, "ExampleText",ExpressionUUID->"650599a9-c6a6-4829-a253-fabf3c907e41",
+ CellTags->"DefaultContent",
+ CellID->677400770],
+Cell[CellGroupData[{
+Cell[59480, 2068, 234, 4, 70, "Input",ExpressionUUID->"c39a68c7-65d5-4ccc-ba05-f9f0c19487c2",
+ CellID->233497687],
+Cell[59717, 2074, 126, 2, 35, "Output",ExpressionUUID->"7ba6ced5-5345-4e92-8696-a9eb2bf37979",
+ CellID->26435928]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "3"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[60097, 2086, 5666, 147, 125, "SeeAlsoSection",ExpressionUUID->"55c2d463-ae52-4a7f-ba4c-e242b146b540"],
+Cell[65766, 2235, 740, 19, 70, "MoreAboutSection",ExpressionUUID->"696558f0-ffc7-4703-9430-2cc778f7ca71"],
+Cell[66509, 2256, 2100, 59, 70, "RelatedLinksSection",ExpressionUUID->"268fb320-1080-47fa-83d9-1fc18d86e33e"],
+Cell[68612, 2317, 78, 0, 70, "FooterCell",ExpressionUUID->"69c8b528-2cff-4397-9b72-2525d015d658"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

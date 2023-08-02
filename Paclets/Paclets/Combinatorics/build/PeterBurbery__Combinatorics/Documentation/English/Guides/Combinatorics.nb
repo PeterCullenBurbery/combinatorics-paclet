@@ -1,0 +1,2446 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     92281,       2436]
+NotebookOptionsPosition[     76339,       2138]
+NotebookOutlinePosition[     78039,       2179]
+CellTagsIndexPosition[     77996,       2176]
+WindowTitle->Combinatorics
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ COMBINATORICS GUIDE", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "f43610b1-1966-457e-b20b-f1a895c51b55"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "b902e529-873a-48c5-9b76-6e523f261966"],
+        Background->RGBColor[0.85098, 0.396078, 0],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Functions",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "9d964088-565a-4a72-abc3-cd0c18137434"]
+         }],ExpressionUUID->"adf94a42-6715-428b-bafe-efacd5786c1d"],
+         StripOnInput->False],{
+        "\"CanonicalMultiset\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/CanonicalMultiset"], 
+         "\"CentralBinomialCoefficient\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/CentralBinomialCoefficient"],
+          "\"ConjugatePartition\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/ConjugatePartition"], 
+         "\"DescendingSublists\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/DescendingSublists"], 
+         "\"DivisorHasseDiagram\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/DivisorHasseDiagram"], 
+         "\"DominatingIntegerPartitionQ\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/DominatingIntegerPartitionQ"]\
+, "\"DurfeeSquare\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/DurfeeSquare"], 
+         "\"EnumerateMultisetPartialDerangements\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/\
+EnumerateMultisetPartialDerangements"], "\"EulerianCatalanNumber\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/EulerianCatalanNumber"], 
+         "\"EulerianNumber\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/EulerianNumber"], 
+         "\"EulerianNumberOfTheSecondKind\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/\
+EulerianNumberOfTheSecondKind"], "\"FerrersDiagram\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/FerrersDiagram"], 
+         "\"Fibbinary\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/Fibbinary"], 
+         "\"FibonacciEncode\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/FibonacciEncode"], 
+         "\"FrobeniusSymbolFromPartition\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/\
+FrobeniusSymbolFromPartition"], "\"FromInversionVector\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/FromInversionVector"], 
+         "\"GaussFactorial\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/GaussFactorial"], 
+         "\"GrayCode\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/GrayCode"], 
+         "\"HasseDiagram\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/HasseDiagram"], 
+         "\"HookLengths\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/HookLengths"], 
+         "\"HuffmanCodeWords\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/HuffmanCodeWords"], 
+         "\"HuffmanDecode\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/HuffmanDecode"], 
+         "\"HuffmanEncode\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/HuffmanEncode"], 
+         "\"IntegerPartitionQ\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/IntegerPartitionQ"], 
+         "\"InverseFibonacci\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/InverseFibonacci"], 
+         "\"InverseGrayCode\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/InverseGrayCode"], 
+         "\"InversionCount\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/InversionCount"], 
+         "\"InversionVectorQ\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/InversionVectorQ"], 
+         "\"LehmerCodeFromPermutation\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/LehmerCodeFromPermutation"], 
+         "\"LucasNumberU1\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/LucasNumberU1"], 
+         "\"LucasNumberV2\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/LucasNumberV2"], 
+         "\"Multichoose\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/Multichoose"], 
+         "\"MultisetAssociation\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/MultisetAssociation"], 
+         "\"MultisetPartialDerangements\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/MultisetPartialDerangements"]\
+, "\"NarayanaNumber\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/NarayanaNumber"], 
+         "\"NextPermutation\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/NextPermutation"], 
+         "\"NumberOfTableaux\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/NumberOfTableaux"], 
+         "\"OrderedTupleFromIndex\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/OrderedTupleFromIndex"], 
+         "\"OrderedTupleIndex\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/OrderedTupleIndex"], 
+         "\"OrderlessCombinations\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/OrderlessCombinations"], 
+         "\"OrderlessCombinationsOfUnmarkedElements\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/\
+OrderlessCombinationsOfUnmarkedElements"], "\"PartialOrderGraphQ\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PartialOrderGraphQ"], 
+         "\"PartitionCrank\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PartitionCrank"], 
+         "\"PartitionFromFrobeniusSymbol\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/\
+PartitionFromFrobeniusSymbol"], "\"PartitionRank\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PartitionRank"], 
+         "\"PermutationAscents\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PermutationAscents"], 
+         "\"PermutationCountByInversions\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/\
+PermutationCountByInversions"], "\"PermutationFromIndex\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PermutationFromIndex"], 
+         "\"PermutationGraph\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PermutationGraph"], 
+         "\"PermutationIndex\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PermutationIndex"], 
+         "\"PermutationMajorIndex\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PermutationMajorIndex"], 
+         "\"PermutationToTableaux\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PermutationToTableaux"], 
+         "\"Phitorial\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/Phitorial"], "\"PosetQ\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PosetQ"], "\"Primorial\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/Primorial"], 
+         "\"QExponential\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/QExponential"], 
+         "\"QMultinomial\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/QMultinomial"], 
+         "\"RandomYoungTableau\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/RandomYoungTableau"], 
+         "\"RationalNumberRepeatingDecimalPeriod\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/\
+RationalNumberRepeatingDecimalPeriod"], "\"ReflexiveGraphQ\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/ReflexiveGraphQ"], 
+         "\"SecantNumber\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/SecantNumber"], 
+         "\"SelectPermutations\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/SelectPermutations"], 
+         "\"SelectSubsets\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/SelectSubsets"], 
+         "\"SelectTuples\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/SelectTuples"], 
+         "\"SelfConjugatePartitionQ\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/SelfConjugatePartitionQ"], 
+         "\"SignedLahNumber\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/SignedLahNumber"], 
+         "\"StandardYoungTableaux\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/StandardYoungTableaux"], 
+         "\"SubsetFromIndex\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/SubsetFromIndex"], 
+         "\"SubsetIndex\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/SubsetIndex"], 
+         "\"TableauQ\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/TableauQ"], 
+         "\"TableauToPoset\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/TableauToPoset"], 
+         "\"TableauxToPermutation\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/TableauxToPermutation"], 
+         "\"TangentNumber\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/TangentNumber"], 
+         "\"TransitiveGraphQ\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/TransitiveGraphQ"], 
+         "\"TransposeTableau\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/TransposeTableau"], 
+         "\"TupleFromIndex\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/TupleFromIndex"], 
+         "\"TupleIndex\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/TupleIndex"], 
+         "\"UnsignedLahNumber\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/UnsignedLahNumber"], 
+         "\"ZeckendorfRepresentation\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/ZeckendorfRepresentation"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideFunction"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "cdaa6aeb-4382-4bd4-84b0-99593a086155"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "17ef868a-e5bf-4b42-a57c-9b1686fa3004"]
+         }],ExpressionUUID->"bb247a6b-0b58-4ebc-a061-49ee1c66a9b4"],
+         StripOnInput->False],{
+        "\"Functions I Understand in combinatorics\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/guide/\
+FunctionsIunderstandincombinatorics"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideMoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "4a5839cb-b9f0-432a-94c2-4d129b6a71ad"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Tech Notes",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "b080d3cb-6a45-4052-9420-36acaa3c2f6a"]
+         }],ExpressionUUID->"f3df8ec0-12b2-4669-8f4c-053fe2c97b03"],
+         StripOnInput->False],{
+        "\"Combinatorics\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/tutorial/Combinatorics"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideTutorial"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "386c918d-c90e-4b4c-879a-78093023df40"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "d2b9bfe7-e6e6-4dd1-9060-e416ae7314da"]
+         }],ExpressionUUID->"f03171fe-95a4-492a-8836-f388befc3d74"],
+         StripOnInput->False],{
+        "\"PeterBurbery/Combinatorics/guide/Combinatorics\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/Combinatorics/guide/Combinatorics"]}, 
+               Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+Combinatorics/guide/Combinatorics.html"], StandardForm]], "Input", 
+                 TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$156015], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/Combinatorics/guide/Combinatorics" <> ".html"], 
+              None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "15a124a5-6a52-4c5f-a085-960195867b94"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "77ee9d9f-8851-448d-ab30-095a53d4102c"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"10658726-5785-41db-badc-5e0cebb3ecdd"],
+
+Cell[CellGroupData[{
+
+Cell["Combinatorics", "GuideTitle",
+ CellID->499626625,ExpressionUUID->"bcecee44-9a54-4bfa-9d7b-bb31f05589e2"],
+
+Cell["\<\
+Some of the functions here do not belong in combinatorics. I am including \
+them here anyways.\
+\>", "GuideAbstract",
+ CellID->421537627,ExpressionUUID->"e412cbdd-1e43-447f-83c6-3a45085b0866"],
+
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"6b153f9e-1c3f-442a-8b84-9d48cf3bf056"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Indexing", "GuideFunctionsSection",
+ CellID->2623184,ExpressionUUID->"1815dfcf-14cb-4e72-b1e3-79e66297ca59"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PermutationIndex"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PermutationIndex", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c40ac8e4-27e1-4161-a8df-4d4f38357a23",ExpressionUUID->
+  "eb924e3d-1329-4420-9c4f-f1eefd2dbeff"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Give the lexicographic index of a permutation"
+}], "GuideText",
+ CellID->109031987,ExpressionUUID->"b61b7eb3-4fee-4969-87aa-31503fab483c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PermutationFromIndex"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PermutationFromIndex", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cff1c1e7-a932-4b1e-b01e-5104818802d3",ExpressionUUID->
+  "668554c1-2b7f-4ce5-865b-b996145a42ce"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Give the permutation corresponding to a given length and lexicographic \
+index"
+}], "GuideText",
+ CellID->125361466,ExpressionUUID->"d726d8a5-911c-42fe-bfb4-2bcc9ad1d13a"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["SubsetIndex"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/SubsetIndex", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c5c6736a-1ff4-4e4e-8fcf-2d9846cbae62",ExpressionUUID->
+  "51f4fa10-843a-4c1b-9820-6d16b322d711"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Give the index of a subset"
+}], "GuideText",
+ CellID->100800444,ExpressionUUID->"cda72d76-5b88-4aaa-a41a-4bcb9cc63d7c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["SubsetFromIndex"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/SubsetFromIndex", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cff1c1e7-a932-4b1e-b01e-5104818802d3",ExpressionUUID->
+  "0d6c767a-15ff-4595-bd0d-6b016430cd50"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get the subset with the given index and length"
+}], "GuideText",
+ CellID->207044306,ExpressionUUID->"227fbfc5-56fe-48bb-a66f-2f50af128a60"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["TupleIndex"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/TupleIndex", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cff1c1e7-a932-4b1e-b01e-5104818802d3",ExpressionUUID->
+  "6bcb2473-f381-4a30-869f-1aab009ce5a4"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Compute the index of a given tuple of non-negative integers"
+}], "GuideText",
+ CellID->377423189,ExpressionUUID->"ed1377dc-9011-46fd-a53a-bb5563141257"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["TupleFromIndex"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/TupleFromIndex", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cff1c1e7-a932-4b1e-b01e-5104818802d3",ExpressionUUID->
+  "40253c74-6a85-4b88-97d8-8741a2fdcd62"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Return the tuple corresponding to a given index"
+}], "GuideText",
+ CellID->121852944,ExpressionUUID->"197a9520-a909-4be0-8b43-4b4769ee3b6b"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["OrderedTupleIndex"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/OrderedTupleIndex", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cff1c1e7-a932-4b1e-b01e-5104818802d3",ExpressionUUID->
+  "b36cf2b5-e9e7-4f75-84a1-58efe3665bcb"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Give the index of an ordered tuple"
+}], "GuideText",
+ CellID->222866031,ExpressionUUID->"803a3cd3-7419-4d10-ac26-68d1e80e12b8"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["OrderedTupleFromIndex"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/OrderedTupleFromIndex", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cff1c1e7-a932-4b1e-b01e-5104818802d3",ExpressionUUID->
+  "aa4567fc-6cec-452e-b512-22345a614434"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get the ordered tuple with the given index and length"
+}], "GuideText",
+ CellID->579821958,ExpressionUUID->"9977f4be-6455-4194-86b2-bdd2404beed0"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["LehmerCodeFromPermutation"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/LehmerCodeFromPermutation", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cff1c1e7-a932-4b1e-b01e-5104818802d3",ExpressionUUID->
+  "3262ab13-1bd2-4334-a095-a902bdfa3bad"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Create the Lehmer code corresponding to a given permutation"
+}], "GuideText",
+ CellID->598178970,ExpressionUUID->"0f08ba26-9546-4cf0-8e1d-ae786ceea3f9"],
+
+Cell[CellGroupData[{
+
+Cell["Partitions", "GuideFunctionsSubsection",
+ CellID->118452367,ExpressionUUID->"1fe4434f-d754-41b3-96c1-f299806286c2"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["ConjugatePartition"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/ConjugatePartition", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cff1c1e7-a932-4b1e-b01e-5104818802d3",ExpressionUUID->
+  "1bdbe0ee-6b49-4cce-9366-c959da1d219f"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Switch the rows and columns of a partition"
+}], "GuideText",
+ CellID->243626626,ExpressionUUID->"10265d22-dc8f-4e2a-9c0f-8d324de271d1"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["DominatingIntegerPartitionQ"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/DominatingIntegerPartitionQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "8ee383ac-fdaf-4375-bbb8-4281df6d04d4"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Determine if one integer partition dominates another"
+}], "GuideText",
+ CellID->119148606,ExpressionUUID->"b8e300f4-067c-4c3a-a67d-6241c6b139c3"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["IntegerPartitionQ"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/IntegerPartitionQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cff1c1e7-a932-4b1e-b01e-5104818802d3",ExpressionUUID->
+  "6a80b400-a806-4b08-bfe3-d95cf9e3efe4"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Check whether the argument is a weakly decreasing list of positive integers"
+}], "GuideText",
+ CellID->220036391,ExpressionUUID->"9e58864c-cf2d-4cb6-adc9-4d8ff132bea2"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PartitionCrank"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PartitionCrank", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "201b27e2-7d8b-4d27-a45a-43cae04e2588"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get Dyson's crank of an integer partition"
+}], "GuideText",
+ CellID->314603902,ExpressionUUID->"b9bc6675-638b-4c09-b5e4-897826949851"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PartitionFromFrobeniusSymbol"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PartitionFromFrobeniusSymbol", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "0b505d28-3641-43c7-a4c0-23283493b19e"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Construct the corresponding partition, given a Frobenius symbol"
+}], "GuideText",
+ CellID->379088138,ExpressionUUID->"6c9bccbe-8c9a-443b-b1c0-9bd5c69aa0e2"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PartitionRank"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PartitionRank", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "32a715d1-5a67-4bbc-9830-0ab27cf644b6"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The largest part minus the number of parts of a partition"
+}], "GuideText",
+ CellID->145090121,ExpressionUUID->"bc906e95-4bf7-46a7-83fe-39a9dd56daa3"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FrobeniusSymbolFromPartition"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/FrobeniusSymbolFromPartition", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "0da85da5-0b7d-48e6-b4e2-0d328312556c"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get a pair of lists representing the Ferrers diagram of a partition"
+}], "GuideText",
+ CellID->4124064,ExpressionUUID->"3238e8d7-64b6-4daa-b06c-62639e21dc31"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FerrersDiagram"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/FerrersDiagram", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "6730b79f-bf3a-4d6a-b120-6f6ae6cb9f6d"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Display the Ferrers diagram of a partition with dots"
+}], "GuideText",
+ CellID->45957383,ExpressionUUID->"30fd9569-f576-40a3-8953-bf1022fcb3f8"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["DurfeeSquare"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/DurfeeSquare", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "3bf91606-aa73-4f92-90c9-120cc4dc62a2"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " get the dimensions of the Durfee square of a partition"
+}], "GuideText",
+ CellID->85833497,ExpressionUUID->"b16066c5-f568-4841-a88d-c8dced330e0e"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["SelfConjugatePartitionQ"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/SelfConjugatePartitionQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "0b5f20b8-af06-4d73-bb78-6aff74703f89"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " test if a partition is a self-conjugate partition"
+}], "GuideText",
+ CellID->60986347,ExpressionUUID->"e0d5bf52-2b92-44e3-ba9f-484c702f556d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tableaux", "GuideFunctionsSubsection",
+ CellID->4087378,ExpressionUUID->"fdaefb32-b515-496e-a4be-97525c450863"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["TableauQ"]], "paclet:PeterBurbery/Combinatorics/ref/TableauQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "462fc673-d9cb-490e-b75e-7666391b52de"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Determine if a list of values forms a Young tableau"
+}], "GuideText",
+ CellID->59154953,ExpressionUUID->"9934af4d-81c5-4a74-9cfa-f4eefa8d4f13"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["TransposeTableau"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/TransposeTableau", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "e4b7afe1-4225-4220-8acd-65462f44067a"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Transpose a Young tableau"
+}], "GuideText",
+ CellID->158238571,ExpressionUUID->"377e6409-ad92-433c-a6ba-bce30be62909"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PermutationToTableaux"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PermutationToTableaux", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "2b11cc1d-18e3-42d9-a98c-5c57390fa7e0"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get the two Young tableaux corresponding to a permutation"
+}], "GuideText",
+ CellID->171470648,ExpressionUUID->"b27d0498-166f-4cc0-bef9-142f211bcb50"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["TableauxToPermutation"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/TableauxToPermutation", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "03e87ed9-c999-4d36-9d7d-447cdd51df2d"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get a permutation corresponding to two Young tableaux"
+}], "GuideText",
+ CellID->17845024,ExpressionUUID->"0c96df35-4992-4290-97c9-5fb0d6bfd0b2"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["TableauToPoset"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/TableauToPoset", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "d3c4a0b0-a06d-4b72-9cbc-2388d43d4d5e"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Convert a Young tableau to a partially ordered set of coordinates"
+}], "GuideText",
+ CellID->19150745,ExpressionUUID->"6940ae61-87bf-45d5-ae20-8d1a742e4559"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["NumberOfTableaux"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/NumberOfTableaux", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "c1008cd4-7686-45e2-b172-69070db91428"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get a count of Young tableaux for a given size or shape"
+}], "GuideText",
+ CellID->266275072,ExpressionUUID->"b777dbe8-4ef8-4d6b-83ab-db7f8933bcdc"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["HookLengths"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/HookLengths", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "f2316012-e272-4bce-841c-f1023a3a7712"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get the list of lists whose entries are the hook lengths of the entries of \
+a Young tableau"
+}], "GuideText",
+ CellID->9092118,ExpressionUUID->"f44d9c62-7fc2-418f-bae6-105a72e04fa6"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["StandardYoungTableaux"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/StandardYoungTableaux", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "80c756b9-1dd3-4837-b5f6-0f157dfe9c07"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Enumerate all standard Young tableaux of a given shape"
+}], "GuideText",
+ CellID->54313187,ExpressionUUID->"b8aac756-6b26-41d4-afb1-020fe3dbd84c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["RandomYoungTableau"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/RandomYoungTableau", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "5b92598e-5886-465e-88c2-bcf4ff2db8f1"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Generate a random Young tableau with a given shape"
+}], "GuideText",
+ CellID->584731089,ExpressionUUID->"54b3d1c4-0433-46c9-a96d-ca9781bc7b5e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Multisets", "GuideFunctionsSubsection",
+ CellID->282640633,ExpressionUUID->"662d6ca1-224a-47e9-b74e-9239e6fca64c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["CanonicalMultiset"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/CanonicalMultiset", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "96180254-eb31-4b6d-bda1-0df881c58e22"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " canonical form of a multiset"
+}], "GuideText",
+ CellID->214010964,ExpressionUUID->"0f554372-883c-4140-8198-5e9a8c34d80c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["EnumerateMultisetPartialDerangements"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/\
+EnumerateMultisetPartialDerangements", "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "dbe24bf6-9db1-4521-a1af-a8f812b7d517"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " enumerate a multiset's partial derangements"
+}], "GuideText",
+ CellID->715225283,ExpressionUUID->"f35fcafa-7b26-429f-a732-b49ba09b6fe9"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["Multichoose"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/Multichoose", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "98be3dd3-3814-4599-9987-9302fb1fe0b8"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the multichoose operation"
+}], "GuideText",
+ CellID->874975016,ExpressionUUID->"d09b0eb8-de95-4b56-acbd-fcbca838dda6"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MultisetAssociation"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/MultisetAssociation", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "df97ef77-cd4a-43f2-80a4-37ea33a5215d"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " assign every element of a multiset a unique number, in effect turning a \
+multiset into a set."
+}], "GuideText",
+ CellID->245605649,ExpressionUUID->"4ee6b352-099f-4205-b010-1aaf08ec78e0"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["MultisetPartialDerangements"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/MultisetPartialDerangements", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "b415a084-99b8-45b4-a2ef-591f45f673eb"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " list the partial derangements of a multiset one by one"
+}], "GuideText",
+ CellID->60716739,ExpressionUUID->"0e083d75-0958-4b8d-a107-eebd388cf623"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Make a list of the elements one by one", "GuideFunctionsSubsection",
+ CellID->142718825,ExpressionUUID->"bfc126d5-be34-456d-b193-10fe099bbc84"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["OrderlessCombinations"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/OrderlessCombinations", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "8a51f29b-3a43-4180-ba61-5ddbeeb51a9e"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Generate all possible orderless lists of a given length with a given set \
+of elements"
+}], "GuideText",
+ CellID->329599759,ExpressionUUID->"0bb24ea0-264c-405a-a7cd-c53a98a5c47d"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["OrderlessCombinationsOfUnmarkedElements"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/\
+OrderlessCombinationsOfUnmarkedElements", "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "73a73933-9306-45eb-a973-63f5a6772605"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Generate all possible orderless lists of a given length with a given set \
+of unmarked indistinguishable plain unlabeled elements"
+}], "GuideText",
+ CellID->578057627,ExpressionUUID->"e2a979f8-6e72-4a6f-82f7-5892de2970fa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Combinatorial Optimization and Existence", "GuideFunctionsSubsection",
+ CellID->679712443,ExpressionUUID->"d0b0f2e6-24dd-4193-9f4c-2de258f09387"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["SelectPermutations"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/SelectPermutations", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"da92ad84-45aa-4b13-9a1f-ccf3ef44058d",ExpressionUUID->
+  "8f8a1951-2307-4abf-9c89-54609d628eda"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get permutations that satisfy a certain criterion"
+}], "GuideText",
+ CellID->667786126,ExpressionUUID->"6a66d033-597d-4d36-a10f-2b666096203d"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["SelectSubsets"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/SelectSubsets", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "103b0887-8728-4e60-9e3c-ecf590bf64c6"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Generate subsets that satisfy a certain criterion"
+}], "GuideText",
+ CellID->28742981,ExpressionUUID->"b171bf0d-1011-4840-8285-c5e4adcbffd6"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["SelectTuples"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/SelectTuples", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "05661793-fa67-4c0e-968f-7cdb2b8192ba"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Generate tuples that satisfy a certain criterion"
+}], "GuideText",
+ CellID->198148347,ExpressionUUID->"31539079-a2ad-4619-ab8c-cb296bbfa532"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Combinatorial Functions", "GuideFunctionsSubsection",
+ CellID->92913058,ExpressionUUID->"5799b1fb-1bba-4cbf-9973-50b220ad6960"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["CentralBinomialCoefficient"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/CentralBinomialCoefficient", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "9f69bd76-f14c-450a-9407-2ae69ee733d0"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the central binomial coefficient"
+}], "GuideText",
+ CellID->124379797,ExpressionUUID->"e702bdef-c1d5-4e73-95bf-dbeab572efab"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["EulerianCatalanNumber"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/EulerianCatalanNumber", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "8a8f90e0-b172-4356-8ec3-086cf0f8fbac"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the Eulerian Catalan number"
+}], "GuideText",
+ CellID->269721593,ExpressionUUID->"da1e27f9-568b-43d7-ab73-6a5c25d5a7bc"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["EulerianNumber"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/EulerianNumber", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "b137b631-7704-421b-be2f-1cfe3c148ce2"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get the number of permutations with a given number of ascents"
+}], "GuideText",
+ CellID->707306842,ExpressionUUID->"8f870bd3-019c-49bb-9d18-78d671130067"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["EulerianNumberOfTheSecondKind"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/EulerianNumberOfTheSecondKind", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "3b7b90ce-953c-4b55-ae2d-1cc93d1e2715"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the Eulerian number of the second kind"
+}], "GuideText",
+ CellID->793169443,ExpressionUUID->"b9940f9a-f877-4e1d-8ba1-9b3a908f3c8e"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["NarayanaNumber"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/NarayanaNumber", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "098c78c2-8167-4a6c-9068-1bc7816aaae9"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the Narayana number"
+}], "GuideText",
+ CellID->2174033,ExpressionUUID->"edaad5eb-6851-47cb-ad27-6aef7c68db33"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["SecantNumber"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/SecantNumber", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"da92ad84-45aa-4b13-9a1f-ccf3ef44058d",ExpressionUUID->
+  "de1ca9fa-5d59-406a-bbdf-383b29349397"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the secant number ",
+ Cell[BoxData[
+  SubscriptBox["S", "k"]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "3057055e-f223-4336-8a7f-762b2e8eae17"],
+ ", also referred to a zig number"
+}], "GuideText",
+ CellID->579746260,ExpressionUUID->"37bfc454-594b-4b25-935d-8c5f1fd7cc08"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["SignedLahNumber"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/SignedLahNumber", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"da92ad84-45aa-4b13-9a1f-ccf3ef44058d",ExpressionUUID->
+  "55f361f7-0e02-4289-b52a-2885303357fc"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the signed Lah number ",
+ Cell[BoxData[
+  RowBox[{"L", 
+   RowBox[{"(", 
+    RowBox[{"n", ",", "k"}], ")"}]}]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "c92d15b2-94ae-4a28-ae38-761ed69e9f30"]
+}], "GuideText",
+ CellID->324145976,ExpressionUUID->"4fb2e013-9307-4498-a49d-eb02a5c430e9"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["TangentNumber"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/TangentNumber", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"da92ad84-45aa-4b13-9a1f-ccf3ef44058d",ExpressionUUID->
+  "be9e6b64-fa6d-4399-8ad4-e7109fa460c6"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the tangent numbers, also referred to as zag numbers"
+}], "GuideText",
+ CellID->87685581,ExpressionUUID->"5ed75904-f7e0-40e4-9f1d-162d45a8a81f"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["UnsignedLahNumber"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/UnsignedLahNumber", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"da92ad84-45aa-4b13-9a1f-ccf3ef44058d",ExpressionUUID->
+  "2a242de6-22a1-4a20-bbcc-a2520a6ede1a"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the unsigned Lah number ",
+ Cell[BoxData[
+  RowBox[{"L", 
+   RowBox[{"(", 
+    RowBox[{"n", ",", "k"}], ")"}]}]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "a0bbf878-0d40-4151-93aa-e7e5003234fa"]
+}], "GuideText",
+ CellID->261231098,ExpressionUUID->"325e79b9-9389-47bb-8b68-9e3fce02ac0b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Encoding, Decoding, and Representation related", \
+"GuideFunctionsSubsection",
+ CellID->40431241,ExpressionUUID->"2f004436-0236-4ef2-b1bf-1a30d7b89f65"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["Fibbinary"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/Fibbinary", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "8d1467d6-53d2-4c3a-b32d-d8a88a4664c6"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get the fibbinary sequence"
+}], "GuideText",
+ CellID->268204308,ExpressionUUID->"74a14e43-46f5-444c-b975-7890d52c4673"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FibonacciEncode"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/FibonacciEncode", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "a403cfdd-02cc-4d1e-bf81-c7713e8439f6"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Fibonacci-digit encoding for a number"
+}], "GuideText",
+ CellID->801706007,ExpressionUUID->"e5d1be43-6ef3-49ea-bfab-38ca979f9b53"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["GrayCode"]], "paclet:PeterBurbery/Combinatorics/ref/GrayCode", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "34308601-b5a5-48ee-8d03-39612de78275"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Find the Gray code for an integer"
+}], "GuideText",
+ CellID->397377832,ExpressionUUID->"1d8a6796-1081-41f8-adf1-26b715687de2"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["HuffmanCodeWords"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/HuffmanCodeWords", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "0b7a0e3c-581b-4f49-aa46-53e580635d3c"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Find optimal Huffman code words given a list of probabilities"
+}], "GuideText",
+ CellID->16156751,ExpressionUUID->"289ef5c5-2e64-4361-83b6-75162877d2c7"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["HuffmanDecode"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/HuffmanDecode", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "e4b427c5-4274-463a-a3fb-096f3db709a4"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Decode data specified by a Huffman encoding"
+}], "GuideText",
+ CellID->646697003,ExpressionUUID->"3036a6f1-c6c2-48e7-9452-7db3cb2e6563"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["HuffmanEncode"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/HuffmanEncode", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "d3c6a550-a860-4aab-be32-7beb6edfa0f8"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Find a Huffman encoding for a string"
+}], "GuideText",
+ CellID->591098440,ExpressionUUID->"20811d0e-de17-48c2-9aa8-76cea24e7df0"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["InverseFibonacci"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/InverseFibonacci", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "9f492001-4adb-49fd-918b-8dd8188b4ed6"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Compute the inverse Fibonacci function"
+}], "GuideText",
+ CellID->46707728,ExpressionUUID->"9dcafb04-1e8d-4ed3-8c07-de4074face7a"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["InverseGrayCode"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/InverseGrayCode", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "8c3644f8-65d4-4d8b-aa13-e5594d2a880d"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Find the integer corresponding to a given Gray code"
+}], "GuideText",
+ CellID->632005940,ExpressionUUID->"2755fbf0-1690-4381-a3d1-6c28481e8117"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["ZeckendorfRepresentation"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/ZeckendorfRepresentation", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "515bd1ff-b802-47d6-9a6f-9ac0e769dc04"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Give the 0\[Dash]1 list that indicates the unique nonconsecutive Fibonacci \
+numbers that sum to the non-negative integer input"
+}], "GuideText",
+ CellID->326440449,ExpressionUUID->"880bd053-bc40-437f-97ba-c54ddb94227b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Permutation Functions", "GuideFunctionsSubsection",
+ CellID->204792574,ExpressionUUID->"f2d368ac-7100-4acb-ae2b-bd2546e3d49f"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["LehmerCodeFromPermutation"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/LehmerCodeFromPermutation", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cff1c1e7-a932-4b1e-b01e-5104818802d3",ExpressionUUID->
+  "93ff9ec5-d449-4f48-8986-6fb16fb5f2ec"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Create the Lehmer code corresponding to a given permutation"
+}], "GuideText",
+ CellID->249920147,ExpressionUUID->"4c001871-cb73-42d3-84c1-529c85a3e110"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["NextPermutation"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/NextPermutation", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "3f86cd6a-f29c-42ca-99f2-7745a5aacaa3"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get the next permutation in lexicographic order"
+}], "GuideText",
+ CellID->11818410,ExpressionUUID->"421062f3-afba-49bf-98c1-424928f2f7bb"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PermutationAscents"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PermutationAscents", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "9ce0c496-ef36-4c61-ab47-75f4c22f197a"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Give the indices of a permutation where there is an immediate ascent"
+}], "GuideText",
+ CellID->89276590,ExpressionUUID->"f0c98926-30b8-49b2-a5a7-e76247c02746"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PermutationGraph"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PermutationGraph", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "4927ce4d-6be2-4708-a52d-2969ab780550"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Compute the permutation graph of a permutation"
+}], "GuideText",
+ CellID->2041884,ExpressionUUID->"1af3afaf-e2d7-4e5d-841f-7a8e02cf104e"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PermutationIndex"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PermutationIndex", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c40ac8e4-27e1-4161-a8df-4d4f38357a23",ExpressionUUID->
+  "d6a2afe6-f76b-4dee-8cf6-3381d1c69e99"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Give the lexicographic index of a permutation"
+}], "GuideText",
+ CellID->55068777,ExpressionUUID->"6a333488-24ff-4e4b-b0c5-edaa22b02718"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PermutationFromIndex"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PermutationFromIndex", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"cff1c1e7-a932-4b1e-b01e-5104818802d3",ExpressionUUID->
+  "2a6b6977-da94-410d-89b6-9a233efeef5c"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Give the permutation corresponding to a given length and lexicographic \
+index"
+}], "GuideText",
+ CellID->333058560,ExpressionUUID->"d11d0a0a-9a5a-4d53-b36d-aac815fa4ecd"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PermutationMajorIndex"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PermutationMajorIndex", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "9fb0c1eb-5e55-49a3-9b53-1fcdd16f6430"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Compute the major index of a permutation"
+}], "GuideText",
+ CellID->491673704,ExpressionUUID->"ec050ecc-f5e2-4216-a2ff-f2c9422e6927"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PermutationToTableaux"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PermutationToTableaux", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "0ddeda30-16b3-4e61-8588-c80fe4aa74b0"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get the two Young tableaux corresponding to a permutation"
+}], "GuideText",
+ CellID->104646382,ExpressionUUID->"db0b60a2-64b0-4c2f-861c-bd89c6a8f8f0"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["TableauxToPermutation"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/TableauxToPermutation", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "41f00bce-c1ea-4f97-90ec-7e79c7f06d7d"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get a permutation corresponding to two Young tableaux"
+}], "GuideText",
+ CellID->143243222,ExpressionUUID->"c91b5b24-a43b-483f-b179-8df2b3aace11"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Permutation Inversion functions", "GuideFunctionsSubsection",
+ CellID->380575879,ExpressionUUID->"e2877ee2-da5a-4c45-9b92-758d5cb6ee98"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FromInversionVector"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/FromInversionVector", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "f6d163ef-e563-40a1-9ece-1c7b3995ba55"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Construct the permutation list corresponding to the given inversion vector"
+}], "GuideText",
+ CellID->72216112,ExpressionUUID->"7509f41b-228d-4b58-8381-b7d058877d01"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["InversionCount"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/InversionCount", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "fd831132-d6f6-4d07-a501-7536a78f4ee4"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Count the number of pairs of out-of-order elements in a permutation"
+}], "GuideText",
+ CellID->33213998,ExpressionUUID->"f53baef3-f42b-4514-8ce6-643ce30d6d9f"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["InversionVectorQ"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/InversionVectorQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "39f27e1e-de08-4bab-8816-81cea276f4bf"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Check if a list is the inversion vector of a permutation written as a list"
+}], "GuideText",
+ CellID->10029217,ExpressionUUID->"a9001fb2-8b95-490a-8a52-064d9b41700a"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PermutationCountByInversions"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PermutationCountByInversions", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "520098f1-06c6-4e50-921a-8fc3f1e01597"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get the number of permutations having a specified length and number of \
+inversions"
+}], "GuideText",
+ CellID->304770217,ExpressionUUID->"c8b47b20-7f24-4c40-b56b-3a25d511ab16"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Permutation Runs and Ascents", "GuideFunctionsSubsection",
+ CellID->35116186,ExpressionUUID->"74ab1828-ba74-4f24-a230-728266154447"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["DescendingSublists"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/DescendingSublists", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "df138297-9550-4306-acf5-1a09f47e0847"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Split a list at its left-to-right maxima"
+}], "GuideText",
+ CellID->578653576,ExpressionUUID->"5abbcf28-6687-4eb8-84be-fac04d7cc213"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PermutationAscents"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PermutationAscents", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "acd2c6c9-6005-4a78-a92c-a1ebbc3b56a3"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Give the indices of a permutation where there is an immediate ascent"
+}], "GuideText",
+ CellID->225254434,ExpressionUUID->"a1450dac-ec7e-495e-9975-b19bd3645fcc"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["EulerianNumber"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/EulerianNumber", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "6904af96-e5eb-4c58-a8a3-5d3004b695f9"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Get the number of permutations with a given number of ascents"
+}], "GuideText",
+ CellID->225181528,ExpressionUUID->"354b6c87-6640-4f27-8725-13b6da18ced9"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["EulerianNumberOfTheSecondKind"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/EulerianNumberOfTheSecondKind", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "805359ca-d791-41cd-a449-d560270c1a65"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the Eulerian number of the second kind"
+}], "GuideText",
+ CellID->59157388,ExpressionUUID->"19529a77-a5f5-4b16-a185-fb130b5a2b61"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Order Theory", "GuideFunctionsSubsection",
+ CellID->253219147,ExpressionUUID->"e39139f5-c5e2-448d-9f86-d5ec89ae5125"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["DivisorHasseDiagram"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/DivisorHasseDiagram", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "5d96470e-f5e0-4d8a-a298-e656556f103c"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Generate a transitive reduction graph for the divisors of a positive \
+integer"
+}], "GuideText",
+ CellID->536494227,ExpressionUUID->"cd3625aa-936c-45e1-a133-1f93932aea48"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["HasseDiagram"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/HasseDiagram", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "1623d8a9-e37a-4b24-8c38-168077d80030"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Construct a Hasse diagram of a poset"
+}], "GuideText",
+ CellID->717861204,ExpressionUUID->"3017d629-c1c7-48a7-a334-fa03a2258392"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PartialOrderGraphQ"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/PartialOrderGraphQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "ddf0dbdb-ba10-4e84-af59-8146797a68b8"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Test whether a graph is a partial order, that is, reflexive, antisymmetric \
+and transitive"
+}], "GuideText",
+ CellID->192028694,ExpressionUUID->"0a13e835-3955-4be2-a285-caad5e0cc00b"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PosetQ"]], "paclet:PeterBurbery/Combinatorics/ref/PosetQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "8517652e-9e20-4b77-b786-8bad840cff4a"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Determine if a set of coordinates is partially ordered"
+}], "GuideText",
+ CellID->466676500,ExpressionUUID->"ff5c3e71-09da-48ce-9a84-0242d63b1029"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["TableauToPoset"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/TableauToPoset", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "71fa19f5-ff77-4dd8-b170-9d46f0be9007"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Convert a Young tableau to a partially ordered set of coordinates"
+}], "GuideText",
+ CellID->137031534,ExpressionUUID->"deba8355-47d7-4280-a8a4-f468fba515f1"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["ReflexiveGraphQ"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/ReflexiveGraphQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "8aa07bd8-f576-4482-a48b-ea9b0c7acec2"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Test whether a graph is reflexive"
+}], "GuideText",
+ CellID->429353628,ExpressionUUID->"f853c311-574b-449d-97e8-842c07492da6"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["TransitiveGraphQ"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/TransitiveGraphQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "b3fafa3a-6014-406e-84b7-1e6057202085"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Test whether the binary relation defined by edges of a graph is transitive"
+}], "GuideText",
+ CellID->6936080,ExpressionUUID->"d461a294-47b6-49aa-a3e4-44c3c9778f48"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Factorial Functions", "GuideFunctionsSubsection",
+ CellID->158709640,ExpressionUUID->"eb975512-041a-46f2-91d5-813f6530b4c8"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["GaussFactorial"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/GaussFactorial", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "9a38baaa-e4cb-4642-bf26-fcd772026341"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the Gauss factorial"
+}], "GuideText",
+ CellID->710028030,ExpressionUUID->"bd79783d-62c7-4c78-8b90-da7059660551"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["Phitorial"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/Phitorial", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "7863d228-54d7-40c3-9f99-7c5970e6c7cc"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the phitorial"
+}], "GuideText",
+ CellID->122376067,ExpressionUUID->"1b80d629-fca3-4dd1-b816-552c5306e94e"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["Primorial"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/Primorial", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "494f15e7-4210-4f70-a9df-4334e9135d21"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the primorial"
+}], "GuideText",
+ CellID->158493789,ExpressionUUID->"cdd36e55-7ff7-490f-ad9c-06dae6b729af"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Recurrence Functions", "GuideFunctionsSubsection",
+ CellID->26912173,ExpressionUUID->"0fbad4d6-11cc-4b71-a24e-963b355ce217"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["LucasNumberU1"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/LucasNumberU1", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "be2ee7c2-995a-4a3a-9f16-bc4d102b190a"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the term of the Lucas sequence of the first kind"
+}], "GuideText",
+ CellID->76369925,ExpressionUUID->"87ebb491-b608-47ae-8fe4-6e4c8ad919a9"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["LucasNumberV2"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/LucasNumberV2", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "753013ff-5b5b-4ce6-82f3-ca22cd9effb2"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the term of the Lucas sequence of the second kind"
+}], "GuideText",
+ CellID->456544194,ExpressionUUID->"32f22955-e80c-4534-85aa-f448b092cfcc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Q Analogues", "GuideFunctionsSubsection",
+ CellID->273374210,ExpressionUUID->"cd3bcb58-4bc8-41e0-875f-eeb75f557d3e"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["QExponential"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/QExponential", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "6ea9ed01-a5e2-495f-8e8b-fa119bfda162"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " q-exponential"
+}], "GuideText",
+ CellID->36015550,ExpressionUUID->"68414469-41cb-4c2a-a202-e5ccbd8ab6a4"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["QMultinomial"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/QMultinomial", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"24ff25c7-553e-470c-9595-c4e58beb1758",ExpressionUUID->
+  "9b6425bb-6370-4078-8ffd-3964d22a3233"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " q-multinomial"
+}], "GuideText",
+ CellID->474406192,ExpressionUUID->"14cc7dbb-6351-45b0-adb6-c7cff4f0cf85"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Modular Number Theory", "GuideFunctionsSubsection",
+ CellID->54177847,ExpressionUUID->"02c9a8ba-6ae4-41f8-96e5-07edab114e87"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["RationalNumberRepeatingDecimalPeriod"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/\
+RationalNumberRepeatingDecimalPeriod", "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"da92ad84-45aa-4b13-9a1f-ccf3ef44058d",ExpressionUUID->
+  "d41e66dd-5aac-4abf-8f10-33cd6782fdfb"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " find the period of a repeating decimal of a rational number"
+}], "GuideText",
+ CellID->230336182,ExpressionUUID->"dbcfb50a-7450-4a15-8be6-bad751b4dc9a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Alternating Permutations", "GuideFunctionsSubsection",
+ CellID->249643630,ExpressionUUID->"eb294a80-ac68-4e67-a217-4544031acef8"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["SecantNumber"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/SecantNumber", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"da92ad84-45aa-4b13-9a1f-ccf3ef44058d",ExpressionUUID->
+  "15fe69fe-6654-4491-81c3-56c5337f0617"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the secant number ",
+ Cell[BoxData[
+  SubscriptBox["S", "k"]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "5211933f-67d8-4f09-b44f-a601a286e2c9"],
+ ", also referred to a zig number"
+}], "GuideText",
+ CellID->495341244,ExpressionUUID->"29d25245-0d14-4f01-9577-12f159b5ea28"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["TangentNumber"]], 
+    "paclet:PeterBurbery/Combinatorics/ref/TangentNumber", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"da92ad84-45aa-4b13-9a1f-ccf3ef44058d",ExpressionUUID->
+  "50e73640-6223-40bc-94ce-2656c41a8e3a"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " compute the tangent numbers, also referred to as zag numbers"
+}], "GuideText",
+ CellID->516417829,ExpressionUUID->"337361ab-4399-4db5-bcf7-cb9af16a6dda"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedTutorial.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Tech", " ", "Notes"}], "GuideTutorialsSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Combinatorics"]], 
+           "paclet:PeterBurbery/Combinatorics/tutorial/Combinatorics"},
+          "RefLinkPlain",
+          BaseStyle->{"GuideTutorial"}]], "GuideTutorial",ExpressionUUID->
+         "cfc92ee7-84f3-4380-b2a4-b0ce1e046d29"]}]}
+     }]}
+  }]], "GuideTutorialsSection",ExpressionUUID->"173e1061-ab40-4ca7-8784-\
+1da3fcce501a"],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "GuideMoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Functions I Understand in combinatorics"]], 
+           "paclet:PeterBurbery/Combinatorics/guide/\
+FunctionsIunderstandincombinatorics"},
+          "RefLinkPlain",
+          BaseStyle->{"GuideMoreAbout"}]], "GuideMoreAbout",ExpressionUUID->
+         "66e1bef8-12f0-40f4-912c-cd0332e2128b"]}]}
+     }]}
+  }]], "GuideMoreAboutSection",ExpressionUUID->"dab910ec-6f8f-4feb-8347-\
+99f7c621ac6b"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"cfe4a93d-9aac-4d0f-8691-41d50ced3990"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Combinatorics",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 7, 30, 21, 51, 43.0649083}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`Combinatorics`", "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Peter Burbery/ Combinatorics Guide", "language" -> "en", "paclet" -> 
+    "PeterBurbery/Combinatorics", "status" -> "None", "summary" -> 
+    "Some of the functions here do not belong in combinatorics. I am \
+including them here anyways.", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$155894, "title" -> 
+    "Combinatorics", "titlemodifier" -> "", "metadescription" -> "", 
+    "windowtitle" -> "Combinatorics", "type" -> "Guide", "uri" -> 
+    "PeterBurbery/Combinatorics/guide/Combinatorics"}},
+CacheGraphics->False,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"d40d25bc-3016-4f0e-ac57-3c2515f2fe05"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[585, 21, 17570, 393, 70, "AnchorBarGrid",ExpressionUUID->"10658726-5785-41db-badc-5e0cebb3ecdd",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[18180, 418, 110, 1, 70, "GuideTitle",ExpressionUUID->"bcecee44-9a54-4bfa-9d7b-bb31f05589e2",
+ CellID->499626625],
+Cell[18293, 421, 202, 4, 70, "GuideAbstract",ExpressionUUID->"e412cbdd-1e43-447f-83c6-3a45085b0866",
+ CellID->421537627],
+Cell[18498, 427, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"6b153f9e-1c3f-442a-8b84-9d48cf3bf056"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18628, 432, 114, 1, 70, "GuideFunctionsSection",ExpressionUUID->"1815dfcf-14cb-4e72-b1e3-79e66297ca59",
+ CellID->2623184],
+Cell[18745, 435, 570, 15, 70, "GuideText",ExpressionUUID->"b61b7eb3-4fee-4969-87aa-31503fab483c",
+ CellID->109031987],
+Cell[19318, 452, 611, 16, 70, "GuideText",ExpressionUUID->"d726d8a5-911c-42fe-bfb4-2bcc9ad1d13a",
+ CellID->125361466],
+Cell[19932, 470, 541, 15, 70, "GuideText",ExpressionUUID->"cda72d76-5b88-4aaa-a41a-4bcb9cc63d7c",
+ CellID->100800444],
+Cell[20476, 487, 569, 15, 70, "GuideText",ExpressionUUID->"227fbfc5-56fe-48bb-a66f-2f50af128a60",
+ CellID->207044306],
+Cell[21048, 504, 572, 15, 70, "GuideText",ExpressionUUID->"ed1377dc-9011-46fd-a53a-bb5563141257",
+ CellID->377423189],
+Cell[21623, 521, 568, 15, 70, "GuideText",ExpressionUUID->"197a9520-a909-4be0-8b43-4b4769ee3b6b",
+ CellID->121852944],
+Cell[22194, 538, 561, 15, 70, "GuideText",ExpressionUUID->"803a3cd3-7419-4d10-ac26-68d1e80e12b8",
+ CellID->222866031],
+Cell[22758, 555, 588, 15, 70, "GuideText",ExpressionUUID->"9977f4be-6455-4194-86b2-bdd2404beed0",
+ CellID->579821958],
+Cell[23349, 572, 602, 15, 70, "GuideText",ExpressionUUID->"0f08ba26-9546-4cf0-8e1d-ae786ceea3f9",
+ CellID->598178970],
+Cell[CellGroupData[{
+Cell[23976, 591, 121, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"1fe4434f-d754-41b3-96c1-f299806286c2",
+ CellID->118452367],
+Cell[24100, 594, 571, 15, 70, "GuideText",ExpressionUUID->"10265d22-dc8f-4e2a-9c0f-8d324de271d1",
+ CellID->243626626],
+Cell[24674, 611, 599, 15, 70, "GuideText",ExpressionUUID->"b8e300f4-067c-4c3a-a67d-6241c6b139c3",
+ CellID->119148606],
+Cell[25276, 628, 602, 15, 70, "GuideText",ExpressionUUID->"9e58864c-cf2d-4cb6-adc9-4d8ff132bea2",
+ CellID->220036391],
+Cell[25881, 645, 562, 15, 70, "GuideText",ExpressionUUID->"b9bc6675-638b-4c09-b5e4-897826949851",
+ CellID->314603902],
+Cell[26446, 662, 612, 15, 70, "GuideText",ExpressionUUID->"6c9bccbe-8c9a-443b-b1c0-9bd5c69aa0e2",
+ CellID->379088138],
+Cell[27061, 679, 576, 15, 70, "GuideText",ExpressionUUID->"bc906e95-4bf7-46a7-83fe-39a9dd56daa3",
+ CellID->145090121],
+Cell[27640, 696, 614, 15, 70, "GuideText",ExpressionUUID->"3238e8d7-64b6-4daa-b06c-62639e21dc31",
+ CellID->4124064],
+Cell[28257, 713, 572, 15, 70, "GuideText",ExpressionUUID->"30fd9569-f576-40a3-8953-bf1022fcb3f8",
+ CellID->45957383],
+Cell[28832, 730, 570, 15, 70, "GuideText",ExpressionUUID->"b16066c5-f568-4841-a88d-c8dced330e0e",
+ CellID->85833497],
+Cell[29405, 747, 587, 15, 70, "GuideText",ExpressionUUID->"e0d5bf52-2b92-44e3-ba9f-484c702f556d",
+ CellID->60986347]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30029, 767, 117, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"fdaefb32-b515-496e-a4be-97525c450863",
+ CellID->4087378],
+Cell[30149, 770, 554, 14, 70, "GuideText",ExpressionUUID->"9934af4d-81c5-4a74-9cfa-f4eefa8d4f13",
+ CellID->59154953],
+Cell[30706, 786, 550, 15, 70, "GuideText",ExpressionUUID->"377e6409-ad92-433c-a6ba-bce30be62909",
+ CellID->158238571],
+Cell[31259, 803, 592, 15, 70, "GuideText",ExpressionUUID->"b27d0498-166f-4cc0-bef9-142f211bcb50",
+ CellID->171470648],
+Cell[31854, 820, 587, 15, 70, "GuideText",ExpressionUUID->"0c96df35-4992-4290-97c9-5fb0d6bfd0b2",
+ CellID->17845024],
+Cell[32444, 837, 585, 15, 70, "GuideText",ExpressionUUID->"6940ae61-87bf-45d5-ae20-8d1a742e4559",
+ CellID->19150745],
+Cell[33032, 854, 580, 15, 70, "GuideText",ExpressionUUID->"b777dbe8-4ef8-4d6b-83ab-db7f8933bcdc",
+ CellID->266275072],
+Cell[33615, 871, 605, 16, 70, "GuideText",ExpressionUUID->"f44d9c62-7fc2-418f-bae6-105a72e04fa6",
+ CellID->9092118],
+Cell[34223, 889, 588, 15, 70, "GuideText",ExpressionUUID->"b8aac756-6b26-41d4-afb1-020fe3dbd84c",
+ CellID->54313187],
+Cell[34814, 906, 579, 15, 70, "GuideText",ExpressionUUID->"54b3d1c4-0433-46c9-a96d-ca9781bc7b5e",
+ CellID->584731089]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35430, 926, 120, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"662d6ca1-224a-47e9-b74e-9239e6fca64c",
+ CellID->282640633],
+Cell[35553, 929, 555, 15, 70, "GuideText",ExpressionUUID->"0f554372-883c-4140-8198-5e9a8c34d80c",
+ CellID->214010964],
+Cell[36111, 946, 605, 15, 70, "GuideText",ExpressionUUID->"f35fcafa-7b26-429f-a732-b49ba09b6fe9",
+ CellID->715225283],
+Cell[36719, 963, 548, 15, 70, "GuideText",ExpressionUUID->"d09b0eb8-de95-4b56-acbd-fcbca838dda6",
+ CellID->874975016],
+Cell[37270, 980, 625, 16, 70, "GuideText",ExpressionUUID->"4ee6b352-099f-4205-b010-1aaf08ec78e0",
+ CellID->245605649],
+Cell[37898, 998, 600, 15, 70, "GuideText",ExpressionUUID->"0e083d75-0958-4b8d-a107-eebd388cf623",
+ CellID->60716739]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38535, 1018, 149, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"bfc126d5-be34-456d-b193-10fe099bbc84",
+ CellID->142718825],
+Cell[38687, 1021, 621, 16, 70, "GuideText",ExpressionUUID->"0bb24ea0-264c-405a-a7cd-c53a98a5c47d",
+ CellID->329599759],
+Cell[39311, 1039, 697, 16, 70, "GuideText",ExpressionUUID->"e2a979f8-6e72-4a6f-82f7-5892de2970fa",
+ CellID->578057627]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40045, 1060, 151, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"d0b0f2e6-24dd-4193-9f4c-2de258f09387",
+ CellID->679712443],
+Cell[40199, 1063, 578, 15, 70, "GuideText",ExpressionUUID->"6a66d033-597d-4d36-a10f-2b666096203d",
+ CellID->667786126],
+Cell[40780, 1080, 567, 15, 70, "GuideText",ExpressionUUID->"b171bf0d-1011-4840-8285-c5e4adcbffd6",
+ CellID->28742981],
+Cell[41350, 1097, 565, 15, 70, "GuideText",ExpressionUUID->"31539079-a2ad-4619-ab8c-cb296bbfa532",
+ CellID->198148347]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41952, 1117, 133, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"5799b1fb-1bba-4cbf-9973-50b220ad6960",
+ CellID->92913058],
+Cell[42088, 1120, 585, 15, 70, "GuideText",ExpressionUUID->"e702bdef-c1d5-4e73-95bf-dbeab572efab",
+ CellID->124379797],
+Cell[42676, 1137, 570, 15, 70, "GuideText",ExpressionUUID->"da1e27f9-568b-43d7-ab73-6a5c25d5a7bc",
+ CellID->269721593],
+Cell[43249, 1154, 582, 15, 70, "GuideText",ExpressionUUID->"8f870bd3-019c-49bb-9d18-78d671130067",
+ CellID->707306842],
+Cell[43834, 1171, 597, 15, 70, "GuideText",ExpressionUUID->"b9940f9a-f877-4e1d-8ba1-9b3a908f3c8e",
+ CellID->793169443],
+Cell[44434, 1188, 546, 15, 70, "GuideText",ExpressionUUID->"edaad5eb-6851-47cb-ad27-6aef7c68db33",
+ CellID->2174033],
+Cell[44983, 1205, 730, 20, 70, "GuideText",ExpressionUUID->"37bfc454-594b-4b25-935d-8c5f1fd7cc08",
+ CellID->579746260],
+Cell[45716, 1227, 749, 21, 70, "GuideText",ExpressionUUID->"4fb2e013-9307-4498-a49d-eb02a5c430e9",
+ CellID->324145976],
+Cell[46468, 1250, 578, 15, 70, "GuideText",ExpressionUUID->"5ed75904-f7e0-40e4-9f1d-162d45a8a81f",
+ CellID->87685581],
+Cell[47049, 1267, 755, 21, 70, "GuideText",ExpressionUUID->"325e79b9-9389-47bb-8b68-9e3fce02ac0b",
+ CellID->261231098]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47841, 1293, 158, 2, 70, "GuideFunctionsSubsection",ExpressionUUID->"2f004436-0236-4ef2-b1bf-1a30d7b89f65",
+ CellID->40431241],
+Cell[48002, 1297, 537, 15, 70, "GuideText",ExpressionUUID->"74a14e43-46f5-444c-b975-7890d52c4673",
+ CellID->268204308],
+Cell[48542, 1314, 560, 15, 70, "GuideText",ExpressionUUID->"e5d1be43-6ef3-49ea-bfab-38ca979f9b53",
+ CellID->801706007],
+Cell[49105, 1331, 537, 14, 70, "GuideText",ExpressionUUID->"1d8a6796-1081-41f8-adf1-26b715687de2",
+ CellID->397377832],
+Cell[49645, 1347, 585, 15, 70, "GuideText",ExpressionUUID->"289ef5c5-2e64-4361-83b6-75162877d2c7",
+ CellID->16156751],
+Cell[50233, 1364, 562, 15, 70, "GuideText",ExpressionUUID->"3036a6f1-c6c2-48e7-9452-7db3cb2e6563",
+ CellID->646697003],
+Cell[50798, 1381, 555, 15, 70, "GuideText",ExpressionUUID->"20811d0e-de17-48c2-9aa8-76cea24e7df0",
+ CellID->591098440],
+Cell[51356, 1398, 562, 15, 70, "GuideText",ExpressionUUID->"9dcafb04-1e8d-4ed3-8c07-de4074face7a",
+ CellID->46707728],
+Cell[51921, 1415, 574, 15, 70, "GuideText",ExpressionUUID->"2755fbf0-1690-4381-a3d1-6c28481e8117",
+ CellID->632005940],
+Cell[52498, 1432, 668, 16, 70, "GuideText",ExpressionUUID->"880bd053-bc40-437f-97ba-c54ddb94227b",
+ CellID->326440449]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53203, 1453, 132, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"f2d368ac-7100-4acb-ae2b-bd2546e3d49f",
+ CellID->204792574],
+Cell[53338, 1456, 602, 15, 70, "GuideText",ExpressionUUID->"4c001871-cb73-42d3-84c1-529c85a3e110",
+ CellID->249920147],
+Cell[53943, 1473, 569, 15, 70, "GuideText",ExpressionUUID->"421062f3-afba-49bf-98c1-424928f2f7bb",
+ CellID->11818410],
+Cell[54515, 1490, 596, 15, 70, "GuideText",ExpressionUUID->"f0c98926-30b8-49b2-a5a7-e76247c02746",
+ CellID->89276590],
+Cell[55114, 1507, 569, 15, 70, "GuideText",ExpressionUUID->"1af3afaf-e2d7-4e5d-841f-7a8e02cf104e",
+ CellID->2041884],
+Cell[55686, 1524, 569, 15, 70, "GuideText",ExpressionUUID->"6a333488-24ff-4e4b-b0c5-edaa22b02718",
+ CellID->55068777],
+Cell[56258, 1541, 611, 16, 70, "GuideText",ExpressionUUID->"d11d0a0a-9a5a-4d53-b36d-aac815fa4ecd",
+ CellID->333058560],
+Cell[56872, 1559, 575, 15, 70, "GuideText",ExpressionUUID->"ec050ecc-f5e2-4216-a2ff-f2c9422e6927",
+ CellID->491673704],
+Cell[57450, 1576, 592, 15, 70, "GuideText",ExpressionUUID->"db0b60a2-64b0-4c2f-861c-bd89c6a8f8f0",
+ CellID->104646382],
+Cell[58045, 1593, 588, 15, 70, "GuideText",ExpressionUUID->"c91b5b24-a43b-483f-b179-8df2b3aace11",
+ CellID->143243222]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58670, 1613, 142, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"e2877ee2-da5a-4c45-9b92-758d5cb6ee98",
+ CellID->380575879],
+Cell[58815, 1616, 604, 15, 70, "GuideText",ExpressionUUID->"7509f41b-228d-4b58-8381-b7d058877d01",
+ CellID->72216112],
+Cell[59422, 1633, 587, 15, 70, "GuideText",ExpressionUUID->"f53baef3-f42b-4514-8ce6-643ce30d6d9f",
+ CellID->33213998],
+Cell[60012, 1650, 598, 15, 70, "GuideText",ExpressionUUID->"a9001fb2-8b95-490a-8a52-064d9b41700a",
+ CellID->10029217],
+Cell[60613, 1667, 632, 16, 70, "GuideText",ExpressionUUID->"c8b47b20-7f24-4c40-b56b-3a25d511ab16",
+ CellID->304770217]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61282, 1688, 138, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"74ab1828-ba74-4f24-a230-728266154447",
+ CellID->35116186],
+Cell[61423, 1691, 569, 15, 70, "GuideText",ExpressionUUID->"5abbcf28-6687-4eb8-84be-fac04d7cc213",
+ CellID->578653576],
+Cell[61995, 1708, 597, 15, 70, "GuideText",ExpressionUUID->"a1450dac-ec7e-495e-9975-b19bd3645fcc",
+ CellID->225254434],
+Cell[62595, 1725, 582, 15, 70, "GuideText",ExpressionUUID->"354b6c87-6640-4f27-8725-13b6da18ced9",
+ CellID->225181528],
+Cell[63180, 1742, 596, 15, 70, "GuideText",ExpressionUUID->"19529a77-a5f5-4b16-a185-fb130b5a2b61",
+ CellID->59157388]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[63813, 1762, 123, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"e39139f5-c5e2-448d-9f86-d5ec89ae5125",
+ CellID->253219147],
+Cell[63939, 1765, 609, 16, 70, "GuideText",ExpressionUUID->"cd3625aa-936c-45e1-a133-1f93932aea48",
+ CellID->536494227],
+Cell[64551, 1783, 553, 15, 70, "GuideText",ExpressionUUID->"3017d629-c1c7-48a7-a334-fa03a2258392",
+ CellID->717861204],
+Cell[65107, 1800, 620, 16, 70, "GuideText",ExpressionUUID->"0a13e835-3955-4be2-a285-caad5e0cc00b",
+ CellID->192028694],
+Cell[65730, 1818, 554, 14, 70, "GuideText",ExpressionUUID->"ff5c3e71-09da-48ce-9a84-0242d63b1029",
+ CellID->466676500],
+Cell[66287, 1834, 586, 15, 70, "GuideText",ExpressionUUID->"deba8355-47d7-4280-a8a4-f468fba515f1",
+ CellID->137031534],
+Cell[66876, 1851, 556, 15, 70, "GuideText",ExpressionUUID->"f853c311-574b-449d-97e8-842c07492da6",
+ CellID->429353628],
+Cell[67435, 1868, 597, 15, 70, "GuideText",ExpressionUUID->"d461a294-47b6-49aa-a3e4-44c3c9778f48",
+ CellID->6936080]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68069, 1888, 130, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"eb975512-041a-46f2-91d5-813f6530b4c8",
+ CellID->158709640],
+Cell[68202, 1891, 548, 15, 70, "GuideText",ExpressionUUID->"bd79783d-62c7-4c78-8b90-da7059660551",
+ CellID->710028030],
+Cell[68753, 1908, 532, 15, 70, "GuideText",ExpressionUUID->"1b80d629-fca3-4dd1-b816-552c5306e94e",
+ CellID->122376067],
+Cell[69288, 1925, 532, 15, 70, "GuideText",ExpressionUUID->"cdd36e55-7ff7-490f-ad9c-06dae6b729af",
+ CellID->158493789]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[69857, 1945, 130, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"0fbad4d6-11cc-4b71-a24e-963b355ce217",
+ CellID->26912173],
+Cell[69990, 1948, 574, 15, 70, "GuideText",ExpressionUUID->"87ebb491-b608-47ae-8fe4-6e4c8ad919a9",
+ CellID->76369925],
+Cell[70567, 1965, 576, 15, 70, "GuideText",ExpressionUUID->"32f22955-e80c-4534-85aa-f448b092cfcc",
+ CellID->456544194]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71180, 1985, 122, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"cd3bcb58-4bc8-41e0-875f-eeb75f557d3e",
+ CellID->273374210],
+Cell[71305, 1988, 529, 15, 70, "GuideText",ExpressionUUID->"68414469-41cb-4c2a-a202-e5ccbd8ab6a4",
+ CellID->36015550],
+Cell[71837, 2005, 530, 15, 70, "GuideText",ExpressionUUID->"14cc7dbb-6351-45b0-adb6-c7cff4f0cf85",
+ CellID->474406192]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[72404, 2025, 131, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"02c9a8ba-6ae4-41f8-96e5-07edab114e87",
+ CellID->54177847],
+Cell[72538, 2028, 621, 15, 70, "GuideText",ExpressionUUID->"dbcfb50a-7450-4a15-8be6-bad751b4dc9a",
+ CellID->230336182]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73196, 2048, 135, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"eb294a80-ac68-4e67-a217-4544031acef8",
+ CellID->249643630],
+Cell[73334, 2051, 730, 20, 70, "GuideText",ExpressionUUID->"29d25245-0d14-4f01-9577-12f159b5ea28",
+ CellID->495341244],
+Cell[74067, 2073, 579, 15, 70, "GuideText",ExpressionUUID->"337361ab-4399-4db5-bcf7-cb9af16a6dda",
+ CellID->516417829]
+}, Open  ]]
+}, Open  ]],
+Cell[74673, 2092, 768, 20, 70, "GuideTutorialsSection",ExpressionUUID->"173e1061-ab40-4ca7-8784-1da3fcce501a"],
+Cell[75444, 2114, 810, 20, 70, "GuideMoreAboutSection",ExpressionUUID->"dab910ec-6f8f-4feb-8347-99f7c621ac6b"],
+Cell[76257, 2136, 78, 0, 70, "FooterCell",ExpressionUUID->"cfe4a93d-9aac-4d0f-8691-41d50ced3990"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

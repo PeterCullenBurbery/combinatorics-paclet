@@ -1,0 +1,825 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     31162,        815]
+NotebookOptionsPosition[     24792,        685]
+NotebookOutlinePosition[     27174,        744]
+CellTagsIndexPosition[     27089,        739]
+WindowTitle->PartitionFromFrobeniusSymbol
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ COMBINATORICS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "3d1cbea1-f68d-4401-971b-a9b3aa16f48f"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "ccbe5130-e042-4266-8d4b-9732e2bfb907"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "See Also",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "abe459e9-a9f3-4a39-ade4-f96a24a8ce74"]
+         }],ExpressionUUID->"7d369c38-5bc1-4022-b7f8-8612738843a7"],
+         StripOnInput->False],{
+        "\"IntegerPartitions\"" :> 
+         Documentation`HelpLookup["paclet:ref/IntegerPartitions"], 
+         "\"PartitionsP\"" :> 
+         Documentation`HelpLookup["paclet:ref/PartitionsP"], Delimiter, 
+         StyleBox[
+          "\"Functions\"", "SeeAlsoSection", FontSize -> 14, FontSlant -> 
+           "Italic", StripOnInput -> False] :> 
+         NotebookFind[EvaluationNotebook[], "SeeAlsoSection", All, CellStyle],
+          StyleBox[
+          "\"FrobeniusSymbolFromPartition\"", "SeeAlsoRelated", StripOnInput -> 
+           False] :> Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/\
+FrobeniusSymbolFromPartition"], 
+         StyleBox[
+          "\"FerrersDiagram\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/FerrersDiagram"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"SeeAlso"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "79d679fe-7a34-46f1-9175-e5f88f8a5980"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "4ea37c35-2cf4-4775-af8d-8c51994b3d2a"]
+         }],ExpressionUUID->"8d81354d-c5bd-4684-ada4-0cd8d6cc9781"],
+         StripOnInput->False],{
+        "\"Combinatorics\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/guide/Combinatorics"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "58ddaa78-5f5a-4f70-977b-bc6f98df3310"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "214db6f0-f7dd-4b06-a352-8abc7a908485"]
+         }],ExpressionUUID->"774218e3-e1a9-4251-957d-38c38581cdcb"],
+         StripOnInput->False],{
+        "\"PeterBurbery/Combinatorics/ref/PartitionFromFrobeniusSymbol\"" :> 
+         None, "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/Combinatorics/ref/\
+PartitionFromFrobeniusSymbol"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+Combinatorics/ref/PartitionFromFrobeniusSymbol.html"], StandardForm]], 
+                 "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+               False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$121619], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/Combinatorics/ref/PartitionFromFrobeniusSymbol" <> 
+               ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "ee0a3114-9f85-493c-995e-ade076ed0339"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "5f7b14f0-5a1f-468b-afd9-9a0ee1fb678d"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"4f180c9f-531d-4c02-9e55-8d1429ba6043"],
+
+Cell["PeterBurbery`Combinatorics`", "ContextNameCell",ExpressionUUID->"e32c9daf-ef8c-43be-8619-90017d00eb28"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "PartitionFromFrobeniusSymbol", "ObjectName",ExpressionUUID->
+      "509ecb69-a6a1-4426-88e6-f4a79c290459"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"f26264ca-5f6b-4a0d-b2a2-f8d920d3948a"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "2d21cf48-0016-4c7c-9bb6-79dbb8bc809a"]
+    }],ExpressionUUID->"ba7996d9-1666-430e-b168-17285aee0ed3"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"312290e7-0429-4bac-b2b5-\
+80b403f9ef7e"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["PartitionFromFrobeniusSymbol"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/\
+PartitionFromFrobeniusSymbol", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["f", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "dc322926-841c-4a65-a52a-749ec7f4c860"],
+     "\[LineSeparator]gives the partition whose Frobenius symbol is ",
+     Cell[BoxData[
+      StyleBox["f", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "339c19d2-a9de-4cfe-87b2-4b7bb07b1d85"],
+     "."
+    }],ExpressionUUID->"e7346a3d-2623-49ca-b3d4-45ef939f37d4"]}
+  }]], "Usage",
+ CellID->527579552,ExpressionUUID->"2268d368-074e-43bf-b5b8-ad5e7c1e8a81"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"f715df88-3da4-4ba0-b070-2561ff103f8b"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"201fce17-3c96-44cb-83f2-a6257991e02f"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"39e66dad-f44a-4461-8a53-8b436cbb91b4"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"57068d35-fdfa-4fe3-a8cf-f4bbe193fe09"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->182135559,ExpressionUUID->"bbde935a-ef1f-43db-956b-efe4bfa1f86d"],
+
+Cell["\<\
+See the documentation for FrobeniusSymbolFromPartition for illustrative \
+examples.\
+\>", "Notes",
+ CellID->436035651,ExpressionUUID->"a0065daf-6f72-4e99-9bd9-1d749b039733"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"0b89bc7a-b3a0-4478-9895-bd487a27df07"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"50420338-64bd-42c8-a15a-17301cf4ab4e"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount",ExpressionUUID->
+  "6dfab35d-dbd2-47f8-9966-43ab46ab7b3a"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->527301652,ExpressionUUID->"819366cc-4192-40dc-990c-440053484473"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`Combinatorics`\>\"", "]"}]], "Input",\
+ "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->470833433,ExpressionUUID->"f3b3218e-f59c-45ee-a11a-e27c37209f61"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"fb14ea10-3c88-4e1a-bbd0-0bd421686796"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"c72ac0f9-73ae-4b0b-bdb3-508676427c6b"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount",ExpressionUUID->
+  "38b73de2-375a-4036-b50a-e2250d8a574c"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->405486305,ExpressionUUID->"6a8fdddd-de08-4abb-8d9a-ad815693924c"],
+
+Cell["\<\
+A Frobenius symbol is matrix with two decreasing rows of nonnegative integers:\
+\>", "ExampleText",
+ CellID->1129580873,ExpressionUUID->"fbef9971-476e-41de-9b81-adb3f1b6a8ee"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f1", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"6", ",", "5", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "2", ",", "0"}], "}"}]}], "}"}]}], ";"}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->1524481416,ExpressionUUID->"30c0c72c-cb56-47f2-9208-cfe0cd0860da"],
+
+Cell["\<\
+This finds the partition corresponding to the Frobenius symbol:\
+\>", "ExampleText",
+ CellID->13078159,ExpressionUUID->"8d392f50-267c-4af3-b464-bff918a8e6b7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PartitionFromFrobeniusSymbol", "@", "f1"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->222963858,ExpressionUUID->"0d9dd78c-2bd8-49c0-b35f-6346a78c6b77"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"7", ",", "7", ",", "4", ",", "2", ",", "1"}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->61487868,ExpressionUUID->"9a827bd8-ccf9-4dd2-96ab-4992edd5cb35"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "3fcd1e85-3aa5-44c0-bc59-ec7ca494e97d"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->510728355,ExpressionUUID->"50da8f2c-2cba-4c6b-bbe4-11bb7d5a36c5"],
+
+Cell["Here is another example:", "ExampleText",
+ CellID->2106138144,ExpressionUUID->"93face1e-2674-4ea4-a9ed-3ae581855f95"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f2", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"7", ",", "5", ",", "2", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", "4", ",", "1", ",", "0"}], "}"}]}], "}"}]}], 
+  ";"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->1899168582,ExpressionUUID->"f56e7c8d-94de-4ca1-868f-b02d836a467e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PartitionFromFrobeniusSymbol", "@", "f2"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->1513195969,ExpressionUUID->"0a116ced-7429-4b2d-930f-e95e40e6d244"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"8", ",", "7", ",", "5", ",", "4", ",", "2", ",", "2"}], 
+  "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->13598914,ExpressionUUID->"15a03cd2-4c3d-4176-a58a-1f47d8eafa31"]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+  ExpressionUUID->"a685b3fc-8861-46c5-a1f6-389739dc5fa3"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"2bcfdbf8-325c-443f-9dc0-6fab3ffb3d85"],
+ "Properties & Relations",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "d8ade45b-e5ad-4080-b5ea-d779b4da6688"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->231753763,ExpressionUUID->"39d6f5aa-2534-4aa1-b6e1-9cde39876122"],
+
+Cell["\<\
+Confirm that partitions and Frobenius symbols round-trip as expected:\
+\>", "ExampleText",
+ CellID->347802759,ExpressionUUID->"d9f9b1fe-efc3-4dad-bb8f-be56c67a467c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f1", "==", 
+  RowBox[{"FrobeniusSymbolFromPartition", "@", 
+   RowBox[{"PartitionFromFrobeniusSymbol", "@", "f1"}]}]}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->1633764701,ExpressionUUID->"74f5434a-255f-4b3e-bf33-184224f4c232"],
+
+Cell[BoxData["True"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->376097655,ExpressionUUID->"0f170aa3-ed99-4b80-886c-9fb82f00cfea"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f2", "==", 
+  RowBox[{"FrobeniusSymbolFromPartition", "@", 
+   RowBox[{"PartitionFromFrobeniusSymbol", "@", "f2"}]}]}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->273130342,ExpressionUUID->"9f748839-8a6e-45e5-8d3d-b326bb48fa01"],
+
+Cell[BoxData["True"], "Output",
+ CellLabel->"Out[2]=",
+ CellID->451257181,ExpressionUUID->"5ee210d1-fd52-4395-b501-796dfbf9daf2"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[{
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["FrobeniusSymbolFromPartition"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/\
+FrobeniusSymbolFromPartition", "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",ExpressionUUID->
+         "3467ab9b-45dd-4dee-bc92-e390cba4b373"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["FerrersDiagram"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/FerrersDiagram", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"e9053b3a-9e86-4960-805d-24d7f8f07532",ExpressionUUID->
+         "cdb2c93c-b4e1-4d9f-9e5d-31db493b2efd"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["IntegerPartitions"]], "paclet:ref/IntegerPartitions"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"ea98b993-69aa-4759-b776-0bec1460c2c6",ExpressionUUID->
+         "48cc6c46-ea74-471a-9179-75b373f9601d"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["PartitionsP"]], "paclet:ref/PartitionsP"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"98953cd5-5df2-4ff8-b580-78004b114536",ExpressionUUID->
+         "2e977ab3-60f8-42f0-ad2a-df7c8631b42c"]
+       }], "SeeAlso",ExpressionUUID->"b2bf6085-6e7b-436d-95eb-f732d228cc44"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"74d59ee7-7159-4152-934d-\
+f164dad33f35"],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Combinatorics"]], 
+           "paclet:PeterBurbery/Combinatorics/guide/Combinatorics"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "cd42057c-05c9-4eac-8949-294629b3bd54"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"6e6ec529-8d50-463b-8c1e-\
+e3ef1d5b0116"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        TemplateBox[{
+          Cell[
+           TextData[
+            Cell[
+             TextData[{
+               Cell[
+                BoxData[
+                 DynamicBox[
+                  FEPrivate`ImportImage[
+                   
+                   FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+                    "RelatedLinks-MathWorld.png"]]]]], 
+               Cell[
+                BoxData[
+                 TemplateBox[{4}, "Spacer1"]]], 
+               "Durfee Square \[LongDash] Wolfram MathWorld"}]]]], 
+          "http://mathworld.wolfram.com/DurfeeSquare.html"},
+         "WebLink",
+         BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+        "88631bb2-7172-4886-9f9b-93b9438c4910"]], "RelatedLinks",
+        ExpressionUUID->"e594a3b8-cfde-4d85-bcad-8b1bed556999"]},
+      {Cell[TextData[Cell[BoxData[
+        TemplateBox[{
+          Cell[
+           TextData[
+            Cell[
+             TextData[{
+               Cell[
+                BoxData[
+                 DynamicBox[
+                  FEPrivate`ImportImage[
+                   
+                   FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+                    "RelatedLinks-FunctionRepository.png"]]]]], 
+               Cell[
+                BoxData[
+                 TemplateBox[{4}, "Spacer1"]]], 
+               "PartitionFromFrobeniusSymbol \[LongDash] Resource \
+Function"}]]]], 
+          "https://resources.wolframcloud.com/FunctionRepository/resources/\
+PartitionFromFrobeniusSymbol"},
+         "WebLink",
+         BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+        "8c47d9ab-7dfa-4b74-91b9-88c9150b2b07"]], "RelatedLinks",
+        ExpressionUUID->"c7f55391-1cf0-4a64-8940-10ccb499e98a"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"cd5b0f87-a8d8-4b88-a218-\
+9ab87b3f67b1"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"ca1f0709-3555-45ff-81d5-ccc9ade2774a"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"PartitionFromFrobeniusSymbol",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, 
+    "ExampleSection" -> {"0" -> Open, "2" -> Closed}, "NotesSection" -> 
+    Closed}, "NewStyles" -> True, "CitationPopupData" -> $Failed, 
+  "ShowCitation" -> False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 7, 29, 17, 28, 43.4571225}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`Combinatorics`", 
+    "keywords" -> {
+     "partition", "conjugate partition", "Durfee square", 
+      "Jacobi triple product"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Peter Burbery/ Combinatorics Symbol", "language" -> "en", "paclet" -> 
+    "PeterBurbery/Combinatorics", "status" -> "None", "summary" -> 
+    "PartitionFromFrobeniusSymbol[f] gives the partition whose Frobenius \
+symbol is f.", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "PartitionFromFrobeniusSymbol", "titlemodifier" -> "", "metadescription" -> 
+    "", "windowtitle" -> "PartitionFromFrobeniusSymbol", "type" -> "Symbol", 
+    "uri" -> "PeterBurbery/Combinatorics/ref/PartitionFromFrobeniusSymbol"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (June 3, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"db494b73-877f-47d7-9fd6-548b92aaecca"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[10696, 279, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"819366cc-4192-40dc-990c-440053484473",
+   CellTags->"PrimaryExamplesSection",
+   CellID->527301652]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 26889, 732}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[600, 21, 6181, 148, 56, "AnchorBarGrid",ExpressionUUID->"4f180c9f-531d-4c02-9e55-8d1429ba6043",
+ CellID->1],
+Cell[6784, 171, 109, 0, 23, "ContextNameCell",ExpressionUUID->"e32c9daf-ef8c-43be-8619-90017d00eb28"],
+Cell[CellGroupData[{
+Cell[6918, 175, 571, 14, 56, "ObjectNameGrid",ExpressionUUID->"312290e7-0429-4bac-b2b5-80b403f9ef7e"],
+Cell[7492, 191, 935, 23, 111, "Usage",ExpressionUUID->"2268d368-074e-43bf-b5b8-ad5e7c1e8a81",
+ CellID->527579552]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8464, 219, 1919, 48, 37, "NotesSection",ExpressionUUID->"bbde935a-ef1f-43db-956b-efe4bfa1f86d",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->182135559],
+Cell[10386, 269, 183, 4, 70, "Notes",ExpressionUUID->"a0065daf-6f72-4e99-9bd9-1d749b039733",
+ CellID->436035651]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[10696, 279, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"819366cc-4192-40dc-990c-440053484473",
+ CellTags->"PrimaryExamplesSection",
+ CellID->527301652],
+Cell[12119, 318, 217, 4, 26, "Input",ExpressionUUID->"f3b3218e-f59c-45ee-a11a-e27c37209f61",
+ CellID->470833433],
+Cell[CellGroupData[{
+Cell[12361, 326, 1398, 36, 30, "ExampleSection",ExpressionUUID->"6a8fdddd-de08-4abb-8d9a-ad815693924c",
+ CellID->405486305],
+Cell[13762, 364, 185, 3, 38, "ExampleText",ExpressionUUID->"fbef9971-476e-41de-9b81-adb3f1b6a8ee",
+ CellID->1129580873],
+Cell[13950, 369, 411, 12, 26, "Input",ExpressionUUID->"30c0c72c-cb56-47f2-9208-cfe0cd0860da",
+ CellID->1524481416],
+Cell[14364, 383, 168, 3, 38, "ExampleText",ExpressionUUID->"8d392f50-267c-4af3-b464-bff918a8e6b7",
+ CellID->13078159],
+Cell[CellGroupData[{
+Cell[14557, 390, 242, 4, 26, "Input",ExpressionUUID->"0d9dd78c-2bd8-49c0-b35f-6346a78c6b77",
+ CellID->222963858],
+Cell[14802, 396, 200, 4, 35, "Output",ExpressionUUID->"9a827bd8-ccf9-4dd2-96ab-4992edd5cb35",
+ CellID->61487868]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15039, 405, 242, 5, 13, "ExampleDelimiter",ExpressionUUID->"50da8f2c-2cba-4c6b-bbe4-11bb7d5a36c5",
+ CellID->510728355],
+Cell[15284, 412, 123, 1, 38, "ExampleText",ExpressionUUID->"93face1e-2674-4ea4-a9ed-3ae581855f95",
+ CellID->2106138144],
+Cell[15410, 415, 432, 12, 26, "Input",ExpressionUUID->"f56e7c8d-94de-4ca1-868f-b02d836a467e",
+ CellID->1899168582],
+Cell[CellGroupData[{
+Cell[15867, 431, 243, 4, 26, "Input",ExpressionUUID->"0a116ced-7429-4b2d-930f-e95e40e6d244",
+ CellID->1513195969],
+Cell[16113, 437, 213, 5, 35, "Output",ExpressionUUID->"15a03cd2-4c3d-4176-a58a-1f47d8eafa31",
+ CellID->13598914]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[16487, 451, 1429, 37, 70, "ExampleSection",ExpressionUUID->"39d6f5aa-2534-4aa1-b6e1-9cde39876122",
+ CellID->231753763],
+Cell[17919, 490, 175, 3, 70, "ExampleText",ExpressionUUID->"d9f9b1fe-efc3-4dad-bb8f-be56c67a467c",
+ CellID->347802759],
+Cell[CellGroupData[{
+Cell[18119, 497, 321, 7, 70, "Input",ExpressionUUID->"74f5434a-255f-4b3e-bf33-184224f4c232",
+ CellID->1633764701],
+Cell[18443, 506, 129, 2, 35, "Output",ExpressionUUID->"0f170aa3-ed99-4b80-886c-9fb82f00cfea",
+ CellID->376097655]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18609, 513, 320, 7, 70, "Input",ExpressionUUID->"9f748839-8a6e-45e5-8d3d-b326bb48fa01",
+ CellID->273130342],
+Cell[18932, 522, 129, 2, 35, "Output",ExpressionUUID->"5ee210d1-fd52-4395-b501-796dfbf9daf2",
+ CellID->451257181]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[19303, 533, 2588, 67, 70, "SeeAlsoSection",ExpressionUUID->"74d59ee7-7159-4152-934d-f164dad33f35"],
+Cell[21894, 602, 740, 19, 70, "MoreAboutSection",ExpressionUUID->"6e6ec529-8d50-463b-8c1e-e3ef1d5b0116"],
+Cell[22637, 623, 2070, 58, 70, "RelatedLinksSection",ExpressionUUID->"cd5b0f87-a8d8-4b88-a218-9ab87b3f67b1"],
+Cell[24710, 683, 78, 0, 70, "FooterCell",ExpressionUUID->"ca1f0709-3555-45ff-81d5-ccc9ade2774a"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

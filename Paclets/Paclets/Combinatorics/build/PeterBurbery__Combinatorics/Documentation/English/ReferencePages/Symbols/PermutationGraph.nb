@@ -1,0 +1,2250 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     89117,       2240]
+NotebookOptionsPosition[     81035,       2073]
+NotebookOutlinePosition[     83269,       2129]
+CellTagsIndexPosition[     83183,       2124]
+WindowTitle->PermutationGraph
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ COMBINATORICS SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "cc5d6a01-6a53-4580-b2fc-067869c89965"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "9f47b9e1-e4da-41e6-ba3b-3507efd85392"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "See Also",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "f0b2fd81-840d-487d-86ad-31bdc05d4b2a"]
+         }],ExpressionUUID->"135a06b9-452a-4f2c-962e-9af0dea2b3ba"],
+         StripOnInput->False],{
+        "\"Permutations\"" :> 
+         Documentation`HelpLookup["paclet:ref/Permutations"], "\"Graph\"" :> 
+         Documentation`HelpLookup["paclet:ref/Graph"], "\"FindClique\"" :> 
+         Documentation`HelpLookup["paclet:ref/FindClique"], 
+         "\"GraphComplement\"" :> 
+         Documentation`HelpLookup["paclet:ref/GraphComplement"], Delimiter, 
+         StyleBox[
+          "\"Functions\"", "SeeAlsoSection", FontSize -> 14, FontSlant -> 
+           "Italic", StripOnInput -> False] :> 
+         NotebookFind[EvaluationNotebook[], "SeeAlsoSection", All, CellStyle],
+          StyleBox[
+          "\"InversionCount\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/InversionCount"], 
+         StyleBox[
+          "\"SelectPermutations\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/SelectPermutations"], 
+         StyleBox[
+          "\"PermutationCountByInversions\"", "SeeAlsoRelated", StripOnInput -> 
+           False] :> Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/\
+PermutationCountByInversions"], 
+         StyleBox[
+          "\"PermutationCountByInversions\"", "SeeAlsoRelated", StripOnInput -> 
+           False] :> Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/\
+PermutationCountByInversions"], 
+         StyleBox[
+          "\"PermutationIndex\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/PermutationIndex"], 
+         StyleBox[
+          "\"ToInversionVector\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/ToInversionVector"], 
+         StyleBox[
+          "\"InversionVectorQ\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/ref/InversionVectorQ"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"SeeAlso"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "5191cf99-5a83-4e19-82f3-2db3389a1a96"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "3f1cd210-d9dc-4cff-a414-2cada12d0dba"]
+         }],ExpressionUUID->"d1105d7c-de70-46a1-b546-48988ba2ff06"],
+         StripOnInput->False],{
+        "\"Combinatorics\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/Combinatorics/guide/Combinatorics"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "68da7f93-0c9c-443f-bdf5-224fca595b02"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "3a1fcce5-eae9-4ca9-bd4a-a4634b67bf14"]
+         }],ExpressionUUID->"5fc2a6e7-1335-4922-8a9b-57a66230533d"],
+         StripOnInput->False],{
+        "\"PeterBurbery/Combinatorics/ref/PermutationGraph\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/Combinatorics/ref/PermutationGraph"]}, 
+               Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+Combinatorics/ref/PermutationGraph.html"], StandardForm]], "Input", 
+                 TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$125732], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/Combinatorics/ref/PermutationGraph" <> ".html"], 
+              None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "1b6008e9-fe06-417d-8df9-403766a2d6aa"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "6f086059-80d7-484a-b50a-960ce2969166"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"f19946ad-39c5-479c-a7b7-b81f0573775c"],
+
+Cell["PeterBurbery`Combinatorics`", "ContextNameCell",ExpressionUUID->"163a48df-698b-4cbd-860e-589eceed86a1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "PermutationGraph", "ObjectName",ExpressionUUID->
+      "d80d563e-426b-4ab9-9cbd-e55417eecee5"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"063c81cf-a481-4022-9422-35f665f961d7"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "a34ddb08-87b5-4dac-aa6e-c22d6f56a66e"]
+    }],ExpressionUUID->"55c9d5fb-cf86-4472-97a3-cdafc1a3fcfa"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"375d133b-5a11-40fc-a046-\
+261765fb7d90"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["PermutationGraph"]], 
+         "paclet:PeterBurberyCombinatoricsPaclet/ref/PermutationGraph", 
+         "PeterBurberyCombinatoricsPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["p", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "695a2623-9b05-4fdb-b667-034e2f059586"],
+     "\[LineSeparator]gives the permutation graph for the permutation p."
+    }],ExpressionUUID->"e67ebedb-297e-40c5-948a-9c0d1f89ea67"]}
+  }]], "Usage",
+ CellID->169802703,ExpressionUUID->"6f61e52f-f5b1-427e-9e3c-9bcd2a781c10"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"f1f9b405-8d4f-4bbd-9ecc-923a9b359be7"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"c4e0d298-5b06-45e1-ad24-2dc98db6a415"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"102f9e2d-639a-4ffa-8fa2-0947c07df561"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"5f7c8b8d-9490-48d7-a0e0-2dc88e771799"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->528791804,ExpressionUUID->"cab30989-5afb-47d0-b6c8-b72414cf15d6"],
+
+Cell[TextData[{
+ "Vertices of a permutation graph represent the elements of a permutation; \
+edges represent pairs of elements that are ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["inversions"]], 
+    "https://mathworld.wolfram.com/PermutationInversion.html"},
+   "WebLink",
+   BaseStyle->{"Notes"}]],ExpressionUUID->
+  "fb214a11-5a06-4205-adf4-a3278bf9858f"],
+ " in the permutation."
+}], "Notes",
+ CellID->56412521,ExpressionUUID->"e97a6ece-98e7-43ce-85c5-a3b8efc9d62d"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["PermutationGraph", "ResourceFunctionName"]], "Text", 
+  "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "5196378d-6ba0-49ad-95fb-ab0a8e682801"],
+ " accepts the same options as ",
+ Cell[BoxData[
+  TagBox[
+   TemplateBox[{
+     Cell[
+      TextData[
+       StyleBox[
+       "Graph", "SymbolsRefLink", ShowStringCharacters -> True, FontFamily -> 
+        "Source Sans Pro"]]], "paclet:ref/Graph"},
+    "RefLink",
+    BaseStyle->{"InlineFormula"}],
+   MouseAppearanceTag["LinkHand"]]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "774fb2bd-9e83-4277-a149-75161112bfa0"],
+ "."
+}], "Notes",
+ CellID->613841248,ExpressionUUID->"e5407d8a-bebd-40f0-a558-9061a1e083ec"],
+
+Cell["The following options can be given: ", "Notes",
+ CellID->197092450,ExpressionUUID->"2ef56fe7-474f-40de-aa2f-1e4bc5c5601f"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "b2675b1c-7155-445e-a59f-27505d752ae5"], 
+    TemplateBox[{
+      Cell[
+       TextData["AlignmentPoint"]], "paclet:ref/AlignmentPoint"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Center"]], "paclet:ref/Center"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+AlignmentPoint is an option which specifies how objects should by default be \
+aligned when they appear in Inset.\
+\>", "TableText",ExpressionUUID->"609e1e63-7858-4290-a517-bfc4241aac3d"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "e9f5ccd1-b7ae-4cb4-b08c-9f36d2ecb6dd"], 
+    TemplateBox[{
+      Cell[
+       TextData["AnnotationRules"]], "paclet:ref/AnnotationRules"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+AnnotationRules is an option that allows specification of annotations to \
+objects and items in objects.\
+\>", "TableText",ExpressionUUID->"50a6eedb-a059-485d-b86f-7fca9be8ee65"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "dfc25ed5-0813-4e6a-8761-3d7d034b2d5f"], 
+    TemplateBox[{
+      Cell[
+       TextData["AspectRatio"]], "paclet:ref/AspectRatio"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+AspectRatio is an option for Graphics and related functions that specifies \
+the ratio of height to width for a plot. \
+\>", "TableText",ExpressionUUID->"2e089bd5-6544-476d-b234-8cf53b53fef9"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "0e5f5a02-4b73-4d76-bfe9-52f9be41e38f"], 
+    TemplateBox[{
+      Cell[
+       TextData["Axes"]], "paclet:ref/Axes"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["False"]], "paclet:ref/False"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+Axes is an option for graphics functions that specifies whether axes should \
+be drawn. \
+\>", "TableText",ExpressionUUID->"17ff2b4b-a2a6-4675-b114-3acfc4b537a5"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "19a3fcb3-6448-4cf9-b8af-d9cb3831778d"], 
+    TemplateBox[{
+      Cell[
+       TextData["AxesLabel"]], "paclet:ref/AxesLabel"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+AxesLabel is an option for graphics functions that specifies labels for axes. \
+\>", "TableText",ExpressionUUID->"8060c88b-6ea6-4c8a-b3af-dfc29360fd99"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "02ca0e5b-1fec-4428-aff5-ca5abadd8581"], 
+    TemplateBox[{
+      Cell[
+       TextData["AxesOrigin"]], "paclet:ref/AxesOrigin"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+AxesOrigin is an option for graphics functions that specifies where any axes \
+drawn should cross. \
+\>", "TableText",ExpressionUUID->"ffdd02d0-8e86-42b5-8eba-766bda631fa1"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "e9041ff4-af02-49b9-9a2d-d7a609b18343"], 
+    TemplateBox[{
+      Cell[
+       TextData["AxesStyle"]], "paclet:ref/AxesStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+AxesStyle is an option for graphics functions that specifies how axes should \
+be rendered. \
+\>", "TableText",ExpressionUUID->"21ca3733-ea9b-4186-9bfa-ad9eb24542ed"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "4cb778a1-6794-46df-986c-1186c749a39f"], 
+    TemplateBox[{
+      Cell[
+       TextData["Background"]], "paclet:ref/Background"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+Background is an option that specifies what background color to use. \
+\>", "TableText",ExpressionUUID->"0ba6a0e7-8a98-41f5-9fbc-ac40494eaa85"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "e1370ea0-c351-4fff-b716-e7824fa98149"], 
+    TemplateBox[{
+      Cell[
+       TextData["BaselinePosition"]], "paclet:ref/BaselinePosition"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+BaselinePosition is an option that specifies where the baseline of an object \
+is considered to be for purposes of alignment with surrounding text or other \
+expressions. \
+\>", "TableText",ExpressionUUID->"69cd1048-3c1d-4d67-ad3b-132dc1b972c0"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "39b4c056-9d50-4d0c-b3bb-ab14bae02ab8"], 
+    TemplateBox[{
+      Cell[
+       TextData["BaseStyle"]], "paclet:ref/BaseStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+BaseStyle is an option for formatting and related constructs that specifies \
+the base style to use for them. \
+\>", "TableText",ExpressionUUID->"92a955c8-f76e-43bc-b96e-716d1c4c2184"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "41e56eab-0339-4f81-91f6-bbae68e9ef0f"], 
+    TemplateBox[{
+      Cell[
+       TextData["ContentSelectable"]], "paclet:ref/ContentSelectable"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+ContentSelectable is an option to constructs such as Inset, Graphics, and \
+GraphicsGroup that specifies whether and how content within them should be \
+selectable. \
+\>", "TableText",ExpressionUUID->"0ccbcb7d-8508-4edd-86de-84b80dca7c57"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "ba3dbf8d-83e2-4aa6-be95-8f42ffee1915"], 
+    TemplateBox[{
+      Cell[
+       TextData["DirectedEdges"]], "paclet:ref/DirectedEdges"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+DirectedEdges is an option for Graph, GraphPlot, and related functions that \
+specifies whether edges should be taken to be directed.\
+\>", "TableText",ExpressionUUID->"b6f596c0-c6b9-4e34-aa8a-50dbcd3164c2"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "4ab846c0-2f2e-409c-8af5-d412cb984954"], 
+    TemplateBox[{
+      Cell[
+       TextData["EdgeCapacity"]], "paclet:ref/EdgeCapacity"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+EdgeCapacity is an option and annotation for Graph and related functions that \
+specifies an edge capacity.\
+\>", "TableText",ExpressionUUID->"8215c6f8-8880-4d2a-8823-bff6d316d263"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "448d1a55-8480-467d-aaea-6ef816babf07"], 
+    TemplateBox[{
+      Cell[
+       TextData["EdgeCost"]], "paclet:ref/EdgeCost"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+EdgeCost is an option and annotation for Graph and related functions that \
+specifies an edge cost.\
+\>", "TableText",ExpressionUUID->"5808a3ee-3b31-4624-84da-6a22a5a864d4"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "b78b3ddb-18f7-4722-adeb-80cc91ce164f"], 
+    TemplateBox[{
+      Cell[
+       TextData["EdgeLabels"]], "paclet:ref/EdgeLabels"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+EdgeLabels is an option and annotation for Graph and related functions that \
+specifies what labels and label positions should be used for edges. \
+\>", "TableText",ExpressionUUID->"327edbb2-e73f-489e-9947-c537545b338b"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "db516cac-329e-4b76-9ca3-8dc08fe2ac23"], 
+    TemplateBox[{
+      Cell[
+       TextData["EdgeLabelStyle"]], "paclet:ref/EdgeLabelStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+EdgeLabelStyle is an option and property for Graph and related functions that \
+specifies the style to use for edge labels.\
+\>", "TableText",ExpressionUUID->"195c4d83-3e4d-4141-a61d-bc96314435bf"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "597b88c1-321f-49e9-a62f-01c37db18a92"], 
+    TemplateBox[{
+      Cell[
+       TextData["EdgeShapeFunction"]], "paclet:ref/EdgeShapeFunction"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+EdgeShapeFunction is an option and annotation for Graph and related functions \
+that specifies a function to use to generate primitives for rendering each \
+edge. \
+\>", "TableText",ExpressionUUID->"714c2595-9ffb-4152-ac2d-ac9232287ec0"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "74fcec57-412b-4745-b5a7-4819d5468579"], 
+    TemplateBox[{
+      Cell[
+       TextData["EdgeStyle"]], "paclet:ref/EdgeStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+EdgeStyle is an option and annotation for Graph and related functions that \
+specifies what style to use for edges. \
+\>", "TableText",ExpressionUUID->"614f92a6-b013-4562-99d5-6f9b2bb769ea"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "72f9e59d-6451-454b-92b1-d3b8d2dc6280"], 
+    TemplateBox[{
+      Cell[
+       TextData["EdgeWeight"]], "paclet:ref/EdgeWeight"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+EdgeWeight is an option and annotation for Graph and related functions that \
+specifies an edge weight.\
+\>", "TableText",ExpressionUUID->"396da5a2-8e16-421a-9189-9755f50c3a3e"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "30afc553-b207-412e-9261-fd2ad97f518d"], 
+    TemplateBox[{
+      Cell[
+       TextData["Editable"]], "paclet:ref/Editable"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["False"]], "paclet:ref/False"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+Editable is an option for displayed objects, cells, and notebooks that \
+specifies whether their contents can be edited interactively using the front \
+end. \
+\>", "TableText",ExpressionUUID->"063861e6-9b51-43eb-9ab6-a85a6b7ffb26"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "8278f3b2-5c45-4511-b9a6-27bbcd0e3c30"], 
+    TemplateBox[{
+      Cell[
+       TextData["Epilog"]], "paclet:ref/Epilog"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+Epilog is an option for graphics functions that gives a list of graphics \
+primitives to be rendered after the main part of the graphics is rendered. \
+\>", "TableText",ExpressionUUID->"6c36d84f-0772-4f2d-a900-7aecc2aee0c2"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "d8f89db8-e317-49b1-835e-d68ac462a7c1"], 
+    TemplateBox[{
+      Cell[
+       TextData["FormatType"]], "paclet:ref/FormatType"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["TraditionalForm"]], "paclet:ref/TraditionalForm"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+FormatType is an option for output streams, graphics, and functions such as \
+Text that specifies the default format type to use when outputting \
+expressions. \
+\>", "TableText",ExpressionUUID->"8224d356-cb98-48cc-af2f-c8f3dd4639ce"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "9aed64cf-96c3-46aa-a7eb-1069053ddcff"], 
+    TemplateBox[{
+      Cell[
+       TextData["Frame"]], "paclet:ref/Frame"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["False"]], "paclet:ref/False"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+Frame is an option for Graphics, Grid, and other constructs that specifies \
+whether to include a frame. \
+\>", "TableText",ExpressionUUID->"d270b35f-0179-45ee-b439-830ae3890cef"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "8853c257-7b78-48bc-b525-7949bfc3db96"], 
+    TemplateBox[{
+      Cell[
+       TextData["FrameLabel"]], "paclet:ref/FrameLabel"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+FrameLabel is an option for Graphics, Manipulate, and related functions that \
+specifies labels to be placed on the edges of a frame. \
+\>", "TableText",ExpressionUUID->"15ae8c64-a088-4473-94d4-eb9e19b3736b"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "90997f7d-0fcf-4fcd-a3ed-f72137d6594e"], 
+    TemplateBox[{
+      Cell[
+       TextData["FrameStyle"]], "paclet:ref/FrameStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+FrameStyle is an option for Graphics, Grid, and other constructs that \
+specifies the style in which to draw frames.\
+\>", "TableText",ExpressionUUID->"1edcbd4b-c15b-4157-824a-acd3e11133e3"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "a910cf1c-c0f9-40cb-9b84-a0971420f85d"], 
+    TemplateBox[{
+      Cell[
+       TextData["FrameTicks"]], "paclet:ref/FrameTicks"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+FrameTicks is an option for 2D graphics functions that specifies tick marks \
+for the edges of a frame. \
+\>", "TableText",ExpressionUUID->"4200d986-9f7f-4b72-aef0-d9394daf998d"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "b6934947-8426-4a67-b7fa-c4b3d006658f"], 
+    TemplateBox[{
+      Cell[
+       TextData["FrameTicksStyle"]], "paclet:ref/FrameTicksStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+FrameTicksStyle is an option for 2D graphics functions that specifies how \
+frame ticks should be rendered.\
+\>", "TableText",ExpressionUUID->"37f8742e-8b89-466f-8ff6-531165b93224"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "55531737-3228-4942-8aa6-849c02f84e49"], 
+    TemplateBox[{
+      Cell[
+       TextData["GraphHighlight"]], "paclet:ref/GraphHighlight"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+GraphHighlight is an option to Graph and related objects that specifies graph \
+elements to highlight. \
+\>", "TableText",ExpressionUUID->"04a2730a-b330-4b8d-9c74-02e2037834a2"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "b5668326-2646-4e13-8542-9a55806fa3c7"], 
+    TemplateBox[{
+      Cell[
+       TextData["GraphHighlightStyle"]], "paclet:ref/GraphHighlightStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+GraphHighlightStyle is an option to Graph and related objects that specifies \
+styles to use for highlighted graph elements. \
+\>", "TableText",ExpressionUUID->"865701bf-916e-409f-8ff1-523cb1921780"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "d5f587f8-8f3c-4aff-8f38-b82b0a5fbda2"], 
+    TemplateBox[{
+      Cell[
+       TextData["GraphLayout"]], "paclet:ref/GraphLayout"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+GraphLayout is an option to Graph and related functions that specifies what \
+layout to use.\
+\>", "TableText",ExpressionUUID->"4421327e-0040-47c1-84f2-91e07bcea8d8"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "5e677ff9-1e43-4423-b744-ca302518cefc"], 
+    TemplateBox[{
+      Cell[
+       TextData["GraphStyle"]], "paclet:ref/GraphStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+GraphStyle is an option to Graph and related objects that specifies styles to \
+use for the different graph elements. \
+\>", "TableText",ExpressionUUID->"c1213f6a-f2d8-45a0-a5b3-a35395bff41b"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "b2950a3d-994a-4b31-a58d-8d6d0d05886b"], 
+    TemplateBox[{
+      Cell[
+       TextData["GridLines"]], "paclet:ref/GridLines"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+GridLines is an option for two-dimensional graphics functions that specifies \
+grid lines. \
+\>", "TableText",ExpressionUUID->"7472e33e-3bf9-494f-a0ef-4f84ed08dc55"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "e8c74cf5-6ee7-41b8-bf08-aac6e3036dc2"], 
+    TemplateBox[{
+      Cell[
+       TextData["GridLinesStyle"]], "paclet:ref/GridLinesStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+GridLinesStyle is an option for 2D graphics functions that specifies how grid \
+lines should be rendered.\
+\>", "TableText",ExpressionUUID->"abaad8af-dc55-41e3-894c-99692b77054b"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "5543d0f7-cd4c-46e1-8656-438b7d2b66ba"], 
+    TemplateBox[{
+      Cell[
+       TextData["ImageMargins"]], "paclet:ref/ImageMargins"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], "0.", Cell["\<\
+ImageMargins is an option that specifies the absolute margins to leave around \
+the image displayed for an object. \
+\>", "TableText",ExpressionUUID->"97f80662-e26e-44c8-84fa-5bc67af96a93"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "815f11ee-a857-4cbc-8cfe-8eeed2e3ab30"], 
+    TemplateBox[{
+      Cell[
+       TextData["ImagePadding"]], "paclet:ref/ImagePadding"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["All"]], "paclet:ref/All"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+ImagePadding is an option for graphics functions that specifies what absolute \
+extra padding should be left for extended objects such as thick lines and \
+annotations such as tick and axis labels.\
+\>", "TableText",ExpressionUUID->"6de5df6e-23a1-4058-8fd3-69e5ca7d64a1"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "80d96f8c-ff92-4d07-9adc-3edccee8c8d8"], 
+    TemplateBox[{
+      Cell[
+       TextData["ImageSize"]], "paclet:ref/ImageSize"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+ImageSize is an option that specifies the overall size of an image to display \
+for an object. \
+\>", "TableText",ExpressionUUID->"4055846a-881d-4baf-9724-71f62b675b78"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "355dc725-01d7-4e2e-8f4d-dac593636474"], 
+    TemplateBox[{
+      Cell[
+       TextData["LabelStyle"]], "paclet:ref/LabelStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+LabelStyle is an option for formatting and related constructs that specifies \
+the style to use in displaying their label-like elements. \
+\>", "TableText",ExpressionUUID->"97573d4a-e64d-4921-9ffd-60bb25adc3cb"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "eb080c0c-8306-4141-90b1-1dbb4c9d4406"], 
+    TemplateBox[{
+      Cell[
+       TextData["PerformanceGoal"]], "paclet:ref/PerformanceGoal"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PerformanceGoal is an option for various algorithmic and presentational \
+functions that specifies what aspect of performance to try to optimize with \
+Automatic settings for options.\
+\>", "TableText",ExpressionUUID->"427bd658-dcf1-4220-8d4f-2cfe12ef00f7"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "1ea607ad-1ded-4ff6-82a4-06b884b56a68"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotLabel"]], "paclet:ref/PlotLabel"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotLabel is an option for graphics functions that specifies an overall label \
+for a plot. \
+\>", "TableText",ExpressionUUID->"f0a1e370-f972-4822-9668-fc9f7347f548"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "572d24b1-0e03-4d47-a522-48818a1f901d"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotRange"]], "paclet:ref/PlotRange"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["All"]], "paclet:ref/All"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotRange is an option for graphics functions that specifies what range of \
+coordinates to include in a plot. \
+\>", "TableText",ExpressionUUID->"12c2d589-a8ac-48f1-b005-6f64c3c7c1b0"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "9f93ebda-4036-4658-b065-5c765f1f81b3"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotRangeClipping"]], "paclet:ref/PlotRangeClipping"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["False"]], "paclet:ref/False"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotRangeClipping is an option for graphics functions that specifies whether \
+graphics objects should be clipped at the edge of the region defined by \
+PlotRange, or should be allowed to extend to the actual edge of the image. \
+\>", "TableText",ExpressionUUID->"6302b0ac-d8f2-4b00-a8ad-7ed7aa8c5d00"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "5c736151-2de1-4abc-bfeb-f824c3c76575"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotRangePadding"]], "paclet:ref/PlotRangePadding"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotRangePadding is an option for graphics functions that specifies how much \
+further axes etc. should extend beyond the range of coordinates specified by \
+PlotRange. \
+\>", "TableText",ExpressionUUID->"a1a92bd1-d012-4d4a-9e5c-34d209d1f31b"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "4e2d4ce4-b30d-4e14-aad9-9c81fd7beeca"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotRegion"]], "paclet:ref/PlotRegion"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotRegion is an option for graphics functions that specifies what region of \
+the final display area a plot should fill. \
+\>", "TableText",ExpressionUUID->"b57da772-1acb-4645-b6dc-bdf4696f673b"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "322892f9-bfd7-402a-9094-c242b9e8249c"], 
+    TemplateBox[{
+      Cell[
+       TextData["PlotTheme"]], "paclet:ref/PlotTheme"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+PlotTheme is an option for plotting and related functions that specifies an \
+overall theme for visualization elements and styles. \
+\>", "TableText",ExpressionUUID->"086b2d6e-65aa-4307-924a-4cfe24429bcf"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "ff06d683-0a14-4950-93a1-e17ca53b3f51"], 
+    TemplateBox[{
+      Cell[
+       TextData["Prolog"]], "paclet:ref/Prolog"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+Prolog is an option for graphics functions which gives a list of graphics \
+primitives to be rendered before the main part of the graphics is rendered. \
+\>", "TableText",ExpressionUUID->"7901ab3e-5abc-4e13-a750-3b9b8653cdc4"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "16174d68-2f98-4625-815c-d2edb2e42e67"], 
+    TemplateBox[{
+      Cell[
+       TextData["Properties"]], "paclet:ref/Properties"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+Properties is an option that allows specification of properties to objects \
+and items of objects.\
+\>", "TableText",ExpressionUUID->"2773ef32-84ff-4b1f-a9f3-43ddeb4fa38f"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "8290c2e2-b71c-4c13-a7b0-ac786c67e593"], 
+    TemplateBox[{
+      Cell[
+       TextData["RotateLabel"]], "paclet:ref/RotateLabel"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["True"]], "paclet:ref/True"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+RotateLabel is an option for graphics and related functions that specifies \
+whether labels on vertical frame axes should be rotated to be vertical. \
+\>", "TableText",ExpressionUUID->"35e33d2a-761f-41a2-8fc0-1ae69565cde4"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "4023712c-814a-40c2-8066-920b3f5bdc7e"], 
+    TemplateBox[{
+      Cell[
+       TextData["Ticks"]], "paclet:ref/Ticks"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+Ticks is an option for graphics functions that specifies tick marks for axes. \
+\>", "TableText",ExpressionUUID->"69d61995-b649-4a5b-8e48-0a042458be6c"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "0c9a3186-f177-4e2b-8167-98f88d08bd47"], 
+    TemplateBox[{
+      Cell[
+       TextData["TicksStyle"]], "paclet:ref/TicksStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    RowBox[{"{", "}"}], Cell["\<\
+TicksStyle is an option for graphics functions which specifies how ticks \
+should be rendered.\
+\>", "TableText",ExpressionUUID->"5aae4d63-56f4-4f06-9215-ec9400f64386"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "fd8a1460-ef53-4de4-86f1-375c94f48d50"], 
+    TemplateBox[{
+      Cell[
+       TextData["VertexCapacity"]], "paclet:ref/VertexCapacity"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+VertexCapacity is an option and annotation for Graph and related functions \
+that specifies a vertex capacity.\
+\>", "TableText",ExpressionUUID->"5fc40412-e7ee-41ec-abec-5c553f4e6316"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "cbc11f26-f728-4ef7-8030-f8e8401b5251"], 
+    TemplateBox[{
+      Cell[
+       TextData["VertexCoordinates"]], "paclet:ref/VertexCoordinates"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+VertexCoordinates is an option to Graph and related functions that specifies \
+the coordinates to use to place the center of vertices.\
+\>", "TableText",ExpressionUUID->"c5492519-2b89-4b30-84ed-36ac225dd0d4"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "cb62cc74-e32a-4411-91fc-0801d6d80fcf"], 
+    TemplateBox[{
+      Cell[
+       TextData["VertexLabels"]], "paclet:ref/VertexLabels"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["None"]], "paclet:ref/None"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+VertexLabels is an option and annotation for Graph and related functions that \
+specifies what labels and label positions should be used for vertices.\
+\>", "TableText",ExpressionUUID->"49d5645f-3484-4846-9b19-7180afa356dc"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "62654302-9c3a-4be1-a6fa-3af7f86c7f50"], 
+    TemplateBox[{
+      Cell[
+       TextData["VertexLabelStyle"]], "paclet:ref/VertexLabelStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+VertexLabelStyle is an option and property for Graph and related functions \
+that specifies the style to use for vertex labels.\
+\>", "TableText",ExpressionUUID->"ba836861-f2b0-4977-8501-e0ef92eec81c"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "348547f8-d0f3-4a35-80b2-398221986619"], 
+    TemplateBox[{
+      Cell[
+       TextData["VertexShape"]], "paclet:ref/VertexShape"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+VertexShape is an option and property for Graph and related functions that \
+specifies the graphics used for vertices.\
+\>", "TableText",ExpressionUUID->"e6efc64c-2ea8-405d-a1c8-74e7986844fd"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "5f414c91-7e6f-4daa-8f0f-70abc218155d"], 
+    TemplateBox[{
+      Cell[
+       TextData["VertexShapeFunction"]], "paclet:ref/VertexShapeFunction"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+VertexShapeFunction is an option and annotation for Graph and related \
+functions that specifies a function to use to generate primitives for \
+rendering each vertex. \
+\>", "TableText",ExpressionUUID->"cdedf833-6f66-48d0-a425-f6f61809854d"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "f639c784-70a2-4ea6-9224-73776981ffed"], 
+    TemplateBox[{
+      Cell[
+       TextData["VertexSize"]], "paclet:ref/VertexSize"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+VertexSize is an option and property for Graph and related functions that \
+specifies the size used for vertices. \
+\>", "TableText",ExpressionUUID->"7a2d3d11-a4cc-45af-8c47-e816b0033a1f"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "0fd66c16-e361-4a1b-bc98-991115fe92ad"], 
+    TemplateBox[{
+      Cell[
+       TextData["VertexStyle"]], "paclet:ref/VertexStyle"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+VertexStyle is an option and annotation for Graph and related functions that \
+specifies what style to use for vertices. \
+\>", "TableText",ExpressionUUID->"9b0e62c3-641f-4ebd-96a5-eab582b91ad1"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "9ece489b-ec00-406a-b56b-d96837de3af8"], 
+    TemplateBox[{
+      Cell[
+       TextData["VertexWeight"]], "paclet:ref/VertexWeight"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], 
+    TemplateBox[{
+      Cell[
+       TextData["Automatic"]], "paclet:ref/Automatic"},
+     "RefLink",
+     BaseStyle->{"3ColumnTableMod"}], Cell["\<\
+VertexWeight is an option and annotation for Graph and related functions that \
+specifies a vertex weight.\
+\>", "TableText",ExpressionUUID->"79bcd7b2-2eda-48f4-8610-e474ed300574"]}
+  }]], "3ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, 
+   "Rows" -> {
+    None, None, None, None, None, None, None, None, None, None, None, None, 
+     None, None, None, None, None, None, None, None, None, None, None, None, 
+     None, None, None, None, None, None, None, None, None, None, None, None, 
+     None, None, None, None, None, None, None, None, None, None, None, None, 
+     None, None, None, None, None, None, None, None, None, {None}}},
+ GridBoxDividers->{
+  "Rows" -> {{
+     True, True, True, True, True, True, True, True, True, True, True, True, 
+      True, True, True, True, True, True, True, True, True, True, True, True, 
+      True, True, True, True, True, True, True, True, True, True, True, True, 
+      True, True, True, True, True, True, True, True, True, True, True, True, 
+      True, True, True, True, True, True, True, True, True, True, True}}}},
+ CellID->9222837,ExpressionUUID->"045949d7-317b-4ab0-ba86-dc1f8ab23233"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"4cc60e9b-6da2-4a49-b508-8687859acdaf"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"00f170b3-1576-42d1-aaba-cec5a2ae6744"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(4)", "ExampleCount",ExpressionUUID->
+  "524f0b25-f89f-44b4-8bd9-20a58a3c460d"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->33852055,ExpressionUUID->"38dd33d3-94b4-45ca-830f-7c8ec1dbdf87"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`Combinatorics`\>\"", "]"}]], "Input",\
+ "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->645656292,ExpressionUUID->"c4416280-e39d-4bb4-945f-df3b23c1346a"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"fca8b52b-6979-41ea-9d1a-0720e17c6c9f"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"8c3384ec-93c4-43a0-aa56-87526ee9fe29"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "29cbc73a-33fb-425d-9b71-c80313987abc"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->328960396,ExpressionUUID->"24b9e4ee-eefd-4ec3-aa62-8ff2655ecc90"],
+
+Cell["A permutation graph of a permutation:", "ExampleText",
+ CellID->394510661,ExpressionUUID->"1a487f75-a4bd-42d9-b67c-b52f5d3f172f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"g", "=", 
+  RowBox[{"PermutationGraph", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"4", ",", "3", ",", "5", ",", "1", ",", "2"}], "}"}], ",", 
+    RowBox[{"VertexLabels", "\[Rule]", "\"\<Name\>\""}]}], "]"}]}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->684675684,ExpressionUUID->"62102097-fea9-45e1-91bd-2672730e4390"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5}, {Null, 
+       SparseArray[
+       Automatic, {5, 5}, 0, {
+        1, {{0, 3, 6, 9, 12, 14}, {{3}, {4}, {5}, {3}, {4}, {5}, {1}, {2}, {
+          4}, {1}, {2}, {3}, {1}, {2}}}, Pattern}]}, {
+      VertexLabels -> {"Name"}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[0.], 
+        ArrowBox[{{{0.9453442817836237, 0.}, {1.7747546158044647`, 
+         0.1329240262086384}}, {{0.9453442817836237, 0.}, {
+         1.7748581433095891`, 0.8469139745790439}}, {{0.9453442817836237, 
+         0.}, {0., 0.4897913895683941}}, {{0.9450339392128104, 
+         0.9800041711673029}, {1.7747546158044647`, 0.1329240262086384}}, {{
+         0.9450339392128104, 0.9800041711673029}, {1.7748581433095891`, 
+         0.8469139745790439}}, {{0.9450339392128104, 0.9800041711673029}, {0.,
+          0.4897913895683941}}, {{1.7747546158044647`, 0.1329240262086384}, {
+         1.7748581433095891`, 0.8469139745790439}}}, 0.020758104437637037`]}, 
+       {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+        0.7]}], {DiskBox[{0.9453442817836237, 0.}, 0.020758104437637037], 
+         InsetBox["1", 
+          Offset[{2, 2}, {0.9661023862212608, 0.020758104437637037}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.9450339392128104, 0.9800041711673029}, 
+          0.020758104437637037], 
+         InsetBox["2", Offset[{2, 2}, {0.9657920436504475, 1.00076227560494}],
+           ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{1.7747546158044647`, 0.1329240262086384}, 
+          0.020758104437637037], 
+         InsetBox["3", 
+          Offset[{2, 2}, {1.7955127202421017, 0.15368213064627545}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{1.7748581433095891`, 0.8469139745790439}, 
+          0.020758104437637037], 
+         InsetBox["4", 
+          Offset[{2, 2}, {1.7956162477472262, 0.867672079016681}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0., 0.4897913895683941}, 0.020758104437637037], 
+         InsetBox["5", 
+          Offset[{2, 2}, {0.020758104437637037, 0.5105494940060311}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  FrameTicks->None,
+  ImageSize->{262., Automatic},
+  ImageSizeRaw->{524, 319}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->557928631,ExpressionUUID->"ce602039-df1f-4ba5-90d1-1ef842fc5918"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+  ExpressionUUID->"98758736-bb10-410f-a982-f5dbc6a5b8f2"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"34a7abc7-b405-455e-8a32-718ce3b088f5"],
+ "Properties & Relations",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount",ExpressionUUID->
+  "02db8ab8-a4cf-4fad-9689-3bb05ad35321"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->52182713,ExpressionUUID->"67576c4e-aba0-4aa5-b6f6-dc91ab11ea93"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TagBox[
+   TemplateBox[{
+     Cell[
+      TextData[
+       StyleBox[
+       "GraphComplement", "SymbolsRefLink", ShowStringCharacters -> True, 
+        FontFamily -> "Source Sans Pro"]]], "paclet:ref/GraphComplement"},
+    "RefLink",
+    BaseStyle->{"InlineFormula"}],
+   MouseAppearanceTag["LinkHand"]]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "e62c6e15-f4d1-41f2-8f77-0921984acbc4"],
+ " gives the permutation graph of the reverse permutation ",
+ Cell[BoxData[
+  StyleBox["p", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "881170fe-0f19-4096-b889-9ff87e74bf23"],
+ ":"
+}], "ExampleText",
+ CellID->634152368,ExpressionUUID->"47e4dabf-48d0-4d3e-8275-3a60293d7288"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"p", "=", 
+  RowBox[{
+   RowBox[{"RandomPermutation", "[", "7", "]"}], "//", 
+   "PermutationList"}]}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->357012813,ExpressionUUID->"690aaba5-db3b-4a67-b5a5-d960a15cd69a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2", ",", "6", ",", "5", ",", "1", ",", "4", ",", "3"}], 
+  "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->334917707,ExpressionUUID->"92fd0840-47a1-4e3b-8611-83737d03d279"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"GraphComplement", "[", 
+    RowBox[{"PermutationGraph", "[", 
+     RowBox[{"p", ",", 
+      RowBox[{"VertexLabels", "\[Rule]", "\"\<Name\>\""}]}], "]"}], "]"}], 
+   ",", 
+   RowBox[{"PermutationGraph", "[", 
+    RowBox[{
+     RowBox[{"Reverse", "[", "p", "]"}], ",", 
+     RowBox[{"VertexLabels", "->", "\"\<Name\>\""}]}], "]"}]}], 
+  "}"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->791027533,ExpressionUUID->"b06ae226-5897-498d-b5b7-195be8b7617e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{1, 2, 3, 4, 5, 6}, {Null, 
+         SparseArray[
+         Automatic, {6, 6}, 0, {
+          1, {{0, 2, 6, 8, 10, 11, 12}, {{3}, {4}, {3}, {4}, {5}, {6}, {1}, {
+            2}, {1}, {2}, {2}, {2}}}, Pattern}]}, {
+        GraphLayout -> {"Dimension" -> 2}, 
+         VertexCoordinates -> {{1.2055904025814863`, 0.3676850291614881}, {0.,
+           0.3675266089720074}, {3.1809210058732287`, 0.7350628037665233}, {
+          3.1813789578291374`, 0.}, {2.3213865659771136`, 
+          0.048119134740533476`}, {2.3222866398279525`, 0.6869385205217233}}, 
+         VertexLabels -> {"Name"}}]]}, 
+      TagBox[GraphicsGroupBox[{
+         {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[0.], 
+          ArrowBox[{{{1.2055904025814863`, 0.3676850291614881}, {
+           3.1809210058732287`, 0.7350628037665233}}, {{1.2055904025814863`, 
+           0.3676850291614881}, {3.1813789578291374`, 0.}}, {{0., 
+           0.3675266089720074}, {3.1809210058732287`, 0.7350628037665233}}, {{
+           0., 0.3675266089720074}, {3.1813789578291374`, 0.}}, {{0., 
+           0.3675266089720074}, {2.3213865659771136`, 
+           0.048119134740533476`}}, {{0., 0.3675266089720074}, {
+           2.3222866398279525`, 0.6869385205217233}}}, 0.03152626601202781]}, 
+         {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+          0.7]}], {
+           DiskBox[{1.2055904025814863`, 0.3676850291614881}, 
+            0.03152626601202781], 
+           InsetBox["1", 
+            Offset[{2, 2}, {1.2371166685935142, 0.3992112951735159}], 
+            ImageScaled[{0, 0}],
+            BaseStyle->"Graphics"]}, {
+           DiskBox[{0., 0.3675266089720074}, 0.03152626601202781], 
+           InsetBox["2", 
+            Offset[{2, 2}, {0.03152626601202781, 0.3990528749840352}], 
+            ImageScaled[{0, 0}],
+            BaseStyle->"Graphics"]}, {
+           DiskBox[{3.1809210058732287`, 0.7350628037665233}, 
+            0.03152626601202781], 
+           InsetBox["3", 
+            Offset[{2, 2}, {3.2124472718852566, 0.7665890697785511}], 
+            ImageScaled[{0, 0}],
+            BaseStyle->"Graphics"]}, {
+           DiskBox[{3.1813789578291374`, 0.}, 0.03152626601202781], 
+           InsetBox["4", 
+            Offset[{2, 2}, {3.2129052238411653, 0.03152626601202781}], 
+            ImageScaled[{0, 0}],
+            BaseStyle->"Graphics"]}, {
+           DiskBox[{2.3213865659771136`, 0.048119134740533476`}, 
+            0.03152626601202781], 
+           InsetBox["5", 
+            Offset[{2, 2}, {2.3529128319891415, 0.07964540075256128}], 
+            ImageScaled[{0, 0}],
+            BaseStyle->"Graphics"]}, {
+           DiskBox[{2.3222866398279525`, 0.6869385205217233}, 
+            0.03152626601202781], 
+           InsetBox["6", 
+            Offset[{2, 2}, {2.3538129058399804, 0.7184647865337511}], 
+            ImageScaled[{0, 0}],
+            BaseStyle->"Graphics"]}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->"NetworkGraphics",
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{1, 2, 3, 4, 5, 6}, {Null, 
+         SparseArray[
+         Automatic, {6, 6}, 0, {
+          1, {{0, 2, 6, 8, 10, 11, 12}, {{3}, {4}, {3}, {4}, {5}, {6}, {1}, {
+            2}, {1}, {2}, {2}, {2}}}, Pattern}]}, {
+        VertexLabels -> {"Name"}}]]}, 
+      TagBox[GraphicsGroupBox[{
+         {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[0.], 
+          ArrowBox[{{{0., 0.6917926778788832}, {0.7443993566608066, 
+           0.2166701900317204}}, {{0., 0.6917926778788832}, {
+           0.7441404069324791, 1.1672129403155407`}}, {{1.689061127826455, 
+           0.6919878976950589}, {0.7443993566608066, 0.2166701900317204}}, {{
+           1.689061127826455, 0.6919878976950589}, {0.7441404069324791, 
+           1.1672129403155407`}}, {{1.689061127826455, 0.6919878976950589}, {
+           2.4788507002067686`, 1.3833802483312843`}}, {{1.689061127826455, 
+           0.6919878976950589}, {2.4781706585228926`, 0.}}}, 
+           0.02638182482427877]}, 
+         {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+          0.7]}], {DiskBox[{0., 0.6917926778788832}, 0.02638182482427877], 
+           InsetBox["1", 
+            Offset[{2, 2}, {0.02638182482427877, 0.718174502703162}], 
+            ImageScaled[{0, 0}],
+            BaseStyle->"Graphics"]}, {
+           DiskBox[{1.689061127826455, 0.6919878976950589}, 
+            0.02638182482427877], 
+           InsetBox["2", 
+            Offset[{2, 2}, {1.7154429526507338, 0.7183697225193376}], 
+            ImageScaled[{0, 0}],
+            BaseStyle->"Graphics"]}, {
+           DiskBox[{0.7443993566608066, 0.2166701900317204}, 
+            0.02638182482427877], 
+           InsetBox["3", 
+            Offset[{2, 2}, {0.7707811814850853, 0.24305201485599914}], 
+            ImageScaled[{0, 0}],
+            BaseStyle->"Graphics"]}, {
+           DiskBox[{0.7441404069324791, 1.1672129403155407`}, 
+            0.02638182482427877], 
+           InsetBox["4", 
+            Offset[{2, 2}, {0.7705222317567578, 1.1935947651398195}], 
+            ImageScaled[{0, 0}],
+            BaseStyle->"Graphics"]}, {
+           DiskBox[{2.4788507002067686`, 1.3833802483312843`}, 
+            0.02638182482427877], 
+           InsetBox["5", 
+            Offset[{2, 2}, {2.5052325250310474, 1.4097620731555631}], 
+            ImageScaled[{0, 0}],
+            BaseStyle->"Graphics"]}, {
+           DiskBox[{2.4781706585228926`, 0.}, 0.02638182482427877], 
+           InsetBox["6", 
+            Offset[{2, 2}, {2.5045524833471715, 0.02638182482427877}], 
+            ImageScaled[{0, 0}],
+            BaseStyle->"Graphics"]}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->"NetworkGraphics",
+    FormatType->TraditionalForm,
+    FrameTicks->None]}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->76923133,ExpressionUUID->"d6e5d431-14e8-45bf-bf6d-2b302b3d1e01"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "35fb599f-5714-41d4-9d74-4187cab5dc4e"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->14107562,ExpressionUUID->"b2e72a4c-1f01-4fa5-bf4a-cc8d4f4e237d"],
+
+Cell["\<\
+The number of inversions in a permutation is equal to the number of edges in \
+its permutation graph:\
+\>", "ExampleText",
+ CellID->3442820,ExpressionUUID->"24b3ec89-464d-450a-a573-1d109929ca68"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"p", "=", 
+  RowBox[{
+   RowBox[{"RandomPermutation", "[", "10", "]"}], "//", 
+   "PermutationList"}]}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->760783621,ExpressionUUID->"20ee141b-09fb-47a6-ba05-b2a398d34ed4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "7", ",", "1", ",", "5", ",", "6", ",", "10", ",", "8", ",", "4", ",", "3", 
+   ",", "2", ",", "9"}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->645094527,ExpressionUUID->"c611cc24-3021-4313-92e9-a4c131c0f956"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"InversionCount", "[", "p", "]"}], ",", 
+   RowBox[{"EdgeCount", "[", 
+    RowBox[{"PermutationGraph", "[", "p", "]"}], "]"}]}], "}"}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->963609095,ExpressionUUID->"59c44c6d-0823-44f3-894e-25fa8eddd58f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"23", ",", "23"}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->527641856,ExpressionUUID->"96f3ffba-be5c-431e-8848-29f08f26e1ab"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "ba19827a-320c-4b83-aff8-724dbabc92ee"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->14107563,ExpressionUUID->"78a5b238-164e-4254-991d-0c4901e5f0a6"],
+
+Cell["\<\
+Every clique in a permutation graph corresponds to a decreasing sequence in \
+the corresponding permutation:\
+\>", "ExampleText",
+ CellID->787144369,ExpressionUUID->"c6f82e78-c461-47a7-a0a0-835126050164"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"p", "=", 
+  RowBox[{
+   RowBox[{"RandomPermutation", "[", "10", "]"}], "//", 
+   "PermutationList"}]}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[1]:=",
+ CellID->155355774,ExpressionUUID->"b6949eec-d5ef-448b-8ee7-b400dfeeb89e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "10", ",", "5", ",", "3", ",", "9", ",", "8", ",", "4", ",", "7", 
+   ",", "6", ",", "2"}], "}"}]], "Output",
+ CellLabel->"Out[1]=",
+ CellID->38823376,ExpressionUUID->"24bc3d24-f548-443c-8722-c49b9e52cb4e"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", "=", 
+   RowBox[{"PermutationGraph", "[", "p", "]"}]}], ";"}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[2]:=",
+ CellID->131268586,ExpressionUUID->"41b90b8c-cf6c-4e71-9fc0-55b9cb008c0e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Reverse", "/@", 
+  RowBox[{"FindClique", "[", 
+   RowBox[{"g", ",", "Infinity", ",", "All"}], "]"}]}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[3]:=",
+ CellID->308772786,ExpressionUUID->"28297adc-2fd4-4065-b5d7-1aaf6f4272d4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"10", ",", "9", ",", "8", ",", "7", ",", "6", ",", "2"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "9", ",", "8", ",", "4", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "5", ",", "4", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "5", ",", "3", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", "1", "}"}]}], "}"}]], "Output",
+ CellLabel->"Out[3]=",
+ CellID->438923677,ExpressionUUID->"955a7b32-e9ff-4530-a53e-967fcfee9bd2"]
+}, Open  ]],
+
+Cell["\<\
+A maximum-size clique corresponds to one of the longest decreasing sequences:\
+\>", "ExampleText",
+ CellID->813561420,ExpressionUUID->"7c6b1cc2-de53-4af1-93ba-c5f85879ffc6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FindClique", "[", "g", "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[4]:=",
+ CellID->824896176,ExpressionUUID->"bc4d9880-d1fc-4bc6-9496-3686231e86fa"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"2", ",", "6", ",", "7", ",", "8", ",", "9", ",", "10"}], "}"}], 
+  "}"}]], "Output",
+ CellLabel->"Out[4]=",
+ CellID->292875,ExpressionUUID->"3affb7e3-f13d-48a6-8f87-cf632d88cc52"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HighlightGraph", "[", 
+  RowBox[{"g", ",", "%", ",", 
+   RowBox[{"VertexSize", "\[Rule]", "Medium"}], ",", 
+   RowBox[{"VertexLabels", "\[Rule]", "\"\<Name\>\""}]}], "]"}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`Combinatorics`"],
+ CellLabel->"In[5]:=",
+ CellID->102871644,ExpressionUUID->"cfd49f66-90c9-4adf-8b25-c9e997d28ac7"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, {Null, 
+       SparseArray[
+       Automatic, {10, 10}, 0, {
+        1, {{0, 0, 8, 11, 16, 20, 25, 30, 36, 42, 50}, {{3}, {4}, {5}, {6}, {
+          7}, {8}, {9}, {10}, {2}, {5}, {10}, {2}, {5}, {8}, {9}, {10}, {2}, {
+          3}, {4}, {10}, {2}, {7}, {8}, {9}, {10}, {2}, {6}, {8}, {9}, {10}, {
+          2}, {4}, {6}, {7}, {9}, {10}, {2}, {4}, {6}, {7}, {8}, {10}, {2}, {
+          3}, {4}, {5}, {6}, {7}, {8}, {9}}}, Pattern}]}, {
+      VertexLabels -> {
+        10 -> "Name", 2 -> "Name", 6 -> "Name", 8 -> "Name", 7 -> "Name", 9 -> 
+         "Name"}, 
+       VertexSize -> {
+        9 -> Medium, 2 -> Medium, 7 -> Medium, 6 -> Medium, 10 -> Medium, 8 -> 
+         Medium}, GraphHighlight -> {6, 7, 9, 2, 8, 10}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[0.], 
+        ArrowBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGImKE5YbrGvcP9X+w1zPPavePpo/4HFjyb/Uzhv72Bh
+9W5r3+X96PL5koUSEbmf7U8INSx35/+DIa+iMa3p8orL9j9k1vbXi37GkOda
+tM86tpfRAWoPhrzH6RPr1f6yOHxrENU2yXiOIV9QxXDjYRmjgwp/8uvuY98x
+5OU3Zk69ks3gkBCze79n2AcM+R/ebTccnb/aX5Q7GTXX6AOGf9Hdjy6Prh89
+PND1o8ujux9dHt396PLo9qPbhy6PHt7o4Ysuj+4+dHl096HLo9uPbh+6+ejy
+6Oajy6Obj24eun50eXT96OrR5QE0bKmd
+         "], 0.02562509687247287]}, 
+       {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+        DiskBox[{0.2431944105240103, -2.240119265286678}, 
+         0.02562509687247287], {
+         {Hue[1, 1, 0.7], EdgeForm[{Hue[1, 1, 0.7], Opacity[1]}], 
+          DiskBox[{1.359239333202332, -0.5905345664986239}, 
+           0.04229107417092293]}, 
+         InsetBox["2", 
+          Offset[{2, 2}, {1.4015304073732548, -0.548243492327701}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, 
+        DiskBox[{0.24319441052401025`, -0.3055853678168923}, 
+         0.02562509687247287], 
+        DiskBox[{1.214195342517623, -1.7537304442386574`}, 
+         0.02562509687247287], 
+        DiskBox[{0.3071793341883924, -1.1927486049988243`}, 
+         0.02562509687247287], {
+         {Hue[1, 1, 0.7], EdgeForm[{Hue[1, 1, 0.7], Opacity[1]}], 
+          DiskBox[{2.1940254848052563`, -0.24319441052401025`}, 
+           0.04229107417092293]}, 
+         InsetBox["6", 
+          Offset[{2, 2}, {2.236316558976179, -0.20090333635308733}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         {Hue[1, 1, 0.7], EdgeForm[{Hue[1, 1, 0.7], Opacity[1]}], 
+          DiskBox[{2.623608945193528, -0.7314701882824284}, 
+           0.04229107417092293]}, 
+         InsetBox["7", 
+          Offset[{2, 2}, {2.6659000193644506, -0.6891791141115055}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         {Hue[1, 1, 0.7], EdgeForm[{Hue[1, 1, 0.7], Opacity[1]}], 
+          DiskBox[{2.1830479502817113`, -1.4859732813647009`}, 
+           0.04229107417092293]}, 
+         InsetBox["8", 
+          Offset[{2, 2}, {2.225339024452634, -1.443682207193778}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         {Hue[1, 1, 0.7], EdgeForm[{Hue[1, 1, 0.7], Opacity[1]}], 
+          DiskBox[{2.0526515648727037`, -1.0210664262320037`}, 
+           0.04229107417092293]}, 
+         InsetBox["9", 
+          Offset[{2, 2}, {2.0949426390436265, -0.9787753520610808}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         {Hue[1, 1, 0.7], EdgeForm[{Hue[1, 1, 0.7], Opacity[1]}], 
+          DiskBox[{1.3289202173225458`, -1.0123570963204893`}, 
+           0.04229107417092293]}, 
+         InsetBox["10", 
+          Offset[{2, 2}, {1.3712112914934687, -0.9700660221495664}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  FrameTicks->None,
+  ImageSize->{257., Automatic},
+  ImageSizeRaw->{514, 394}]], "Output",
+ CellLabel->"Out[5]=",
+ CellID->541033400,ExpressionUUID->"7bbf500e-4f48-4355-b330-2f046dce2846"]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[{
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Permutations"]], "paclet:ref/Permutations"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",ExpressionUUID->
+         "0f925bb7-10ae-45e5-89dc-a097f3bff569"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Graph"]], "paclet:ref/Graph"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"8639f44a-75e4-4550-b656-bfe374c51d4e",ExpressionUUID->
+         "fa75cd99-c628-45db-a091-00ca1006d39c"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["FindClique"]], "paclet:ref/FindClique"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"26dc9ef9-5983-48e0-8445-b5adfd358d4f",ExpressionUUID->
+         "c7fa3711-7241-45e5-bae4-3ca51c6052d3"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["GraphComplement"]], "paclet:ref/GraphComplement"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"b84eb289-e203-4ec8-8444-63314e32faab",ExpressionUUID->
+         "3960bf70-0219-4270-bb85-fe53f5bf0245"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["InversionCount"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/InversionCount", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"0a63499c-bef7-4396-b78e-5422004d49bd",ExpressionUUID->
+         "a3d71b84-9c24-46fd-87cf-20c312232e3e"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["SelectPermutations"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/SelectPermutations", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"c214e5a8-87e7-417d-a73b-1310fbbb2cb4",ExpressionUUID->
+         "78cc0f68-56ff-4905-866e-d18da18236a0"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["PermutationCountByInversions"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/\
+PermutationCountByInversions", "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"b58939ea-169a-4455-b523-26323686a1ec",ExpressionUUID->
+         "65cdea66-63fd-412a-bc89-749c24769106"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["PermutationCountByInversions"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/\
+PermutationCountByInversions", "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"07cc832e-5475-4de9-83b2-93e90e3ab2d7",ExpressionUUID->
+         "561939a0-80a5-4240-9354-a86062c583fc"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["PermutationIndex"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/PermutationIndex", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"bc867bbc-34ad-4863-947a-500c85c2c66c",ExpressionUUID->
+         "9b460823-5aa9-4815-bd40-ae9a1a6718de"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["ToInversionVector"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/ToInversionVector", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"91511da7-be82-448e-a1f9-8574d1e873b8",ExpressionUUID->
+         "bdbbbbab-ffa2-4648-9144-41724bae1226"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["InversionVectorQ"]], 
+           "paclet:PeterBurbery/Combinatorics/ref/InversionVectorQ", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"2730630e-f3e0-42d6-b275-7b6ce0547b0e",ExpressionUUID->
+         "fa6158dc-1ae0-42ed-b595-d171c5d5c298"]
+       }], "SeeAlso",ExpressionUUID->"39e51f57-e771-451f-867b-c6a616646040"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"1714adee-af06-416a-a2ae-\
+26938efbf5b0"],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Combinatorics"]], 
+           "paclet:PeterBurbery/Combinatorics/guide/Combinatorics"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "5fda82a4-7a11-4539-9cfb-eb4428392252"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"7fd7c019-135c-4904-a8bb-\
+2aba8e3be761"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[{
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData[
+             Cell[
+              TextData[{
+                Cell[
+                 BoxData[
+                  DynamicBox[
+                   FEPrivate`ImportImage[
+                    
+                    FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+                    "RelatedLinks-FunctionRepository.png"]]]]], 
+                Cell[
+                 BoxData[
+                  TemplateBox[{4}, "Spacer1"]]], "PermutationGraph"}]]]], 
+           "https://resources.wolframcloud.com/FunctionRepository/resources/\
+PermutationGraph"},
+          "WebLink",
+          BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+         "8240c051-38c7-4fac-94eb-90f8164a7ce5"],
+        " Resource Function contributed by Wolfram Staff (original content by \
+Sriram V. Pemmaraju and Steven S. Skiena)"
+       }], "RelatedLinks",ExpressionUUID->
+        "8ca8f22c-3c5c-4c93-82ef-2c939f198ec2"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"6a78483a-5a9a-4396-8035-\
+5c43ef133eff"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"4a9ce5ed-5809-4d13-b620-66816e455a50"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"PermutationGraph",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, 
+    "ExampleSection" -> {"0" -> Open, "2" -> Closed}, "NotesSection" -> 
+    Closed}, "NewStyles" -> True, "CitationPopupData" -> $Failed, 
+  "ShowCitation" -> False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 7, 29, 17, 28, 52.2990774}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`Combinatorics`", "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Peter Burbery/ Combinatorics Symbol", "language" -> "en", "paclet" -> 
+    "PeterBurbery/Combinatorics", "status" -> "None", "summary" -> 
+    "PermutationGraph[p] gives the permutation graph for the permutation p.", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> "PermutationGraph", 
+    "titlemodifier" -> "", "metadescription" -> "", "windowtitle" -> 
+    "PermutationGraph", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/Combinatorics/ref/PermutationGraph"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (June 3, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"47a59a45-ff46-4d8b-a017-609b7cab0435"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[46624, 1175, 1419, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"38dd33d3-94b4-45ca-830f-7c8ec1dbdf87",
+   CellTags->"PrimaryExamplesSection",
+   CellID->33852055]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 82983, 2117}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[588, 21, 7329, 170, 56, "AnchorBarGrid",ExpressionUUID->"f19946ad-39c5-479c-a7b7-b81f0573775c",
+ CellID->1],
+Cell[7920, 193, 109, 0, 23, "ContextNameCell",ExpressionUUID->"163a48df-698b-4cbd-860e-589eceed86a1"],
+Cell[CellGroupData[{
+Cell[8054, 197, 559, 14, 56, "ObjectNameGrid",ExpressionUUID->"375d133b-5a11-40fc-a046-261765fb7d90"],
+Cell[8616, 213, 739, 17, 111, "Usage",ExpressionUUID->"6f61e52f-f5b1-427e-9e3c-9bcd2a781c10",
+ CellID->169802703]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9392, 235, 1919, 48, 37, "NotesSection",ExpressionUUID->"cab30989-5afb-47d0-b6c8-b72414cf15d6",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->528791804],
+Cell[11314, 285, 485, 13, 70, "Notes",ExpressionUUID->"e97a6ece-98e7-43ce-85c5-a3b8efc9d62d",
+ CellID->56412521],
+Cell[11802, 300, 754, 22, 70, "Notes",ExpressionUUID->"e5407d8a-bebd-40f0-a558-9061a1e083ec",
+ CellID->613841248],
+Cell[12559, 324, 128, 1, 70, "Notes",ExpressionUUID->"2ef56fe7-474f-40de-aa2f-1e4bc5c5601f",
+ CellID->197092450],
+Cell[12690, 327, 33807, 842, 70, "3ColumnTableMod",ExpressionUUID->"045949d7-317b-4ab0-ba86-dc1f8ab23233",
+ CellID->9222837]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[46624, 1175, 1419, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"38dd33d3-94b4-45ca-830f-7c8ec1dbdf87",
+ CellTags->"PrimaryExamplesSection",
+ CellID->33852055],
+Cell[48046, 1214, 217, 4, 26, "Input",ExpressionUUID->"c4416280-e39d-4bb4-945f-df3b23c1346a",
+ CellID->645656292],
+Cell[CellGroupData[{
+Cell[48288, 1222, 1398, 36, 30, "ExampleSection",ExpressionUUID->"24b9e4ee-eefd-4ec3-aa62-8ff2655ecc90",
+ CellID->328960396],
+Cell[49689, 1260, 135, 1, 38, "ExampleText",ExpressionUUID->"1a487f75-a4bd-42d9-b67c-b52f5d3f172f",
+ CellID->394510661],
+Cell[CellGroupData[{
+Cell[49849, 1265, 417, 10, 26, "Input",ExpressionUUID->"62102097-fea9-45e1-91bd-2672730e4390",
+ CellID->684675684],
+Cell[50269, 1277, 2739, 57, 179, "Output",ExpressionUUID->"ce602039-df1f-4ba5-90d1-1ef842fc5918",
+ CellID->557928631]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[53157, 1342, 1428, 37, 30, "ExampleSection",ExpressionUUID->"67576c4e-aba0-4aa5-b6f6-dc91ab11ea93",
+ CellID->52182713],
+Cell[54588, 1381, 771, 21, 70, "ExampleText",ExpressionUUID->"47e4dabf-48d0-4d3e-8275-3a60293d7288",
+ CellID->634152368],
+Cell[CellGroupData[{
+Cell[55384, 1406, 301, 7, 70, "Input",ExpressionUUID->"690aaba5-db3b-4a67-b5a5-d960a15cd69a",
+ CellID->357012813],
+Cell[55688, 1415, 214, 5, 35, "Output",ExpressionUUID->"92fd0840-47a1-4e3b-8611-83737d03d279",
+ CellID->334917707]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55939, 1425, 568, 15, 70, "Input",ExpressionUUID->"b06ae226-5897-498d-b5b7-195be8b7617e",
+ CellID->791027533],
+Cell[56510, 1442, 6217, 129, 70, "Output",ExpressionUUID->"d6e5d431-14e8-45bf-bf6d-2b302b3d1e01",
+ CellID->76923133]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62764, 1576, 241, 5, 70, "ExampleDelimiter",ExpressionUUID->"b2e72a4c-1f01-4fa5-bf4a-cc8d4f4e237d",
+ CellID->14107562],
+Cell[63008, 1583, 205, 4, 70, "ExampleText",ExpressionUUID->"24b3ec89-464d-450a-a573-1d109929ca68",
+ CellID->3442820],
+Cell[CellGroupData[{
+Cell[63238, 1591, 302, 7, 70, "Input",ExpressionUUID->"20ee141b-09fb-47a6-ba05-b2a398d34ed4",
+ CellID->760783621],
+Cell[63543, 1600, 259, 6, 35, "Output",ExpressionUUID->"c611cc24-3021-4313-92e9-a4c131c0f956",
+ CellID->645094527]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[63839, 1611, 363, 9, 70, "Input",ExpressionUUID->"59c44c6d-0823-44f3-894e-25fa8eddd58f",
+ CellID->963609095],
+Cell[64205, 1622, 173, 4, 35, "Output",ExpressionUUID->"96f3ffba-be5c-431e-8848-29f08f26e1ab",
+ CellID->527641856]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64427, 1632, 241, 5, 70, "ExampleDelimiter",ExpressionUUID->"78a5b238-164e-4254-991d-0c4901e5f0a6",
+ CellID->14107563],
+Cell[64671, 1639, 214, 4, 70, "ExampleText",ExpressionUUID->"c6f82e78-c461-47a7-a0a0-835126050164",
+ CellID->787144369],
+Cell[CellGroupData[{
+Cell[64910, 1647, 302, 7, 70, "Input",ExpressionUUID->"b6949eec-d5ef-448b-8ee7-b400dfeeb89e",
+ CellID->155355774],
+Cell[65215, 1656, 258, 6, 35, "Output",ExpressionUUID->"24bc3d24-f548-443c-8722-c49b9e52cb4e",
+ CellID->38823376]
+}, Open  ]],
+Cell[65488, 1665, 278, 7, 70, "Input",ExpressionUUID->"41b90b8c-cf6c-4e71-9fc0-55b9cb008c0e",
+ CellID->131268586],
+Cell[CellGroupData[{
+Cell[65791, 1676, 303, 7, 70, "Input",ExpressionUUID->"28297adc-2fd4-4065-b5d7-1aaf6f4272d4",
+ CellID->308772786],
+Cell[66097, 1685, 539, 14, 35, "Output",ExpressionUUID->"955a7b32-e9ff-4530-a53e-967fcfee9bd2",
+ CellID->438923677]
+}, Open  ]],
+Cell[66651, 1702, 183, 3, 70, "ExampleText",ExpressionUUID->"7c6b1cc2-de53-4af1-93ba-c5f85879ffc6",
+ CellID->813561420],
+Cell[CellGroupData[{
+Cell[66859, 1709, 228, 4, 70, "Input",ExpressionUUID->"bc4d9880-d1fc-4bc6-9496-3686231e86fa",
+ CellID->824896176],
+Cell[67090, 1715, 236, 6, 35, "Output",ExpressionUUID->"3affb7e3-f13d-48a6-8f87-cf632d88cc52",
+ CellID->292875]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[67363, 1726, 373, 8, 70, "Input",ExpressionUUID->"cfd49f66-90c9-4adf-8b25-c9e997d28ac7",
+ CellID->102871644],
+Cell[67739, 1736, 4126, 87, 70, "Output",ExpressionUUID->"7bbf500e-4f48-4355-b330-2f046dce2846",
+ CellID->541033400]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[72119, 1833, 6758, 175, 70, "SeeAlsoSection",ExpressionUUID->"1714adee-af06-416a-a2ae-26938efbf5b0"],
+Cell[78880, 2010, 740, 19, 70, "MoreAboutSection",ExpressionUUID->"7fd7c019-135c-4904-a8bb-2aba8e3be761"],
+Cell[79623, 2031, 1327, 38, 70, "RelatedLinksSection",ExpressionUUID->"6a78483a-5a9a-4396-8035-5c43ef133eff"],
+Cell[80953, 2071, 78, 0, 70, "FooterCell",ExpressionUUID->"4a9ce5ed-5809-4d13-b620-66816e455a50"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
