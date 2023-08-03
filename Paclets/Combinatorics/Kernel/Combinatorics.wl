@@ -2,19 +2,15 @@
 
 (**)
 
-
-
 (* ::Section:: *)
-(*Package Header*)
 
+(*Package Header*)
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-
-
 (* ::Text:: *)
-(*Declare your public symbols here:*)
 
+(*Declare your public symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset;
 
@@ -196,15 +192,13 @@ PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-
-
 (* ::Section:: *)
+
 (*Definitions*)
 
-
 (* ::Text:: *)
-(*Define your public and private symbols here:*)
 
+(*Define your public and private symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -900,13 +894,19 @@ PartitionPlusNotation[partition_List ? (VectorQ[#, MatchQ[#, _Integer
     ?IntegerQ]&]&)] :=
     Inactive[Plus] @@ partition
 
-
 PartitionRank // ClearAll
 
 PartitionRank::usage = "PartitionRank[x] gives the difference of the largest part of the partition x and the number of parts of x.\n";
 
 PartitionRank[x_] :=
     First @ x - Length @ x /; IntegerPartitionQ @ x
+
+PartitionSuperscriptNotation // ClearAll
+
+PartitionSuperscriptNotation::usage = "PartitionSuperscriptNotation[partition] represents partition with superscript notation.";
+
+PartitionSuperscriptNotation[partition_] :=
+    Row[KeyValueMap[Superscript][Counts[partition]]]
 
 PermutationAscents // ClearAll
 
@@ -1288,6 +1288,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
                                     
                                     
                                     
@@ -1890,11 +1891,9 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-
-
 (* ::Section:: *)
-(*Package Footer*)
 
+(*Package Footer*)
 
 End[]
 
