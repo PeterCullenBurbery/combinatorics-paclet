@@ -96,6 +96,10 @@ PeterBurbery`Combinatorics`MultisetPartialDerangements;
 
 PeterBurbery`Combinatorics`MultisetStrictAscentElements;
 
+PeterBurbery`Combinatorics`MultisetStrictDescents;
+
+PeterBurbery`Combinatorics`MultisetStrictDescentElements;
+
 PeterBurbery`Combinatorics`NarayanaNumber;
 
 PeterBurbery`Combinatorics`NextPermutation;
@@ -765,12 +769,10 @@ MultisetStrictDescents[perm_] :=
 
 MultisetStrictDescentElements // ClearAll
 
-MultisetStrictDescentElements::usage = 
-  "MultisetStrictDescentElements[perm] gives the elements that \
-compose the descents in the multiset perm.";
+MultisetStrictDescentElements::usage = "MultisetStrictDescentElements[perm] gives the elements that compose the descents in the multiset perm.";
 
-MultisetStrictDescentElements[perm_] := 
- Extract[Partition[perm, 2, 1], MultisetStrictDescents[perm]]
+MultisetStrictDescentElements[perm_] :=
+    Extract[Partition[perm, 2, 1], MultisetStrictDescents[perm]]
 
 NarayanaNumber // ClearAll
 
@@ -1345,6 +1347,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
                                     
                                     
                                     
