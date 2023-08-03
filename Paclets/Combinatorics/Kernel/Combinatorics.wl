@@ -1332,6 +1332,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     
                                     
                                     
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -1885,6 +1886,35 @@ UnsignedLahNumber::usage = "UnsignedLahNumber[n,k] gives the unsigned Lah number
 
 UnsignedLahNumber[n_, k_] :=
     Binomial[n - 1, k - 1] n! / k!
+
+YoungDiagram // ClearAll
+
+YoungDiagram::usage = "YoungDiagram[\[Lambda]] gives a Young diagram for the partition \[Lambda] with empty boxes.";
+
+YoungDiagram[list_] :=
+    Grid[
+        ConstantArray["", #]& /@ list
+        ,
+        Frame ->
+            Join[
+                {None}
+                ,
+                {None}
+                ,
+                {
+                    Flatten[
+                        With[{cc = Range @ #& /@ list},
+                            Table[Flatten[{nn, #} -> True& /@ cc[[nn]],
+                                 1], {nn, Length @ cc}]
+                        ]
+                        ,
+                        1
+                    ]
+                }
+            ]
+        ,
+        ItemSize -> {1.5, 1.5}
+    ]
 
 ZeckendorfRepresentation // ClearAll
 
