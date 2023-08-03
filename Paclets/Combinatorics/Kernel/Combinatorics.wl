@@ -757,6 +757,15 @@ MultisetStrictDescents::usage = "MultisetStrictDescents[perm] gives the strict d
 MultisetStrictDescents[perm_] :=
     Position[(#1 > #2&) @@@ Partition[perm, 2, 1], True]
 
+MultisetStrictDescentElements // ClearAll
+
+MultisetStrictDescentElements::usage = 
+  "MultisetStrictDescentElements[perm] gives the elements that \
+compose the descents in the multiset perm.";
+
+MultisetStrictDescentElements[perm_] := 
+ Extract[Partition[perm, 2, 1], MultisetStrictDescents[perm]]
+
 NarayanaNumber // ClearAll
 
 SetAttributes[NarayanaNumber, {Listable, NumericFunction}]
