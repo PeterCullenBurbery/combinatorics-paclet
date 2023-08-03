@@ -2,15 +2,19 @@
 
 (**)
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Package Header*)
+
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-(* ::Text:: *)
 
+
+(* ::Text:: *)
 (*Declare your public symbols here:*)
+
 
 PeterBurbery`Combinatorics`CanonicalMultiset;
 
@@ -110,6 +114,8 @@ PeterBurbery`Combinatorics`PartitionPlusNotation;
 
 PeterBurbery`Combinatorics`PartitionRank;
 
+PeterBurbery`Combinatorics`PartitionSuperscriptNotation;
+
 PeterBurbery`Combinatorics`PermutationAscents;
 
 PeterBurbery`Combinatorics`PermutationCountByInversions;
@@ -192,13 +198,15 @@ PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Definitions*)
 
-(* ::Text:: *)
 
+(* ::Text:: *)
 (*Define your public and private symbols here:*)
+
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -1301,6 +1309,8 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     
                                     
                                     
+                                    
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -1891,9 +1901,11 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Package Footer*)
+
 
 End[]
 
