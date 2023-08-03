@@ -24,7 +24,7 @@ Begin["`Private`"];
 
 PermutationDescents // ClearAll
 
-PermutationDescents::usage = "PermutationDescents[perm] gives the indices i where p_i>p_{i+1}, where the permutation p={p_1,p_2,...,p_n} is given as a list of integers.";
+PermutationDescents::usage = "PermutationDescents[perm] gives the descents of the permutation perm.";
 
 PermutationDescents[p_] :=
     Reverse[Length @ p - PermutationAscents @ Reverse @ p]
