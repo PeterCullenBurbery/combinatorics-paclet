@@ -2,19 +2,15 @@
 
 (**)
 
-
-
 (* ::Section:: *)
-(*Package Header*)
 
+(*Package Header*)
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-
-
 (* ::Text:: *)
-(*Declare your public symbols here:*)
 
+(*Declare your public symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset;
 
@@ -206,15 +202,13 @@ PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-
-
 (* ::Section:: *)
+
 (*Definitions*)
 
-
 (* ::Text:: *)
-(*Define your public and private symbols here:*)
 
+(*Define your public and private symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -983,7 +977,7 @@ PermutationCountByInversions[n_Integer, k_Integer?Positive] :=
 
 PermutationDescents // ClearAll
 
-PermutationDescents::usage = "PermutationDescents[perm] gives the indices i where p_i>p_{i+1}, where the permutation p={p_1,p_2,...,p_n} is given as a list of integers.";
+PermutationDescents::usage = "PermutationDescents[perm] gives the descents of the permutation perm.";
 
 PermutationDescents[p_] :=
     Reverse[Length @ p - PermutationAscents @ Reverse @ p]
@@ -1329,6 +1323,8 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
+                                    
                                     
                                     
                                     
@@ -1970,11 +1966,9 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-
-
 (* ::Section:: *)
-(*Package Footer*)
 
+(*Package Footer*)
 
 End[]
 
