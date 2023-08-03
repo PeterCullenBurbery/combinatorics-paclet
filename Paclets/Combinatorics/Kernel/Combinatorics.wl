@@ -94,6 +94,8 @@ PeterBurbery`Combinatorics`MultisetCardinality;
 
 PeterBurbery`Combinatorics`MultisetPartialDerangements;
 
+PeterBurbery`Combinatorics`MultisetStrictAscentElements;
+
 PeterBurbery`Combinatorics`NarayanaNumber;
 
 PeterBurbery`Combinatorics`NextPermutation;
@@ -746,6 +748,14 @@ MultisetPartialDerangements[set_, Optional[numberOfFixedPoints_, 0],
 MultisetPartialDerangements[args___] :=
     Null /; CheckArguments[MultisetPartialDerangements[args], {1, 3}]
 
+MultisetStrictAscentElements // ClearAll
+
+MultisetStrictAscentElements::usage = "MultisetStrictAscentElements[multiset] returns the pairs elements that at the positions of the ascents of multiset.";
+
+MultisetStrictAscentElements[multiset_] :=
+    Extract[Partition[multiset, 2, 1], MultisetStrictAscents[multiset
+        ]]
+
 NarayanaNumber // ClearAll
 
 SetAttributes[NarayanaNumber, {Listable, NumericFunction}]
@@ -1319,6 +1329,8 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
+                                    
                                     
                                     
                                     
