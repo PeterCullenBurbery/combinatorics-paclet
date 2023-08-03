@@ -4,3 +4,11 @@ FindAscentElements::usage = "FindAscentElements[multi] returns the sets of adjac
 
 FindAscentElements[multiset_] :=
     Extract[Partition[multiset, 2, 1], FindAscentPositions[multiset]]
+
+FindAscentElements[multiset_, PerformanceGoal -> "Speed"] :=
+    Extract[Partition[multiset, 2, 1], FindAscentPositions[multiset, 
+        PerformanceGoal -> "Speed"]]
+
+FindAscentElements[multiset_, PerformanceGoal -> "Memory"] :=
+    Extract[Partition[multiset, 2, 1], FindAscentPositions[multiset, 
+        PerformanceGoal -> "Memory"]]

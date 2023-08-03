@@ -30,7 +30,7 @@ PermutationAscents//ClearAll
 
 PermutationAscents::usage="PermutationAscents[p] gives the indices i where p_i<p_i+1, where the permutation p={p_1, p_2, \[Ellipsis], p_n} is written as a list.";
 
-PermutationAscents[p_] := Select[-1 + Range[Length[p]], p[[#1]] < p[[#1 + 1]] & ] /; PermutationListQ[p]
+PermutationAscents[p_] := Select[-1 + Range[Length[p]], p[[#1]] < p[[#1 + 1]] & ] (*/; PermutationListQ[p]*)(*I commented this out so this would work with inputs like {2,4,5} and {2,2,4,5}*)
 
 
 (* ::Section::Closed:: *)

@@ -46,6 +46,8 @@ PeterBurbery`Combinatorics`FibonacciEncode;
 
 PeterBurbery`Combinatorics`FindAscentElements;
 
+PeterBurbery`Combinatorics`FindAscentPositions;
+
 PeterBurbery`Combinatorics`FrobeniusSymbolFromPartition;
 
 PeterBurbery`Combinatorics`FromInversionVector;
@@ -435,6 +437,29 @@ FindAscentElements::usage = "FindAscentElements[multi] returns the sets of adjac
 
 FindAscentElements[multiset_] :=
     Extract[Partition[multiset, 2, 1], FindAscentPositions[multiset]]
+
+FindAscentElements[multiset_, PerformanceGoal -> "Speed"] :=
+    Extract[Partition[multiset, 2, 1], FindAscentPositions[multiset, 
+        PerformanceGoal -> "Speed"]]
+
+FindAscentElements[multiset_, PerformanceGoal -> "Memory"
+    ] :=
+    Extract[Partition[multiset, 2, 1], FindAscentPositions[multiset, 
+        PerformanceGoal -> "Memory"]]
+
+FindAscentPositions // ClearAll
+
+FindAscentPositions::usage = "FindAscentPositions[multi] finds the positions of ascents in the multiset multi.";
+
+FindAscentPositions[multiset_] :=
+    Position[Less @@@ Partition[multiset, 2, 1], True]
+
+FindAscentPositions[multiset_, PerformanceGoal -> "Speed"] :=
+    Position[Less @@@ Partition[multiset, 2, 1], True]
+
+FindAscentPositions[multiset_, PerformanceGoal -> "Memory"] :=
+    List /@ Select[-1 + Range[Length[multiset]], multiset[[#1]] < multiset
+        [[#1 + 1]]&]
 
 (* (* slower, but uses less memory *)
 FibonacciEncode[{n_Integer?Positive}]:=NestWhileList[nextFibonacciEncode,1,#<=n&,1,Infinity,-1]*)
@@ -1356,6 +1381,12 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
                                     
                                     
                                     
