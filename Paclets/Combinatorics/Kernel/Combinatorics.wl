@@ -44,6 +44,8 @@ PeterBurbery`Combinatorics`Fibbinary;
 
 PeterBurbery`Combinatorics`FibonacciEncode;
 
+PeterBurbery`Combinatorics`FindAscentElements;
+
 PeterBurbery`Combinatorics`FrobeniusSymbolFromPartition;
 
 PeterBurbery`Combinatorics`FromInversionVector;
@@ -426,6 +428,13 @@ FibonacciEncode[{n_Integer?Positive}] :=
     With[{r = Range[n]},
         Pick[r, BitAnd[r, 2 r], 0]
     ]
+
+FindAscentElements // ClearAll
+
+FindAscentElements::usage = "FindAscentElements[multi] returns the sets of adjacent elements in the multiset multi where the second element of the set of adjacent elements is greater than the first element of the set of adjacent elements.";
+
+FindAscentElements[multiset_] :=
+    Extract[Partition[multiset, 2, 1], FindAscentPositions[multiset]]
 
 (* (* slower, but uses less memory *)
 FibonacciEncode[{n_Integer?Positive}]:=NestWhileList[nextFibonacciEncode,1,#<=n&,1,Infinity,-1]*)
@@ -1347,6 +1356,8 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
+                                    
                                     
                                     
                                     
