@@ -2,19 +2,15 @@
 
 (**)
 
-
-
 (* ::Section:: *)
-(*Package Header*)
 
+(*Package Header*)
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-
-
 (* ::Text:: *)
-(*Declare your public symbols here:*)
 
+(*Declare your public symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset;
 
@@ -206,15 +202,13 @@ PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-
-
 (* ::Section:: *)
+
 (*Definitions*)
 
-
 (* ::Text:: *)
-(*Define your public and private symbols here:*)
 
+(*Define your public and private symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -755,6 +749,13 @@ MultisetStrictAscentElements::usage = "MultisetStrictAscentElements[multiset] re
 MultisetStrictAscentElements[multiset_] :=
     Extract[Partition[multiset, 2, 1], MultisetStrictAscents[multiset
         ]]
+
+MultisetStrictDescents // ClearAll
+
+MultisetStrictDescents::usage = "MultisetStrictDescents[perm] gives the strict descents of the permutation perm.";
+
+MultisetStrictDescents[perm_] :=
+    Position[(#1 > #2&) @@@ Partition[perm, 2, 1], True]
 
 NarayanaNumber // ClearAll
 
@@ -1329,6 +1330,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
                                     
                                     
                                     
@@ -1972,11 +1974,9 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-
-
 (* ::Section:: *)
-(*Package Footer*)
 
+(*Package Footer*)
 
 End[]
 
