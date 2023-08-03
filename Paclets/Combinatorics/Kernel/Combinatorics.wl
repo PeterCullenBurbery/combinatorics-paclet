@@ -2,19 +2,15 @@
 
 (**)
 
-
-
 (* ::Section:: *)
-(*Package Header*)
 
+(*Package Header*)
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-
-
 (* ::Text:: *)
-(*Declare your public symbols here:*)
 
+(*Declare your public symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset;
 
@@ -47,6 +43,8 @@ PeterBurbery`Combinatorics`FibonacciEncode;
 PeterBurbery`Combinatorics`FrobeniusSymbolFromPartition;
 
 PeterBurbery`Combinatorics`FromInversionVector;
+
+PeterBurbery`Combinatorics`FromPartitionPlusNotation;
 
 PeterBurbery`Combinatorics`GaussFactorial;
 
@@ -198,15 +196,13 @@ PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-
-
 (* ::Section:: *)
+
 (*Definitions*)
 
-
 (* ::Text:: *)
-(*Define your public and private symbols here:*)
 
+(*Define your public and private symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -438,6 +434,16 @@ FromInversionVector[vec_ ? (InversionVectorQ)] :=
         Do[p = Insert[p, i, vec[[i]] + 1], {i, n - 1, 1, -1}];
         p
     ]
+
+FromPartitionPlusNotation // ClearAll
+
+FromPartitionPlusNotation::usage = "FromPartitionPlusNotation[\[Lambda]] returns a list of weakly decreasing integers representing the integer partition \[Lambda] written in partition plus notation.";
+
+FromPartitionPlusNotation[\[Lambda]_Integer?IntegerQ] :=
+    {\[Lambda]}
+
+FromPartitionPlusNotation[\[Lambda]_] :=
+    List @@ \[Lambda]
 
 GaussFactorial // ClearAll
 
@@ -1311,6 +1317,8 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     
                                     
                                     
+                                    
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -1901,11 +1909,9 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-
-
 (* ::Section:: *)
-(*Package Footer*)
 
+(*Package Footer*)
 
 End[]
 
