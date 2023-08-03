@@ -2,19 +2,15 @@
 
 (**)
 
-
-
 (* ::Section:: *)
-(*Package Header*)
 
+(*Package Header*)
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-
-
 (* ::Text:: *)
-(*Declare your public symbols here:*)
 
+(*Declare your public symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset;
 
@@ -49,6 +45,8 @@ PeterBurbery`Combinatorics`FrobeniusSymbolFromPartition;
 PeterBurbery`Combinatorics`FromInversionVector;
 
 PeterBurbery`Combinatorics`FromPartitionPlusNotation;
+
+PeterBurbery`Combinatorics`FromPartitionSuperscriptNotation;
 
 PeterBurbery`Combinatorics`GaussFactorial;
 
@@ -200,15 +198,13 @@ PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-
-
 (* ::Section:: *)
+
 (*Definitions*)
 
-
 (* ::Text:: *)
-(*Define your public and private symbols here:*)
 
+(*Define your public and private symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -450,6 +446,13 @@ FromPartitionPlusNotation[\[Lambda]_Integer?IntegerQ] :=
 
 FromPartitionPlusNotation[\[Lambda]_] :=
     List @@ \[Lambda]
+
+FromPartitionSuperscriptNotation // ClearAll
+
+FromPartitionSuperscriptNotation::usage = "FromPartitionSuperscriptNotation[\[Lambda]] goes from \[Lambda] represented with partition superscript notation to \[Lambda] represented as a weakly decreasing list of strictly positive integers.";
+
+FromPartitionSuperscriptNotation[\[Lambda]_] :=
+    Catenate[ConstantArray @@@ Identity @@ \[Lambda]]
 
 GaussFactorial // ClearAll
 
@@ -1325,6 +1328,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     
                                     
                                     
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -1915,11 +1919,9 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-
-
 (* ::Section:: *)
-(*Package Footer*)
 
+(*Package Footer*)
 
 End[]
 
