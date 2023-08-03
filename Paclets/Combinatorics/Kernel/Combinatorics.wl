@@ -110,6 +110,8 @@ PeterBurbery`Combinatorics`PartitionCrank;
 
 PeterBurbery`Combinatorics`PartitionFromFrobeniusSymbol;
 
+PeterBurbery`Combinatorics`PartitionPlusNotation;
+
 PeterBurbery`Combinatorics`PartitionRank;
 
 PeterBurbery`Combinatorics`PermutationAscents;
@@ -884,6 +886,20 @@ PartitionFromFrobeniusSymbol[f_] :=
                 Reverse[-1 + Range @ d], 0]]
         ] /; MatrixQ @ f && Length @ f == 2 && IntegerPartitionQ[First
              @ f + 1] && IntegerPartitionQ[Last @ f + 1]
+
+PartitionPlusNotation // ClearAll
+
+(*SetAttributes[PartitionPlusNotation,{Listable}]*)
+
+PartitionPlusNotation::usage = "PartitionPlusNotation[partition] displays partition in plus notation.";
+
+PartitionPlusNotation[{p_Integer?IntegerQ}] :=
+    p
+
+PartitionPlusNotation[partition_List ? (VectorQ[#, MatchQ[#, _Integer
+    ?IntegerQ]&]&)] :=
+    Inactive[Plus] @@ partition
+
 
 PartitionRank // ClearAll
 
