@@ -98,8 +98,6 @@ PeterBurbery`Combinatorics`MultisetCardinality;
 
 PeterBurbery`Combinatorics`MultisetPartialDerangements;
 
-PeterBurbery`Combinatorics`MultisetStrictAscentElements;
-
 PeterBurbery`Combinatorics`MultisetStrictDescents;
 
 PeterBurbery`Combinatorics`MultisetStrictDescentElements;
@@ -129,8 +127,6 @@ PeterBurbery`Combinatorics`PartitionPlusNotation;
 PeterBurbery`Combinatorics`PartitionRank;
 
 PeterBurbery`Combinatorics`PartitionSuperscriptNotation;
-
-PeterBurbery`Combinatorics`PermutationAscents;
 
 PeterBurbery`Combinatorics`PermutationCountByInversions;
 
@@ -1001,14 +997,6 @@ PartitionSuperscriptNotation::usage = "PartitionSuperscriptNotation[partition] r
 PartitionSuperscriptNotation[partition_] :=
     Row[KeyValueMap[Superscript][Counts[partition]]]
 
-PermutationAscents // ClearAll
-
-PermutationAscents::usage = "PermutationAscents[p] gives the indices i where p_i<p_i+1, where the permutation p={p_1, p_2, \[Ellipsis], p_n} is written as a list.";
-
-PermutationAscents[p_] :=
-    Select[-1 + Range[Length[p]], p[[#1]] < p[[#1 + 1]]&] /; PermutationListQ[
-        p]
-
 PermutationCountByInversions // ClearAll
 
 PermutationCountByInversions::usage = "PermutationCountByInversions[n, k] gives the number of permutations of length n with exactly k inversions.\nPermutationCountByInversions[n] gives a List for all k starting at zero.";
@@ -1038,7 +1026,7 @@ PermutationDescents // ClearAll
 PermutationDescents::usage = "PermutationDescents[perm] gives the descents of the permutation perm.";
 
 PermutationDescents[p_] :=
-    Reverse[Length @ p - PermutationAscents @ Reverse @ p]
+    Reverse[Length @ p - FindAscentPositions @ Reverse @ p]
 
 PermutationFromIndex // ClearAll
 

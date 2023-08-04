@@ -27,7 +27,7 @@ PermutationDescents // ClearAll
 PermutationDescents::usage = "PermutationDescents[perm] gives the descents of the permutation perm.";
 
 PermutationDescents[p_] :=
-    Reverse[Length @ p - PermutationAscents @ Reverse @ p]
+    Reverse[Length @ p - FindAscentPositions @ Reverse @ p]
 
 (* ::Section::Closed:: *)
 
