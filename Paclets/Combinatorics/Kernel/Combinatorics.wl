@@ -460,6 +460,22 @@ FindAscentPositions[multiset_, PerformanceGoal -> "Memory"] :=
     List /@ Select[-1 + Range[Length[multiset]], multiset[[#1]] < multiset
         [[#1 + 1]]&]
 
+FindDescentElements // ClearAll
+
+FindDescentElements::usage = "FindDescentElements[multi] returns the sets of adjacent elements in the multiset multi where the second element of the set of adjacent elements is less than the first element of the set of adjacent elements.";
+
+FindDescentElements[multiset_] :=
+    Extract[Partition[multiset, 2, 1], FindDescentPositions[multiset]
+        ]
+
+FindDescentElements[multiset_, PerformanceGoal -> "Speed"] :=
+    Extract[Partition[multiset, 2, 1], FindDescentPositions[multiset,
+         PerformanceGoal -> "Speed"]]
+
+FindDescentElements[multiset_, PerformanceGoal -> "Memory"] :=
+    Extract[Partition[multiset, 2, 1], FindDescentPositions[multiset,
+         PerformanceGoal -> "Memory"]]
+
 FindDescentPositions // ClearAll
 
 FindDescentPositions::usage = "FindDescentPositions[multi] finds the positions of descents in the multiset multi.";
@@ -1386,6 +1402,9 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
+                                    
+                                    
                                     
                                     
                                     
