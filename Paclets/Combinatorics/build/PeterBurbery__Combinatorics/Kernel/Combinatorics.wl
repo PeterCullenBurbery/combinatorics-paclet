@@ -1,197 +1,20 @@
 (* ::Package:: *)
 
-(* <<PeterBurbery`Combinatorics`CanonicalMultiset`;
-
-<<PeterBurbery`Combinatorics`CentralBinomialCoefficient`;
-
-<<PeterBurbery`Combinatorics`ConjugatePartition`;
-
-<<PeterBurbery`Combinatorics`DescendingSublists`;
-
-<<PeterBurbery`Combinatorics`DivisorHasseDiagram`;
-
-<<PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`;
-
-<<PeterBurbery`Combinatorics`DurfeeSquare`;
-
-<<PeterBurbery`Combinatorics`EnumerateMultisetPartialDerangements`;
-
-<<PeterBurbery`Combinatorics`EulerianCatalanNumber`;
-
-<<PeterBurbery`Combinatorics`EulerianNumber`;
-
-<<PeterBurbery`Combinatorics`EulerianNumberOfTheSecondKind`;
-
-<<PeterBurbery`Combinatorics`FerrersDiagram`;
-
-<<PeterBurbery`Combinatorics`Fibbinary`;
-
-<<PeterBurbery`Combinatorics`FibonacciEncode`;
-
-<<PeterBurbery`Combinatorics`FrobeniusSymbolFromPartition`;
-
-<<PeterBurbery`Combinatorics`FromInversionVector`;
-
-<<PeterBurbery`Combinatorics`GaussFactorial`;
-
-<<PeterBurbery`Combinatorics`GrayCode`;
-
-<<PeterBurbery`Combinatorics`HasseDiagram`;
-
-<<PeterBurbery`Combinatorics`HookLengths`;
-
-<<PeterBurbery`Combinatorics`HuffmanCodeWords`;
-
-<<PeterBurbery`Combinatorics`HuffmanDecode`;
-
-<<PeterBurbery`Combinatorics`HuffmanEncode`;
-
-<<PeterBurbery`Combinatorics`IntegerPartitionQ`;
-
-<<PeterBurbery`Combinatorics`InverseFibonacci`;
-
-<<PeterBurbery`Combinatorics`InverseGrayCode`;
-
-<<PeterBurbery`Combinatorics`InversionCount`;
-
-<<PeterBurbery`Combinatorics`InversionVectorQ`;
-
-<<PeterBurbery`Combinatorics`LehmerCodeFromIndex`;
-
-<<PeterBurbery`Combinatorics`LehmerCodeFromPermutation`;
-
-<<PeterBurbery`Combinatorics`LucasNumberU1`;
-
-<<PeterBurbery`Combinatorics`LucasNumberV2`;
-
-<<PeterBurbery`Combinatorics`Multichoose`;
-
-<<PeterBurbery`Combinatorics`MultisetAssociation`;
-
-<<PeterBurbery`Combinatorics`MultisetCardinality`;
-
-<<PeterBurbery`Combinatorics`MultisetPartialDerangements`;
-
-<<PeterBurbery`Combinatorics`NarayanaNumber`;
-
-<<PeterBurbery`Combinatorics`NDigitNumbers`;
-
-<<PeterBurbery`Combinatorics`NextPermutation`;
-
-<<PeterBurbery`Combinatorics`NumberOfTableaux`;
-
-<<PeterBurbery`Combinatorics`OrderedTupleFromIndex`;
-
-<<PeterBurbery`Combinatorics`OrderedTupleIndex`;
-
-<<PeterBurbery`Combinatorics`OrderlessCombinations`;
-
-<<PeterBurbery`Combinatorics`OrderlessCombinationsOfUnmarkedElements`;
-
-<<PeterBurbery`Combinatorics`PartialDerangements`;
-
-<<PeterBurbery`Combinatorics`PartialOrderGraphQ`;
-
-<<PeterBurbery`Combinatorics`PartitionCrank`;
-
-<<PeterBurbery`Combinatorics`PartitionFromFrobeniusSymbol`;
-
-<<PeterBurbery`Combinatorics`PartitionRank`;
-
-<<PeterBurbery`Combinatorics`PermutationAscents`;
-
-<<PeterBurbery`Combinatorics`PermutationCountByInversions`;
-
-<<PeterBurbery`Combinatorics`PermutationFromIndex`;
-
-<<PeterBurbery`Combinatorics`PermutationFromLehmerCode`;
-
-<<PeterBurbery`Combinatorics`PermutationGraph`;
-
-<<PeterBurbery`Combinatorics`PermutationIndex`;
-
-<<PeterBurbery`Combinatorics`PermutationMajorIndex`;
-
-<<PeterBurbery`Combinatorics`PermutationToTableaux`;
-
-<<PeterBurbery`Combinatorics`Phitorial`;
-
-<<PeterBurbery`Combinatorics`PosetQ`;
-
-<<PeterBurbery`Combinatorics`PosetToTableau`;
-
-<<PeterBurbery`Combinatorics`Primorial`;
-
-<<PeterBurbery`Combinatorics`QExponential`;
-
-<<PeterBurbery`Combinatorics`QMultinomial`;
-
-<<PeterBurbery`Combinatorics`RandomSelfConjugatePartition`;
-
-<<PeterBurbery`Combinatorics`RandomYoungTableau`;
-
-<<PeterBurbery`Combinatorics`RationalNumberRepeatingDecimalPeriod`;
-
-<<PeterBurbery`Combinatorics`ReflexiveGraphQ`;
-
-<<PeterBurbery`Combinatorics`SecantNumber`;
-
-<<PeterBurbery`Combinatorics`SelectPermutations`;
-
-<<PeterBurbery`Combinatorics`SelectSubsets`;
-
-<<PeterBurbery`Combinatorics`SelectTuples`;
-
-<<PeterBurbery`Combinatorics`SelfConjugatePartitionQ`;
-
-<<PeterBurbery`Combinatorics`SignedLahNumber`;
-
-<<PeterBurbery`Combinatorics`StandardYoungTableaux`;
-
-<<PeterBurbery`Combinatorics`SubsetFromIndex`;
-
-<<PeterBurbery`Combinatorics`SubsetIndex`;
-
-<<PeterBurbery`Combinatorics`TableauQ`;
-
-<<PeterBurbery`Combinatorics`TableauToPoset`;
-
-<<PeterBurbery`Combinatorics`TableauxToPermutation`;
-
-<<PeterBurbery`Combinatorics`TangentNumber`;
-
-<<PeterBurbery`Combinatorics`ToInversionVector`;
-
-<<PeterBurbery`Combinatorics`TransitiveGraphQ`;
-
-<<PeterBurbery`Combinatorics`TransposeTableau`;
-
-<<PeterBurbery`Combinatorics`TupleFromIndex`;
-
-<<PeterBurbery`Combinatorics`TupleIndex`;
-
-<<PeterBurbery`Combinatorics`UnsignedLahNumber`;
-
-<<PeterBurbery`Combinatorics`ZeckendorfRepresentation`; *)
-
-(* ::Package:: *)
-
 (**)
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Package Header*)
+
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-(* ::Text:: *)
 
+
+(* ::Text:: *)
 (*Declare your public symbols here:*)
 
-(*PacletDirectoryLoad[NotebookDirectory[]]
-
-Get /@ Cases[Except[NotebookFileName[]]]@FileNames[All, NotebookDirectory[]]
-*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset;
 
@@ -221,9 +44,17 @@ PeterBurbery`Combinatorics`Fibbinary;
 
 PeterBurbery`Combinatorics`FibonacciEncode;
 
+PeterBurbery`Combinatorics`FindAscentElements;
+
+PeterBurbery`Combinatorics`FindAscentPositions;
+
 PeterBurbery`Combinatorics`FrobeniusSymbolFromPartition;
 
 PeterBurbery`Combinatorics`FromInversionVector;
+
+PeterBurbery`Combinatorics`FromPartitionPlusNotation;
+
+PeterBurbery`Combinatorics`FromPartitionSuperscriptNotation;
 
 PeterBurbery`Combinatorics`GaussFactorial;
 
@@ -257,6 +88,8 @@ PeterBurbery`Combinatorics`LucasNumberU1;
 
 PeterBurbery`Combinatorics`LucasNumberV2;
 
+PeterBurbery`Combinatorics`ModifiedCentralBinomialCoefficient;
+
 PeterBurbery`Combinatorics`Multichoose;
 
 PeterBurbery`Combinatorics`MultisetAssociation;
@@ -264,6 +97,10 @@ PeterBurbery`Combinatorics`MultisetAssociation;
 PeterBurbery`Combinatorics`MultisetCardinality;
 
 PeterBurbery`Combinatorics`MultisetPartialDerangements;
+
+PeterBurbery`Combinatorics`MultisetStrictDescents;
+
+PeterBurbery`Combinatorics`MultisetStrictDescentElements;
 
 PeterBurbery`Combinatorics`NarayanaNumber;
 
@@ -285,11 +122,15 @@ PeterBurbery`Combinatorics`PartitionCrank;
 
 PeterBurbery`Combinatorics`PartitionFromFrobeniusSymbol;
 
+PeterBurbery`Combinatorics`PartitionPlusNotation;
+
 PeterBurbery`Combinatorics`PartitionRank;
 
-PeterBurbery`Combinatorics`PermutationAscents;
+PeterBurbery`Combinatorics`PartitionSuperscriptNotation;
 
 PeterBurbery`Combinatorics`PermutationCountByInversions;
+
+PeterBurbery`Combinatorics`PermutationDescents;
 
 PeterBurbery`Combinatorics`PermutationFromIndex;
 
@@ -337,6 +178,8 @@ PeterBurbery`Combinatorics`SignedLahNumber;
 
 PeterBurbery`Combinatorics`StandardYoungTableaux;
 
+PeterBurbery`Combinatorics`StrictIntegerPartitions;
+
 PeterBurbery`Combinatorics`SubsetFromIndex;
 
 PeterBurbery`Combinatorics`SubsetIndex;
@@ -361,219 +204,21 @@ PeterBurbery`Combinatorics`TupleIndex;
 
 PeterBurbery`Combinatorics`UnsignedLahNumber;
 
+PeterBurbery`Combinatorics`YoungDiagram;
+
 PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Definitions*)
 
-(* ::Text:: *)
 
+(* ::Text:: *)
 (*Define your public and private symbols here:*)
 
-(*CompoundExpression@@{AppendTo[CloudExpression["monitoring list"],DateObject[]],PacletDirectoryLoad["C:\\Users\\Peter\\AppData\\Roaming\\Mathematica\\Paclets\\Repository\\PeterBurbery__Combinatorics-2.0.5"](*NotebookDirectory[]*),Get/@Cases[Except["C:\\Users\\Peter\\AppData\\Roaming\\Mathematica\\Paclets\\Repository\\PeterBurbery__Combinatorics-2.0.5\\Combinatorics.wl"]]@FileNames[All,"C:\\Users\\Peter\\AppData\\Roaming\\Mathematica\\Paclets\\Repository\\PeterBurbery__Combinatorics-2.0.5"],Null}*)
-
-(* 
-PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
-
-PeterBurbery`Combinatorics`CanonicalMultiset::usage = "CanonicalMultiset[multiset] replaces all elements in multiset with integers.";
-
-PeterBurbery`Combinatorics`CanonicalMultiset[PeterBurbery`Combinatorics`CanonicalMultiset`Private`multiset_
-    ] :=
-    Module[{PeterBurbery`Combinatorics`CanonicalMultiset`Private`multisetSupport
-        },
-        PeterBurbery`Combinatorics`CanonicalMultiset`Private`multisetSupport
-             = Union[PeterBurbery`Combinatorics`CanonicalMultiset`Private`multiset
-            ];
-        PeterBurbery`Combinatorics`CanonicalMultiset`Private`multiset
-             /. Thread[PeterBurbery`Combinatorics`CanonicalMultiset`Private`multisetSupport
-             -> Range[Length[PeterBurbery`Combinatorics`CanonicalMultiset`Private`multisetSupport
-            ]]]
-    ]
-
-PeterBurbery`Combinatorics`CentralBinomialCoefficient // ClearAll
-
-SetAttributes[PeterBurbery`Combinatorics`CentralBinomialCoefficient, 
-    {NumericFunction, Listable}]
-
-PeterBurbery`Combinatorics`CentralBinomialCoefficient::usage = "CentralBinomialCoefficient[n] calculates the nth central binomial coefficient.";
-
-PeterBurbery`Combinatorics`CentralBinomialCoefficient[PeterBurbery`Combinatorics`CentralBinomialCoefficient`Private`n_
-    ] :=
-    Binomial[2 PeterBurbery`Combinatorics`CentralBinomialCoefficient`Private`n,
-         PeterBurbery`Combinatorics`CentralBinomialCoefficient`Private`n]
-
-PeterBurbery`Combinatorics`ConjugatePartition // ClearAll
-
-PeterBurbery`Combinatorics`ConjugatePartition::usage = "ConjugatePartition[p] gives the partition that transposes the rows and columns of the integer partition p.";
-
-PeterBurbery`Combinatorics`ConjugatePartition[PeterBurbery`Combinatorics`ConjugatePartition`Private`p_
-    ] /; PeterBurbery`Combinatorics`IntegerPartitionQ[PeterBurbery`Combinatorics`ConjugatePartition`Private`p
-    ] :=
-    Total[UnitStep[Outer[Plus, PeterBurbery`Combinatorics`ConjugatePartition`Private`p,
-         -Range[First[PeterBurbery`Combinatorics`ConjugatePartition`Private`p
-        ]]]]]
-
-PeterBurbery`Combinatorics`DescendingSublists // ClearAll
-
-PeterBurbery`Combinatorics`DescendingSublists::usage = "DescendingSublists[list] makes sublists of list starting at its left-to-right maxima.";
-
-PeterBurbery`Combinatorics`DescendingSublists[PeterBurbery`Combinatorics`DescendingSublists`Private`list_
-    ] :=
-    TakeList[PeterBurbery`Combinatorics`DescendingSublists`Private`list,
-         Length /@ Split[Max /@ Table[Take[PeterBurbery`Combinatorics`DescendingSublists`Private`list,
-         PeterBurbery`Combinatorics`DescendingSublists`Private`n], {PeterBurbery`Combinatorics`DescendingSublists`Private`n,
-         Length @ PeterBurbery`Combinatorics`DescendingSublists`Private`list}
-        ]]]
-
-PeterBurbery`Combinatorics`DivisorHasseDiagram // ClearAll
-
-PeterBurbery`Combinatorics`DivisorHasseDiagram::usage = "DivisorHasseDiagram[n] gives a Hasse diagram based on the divisors of n, represented as a Graph.";
-
-Options[PeterBurbery`Combinatorics`DivisorHasseDiagram] = Options[Graph
-    ];
-
-PeterBurbery`Combinatorics`DivisorHasseDiagram[PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`n_Integer
-    ?Positive, PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`opt
-     : OptionsPattern[]] :=
-    Module[{PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`divisors
-         = Divisors[PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`n],
-         PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`links},
-        PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`links 
-            =
-            Reap[
-                    Do[
-                        If[PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`a
-                             > PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`b && Divisible[
-                            PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`a, PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`b
-                            ],
-                            Sow[PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`a
-                                 \[DirectedEdge] PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`b
-                                ]
-                        ]
-                        ,
-                        {PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`a,
-                             PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`divisors}
-                        ,
-                        {PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`b,
-                             PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`divisors}
-                    ];
-                    Nothing
-                ] // Flatten;
-        TransitiveReductionGraph[PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`links,
-             Evaluate @ FilterRules[{PeterBurbery`Combinatorics`DivisorHasseDiagram`Private`opt
-            }, Options[Graph]]]
-    ]
-
-PeterBurbery`Combinatorics`DominatingIntegerPartitionQ // ClearAll
-
-PeterBurbery`Combinatorics`DominatingIntegerPartitionQ::usage = "DominatingIntegerPartitionQ[p, q] yields True if integer partition p dominates integer partition q and False otherwise.";
-
-PeterBurbery`Combinatorics`DominatingIntegerPartitionQ[PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`a_,
-     PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`b_] /;
-     PeterBurbery`Combinatorics`IntegerPartitionQ[PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`a
-    ] && PeterBurbery`Combinatorics`IntegerPartitionQ[PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`b
-    ] && Total[PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`a
-    ] == Total[PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`b
-    ] :=
-    (Length[PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`a
-        ] <= Length[PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`b
-        ]) &&
-        With[{PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`aa
-             = Accumulate[PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`a
-            ], PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`bb 
-            = Accumulate[Take[PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`b,
-             Length[PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`a
-            ]]]},
-            VectorQ[PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`aa
-                 - PeterBurbery`Combinatorics`DominatingIntegerPartitionQ`Private`bb,
-                 NonNegative]
-        ] *)
-
-(*PeterBurbery`Combinatorics`DurfeeSquare // ClearAll
-
-PeterBurbery`Combinatorics`DurfeeSquare::usage="DurfeeSquare[p] gives the number of rows involved in the Durfee square of partition p, the side of the largest-sized square contained within the Ferrers diagram of p.";
-
-PeterBurbery`Combinatorics`DurfeeSquare[{}] = 0
- 
-PeterBurbery`Combinatorics`DurfeeSquare[PeterBurbery`Combinatorics`Private`s_List] := 
- Module[{PeterBurbery`Combinatorics`Private`i, PeterBurbery`Combinatorics`Private`max = 1}, 
-   Do[If[PeterBurbery`Combinatorics`Private`s[[PeterBurbery`Combinatorics`Private`i]] >= PeterBurbery`Combinatorics`Private`i, PeterBurbery`Combinatorics`Private`max = PeterBurbery`Combinatorics`Private`i], {PeterBurbery`Combinatorics`Private`i, 2, Min[Length[PeterBurbery`Combinatorics`Private`s], First[PeterBurbery`Combinatorics`Private`s]]}]; 
-   PeterBurbery`Combinatorics`Private`max] /; PeterBurbery`Combinatorics`IntegerPartitionQ[PeterBurbery`Combinatorics`Private`s]
-       
-PeterBurbery`Combinatorics`EnumerateMultisetPartialDerangements // ClearAll
-
-PeterBurbery`Combinatorics`EnumerateMultisetPartialDerangements`Private`DerangementsCount // ClearAll
-
-PeterBurbery`Combinatorics`EnumerateMultisetPartialDerangements`Private`DerangementsCount[nvec_List] :=
-    Integrate[Exp[-x] Times @@ (LaguerreL[nvec, x]), {x, 0, \[Infinity]
-        }]
-
-PeterBurbery`Combinatorics`EnumerateMultisetPartialDerangements`Private`vCounts // ClearAll
-
-PeterBurbery`Combinatorics`EnumerateMultisetPartialDerangements`Private`vCounts[lst_, nfixed_] :=
-    Counts @ Map[Sort @* Values @* Counts] @ Subsets[lst, {Length @ lst
-         - nfixed}]
-
-PeterBurbery`Combinatorics`EnumerateMultisetPartialDerangements::usage = "EnumerateMultisetPartialDerangements[multiset] enumerates the number of derangements of a multiset with 0 fixed points.EnumerateMultisetPartialDerangements[multiset, nfixed] enumerates the number of partial derangements of a multiset with nfixed fixed points.";
-
-PeterBurbery`Combinatorics`EnumerateMultisetPartialDerangements[multiset_, Optional[nfixed_Integer ? (IntegerQ[
-    #] && # \[Element] NonNegativeIntegers&),0]] /; nfixed <= Length[multiset
-    ] :=
-    Abs @ Total @ KeyValueMap[#2 PeterBurbery`Combinatorics`EnumerateMultisetPartialDerangements`Private`DerangementsCount @ #&] @ PeterBurbery`Combinatorics`EnumerateMultisetPartialDerangements`Private`vCounts[multiset,
-         nf;
-         
- PeterBurbery`Combinatorics`EulerianCatalanNumber // ClearAll;
-
-SetAttributes[PeterBurbery`Combinatorics`EulerianCatalanNumber, {NumericFunction, Listable}];
-
-PeterBurbery`Combinatorics`EulerianCatalanNumber::usage = "EulerianCatalanNumber[n] calculates the nth Eulerian Catalan number.";
-
-PeterBurbery`Combinatorics`EulerianCatalanNumber[n_] :=
-    1 / (n + 1) PeterBurbery`Combinatorics`EulerianNumber[2 n + 1, n];
-
-
-PeterBurbery`Combinatorics`EulerianNumber//ClearAll;
-
-SetAttributes[PeterBurbery`Combinatorics`EulerianNumber,{Listable,NumericFunction}];
-
-PeterBurbery`Combinatorics`EulerianNumber::usage="EulerianNumber[n, k] gives the number of permutations of the numbers 1 to n in which exactly k elements are greater than the previous element (permutations with k \"ascents\")";
-(*This definition is based on the ResourceFunction EulerianNumber from https://resources.wolframcloud.com/FunctionRepository/resources/EulerianNumber/?i=EulerianNumber&searchapi=https%3A%2F%2Fresources.wolframcloud.com%2FFunctionRepository%2Fsearch*)
-
-PeterBurbery`Combinatorics`EulerianNumber[n_,k_]:=Module[{x},SeriesCoefficient[(1-x)^(n+1) PolyLog[-n,x],{x,0,k}]];
-
-PeterBurbery`Combinatorics`EulerianNumberOfTheSecondKind // ClearAll;
-
-SetAttributes[PeterBurbery`Combinatorics`EulerianNumberOfTheSecondKind, {Listable, 
-  NumericFunction}];
-
-PeterBurbery`Combinatorics`EulerianNumberOfTheSecondKind::usage = 
-  "EulerianNumberOfTheSecondKind[n, m]number of all such permutations \
-of the multiset where there are two of every element with exactly km \
-ascents.";
-
-PeterBurbery`Combinatorics`EulerianNumberOfTheSecondKind[n_, m_] := 0 /; Or @@ {m >= n, n === 0};
-
-PeterBurbery`Combinatorics`EulerianNumberOfTheSecondKind[n_, m_] /; m === 0 := 1;
-
-PeterBurbery`Combinatorics`EulerianNumberOfTheSecondKind[n_, k_] := 
- PeterBurbery`Combinatorics`EulerianNumberOfTheSecondKind[n, 
-   k] = (2 n - k - 1) PeterBurbery`Combinatorics`EulerianNumberOfTheSecondKind[n - 1, 
-     k - 1] + (k + 1) PeterBurbery`Combinatorics`EulerianNumberOfTheSecondKind[n - 1, k];
-*)
-
-(* PeterBurbery`Combinatorics`IntegerPartitionQ // ClearAll;
-
-PeterBurbery`Combinatorics`IntegerPartitionQ::usage = "IntegerPartitionQ[x] checks whether x is a weakly decreasing list of positive integers.\nIntegerPartitionQ[x,n] checks whether x is an integer partition of n.";
-
-PeterBurbery`Combinatorics`IntegerPartitionQ[x_] :=
-    VectorQ[x, Internal`PositiveIntegerQ] && VectorQ[Differences[x], 
-        Internal`NonPositiveIntegerQ];
-
-PeterBurbery`Combinatorics`IntegerPartitionQ[x_, n_] :=
-    IntegerQ[n] && IntegerPartitionQ[x] && Total[x] == n *)
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -695,7 +340,8 @@ SetAttributes[EulerianCatalanNumber, {NumericFunction, Listable}]
 EulerianCatalanNumber::usage = "EulerianCatalanNumber[n] calculates the nth Eulerian Catalan number.";
 
 EulerianCatalanNumber[n_] :=
-    1 / (n + 1) PeterBurbery`Combinatorics`EulerianNumber[2 n + 1, n]
+    1 / (n + 1) PeterBurbery`Combinatorics`EulerianNumber[2 n + 1, n 
+        + 1](*Although this is different from the definition of 1/n+1*EulerianNumber[2n+1,n], we need to use n+1 instead of n for the second argument*)
 
 EulerianNumber // ClearAll
 
@@ -781,6 +427,36 @@ FibonacciEncode[{n_Integer?Positive}] :=
         Pick[r, BitAnd[r, 2 r], 0]
     ]
 
+FindAscentElements // ClearAll
+
+FindAscentElements::usage = "FindAscentElements[multi] returns the sets of adjacent elements in the multiset multi where the second element of the set of adjacent elements is greater than the first element of the set of adjacent elements.";
+
+FindAscentElements[multiset_] :=
+    Extract[Partition[multiset, 2, 1], FindAscentPositions[multiset]]
+
+FindAscentElements[multiset_, PerformanceGoal -> "Speed"] :=
+    Extract[Partition[multiset, 2, 1], FindAscentPositions[multiset, 
+        PerformanceGoal -> "Speed"]]
+
+FindAscentElements[multiset_, PerformanceGoal -> "Memory"
+    ] :=
+    Extract[Partition[multiset, 2, 1], FindAscentPositions[multiset, 
+        PerformanceGoal -> "Memory"]]
+
+FindAscentPositions // ClearAll
+
+FindAscentPositions::usage = "FindAscentPositions[multi] finds the positions of ascents in the multiset multi.";
+
+FindAscentPositions[multiset_] :=
+    Position[Less @@@ Partition[multiset, 2, 1], True]
+
+FindAscentPositions[multiset_, PerformanceGoal -> "Speed"] :=
+    Position[Less @@@ Partition[multiset, 2, 1], True]
+
+FindAscentPositions[multiset_, PerformanceGoal -> "Memory"] :=
+    List /@ Select[-1 + Range[Length[multiset]], multiset[[#1]] < multiset
+        [[#1 + 1]]&]
+
 (* (* slower, but uses less memory *)
 FibonacciEncode[{n_Integer?Positive}]:=NestWhileList[nextFibonacciEncode,1,#<=n&,1,Infinity,-1]*)
 
@@ -804,6 +480,23 @@ FromInversionVector[vec_ ? (InversionVectorQ)] :=
         Do[p = Insert[p, i, vec[[i]] + 1], {i, n - 1, 1, -1}];
         p
     ]
+
+FromPartitionPlusNotation // ClearAll
+
+FromPartitionPlusNotation::usage = "FromPartitionPlusNotation[\[Lambda]] returns a list of weakly decreasing integers representing the integer partition \[Lambda] written in partition plus notation.";
+
+FromPartitionPlusNotation[\[Lambda]_Integer?IntegerQ] :=
+    {\[Lambda]}
+
+FromPartitionPlusNotation[\[Lambda]_] :=
+    List @@ \[Lambda]
+
+FromPartitionSuperscriptNotation // ClearAll
+
+FromPartitionSuperscriptNotation::usage = "FromPartitionSuperscriptNotation[\[Lambda]] goes from \[Lambda] represented with partition superscript notation to \[Lambda] represented as a weakly decreasing list of strictly positive integers.";
+
+FromPartitionSuperscriptNotation[\[Lambda]_] :=
+    Catenate[ConstantArray @@@ Identity @@ \[Lambda]]
 
 GaussFactorial // ClearAll
 
@@ -1044,6 +737,18 @@ LucasNumberV2[1, p_, q_] :=
 LucasNumberV2[n_, p_, q_] /; n > 1 := LucasNumberV2[n, p, q] =
     p LucasNumberV2[n - 1, p, q] - q LucasNumberV2[n - 2, p, q]
 
+ModifiedCentralBinomialCoefficient // ClearAll
+
+SetAttributes[ModifiedCentralBinomialCoefficient, {NumericFunction, Listable
+    }]
+
+ModifiedCentralBinomialCoefficient::usage = "ModifiedCentralBinomialCoefficient[n] calculates the nth modified central binomial coefficient.";
+
+ModifiedCentralBinomialCoefficient[n_] :=
+    Binomial[n, Quotient[n, 2]]
+
+(*Binomial[n,Floor[n/2]]*)
+
 Multichoose // ClearAll
 
 Multichoose::usage = "Multichoose[n,k] represents n multichoose k.";
@@ -1076,6 +781,28 @@ MultisetPartialDerangements[set_, Optional[numberOfFixedPoints_, 0],
 
 MultisetPartialDerangements[args___] :=
     Null /; CheckArguments[MultisetPartialDerangements[args], {1, 3}]
+
+MultisetStrictAscentElements // ClearAll
+
+MultisetStrictAscentElements::usage = "MultisetStrictAscentElements[multiset] returns the pairs elements that at the positions of the ascents of multiset.";
+
+MultisetStrictAscentElements[multiset_] :=
+    Extract[Partition[multiset, 2, 1], MultisetStrictAscents[multiset
+        ]]
+
+MultisetStrictDescents // ClearAll
+
+MultisetStrictDescents::usage = "MultisetStrictDescents[perm] gives the strict descents of the permutation perm.";
+
+MultisetStrictDescents[perm_] :=
+    Position[(#1 > #2&) @@@ Partition[perm, 2, 1], True]
+
+MultisetStrictDescentElements // ClearAll
+
+MultisetStrictDescentElements::usage = "MultisetStrictDescentElements[perm] gives the elements that compose the descents in the multiset perm.";
+
+MultisetStrictDescentElements[perm_] :=
+    Extract[Partition[perm, 2, 1], MultisetStrictDescents[perm]]
 
 NarayanaNumber // ClearAll
 
@@ -1243,6 +970,19 @@ PartitionFromFrobeniusSymbol[f_] :=
         ] /; MatrixQ @ f && Length @ f == 2 && IntegerPartitionQ[First
              @ f + 1] && IntegerPartitionQ[Last @ f + 1]
 
+PartitionPlusNotation // ClearAll
+
+(*SetAttributes[PartitionPlusNotation,{Listable}]*)
+
+PartitionPlusNotation::usage = "PartitionPlusNotation[partition] displays partition in plus notation.";
+
+PartitionPlusNotation[{p_Integer?IntegerQ}] :=
+    p
+
+PartitionPlusNotation[partition_List ? (VectorQ[#, MatchQ[#, _Integer
+    ?IntegerQ]&]&)] :=
+    Inactive[Plus] @@ partition
+
 PartitionRank // ClearAll
 
 PartitionRank::usage = "PartitionRank[x] gives the difference of the largest part of the partition x and the number of parts of x.\n";
@@ -1250,13 +990,12 @@ PartitionRank::usage = "PartitionRank[x] gives the difference of the largest par
 PartitionRank[x_] :=
     First @ x - Length @ x /; IntegerPartitionQ @ x
 
-PermutationAscents // ClearAll
+PartitionSuperscriptNotation // ClearAll
 
-PermutationAscents::usage = "PermutationAscents[p] gives the indices i where p_i<p_i+1, where the permutation p={p_1, p_2, \[Ellipsis], p_n} is written as a list.";
+PartitionSuperscriptNotation::usage = "PartitionSuperscriptNotation[partition] represents partition with superscript notation.";
 
-PermutationAscents[p_] :=
-    Select[-1 + Range[Length[p]], p[[#1]] < p[[#1 + 1]]&] /; PermutationListQ[
-        p]
+PartitionSuperscriptNotation[partition_] :=
+    Row[KeyValueMap[Superscript][Counts[partition]]]
 
 PermutationCountByInversions // ClearAll
 
@@ -1281,6 +1020,13 @@ PermutationCountByInversions[n_Integer, k_Integer?Positive] :=
     PermutationCountByInversions[n, All][[k + 1]]
 
 (*https://resources.wolframcloud.com/FunctionRepository/resources/PermutationCountByInversions*)
+
+PermutationDescents // ClearAll
+
+PermutationDescents::usage = "PermutationDescents[perm] gives the descents of the permutation perm.";
+
+PermutationDescents[p_] :=
+    Reverse[Length @ p - FindAscentPositions @ Reverse @ p]
 
 PermutationFromIndex // ClearAll
 
@@ -1624,6 +1370,39 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
                                     
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -1913,6 +1692,22 @@ StandardYoungTableaux[partition_] /; IntegerPartitionQ[partition] :=
             ConstantArray[0, n], 1, affectedByList, minIndTable, maxIndTable]
     ]
 
+functionWithoutVariables[partition_] :=
+    Join[{First[partition] * 2 ^ (BitLength[Length[partition]] - 1)},
+         Drop[partition, 2 ^ (BitLength[Length[partition]] - 1)]]
+
+NoVariablesOddPartsToDistinctParts[partition_] :=
+    ReverseSort[FixedPoint[Catenate[Split[#] /. list : {Repeated[x_, 
+        {2, Infinity}]} :> functionWithoutVariables[list]]&, partition]]
+
+StrictIntegerPartitions // ClearAll
+
+StrictIntegerPartitions::usage = "StrictIntegerPartitions[n] gives the strict integer partitions of the strictly positive integer n."(*A strict partition has no distinct parts and no duplicate parts like 1 in {5,3,1,1}.*);
+
+StrictIntegerPartitions[n_Integer?IntegerQ /; Not[n <= 0]] :=
+    Reverse[LexicographicSort[Map[NoVariablesOddPartsToDistinctParts][
+        IntegerPartitions[n, Infinity, Range[1, n, 2]]]]];
+
 SubsetFromIndex // ClearAll
 
 SubsetFromIndex::usage = "SubsetFromIndex[index, len] returns a subset of length len with given index.";
@@ -2162,6 +1957,35 @@ UnsignedLahNumber::usage = "UnsignedLahNumber[n,k] gives the unsigned Lah number
 UnsignedLahNumber[n_, k_] :=
     Binomial[n - 1, k - 1] n! / k!
 
+YoungDiagram // ClearAll
+
+YoungDiagram::usage = "YoungDiagram[\[Lambda]] gives a Young diagram for the partition \[Lambda] with empty boxes.";
+
+YoungDiagram[list_] :=
+    Grid[
+        ConstantArray["", #]& /@ list
+        ,
+        Frame ->
+            Join[
+                {None}
+                ,
+                {None}
+                ,
+                {
+                    Flatten[
+                        With[{cc = Range @ #& /@ list},
+                            Table[Flatten[{nn, #} -> True& /@ cc[[nn]],
+                                 1], {nn, Length @ cc}]
+                        ]
+                        ,
+                        1
+                    ]
+                }
+            ]
+        ,
+        ItemSize -> {1.5, 1.5}
+    ]
+
 ZeckendorfRepresentation // ClearAll
 
 SetAttributes[ZeckendorfRepresentation, {Listable, NumericFunction}]
@@ -2198,9 +2022,11 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*Package Footer*)
+
 
 End[]
 
