@@ -1,0 +1,961 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     36544,        953]
+NotebookOptionsPosition[     30417,        819]
+NotebookOutlinePosition[     31207,        845]
+CellTagsIndexPosition[     31128,        840]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["RandomSelfConjugatePartition", "ObjectName",
+ CellID->644721691,ExpressionUUID->"e72fff0a-18ba-4e9e-86e5-d1550a98b5eb"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"0f7fdd58-f431-42c7-a296-c1c444ec3c09"],
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["RandomSelfConjugatePartition",
+    BaseStyle->"Link",
+    ButtonData->
+     "paclet:PeterBurberyCombinatorics/ref/RandomSelfConjugatePartition"], 
+   "[", 
+   StyleBox["poset", "TI"], "]"}]], "InlineFormula",ExpressionUUID->
+  "2aaf32d9-317a-4779-a5b1-02c3ded142e4"],
+ "\[LineSeparator]determines if the coordinates in poset are partially \
+ordered."
+}], "Usage",
+ CellChangeTimes->{3.9002601465283403`*^9},
+ CellID->219243348,ExpressionUUID->"27d69059-4a6f-49a9-a0c6-58f759fe9b81"],
+
+Cell["XXXX", "Notes",
+ CellID->123413285,ExpressionUUID->"c0515aa5-7655-4dbd-90dd-25e039899d08"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "See Also",
+ Cell[BoxData[
+  TemplateBox[{"SeeAlso", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related reference (function) pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "a3a3c3a7-0e8f-44bd-ac5c-d5375abd7128"]
+}], "SeeAlsoSection",
+ CellID->543961153,ExpressionUUID->"0ca9cb2d-1c4a-4d6c-875e-91a62ef2802b"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TagBox[
+   FrameBox["\<\"XXXX\"\>"],
+   "FunctionPlaceholder"]], "InlineSeeAlsoFunction",
+  TaggingRules->{"PageType" -> "Function"},ExpressionUUID->
+  "86c6f976-c375-4568-af6b-4533937efa42"],
+ Cell[BoxData[
+  RowBox[{
+  Cell[TextData[StyleBox[
+   " \[FilledVerySmallSquare] ", "InlineSeparator"]],ExpressionUUID->
+    "b1999238-871c-47dc-b247-9d119efacdc0"], 
+   DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
+    "acde63b3-6f78-407a-859e-14862d7756de", 
+     "6458824b-c4ca-4294-879f-50c0fb8a875a"], $CellContext`cellobj$$ = 
+    CellObject[
+    "d658bfc2-1992-4fcb-9291-721b198587a0", 
+     "6239e734-24cf-4b87-ae3f-358514cef22c"]}, 
+    TemplateBox[{
+      GraphicsBox[{{
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         CircleBox[{0, 0}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{0, 0.62}, {0, -0.62}}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{-0.62, 0}, {0.62, 0}}]}}, 
+       ImagePadding -> {{1., 1.}, {2.4, 1.}}, ImageSize -> 16, 
+       PlotRange -> {{-1.06, 1.06}, {-1.06, 1.06}}, 
+       BaselinePosition -> (Center -> 
+        Center)], $CellContext`nbobj$$, $CellContext`cellobj$$},
+     "InlineListingAddButton"],
+    Initialization:>($CellContext`nbobj$$ = 
+      EvaluationNotebook[]; $CellContext`cellobj$$ = EvaluationCell[])]}]], 
+  "InlineListingAddButton",ExpressionUUID->
+  "d658bfc2-1992-4fcb-9291-721b198587a0"]
+}], "SeeAlso",
+ CellID->90861527,ExpressionUUID->"aaf6dcd4-1a16-46b3-b7ab-492d52398f9c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Tech Notes",
+ Cell[BoxData[
+  TemplateBox[{"TechNotes", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Insert links to related tech notes.", "MoreInfoText"], BaseStyle -> 
+       "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "e463c72d-f094-43cd-9abf-322024725fd6"]
+}], "TechNotesSection",
+ CellID->562924370,ExpressionUUID->"b0b2e3f1-7dd7-44a9-8337-064ecb7b3f47"],
+
+Cell["XXXX", "Tutorials",
+ CellID->874069216,ExpressionUUID->"4d2d6117-b3fd-4141-9982-84fae601f261"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "MoreAboutSection",
+ CellID->236834609,ExpressionUUID->"f625eb9d-df26-434c-ab3f-d735f8af85aa"],
+
+Cell["XXXX", "MoreAbout",
+ CellID->34598375,ExpressionUUID->"e6c08777-86ec-49ab-9d37-c3b26407d883"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Related Links",
+ Cell[BoxData[
+  TemplateBox[{"RelatedLinks", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related page, including web pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "758ae198-b035-4542-8f8a-35c3b0093f0f"]
+}], "RelatedLinksSection",
+ CellID->281339588,ExpressionUUID->"1dab0b89-d595-4355-8941-f4c44fa4ed7b"],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->87711432,ExpressionUUID->"9dfefe2f-c48c-47fc-a46d-a89c0da42217"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "52052591-208d-496c-b289-91ac3d0fda60"]
+}], "ExamplesInitializationSection",
+ CellID->376874970,ExpressionUUID->"2272057a-472e-4ece-8098-e26f5ae1c608"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`Combinatorics`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellID->721815291,ExpressionUUID->"093e3547-884d-4253-a7fe-fbafaa92a7de"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->525752078,ExpressionUUID->"73947480-c965-419a-84a9-a056cfce728d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "RandomSelfConjugatePartition"}]], "Input",
+ CellChangeTimes->{{3.900260173704027*^9, 3.900260177367028*^9}},
+ CellLabel->"In[532]:=",
+ CellID->196232847,ExpressionUUID->"083aa178-522f-4bf9-b6a9-bfc9090b75de"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"]], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"]]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              
+              ButtonData->
+               "paclet:PeterBurbery/Combinatorics/ref/\
+RandomSelfConjugatePartition",
+              
+              ButtonNote->
+               "paclet:PeterBurbery/Combinatorics/ref/\
+RandomSelfConjugatePartition"],
+             
+             "\"paclet:PeterBurbery/Combinatorics/ref/\
+RandomSelfConjugatePartition\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"RandomSelfConjugatePartition[poset] determines if \
+the coordinates in poset are partially ordered.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    
+                    RowBox[{
+                    "RandomSelfConjugatePartition", "[", 
+                    "PeterBurbery`Combinatorics`Private`poset_", "]"}], ":=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"PeterBurbery`Combinatorics`Private`sortedlast", 
+                    ",", "PeterBurbery`Combinatorics`Private`sortedfirst", 
+                    ",", "PeterBurbery`Combinatorics`Private`gatherfirst", 
+                    ",", "PeterBurbery`Combinatorics`Private`gatherlast"}], 
+                    "}"}], ",", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"!", 
+                    RowBox[{"MatrixQ", "[", 
+                    
+                    RowBox[{"PeterBurbery`Combinatorics`Private`poset", ",", 
+                    "IntegerQ"}], "]"}]}], ",", 
+                    RowBox[{"Return", "[", 
+                    RowBox[{"False", ",", "Module"}], "]"}]}], "]"}], ";", 
+                    
+                    RowBox[{"PeterBurbery`Combinatorics`Private`sortedlast", 
+                    "=", 
+                    RowBox[{"GatherBy", "[", 
+                    RowBox[{
+                    
+                    RowBox[{"Sort", "[", 
+                    "PeterBurbery`Combinatorics`Private`poset", "]"}], ",", 
+                    "Last"}], "]"}]}], ";", 
+                    
+                    RowBox[{"PeterBurbery`Combinatorics`Private`sortedfirst", 
+                    "=", 
+                    RowBox[{"GatherBy", "[", 
+                    RowBox[{
+                    
+                    RowBox[{"Sort", "[", 
+                    "PeterBurbery`Combinatorics`Private`poset", "]"}], ",", 
+                    "First"}], "]"}]}], ";", 
+                    
+                    RowBox[{"PeterBurbery`Combinatorics`Private`gatherfirst", 
+                    "=", 
+                    RowBox[{"GatherBy", "[", 
+                    RowBox[{
+                    RowBox[{"Reverse", "[", 
+                    RowBox[{
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Position", "[", 
+                    
+                    RowBox[{"PeterBurbery`Combinatorics`Private`sortedlast", 
+                    ",", "#1"}], "]"}], "&"}], ")"}], "/@", 
+                    "PeterBurbery`Combinatorics`Private`poset"}], ",", "1"}], 
+                    "]"}], ",", "2"}], "]"}], ",", "First"}], "]"}]}], ";", 
+                    
+                    RowBox[{"PeterBurbery`Combinatorics`Private`gatherlast", 
+                    "=", 
+                    RowBox[{"GatherBy", "[", 
+                    RowBox[{
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Position", "[", 
+                    
+                    RowBox[{"PeterBurbery`Combinatorics`Private`sortedfirst", 
+                    ",", "#1"}], "]"}], "&"}], ")"}], "/@", 
+                    "PeterBurbery`Combinatorics`Private`poset"}], ",", "1"}], 
+                    "]"}], ",", "Last"}], "]"}]}], ";", 
+                    RowBox[{
+                    
+                    RowBox[{"PeterBurbery`Combinatorics`Private`sortedlast", 
+                    "===", "PeterBurbery`Combinatorics`Private`gatherlast"}], 
+                    "&&", 
+                    
+                    RowBox[{"PeterBurbery`Combinatorics`Private`sortedfirst", 
+                    "===", "PeterBurbery`Combinatorics`Private`gatherfirst"}]}\
+]}]}], "]"}]}]}, {" "}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Documentation\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Documentation", "Tooltip"]& ], 
+                   TemplateBox[{
+                    
+                    TemplateBox[{
+                    "\"Local \[RightGuillemet]\"", 
+                    "paclet:PeterBurbery/Combinatorics/ref/\
+RandomSelfConjugatePartition", 
+                    "paclet:PeterBurbery/Combinatorics/ref/\
+RandomSelfConjugatePartition", "Link", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"]},
+                    "RowDefault"]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], \
+"\<\"PeterBurbery`Combinatorics`RandomSelfConjugatePartition\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"],
+                ImageSizeCache->{13., {4., 9.}}], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"],
+                ImageSizeCache->{13., {4., 9.}}]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              
+              ButtonData->
+               "paclet:PeterBurbery/Combinatorics/ref/\
+RandomSelfConjugatePartition",
+              
+              ButtonNote->
+               "paclet:PeterBurbery/Combinatorics/ref/\
+RandomSelfConjugatePartition"],
+             
+             "\"paclet:PeterBurbery/Combinatorics/ref/\
+RandomSelfConjugatePartition\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"RandomSelfConjugatePartition[poset] determines if \
+the coordinates in poset are partially ordered.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "RandomSelfConjugatePartition[poset] determines if the coordinates in \
+poset are partially ordered.", 
+    "Documentation" -> <|
+     "Local" -> 
+      "paclet:PeterBurbery/Combinatorics/ref/RandomSelfConjugatePartition"|>, 
+    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, PeterBurbery`Combinatorics`RandomSelfConjugatePartition, {
+      PeterBurbery`Combinatorics`RandomSelfConjugatePartition[
+         Pattern[PeterBurbery`Combinatorics`Private`poset, 
+          Blank[]]] :> 
+       Module[{PeterBurbery`Combinatorics`Private`sortedlast, 
+          PeterBurbery`Combinatorics`Private`sortedfirst, 
+          PeterBurbery`Combinatorics`Private`gatherfirst, 
+          PeterBurbery`Combinatorics`Private`gatherlast}, If[
+           Not[
+            MatrixQ[PeterBurbery`Combinatorics`Private`poset, IntegerQ]], 
+           Return[False, Module]]; 
+         PeterBurbery`Combinatorics`Private`sortedlast = GatherBy[
+            Sort[PeterBurbery`Combinatorics`Private`poset], Last]; 
+         PeterBurbery`Combinatorics`Private`sortedfirst = GatherBy[
+            Sort[PeterBurbery`Combinatorics`Private`poset], First]; 
+         PeterBurbery`Combinatorics`Private`gatherfirst = GatherBy[
+            Reverse[
+             Flatten[
+              Map[
+              Position[PeterBurbery`Combinatorics`Private`sortedlast, #]& , 
+               PeterBurbery`Combinatorics`Private`poset], 1], 2], First]; 
+         PeterBurbery`Combinatorics`Private`gatherlast = GatherBy[
+            Flatten[
+             Map[
+             Position[PeterBurbery`Combinatorics`Private`sortedfirst, #]& , 
+              PeterBurbery`Combinatorics`Private`poset], 1], Last]; 
+         And[PeterBurbery`Combinatorics`Private`sortedlast === 
+           PeterBurbery`Combinatorics`Private`gatherlast, 
+           PeterBurbery`Combinatorics`Private`sortedfirst === 
+           PeterBurbery`Combinatorics`Private`gatherfirst]]}], "SubValues" -> 
+    None, "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "PeterBurbery`Combinatorics`RandomSelfConjugatePartition"|>, 
+   False]]], "Output",
+ CellChangeTimes->{3.9002601777796226`*^9},
+ CellLabel->"Out[532]=",
+ CellID->201815909,ExpressionUUID->"24cb3c41-2ffa-449d-bcb5-db1229e8f4db"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "More Examples",
+ Cell[BoxData[
+  TemplateBox[{"MoreExamples", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Extended examples in standardized sections.", "MoreInfoText"], 
+       BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "bbd43383-394a-4a6c-91fd-386ed3275136"]
+}], "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->58937918,ExpressionUUID->"19b5be4b-9f48-43d4-8b80-071ceab3fe8d"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "0ae764da-1607-4f30-a8d7-7726966da326"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->103314111,ExpressionUUID->"92f54e4b-861d-44a8-aacd-b38cf25ee90a"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "40372a43-bc92-408d-acc6-7bab25a7477a"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->182274453,ExpressionUUID->"18d0e783-be93-4ebd-b1df-d57efc0a5a9e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "1cd3723b-5e57-4bde-9ef1-55ef2c70b052"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->398500306,ExpressionUUID->"95a8669d-ef44-4d02-8e3d-034a47ccfa21"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "d3fe45b3-de56-4b7a-98e6-de323edd876e"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->68237569,ExpressionUUID->"87359005-aef4-4825-8847-79bf238db69d"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "b336baf8-4611-4b69-85f8-904acdf35043"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->432636798,ExpressionUUID->"8611eefe-59ae-4638-82a9-e19042883a4b"]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "951c3ef6-ea8c-4b48-aba1-589d00872daf"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->172328504,ExpressionUUID->"53e0551e-0bb5-4130-8e5f-b95a183f390e"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "df338747-9839-428a-910d-47cd4961c845"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->88672945,ExpressionUUID->"3c52a030-e390-4f3f-a411-c55517d6a099"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "c6717dea-b148-4ac8-9bdd-d18e2e74f1ab"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->3348179,ExpressionUUID->"9103c566-47c6-4a72-9d01-b8ffaa512b41"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "0d997a59-78bc-410b-bc67-5f6c5bc95814"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->23719315,ExpressionUUID->"e77d19ea-2778-4e84-97ff-0b16a029fd7e"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "3e327524-ba50-43b4-a22e-0b3883c25b7a"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->254121021,ExpressionUUID->"80e99f1c-abec-40db-9820-7a5b1f34fbe3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->109781816,ExpressionUUID->"c7ee461e-1cfc-434a-ae56-9f13666803a4"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New",ExpressionUUID->"37280a5a-4d54-4790-b990-5838270193b4"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"5b0e4c91-272c-4e36-91ae-57508a7057e2"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->"521aaa6f-ba7b-4ba3-875d-72cfe083ea92"]
+}], "History",
+ CellID->11094631,ExpressionUUID->"5e806268-fb00-4e80-8342-8f9c77a8b492"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Categorization",
+ Cell[BoxData[
+  TemplateBox[{"Metadata", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Metadata such as page URI, context, and type of documentation page.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "10ffe52e-5e5d-4a73-8dd1-31581b48244f"]
+}], "CategorizationSection",
+ CellID->40306811,ExpressionUUID->"3c9e6667-7a1a-405a-ab31-3fa1161861a4"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->225601512,ExpressionUUID->"fff8fcf6-211a-4734-8a32-0a9552abe8bc"],
+
+Cell["PeterBurbery/Combinatorics", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->17277971,ExpressionUUID->"d5ec750c-80b2-4e8b-9c94-8cba9c42824d"],
+
+Cell["PeterBurbery`Combinatorics`", "Categorization",
+ CellLabel->"Context",
+ CellID->8532160,ExpressionUUID->"0ccae066-8b05-46c3-8a1e-a92dc050d4da"],
+
+Cell["PeterBurbery/Combinatorics/ref/RandomSelfConjugatePartition", \
+"Categorization",
+ CellLabel->"URI",
+ CellID->47015766,ExpressionUUID->"6561577d-2631-47bb-a508-3c3bbf74cbf7"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->606109252,ExpressionUUID->"81366fac-6e0c-4ca9-8eb8-351b8b23619e"],
+
+Cell["XXXX", "Keywords",
+ CellID->368902397,ExpressionUUID->"72ac0a42-765f-44c1-acc9-b0c08a69aa33"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->425672484,ExpressionUUID->"8a1a75d6-7466-4d2c-a322-d0562cc2d1a1"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->87850637,ExpressionUUID->"715c1ee9-547d-4d4b-88f3-5cf1f49b90d0"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->285561473,ExpressionUUID->"3d298dea-0efa-4da5-837c-8d8fe922d12f"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->90486089,ExpressionUUID->"846eb801-fc75-48fb-9964-45bb515407dd"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->39285202,ExpressionUUID->"db43f974-da3f-4733-a8b6-6636dc4898b7"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{700, 557},
+WindowMargins->{{5, Automatic}, {Automatic, 0}},
+TaggingRules-><|"Paclet" -> "PeterBurbery/Combinatorics"|>,
+CellContext->"Global`",
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (August 1, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"acde63b3-6f78-407a-859e-14862d7756de"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[24613, 645, 486, 13, 57, "ExtendedExamplesSection",ExpressionUUID->"19b5be4b-9f48-43d4-8b80-071ceab3fe8d",
+   CellTags->"ExtendedExamples",
+   CellID->58937918]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 30935, 833}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 125, 1, 74, "ObjectName",ExpressionUUID->"e72fff0a-18ba-4e9e-86e5-d1550a98b5eb",
+ CellID->644721691],
+Cell[708, 25, 618, 15, 78, "Usage",ExpressionUUID->"27d69059-4a6f-49a9-a0c6-58f759fe9b81",
+ CellID->219243348],
+Cell[1329, 42, 96, 1, 27, "Notes",ExpressionUUID->"c0515aa5-7655-4dbd-90dd-25e039899d08",
+ CellID->123413285]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1462, 48, 458, 13, 39, "SeeAlsoSection",ExpressionUUID->"0ca9cb2d-1c4a-4d6c-875e-91a62ef2802b",
+ CellID->543961153],
+Cell[1923, 63, 1652, 42, 24, "SeeAlso",ExpressionUUID->"aaf6dcd4-1a16-46b3-b7ab-492d52398f9c",
+ CellID->90861527]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3612, 110, 435, 12, 40, "TechNotesSection",ExpressionUUID->"b0b2e3f1-7dd7-44a9-8337-064ecb7b3f47",
+ CellID->562924370],
+Cell[4050, 124, 100, 1, 19, "Tutorials",ExpressionUUID->"4d2d6117-b3fd-4141-9982-84fae601f261",
+ CellID->874069216]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4187, 130, 117, 1, 39, "MoreAboutSection",ExpressionUUID->"f625eb9d-df26-434c-ab3f-d735f8af85aa",
+ CellID->236834609],
+Cell[4307, 133, 99, 1, 19, "MoreAbout",ExpressionUUID->"e6c08777-86ec-49ab-9d37-c3b26407d883",
+ CellID->34598375]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4443, 139, 472, 13, 39, "RelatedLinksSection",ExpressionUUID->"1dab0b89-d595-4355-8941-f4c44fa4ed7b",
+ CellID->281339588],
+Cell[4918, 154, 102, 1, 19, "RelatedLinks",ExpressionUUID->"9dfefe2f-c48c-47fc-a46d-a89c0da42217",
+ CellID->87711432]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5057, 160, 530, 14, 69, "ExamplesInitializationSection",ExpressionUUID->"2272057a-472e-4ece-8098-e26f5ae1c608",
+ CellID->376874970],
+Cell[5590, 176, 186, 3, 45, "ExampleInitialization",ExpressionUUID->"093e3547-884d-4253-a7fe-fbafaa92a7de",
+ CellID->721815291]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5813, 184, 442, 12, 71, "PrimaryExamplesSection",ExpressionUUID->"73947480-c965-419a-84a9-a056cfce728d",
+ CellID->525752078],
+Cell[CellGroupData[{
+Cell[6280, 200, 237, 4, 25, "Input",ExpressionUUID->"083aa178-522f-4bf9-b6a9-bfc9090b75de",
+ CellID->196232847],
+Cell[6520, 206, 18044, 433, 111, "Output",ExpressionUUID->"24cb3c41-2ffa-449d-bcb5-db1229e8f4db",
+ CellID->201815909]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24613, 645, 486, 13, 57, "ExtendedExamplesSection",ExpressionUUID->"19b5be4b-9f48-43d4-8b80-071ceab3fe8d",
+ CellTags->"ExtendedExamples",
+ CellID->58937918],
+Cell[25102, 660, 241, 5, 35, "ExampleSection",ExpressionUUID->"92f54e4b-861d-44a8-aacd-b38cf25ee90a",
+ CellID->103314111],
+Cell[25346, 667, 264, 5, 23, "ExampleSection",ExpressionUUID->"18d0e783-be93-4ebd-b1df-d57efc0a5a9e",
+ CellID->182274453],
+Cell[CellGroupData[{
+Cell[25635, 676, 243, 5, 23, "ExampleSection",ExpressionUUID->"95a8669d-ef44-4d02-8e3d-034a47ccfa21",
+ CellID->398500306],
+Cell[25881, 683, 245, 5, 26, "ExampleSubsection",ExpressionUUID->"87359005-aef4-4825-8847-79bf238db69d",
+ CellID->68237569],
+Cell[26129, 690, 246, 5, 22, "ExampleSubsection",ExpressionUUID->"8611eefe-59ae-4638-82a9-e19042883a4b",
+ CellID->432636798]
+}, Open  ]],
+Cell[26390, 698, 248, 5, 35, "ExampleSection",ExpressionUUID->"53e0551e-0bb5-4130-8e5f-b95a183f390e",
+ CellID->172328504],
+Cell[26641, 705, 257, 5, 23, "ExampleSection",ExpressionUUID->"3c52a030-e390-4f3f-a411-c55517d6a099",
+ CellID->88672945],
+Cell[26901, 712, 249, 5, 23, "ExampleSection",ExpressionUUID->"9103c566-47c6-4a72-9d01-b8ffaa512b41",
+ CellID->3348179],
+Cell[27153, 719, 255, 5, 23, "ExampleSection",ExpressionUUID->"e77d19ea-2778-4e84-97ff-0b16a029fd7e",
+ CellID->23719315],
+Cell[27411, 726, 249, 5, 23, "ExampleSection",ExpressionUUID->"80e99f1c-abec-40db-9820-7a5b1f34fbe3",
+ CellID->254121021]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27697, 736, 110, 1, 72, "MetadataSection",ExpressionUUID->"c7ee461e-1cfc-434a-ae56-9f13666803a4",
+ CellID->109781816],
+Cell[27810, 739, 472, 11, 26, "History",ExpressionUUID->"5e806268-fb00-4e80-8342-8f9c77a8b492",
+ CellID->11094631],
+Cell[CellGroupData[{
+Cell[28307, 754, 483, 13, 21, "CategorizationSection",ExpressionUUID->"3c9e6667-7a1a-405a-ab31-3fa1161861a4",
+ CellID->40306811],
+Cell[28793, 769, 134, 2, 35, "Categorization",ExpressionUUID->"fff8fcf6-211a-4734-8a32-0a9552abe8bc",
+ CellID->225601512],
+Cell[28930, 773, 153, 2, 35, "Categorization",ExpressionUUID->"d5ec750c-80b2-4e8b-9c94-8cba9c42824d",
+ CellID->17277971],
+Cell[29086, 777, 149, 2, 35, "Categorization",ExpressionUUID->"0ccae066-8b05-46c3-8a1e-a92dc050d4da",
+ CellID->8532160],
+Cell[29238, 781, 180, 3, 35, "Categorization",ExpressionUUID->"6561577d-2631-47bb-a508-3c3bbf74cbf7",
+ CellID->47015766]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[29455, 789, 110, 1, 21, "KeywordsSection",ExpressionUUID->"81366fac-6e0c-4ca9-8eb8-351b8b23619e",
+ CellID->606109252],
+Cell[29568, 792, 99, 1, 70, "Keywords",ExpressionUUID->"72ac0a42-765f-44c1-acc9-b0c08a69aa33",
+ CellID->368902397]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[29704, 798, 119, 1, 21, "TemplatesSection",ExpressionUUID->"8a1a75d6-7466-4d2c-a322-d0562cc2d1a1",
+ CellID->425672484],
+Cell[29826, 801, 147, 2, 70, "Template",ExpressionUUID->"715c1ee9-547d-4d4b-88f3-5cf1f49b90d0",
+ CellID->87850637],
+Cell[29976, 805, 137, 2, 70, "Template",ExpressionUUID->"3d298dea-0efa-4da5-837c-8d8fe922d12f",
+ CellID->285561473],
+Cell[30116, 809, 134, 2, 70, "Template",ExpressionUUID->"846eb801-fc75-48fb-9964-45bb515407dd",
+ CellID->90486089],
+Cell[30253, 813, 136, 2, 70, "Template",ExpressionUUID->"db43f974-da3f-4733-a8b6-6636dc4898b7",
+ CellID->39285202]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+

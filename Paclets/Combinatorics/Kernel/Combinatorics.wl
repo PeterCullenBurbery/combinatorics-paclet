@@ -2,19 +2,15 @@
 
 (**)
 
-
-
 (* ::Section:: *)
-(*Package Header*)
 
+(*Package Header*)
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-
-
 (* ::Text:: *)
-(*Declare your public symbols here:*)
 
+(*Declare your public symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset;
 
@@ -160,8 +156,6 @@ PeterBurbery`Combinatorics`QExponential;
 
 PeterBurbery`Combinatorics`QMultinomial;
 
-PeterBurbery`Combinatorics`RandomSelfConjugatePartition;
-
 PeterBurbery`Combinatorics`RandomYoungTableau;
 
 PeterBurbery`Combinatorics`RationalNumberRepeatingDecimalPeriod;
@@ -216,15 +210,13 @@ PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-
-
 (* ::Section:: *)
+
 (*Definitions*)
 
-
 (* ::Text:: *)
-(*Define your public and private symbols here:*)
 
+(*Define your public and private symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -1300,24 +1292,6 @@ QMultinomial[numbers__, q_] :=
         qGammaApplied /. replacementRules
     ]
 
-RandomSelfConjugatePartition // ClearAll
-
-RandomSelfConjugatePartition::usage = "RandomSelfConjugatePartition[poset] determines if the coordinates in poset are partially ordered.";
-
-RandomSelfConjugatePartition[poset_] :=
-    Module[{sortedlast, sortedfirst, gatherfirst, gatherlast},
-        If[!MatrixQ[poset, IntegerQ],
-            Return[False, Module]
-        ];
-        sortedlast = GatherBy[Sort[poset], Last];
-        sortedfirst = GatherBy[Sort[poset], First];
-        gatherfirst = GatherBy[Reverse[Flatten[Position[sortedlast, #
-            ]& /@ poset, 1], 2], First];
-        gatherlast = GatherBy[Flatten[Position[sortedfirst, #]& /@ poset,
-             1], Last];
-        sortedlast === gatherlast && sortedfirst === gatherfirst
-    ]
-
 RandomYoungTableau // ClearAll
 
 RandomYoungTableau::usage = "RandomYoungTableau[p] generates a random Young tableau of shape p.\nRandomYoungTableau[p,n] generates n random Young tableaux of shape p.";
@@ -1417,6 +1391,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
                                     
                                     
                                     
@@ -2089,11 +2064,9 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-
-
 (* ::Section:: *)
-(*Package Footer*)
 
+(*Package Footer*)
 
 End[]
 
