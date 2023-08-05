@@ -48,6 +48,10 @@ PeterBurbery`Combinatorics`FindAscentElements;
 
 PeterBurbery`Combinatorics`FindAscentPositions;
 
+PeterBurbery`Combinatorics`FindDescentElements;
+
+PeterBurbery`Combinatorics`FindDescentPositions;
+
 PeterBurbery`Combinatorics`FrobeniusSymbolFromPartition;
 
 PeterBurbery`Combinatorics`FromInversionVector;
@@ -98,10 +102,6 @@ PeterBurbery`Combinatorics`MultisetCardinality;
 
 PeterBurbery`Combinatorics`MultisetPartialDerangements;
 
-PeterBurbery`Combinatorics`MultisetStrictDescents;
-
-PeterBurbery`Combinatorics`MultisetStrictDescentElements;
-
 PeterBurbery`Combinatorics`NarayanaNumber;
 
 PeterBurbery`Combinatorics`NextPermutation;
@@ -130,8 +130,6 @@ PeterBurbery`Combinatorics`PartitionSuperscriptNotation;
 
 PeterBurbery`Combinatorics`PermutationCountByInversions;
 
-PeterBurbery`Combinatorics`PermutationDescents;
-
 PeterBurbery`Combinatorics`PermutationFromIndex;
 
 PeterBurbery`Combinatorics`PermutationFromLehmerCode;
@@ -156,8 +154,6 @@ PeterBurbery`Combinatorics`QExponential;
 
 PeterBurbery`Combinatorics`QMultinomial;
 
-PeterBurbery`Combinatorics`RandomSelfConjugatePartition;
-
 PeterBurbery`Combinatorics`RandomYoungTableau;
 
 PeterBurbery`Combinatorics`RationalNumberRepeatingDecimalPeriod;
@@ -179,6 +175,10 @@ PeterBurbery`Combinatorics`SignedLahNumber;
 PeterBurbery`Combinatorics`StandardYoungTableaux;
 
 PeterBurbery`Combinatorics`StrictIntegerPartitions;
+
+PeterBurbery`Combinatorics`StirlingPermutations;
+
+PeterBurbery`Combinatorics`StirlingPermutationGraph;
 
 PeterBurbery`Combinatorics`SubsetFromIndex;
 
@@ -331,7 +331,15 @@ EnumerateMultisetPartialDerangements[multiset_, Optional[nfixed_Integer
      ? (IntegerQ[#] && # \[Element] NonNegativeIntegers&), 0]] /; nfixed <=
      Length[multiset] :=
     Abs @ Total @ KeyValueMap[#2 DerangementsCount @ #&] @ vCounts[multiset,
-         nfixed]
+         nfixed] /; Not[DuplicateFreeQ[multiset]]
+
+EnumerateMultisetPartialDerangements[set_?DuplicateFreeQ] :=
+    Subfactorial[Length[set]]
+
+EnumerateMultisetPartialDerangements[set_?DuplicateFreeQ, nfixed_Integer
+     ? (IntegerQ[#] && # \[Element] NonNegativeIntegers&)] /; nfixed <= Length[
+    set] :=
+    Binomial[Length[set], nfixed] Subfactorial[Length[set] - nfixed]
 
 EulerianCatalanNumber // ClearAll
 
@@ -353,8 +361,13 @@ EulerianNumber::usage = "EulerianNumber[n, k] gives the number of permutations o
 
 EulerianNumber[n_, k_] :=
     Module[{x},
-        SeriesCoefficient[(1 - x) ^ (n + 1) PolyLog[-n, x], {x, 0, k}
-            ]
+        SeriesCoefficient[
+            (1 - x) ^ (n + 1) PolyLog[-n, x]
+            ,
+            {
+                x, 0, k                                 (*
+It might fix it to have k-1*) }
+        ]
     ]
 
 EulerianNumberOfTheSecondKind // ClearAll
@@ -362,7 +375,7 @@ EulerianNumberOfTheSecondKind // ClearAll
 SetAttributes[EulerianNumberOfTheSecondKind, {Listable, NumericFunction
     }]
 
-EulerianNumberOfTheSecondKind::usage = "EulerianNumberOfTheSecondKind[n, m]number of all such permutations of the multiset where there are two of every element with exactly km ascents.";
+EulerianNumberOfTheSecondKind::usage = "EulerianNumberOfTheSecondKind[n, m]number of all such permutations of the multiset {1,1,2,2,...,n,n}, where there are two of every element with exactly m ascents.";
 
 EulerianNumberOfTheSecondKind[n_, m_] :=
     0 /; Or @@ {m >= n, n === 0}
@@ -438,8 +451,7 @@ FindAscentElements[multiset_, PerformanceGoal -> "Speed"] :=
     Extract[Partition[multiset, 2, 1], FindAscentPositions[multiset, 
         PerformanceGoal -> "Speed"]]
 
-FindAscentElements[multiset_, PerformanceGoal -> "Memory"
-    ] :=
+FindAscentElements[multiset_, PerformanceGoal -> "Memory"] :=
     Extract[Partition[multiset, 2, 1], FindAscentPositions[multiset, 
         PerformanceGoal -> "Memory"]]
 
@@ -455,6 +467,36 @@ FindAscentPositions[multiset_, PerformanceGoal -> "Speed"] :=
 
 FindAscentPositions[multiset_, PerformanceGoal -> "Memory"] :=
     List /@ Select[-1 + Range[Length[multiset]], multiset[[#1]] < multiset
+        [[#1 + 1]]&]
+
+FindDescentElements // ClearAll
+
+FindDescentElements::usage = "FindDescentElements[multi] returns the sets of adjacent elements in the multiset multi where the second element of the set of adjacent elements is less than the first element of the set of adjacent elements.";
+
+FindDescentElements[multiset_] :=
+    Extract[Partition[multiset, 2, 1], FindDescentPositions[multiset]
+        ]
+
+FindDescentElements[multiset_, PerformanceGoal -> "Speed"] :=
+    Extract[Partition[multiset, 2, 1], FindDescentPositions[multiset,
+         PerformanceGoal -> "Speed"]]
+
+FindDescentElements[multiset_, PerformanceGoal -> "Memory"] :=
+    Extract[Partition[multiset, 2, 1], FindDescentPositions[multiset,
+         PerformanceGoal -> "Memory"]]
+
+FindDescentPositions // ClearAll
+
+FindDescentPositions::usage = "FindDescentPositions[multi] finds the positions of descents in the multiset multi.";
+
+FindDescentPositions[multiset_] :=
+    Position[Greater @@@ Partition[multiset, 2, 1], True]
+
+FindDescentPositions[multiset_, PerformanceGoal -> "Speed"] :=
+    Position[Greater @@@ Partition[multiset, 2, 1], True]
+
+FindDescentPositions[multiset_, PerformanceGoal -> "Memory"] :=
+    List /@ Select[-1 + Range[Length[multiset]], multiset[[#1]] > multiset
         [[#1 + 1]]&]
 
 (* (* slower, but uses less memory *)
@@ -782,28 +824,6 @@ MultisetPartialDerangements[set_, Optional[numberOfFixedPoints_, 0],
 MultisetPartialDerangements[args___] :=
     Null /; CheckArguments[MultisetPartialDerangements[args], {1, 3}]
 
-MultisetStrictAscentElements // ClearAll
-
-MultisetStrictAscentElements::usage = "MultisetStrictAscentElements[multiset] returns the pairs elements that at the positions of the ascents of multiset.";
-
-MultisetStrictAscentElements[multiset_] :=
-    Extract[Partition[multiset, 2, 1], MultisetStrictAscents[multiset
-        ]]
-
-MultisetStrictDescents // ClearAll
-
-MultisetStrictDescents::usage = "MultisetStrictDescents[perm] gives the strict descents of the permutation perm.";
-
-MultisetStrictDescents[perm_] :=
-    Position[(#1 > #2&) @@@ Partition[perm, 2, 1], True]
-
-MultisetStrictDescentElements // ClearAll
-
-MultisetStrictDescentElements::usage = "MultisetStrictDescentElements[perm] gives the elements that compose the descents in the multiset perm.";
-
-MultisetStrictDescentElements[perm_] :=
-    Extract[Partition[perm, 2, 1], MultisetStrictDescents[perm]]
-
 NarayanaNumber // ClearAll
 
 SetAttributes[NarayanaNumber, {Listable, NumericFunction}]
@@ -1020,13 +1040,6 @@ PermutationCountByInversions[n_Integer, k_Integer?Positive] :=
     PermutationCountByInversions[n, All][[k + 1]]
 
 (*https://resources.wolframcloud.com/FunctionRepository/resources/PermutationCountByInversions*)
-
-PermutationDescents // ClearAll
-
-PermutationDescents::usage = "PermutationDescents[perm] gives the descents of the permutation perm.";
-
-PermutationDescents[p_] :=
-    Reverse[Length @ p - FindAscentPositions @ Reverse @ p]
 
 PermutationFromIndex // ClearAll
 
@@ -1252,24 +1265,6 @@ QMultinomial[numbers__, q_] :=
         qGammaApplied /. replacementRules
     ]
 
-RandomSelfConjugatePartition // ClearAll
-
-RandomSelfConjugatePartition::usage = "RandomSelfConjugatePartition[poset] determines if the coordinates in poset are partially ordered.";
-
-RandomSelfConjugatePartition[poset_] :=
-    Module[{sortedlast, sortedfirst, gatherfirst, gatherlast},
-        If[!MatrixQ[poset, IntegerQ],
-            Return[False, Module]
-        ];
-        sortedlast = GatherBy[Sort[poset], Last];
-        sortedfirst = GatherBy[Sort[poset], First];
-        gatherfirst = GatherBy[Reverse[Flatten[Position[sortedlast, #
-            ]& /@ poset, 1], 2], First];
-        gatherlast = GatherBy[Flatten[Position[sortedfirst, #]& /@ poset,
-             1], Last];
-        sortedlast === gatherlast && sortedfirst === gatherfirst
-    ]
-
 RandomYoungTableau // ClearAll
 
 RandomYoungTableau::usage = "RandomYoungTableau[p] generates a random Young tableau of shape p.\nRandomYoungTableau[p,n] generates n random Young tableaux of shape p.";
@@ -1369,6 +1364,16 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
                                     
                                     
                                     
@@ -1692,6 +1697,20 @@ StandardYoungTableaux[partition_] /; IntegerPartitionQ[partition] :=
             ConstantArray[0, n], 1, affectedByList, minIndTable, maxIndTable]
     ]
 
+StirlingPermutations // ClearAll
+
+StirlingPermutations::usage = "StirlingPermutations[n] generates all Stirling permutations of order n.";
+
+StirlingPermutations[1] = {{1, 1}};
+
+StirlingPermutations[k_Integer?IntegerQ /; !(k < 1)] :=
+    Join @@
+        (
+            Function[x,
+                    Flatten[Insert[x, {k, k}, #]]& /@ Range[2 k - 1]
+                ] /@ StirlingPermutations[k - 1]
+        )
+
 functionWithoutVariables[partition_] :=
     Join[{First[partition] * 2 ^ (BitLength[Length[partition]] - 1)},
          Drop[partition, 2 ^ (BitLength[Length[partition]] - 1)]]
@@ -1707,6 +1726,20 @@ StrictIntegerPartitions::usage = "StrictIntegerPartitions[n] gives the strict in
 StrictIntegerPartitions[n_Integer?IntegerQ /; Not[n <= 0]] :=
     Reverse[LexicographicSort[Map[NoVariablesOddPartsToDistinctParts][
         IntegerPartitions[n, Infinity, Range[1, n, 2]]]]];
+
+StirlingPermutationGraph // ClearAll
+
+StirlingPermutationGraph::usage = "StirlingPermutationGraph[perm] displays the plane tree corresponding to the Stirling permutation perm.";
+
+StirlingPermutationGraph[sp_, opts : OptionsPattern[Graph]] :=
+    Module[{vl = DeleteDuplicates @ sp, pos = PositionIndex @ sp, eL 
+        = EdgeList @* TransitiveReductionGraph @* GraphUnion},
+        Graph[Prepend[vl, 0], eL[Graph @ Thread[0 -> vl], SimpleGraph
+             @ RelationGraph[And @@ Between[pos @ #] /@ pos[#2]&, vl]], GraphLayout
+             -> {"LayeredEmbedding", "RootVertex" -> 0}, EdgeLabels -> {e_ :> Placed[
+            Last @ e, {Left, "Middle"}]}, opts]
+    ]
+
 
 SubsetFromIndex // ClearAll
 

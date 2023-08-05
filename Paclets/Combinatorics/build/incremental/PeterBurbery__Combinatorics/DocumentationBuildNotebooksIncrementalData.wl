@@ -1,7 +1,7 @@
 <|"English\\Guides\\Combinatorics.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.9063931, "Seconds"]|>], 
-   "FileHash" -> "+eCD8JiH/8t8bQ/owID6aPTvFa8NUlhu3y7ssDnBFJk="|>, 
+      "Time" -> Quantity[1.7347936, "Seconds"]|>], 
+   "FileHash" -> "RgjkmSbwY7L3NPwGWzq09HP2w1CfK6HAZhuQlbwk9MA="|>, 
  "English\\ReferencePages\\Symbols\\CanonicalMultiset.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.0901732, "Seconds"]|>], 
@@ -328,20 +328,20 @@ b" -> <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build",
    "FileHash" -> "wNatoq1j2aJH+AyVcSqzd3jTOp6WgWnWH3op7Ny+xqM="|>, 
  "English\\Tutorials\\Combinatorics.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[29.409402, "Seconds"]|>], 
-   "FileHash" -> "tdgdAGhxyMukwh6pxEm6uMFK7fO0bUsnG3P2jfvebCw="|>, 
+      "Time" -> Quantity[16.6306189, "Seconds"]|>], 
+   "FileHash" -> "JBGgQqbe1yxqRplku/ibeX+W/+IoambuYq8eJuHWDpg="|>, 
  "English\\Guides\\FunctionsIunderstandincombinatorics.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[0.6929145, "Seconds"]|>], 
    "FileHash" -> "Rg30uyZLfPZh75ojaPRu9pepect6j+NpROi6MgQ08Qo="|>, 
  "English\\ReferencePages\\Symbols\\FindAscentElements.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.7353026, "Seconds"]|>], 
-   "FileHash" -> "P7K3HgVoOG5cOWkapL+NsIdsnDzUFHQSsv8/CG/F6gc="|>, 
+      "Time" -> Quantity[1.2718609, "Seconds"]|>], 
+   "FileHash" -> "o/oLJV6bo1lMhjnWgVsHsTY7LkYaXzcndC5u6IufZuA="|>, 
  "English\\ReferencePages\\Symbols\\FindAscentPositions.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.8371781, "Seconds"]|>], 
-   "FileHash" -> "R2OeTV2mWnhvQqnkDrhSHOFZ1jIeZf44/Vvkv/7lI8g="|>, 
+      "Time" -> Quantity[1.5033831, "Seconds"]|>], 
+   "FileHash" -> "D0t4K9MfvhapQPZrpVjyGGW4Fj0ZtFPuc/7q87OS+rA="|>, 
  "English\\ReferencePages\\Symbols\\FromPartitionPlusNotation.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.2133625, "Seconds"]|>], 
@@ -393,4 +393,24 @@ b" -> <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build",
  "English\\Tutorials\\Combinatorics-2.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[30.6036103, "Seconds"]|>], 
-   "FileHash" -> "oYQ4nv8ejp99j7FuqorV+4TxHzV2HNeHBnqizNDRDhM="|>|>
+   "FileHash" -> "oYQ4nv8ejp99j7FuqorV+4TxHzV2HNeHBnqizNDRDhM="|>, 
+ "English\\ReferencePages\\Symbols\\FindDescentElements.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[1.2575976, "Seconds"]|>], 
+   "FileHash" -> "FBdUq3Pz+iSO8FW0iBqCIeqnMeJVGKYQhrp9LO+T/6c="|>, 
+ "English\\ReferencePages\\Symbols\\FindDescentPositions.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[1.541, "Seconds"]|>], 
+   "FileHash" -> "D+76ZDfqFX439EDuIGM1ah28rB3SHxjLXuXBqs6xQ7U="|>, 
+ "English\\ReferencePages\\Symbols\\StirlingPermutationGraph.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[1.6731964, "Seconds"]|>], 
+   "FileHash" -> "GabPffGe0KSzDiKVva1bEgtoYNAnDb9k0jvF2YzT+Us="|>, 
+ "English\\ReferencePages\\Symbols\\StirlingPermutations.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[0.7527294, "Seconds"]|>], 
+   "FileHash" -> "WrUeo/6PIXn3I1sYgxhwN4WqiKgWuHG1TfSqthD2N5I="|>, 
+ "English\\Tutorials\\Stirlingpermutation.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[9.6086573, "Seconds"]|>], 
+   "FileHash" -> "lx+AOV6aWhz1TP8Hj28xKpBmIDD5orYvjSz32Zr395s="|>|>

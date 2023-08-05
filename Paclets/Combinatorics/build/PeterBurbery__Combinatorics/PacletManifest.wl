@@ -37,7 +37,20 @@
             ,
             "Hash"
             ->
-            "f359835d1736364842e5e94f8638357a2237fe0b24fec9d2f5b26d192bd37e8a"
+            "fd5921d35ad0fdf23fd8253d670da287084511e8d3e92fe28708b6d15e45ed16"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\Combinatorics.wl.bak"
+            ]
+            ,
+            "Hash"
+            ->
+            "a0f598ecc1b82107b146a50f6f1a4c4abe3f9348847ceb4edccd8b453acab170"
                 
         |>
         ,
@@ -245,7 +258,7 @@
             ,
             "Hash"
             ->
-            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            "838250adfb88676d85fe8a0d4c9e6f3e7d4791d5e717d7c8625873fe39084b43"
                 
         |>
         ,
@@ -258,7 +271,7 @@
             ,
             "Hash"
             ->
-            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            "4173d7a9c64f2f03f16d076add458b1835b9e9dd6fe29c5718f39af7c2a01e16"
                 
         |>
         ,
@@ -643,45 +656,6 @@
             "File"
             ->
             File[
-                "Kernel\\MultisetStrictAscentElements.wl"
-            ]
-            ,
-            "Hash"
-            ->
-            "019812acadeaa8aae4139c023b4d772ee9c41041bc43367aef7055702ddc9ec4"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Kernel\\MultisetStrictDescentElements.wl"
-            ]
-            ,
-            "Hash"
-            ->
-            "c6f7d7ee225dc242b5db3f5cdc5fbe039b77564b4bd28c7edf5cbf22088cbf4e"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Kernel\\MultisetStrictDescents.wl"
-            ]
-            ,
-            "Hash"
-            ->
-            "3ee15fc7475275f15447c3e7ed2d2c3866da8a3413bca8c5c3596932091bd26f"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
                 "Kernel\\NarayanaNumber.wl"
             ]
             ,
@@ -851,19 +825,6 @@
             "File"
             ->
             File[
-                "Kernel\\PermutationAscents.wl"
-            ]
-            ,
-            "Hash"
-            ->
-            "7807e831f4c4c1bf218dfce40711273e5e9e1f782da26492506387086a73b65f"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
                 "Kernel\\PermutationCountByInversions.wl"
             ]
             ,
@@ -877,38 +838,12 @@
             "File"
             ->
             File[
-                "Kernel\\PermutationDescents.wl"
-            ]
-            ,
-            "Hash"
-            ->
-            "36f66305c494b66aa26895304f3ac57a334b0acbf4034e9790b56b2104ef0b18"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
                 "Kernel\\PermutationFromIndex.wl"
             ]
             ,
             "Hash"
             ->
             "c1245c1a48827ca7267cd9f0a41843669bab038867f80ac55c4434299eef9a69"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Kernel\\PermutationFromLehmerCode.wl"
-            ]
-            ,
-            "Hash"
-            ->
-            "e0d0b9f5d2421284c42b1571a99da10e8e4509b849ced184c5c3903dc61cf8e4"
                 
         |>
         ,
@@ -1052,19 +987,6 @@
             "Hash"
             ->
             "04e25bef5e0f568e5cd842aea76ca96c2c80eaa144c35097ade2d0fafb0c6ee2"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Kernel\\RandomSelfConjugatePartition.wl"
-            ]
-            ,
-            "Hash"
-            ->
-            "f71d8e93fd61660a3b9498fee738b19a6d2a5e8b4f67e53bc5ccf4a9c1ea1618"
                 
         |>
         ,
@@ -1221,6 +1143,19 @@
             "Hash"
             ->
             "76bfe8dd868cbb97f2a6daf9db4894eb10b5bc1889efeb2b3a4b8fc7f739739e"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\StirlingPermutationGraph.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "f14f13f457c8a4d9c852a038628f52e8b02b503352218e72660294b24ec7131c"
                 
         |>
         ,
@@ -1467,7 +1402,7 @@
             ,
             "Hash"
             ->
-            "d9de6b81359a07a9db615e5fed6f5e259c98df49e591335d45af8397df18c5c5"
+            "eeffc3876efab5589733a566c774c2c88c108deb50f6f21b1e1074c9a1f5f639"
                 
         |>
         ,
@@ -1629,20 +1564,6 @@
             "File"
             ->
             File[
-                "Documentation\\English\\ReferencePages\\Symbols\\EulerianNumberOfTheSecondKind.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "65ae3dd5def5f987a1eccbdc421c6d5c612215cdd16d1cfb59dc76a60087e467"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
                 "Documentation\\English\\ReferencePages\\Symbols\\FerrersDiagram.nb"
                     
             ]
@@ -1691,7 +1612,7 @@
             ,
             "Hash"
             ->
-            "fd7128312665b1256d0c2a2c8daa888bb6025e7d7dbce161d6a3dddac50ba3b3"
+            "9deb0002cab85ae2b70bd0bbbcbdcae3429ab133675c170977a7f5bc64abf4f9"
                 
         |>
         ,
@@ -1705,7 +1626,35 @@
             ,
             "Hash"
             ->
-            "d39e055f1cbd330120f83965dc3ff67865826db558dbddfe5f31f09138cefd1d"
+            "11ba40b63b75bb7ea5a3af6a416cf97730f0cf263ba35d4e603bc7dd8d110f94"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\FindDescentElements.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "d44bac5c3b82bf669b459ce435aef2a48e4672c901d6030fab0feccfba60212c"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\FindDescentPositions.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "50f04bd1b87ff1b3d900cb9ae8775108fc930dd80ad39bf79f91eb30c9a1ae3d"
                 
         |>
         ,
@@ -2035,34 +1984,6 @@
             "File"
             ->
             File[
-                "Documentation\\English\\ReferencePages\\Symbols\\MultisetStrictDescentElements.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "63ba3faf26f82c0f0820b91fb38a8315931cb693d6eaa108b90b1d7fcad440de"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Documentation\\English\\ReferencePages\\Symbols\\MultisetStrictDescents.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "a85892963a795b12c33e710bebb7344c51abc12587bd2dabddec46c9a4cfb2c1"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
                 "Documentation\\English\\ReferencePages\\Symbols\\NarayanaNumber.nb"
                     
             ]
@@ -2188,19 +2109,6 @@
             ->
             File[
                 "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\OrderedTupleFromIndex.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            $Failed
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Documentation\\English\\ReferencePages\\Symbols\\OriginalReferencePages\\PermutationDescents.nb"
                     
             ]
             ,
@@ -2447,20 +2355,6 @@
             "Hash"
             ->
             "d0ec0413fbfe1eb0b447e559ec3d47ea51019c51874ccc412dca3cef9a2f9182"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Documentation\\English\\ReferencePages\\Symbols\\PermutationDescents.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "3b5707ecdb3acf8b8f6797ed006592dddef615bf159aaaab73c88e04df8bdb38"
                 
         |>
         ,
@@ -2762,6 +2656,34 @@
             "File"
             ->
             File[
+                "Documentation\\English\\ReferencePages\\Symbols\\StirlingPermutationGraph.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "3f956897d9bc5e06daf8103f96542037fe93d5c35a40dc3a662bf9a412a11f6e"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\StirlingPermutations.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "c47544a4b45430e82a00cbbff25b7005f29ccc1495801c3e0455ef244bfc766a"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Documentation\\English\\ReferencePages\\Symbols\\StrictIntegerPartitions.nb"
                     
             ]
@@ -2972,55 +2894,27 @@
             "File"
             ->
             File[
-                "Documentation\\English\\Tutorials\\Combinatorics-0.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "77b9bff7ea1f6401381edd04ab2ee1d179b59f8c9fa75e2d791206b99109ea9b"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Documentation\\English\\Tutorials\\Combinatorics-1.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "bf18a9a2f8a8d8811e0c5cdc69ae546764a79289aca7d61a2db912ba98f536e1"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Documentation\\English\\Tutorials\\Combinatorics-2.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "5e40a3e311de69c3bbdc7ede57c81cd47e34daa58c4a83a1cfcea3b9602100d8"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
                 "Documentation\\English\\Tutorials\\Combinatorics.nb"
                     
             ]
             ,
             "Hash"
             ->
-            "5b88bbba39280ad4c7827ed3190e12e1c787aaeb0a60875920085f0eef82bc81"
+            "bc23b973e03693e7ac736643f0b5d4d73bbd5d6486cc6f3a3eaa24e9df65f5af"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\Tutorials\\Stirlingpermutation.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "839d9e648f9152f89553217e0b89a4f0eaeb8467bf6a4a959d84e4b610c8d164"
                 
         |>
     }
