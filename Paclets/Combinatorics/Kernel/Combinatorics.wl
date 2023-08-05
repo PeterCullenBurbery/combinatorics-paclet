@@ -98,10 +98,6 @@ PeterBurbery`Combinatorics`MultisetCardinality;
 
 PeterBurbery`Combinatorics`MultisetPartialDerangements;
 
-PeterBurbery`Combinatorics`MultisetStrictDescents;
-
-PeterBurbery`Combinatorics`MultisetStrictDescentElements;
-
 PeterBurbery`Combinatorics`NarayanaNumber;
 
 PeterBurbery`Combinatorics`NextPermutation;
@@ -129,8 +125,6 @@ PeterBurbery`Combinatorics`PartitionRank;
 PeterBurbery`Combinatorics`PartitionSuperscriptNotation;
 
 PeterBurbery`Combinatorics`PermutationCountByInversions;
-
-PeterBurbery`Combinatorics`PermutationDescents;
 
 PeterBurbery`Combinatorics`PermutationFromIndex;
 
@@ -822,28 +816,6 @@ MultisetPartialDerangements[set_, Optional[numberOfFixedPoints_, 0],
 MultisetPartialDerangements[args___] :=
     Null /; CheckArguments[MultisetPartialDerangements[args], {1, 3}]
 
-MultisetStrictAscentElements // ClearAll
-
-MultisetStrictAscentElements::usage = "MultisetStrictAscentElements[multiset] returns the pairs elements that at the positions of the ascents of multiset.";
-
-MultisetStrictAscentElements[multiset_] :=
-    Extract[Partition[multiset, 2, 1], MultisetStrictAscents[multiset
-        ]]
-
-MultisetStrictDescents // ClearAll
-
-MultisetStrictDescents::usage = "MultisetStrictDescents[perm] gives the strict descents of the permutation perm.";
-
-MultisetStrictDescents[perm_] :=
-    Position[(#1 > #2&) @@@ Partition[perm, 2, 1], True]
-
-MultisetStrictDescentElements // ClearAll
-
-MultisetStrictDescentElements::usage = "MultisetStrictDescentElements[perm] gives the elements that compose the descents in the multiset perm.";
-
-MultisetStrictDescentElements[perm_] :=
-    Extract[Partition[perm, 2, 1], MultisetStrictDescents[perm]]
-
 NarayanaNumber // ClearAll
 
 SetAttributes[NarayanaNumber, {Listable, NumericFunction}]
@@ -1060,13 +1032,6 @@ PermutationCountByInversions[n_Integer, k_Integer?Positive] :=
     PermutationCountByInversions[n, All][[k + 1]]
 
 (*https://resources.wolframcloud.com/FunctionRepository/resources/PermutationCountByInversions*)
-
-PermutationDescents // ClearAll
-
-PermutationDescents::usage = "PermutationDescents[perm] gives the descents of the permutation perm.";
-
-PermutationDescents[p_] :=
-    Reverse[Length @ p - FindAscentPositions @ Reverse @ p]
 
 PermutationFromIndex // ClearAll
 
@@ -1391,6 +1356,9 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
+                                    
+                                    
                                     
                                     
                                     
