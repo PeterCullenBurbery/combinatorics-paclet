@@ -412,5 +412,5 @@ b" -> <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build",
    "FileHash" -> "WrUeo/6PIXn3I1sYgxhwN4WqiKgWuHG1TfSqthD2N5I="|>, 
  "English\\Tutorials\\Stirlingpermutation.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[9.6086573, "Seconds"]|>], 
-   "FileHash" -> "lx+AOV6aWhz1TP8Hj28xKpBmIDD5orYvjSz32Zr395s="|>|>
+      "Time" -> Quantity[2.5709153, "Seconds"]|>], 
+   "FileHash" -> "MOatAe6X+sVIsmL2tMoWPvbBGLEQZfdc7FXmYG931ZE="|>|>
