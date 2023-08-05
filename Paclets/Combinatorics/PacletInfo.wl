@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Peter Cullen Burbery",
     "License" -> "BSD-3-Clause",
     "PublisherID" -> "PeterBurbery",
-    "Version" -> "2.0.22",
+    "Version" -> "2.1.0",
     "WolframVersion" -> "13.3+",
     "PrimaryContext" -> "PeterBurbery`Combinatorics`",
     "Extensions" -> {
