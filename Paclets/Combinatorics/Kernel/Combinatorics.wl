@@ -2,25 +2,27 @@
 
 (**)
 
-
-
 (* ::Section:: *)
-(*Package Header*)
 
+(*Package Header*)
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-
-
 (* ::Text:: *)
+
 (*Declare your public symbols here:*)
 
+PeterBurbery`Combinatorics`CakeNumber;
 
 PeterBurbery`Combinatorics`CanonicalMultiset;
 
 PeterBurbery`Combinatorics`CentralBinomialCoefficient;
 
 PeterBurbery`Combinatorics`ConjugatePartition;
+
+PeterBurbery`Combinatorics`DedekindNumber;
+
+PeterBurbery`Combinatorics`DelannoyNumber;
 
 PeterBurbery`Combinatorics`DescendingSublists;
 
@@ -60,6 +62,10 @@ PeterBurbery`Combinatorics`FromPartitionPlusNotation;
 
 PeterBurbery`Combinatorics`FromPartitionSuperscriptNotation;
 
+PeterBurbery`Combinatorics`FubiniNumber;
+
+PeterBurbery`Combinatorics`FussCatalanNumber;
+
 PeterBurbery`Combinatorics`GaussFactorial;
 
 PeterBurbery`Combinatorics`GrayCode;
@@ -84,15 +90,21 @@ PeterBurbery`Combinatorics`InversionCount;
 
 PeterBurbery`Combinatorics`InversionVectorQ;
 
+PeterBurbery`Combinatorics`LazyCatererNumber;
+
 PeterBurbery`Combinatorics`LehmerCodeFromIndex;
 
 PeterBurbery`Combinatorics`LehmerCodeFromPermutation;
+
+PeterBurbery`Combinatorics`LobbNumber;
 
 PeterBurbery`Combinatorics`LucasNumberU1;
 
 PeterBurbery`Combinatorics`LucasNumberV2;
 
 PeterBurbery`Combinatorics`ModifiedCentralBinomialCoefficient;
+
+PeterBurbery`Combinatorics`MotzkinNumber;
 
 PeterBurbery`Combinatorics`Multichoose;
 
@@ -160,6 +172,10 @@ PeterBurbery`Combinatorics`RationalNumberRepeatingDecimalPeriod;
 
 PeterBurbery`Combinatorics`ReflexiveGraphQ;
 
+PeterBurbery`Combinatorics`SchroderHipparchusNumber;
+
+PeterBurbery`Combinatorics`SchroderNumber;
+
 PeterBurbery`Combinatorics`SecantNumber;
 
 PeterBurbery`Combinatorics`SelectPermutations;
@@ -192,6 +208,8 @@ PeterBurbery`Combinatorics`TableauxToPermutation;
 
 PeterBurbery`Combinatorics`TangentNumber;
 
+PeterBurbery`Combinatorics`TelephoneNumber;
+
 PeterBurbery`Combinatorics`ToInversionVector;
 
 PeterBurbery`Combinatorics`TransitiveGraphQ;
@@ -204,21 +222,21 @@ PeterBurbery`Combinatorics`TupleIndex;
 
 PeterBurbery`Combinatorics`UnsignedLahNumber;
 
+PeterBurbery`Combinatorics`WedderburnEtheringtonNumber;
+
 PeterBurbery`Combinatorics`YoungDiagram;
 
 PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-
-
 (* ::Section:: *)
+
 (*Definitions*)
 
-
 (* ::Text:: *)
-(*Define your public and private symbols here:*)
 
+(*Define your public and private symbols here:*)
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -1408,6 +1426,10 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     
                                     
                                     
+                                    
+                                    
+                                    
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -1740,7 +1762,6 @@ StirlingPermutationGraph[sp_, opts : OptionsPattern[Graph]] :=
             Last @ e, {Left, "Middle"}]}, opts]
     ]
 
-
 SubsetFromIndex // ClearAll
 
 SubsetFromIndex::usage = "SubsetFromIndex[index, len] returns a subset of length len with given index.";
@@ -2055,11 +2076,9 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-
-
 (* ::Section:: *)
-(*Package Footer*)
 
+(*Package Footer*)
 
 End[]
 
