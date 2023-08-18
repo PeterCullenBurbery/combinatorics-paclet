@@ -94,6 +94,8 @@ PeterBurbery`Combinatorics`InversionCount;
 
 PeterBurbery`Combinatorics`InversionVectorQ;
 
+PeterBurbery`Combinatorics`KSetPartitions;
+
 PeterBurbery`Combinatorics`LazyCatererNumber;
 
 PeterBurbery`Combinatorics`LehmerCodeFromIndex;
@@ -190,6 +192,8 @@ PeterBurbery`Combinatorics`SelectTuples;
 
 PeterBurbery`Combinatorics`SelfConjugatePartitionQ;
 
+PeterBurbery`Combinatorics`SetPartitions;
+
 PeterBurbery`Combinatorics`SignedLahNumber;
 
 PeterBurbery`Combinatorics`StandardYoungTableaux;
@@ -244,15 +248,14 @@ Begin["`Private`"];
 (*Define your public and private symbols here:*)
 
 
+CakeNumber // ClearAll
 
-CakeNumber//ClearAll
+SetAttributes[CakeNumber, {Listable}]
 
-SetAttributes[CakeNumber,{Listable}]
+CakeNumber::usage = "CakeNumber[n] gives the nth cake number.";
 
-CakeNumber::usage="CakeNumber[n] gives the nth cake number.";
-
-CakeNumber[n_]:=Binomial[n,3]+n
-
+CakeNumber[n_] :=
+    Binomial[n, 3] + n
 
 PeterBurbery`Combinatorics`CanonicalMultiset // ClearAll
 
@@ -765,6 +768,42 @@ InversionVectorQ::usage = "InversionVectorQ[iv] checks if iv is the inversion ve
 InversionVectorQ @ iv_ :=
     And @@ Thread[GreaterEqual[Range[0, -1 + Length @ iv], Reverse @ 
         iv]]
+
+KSetPartitions // ClearAll
+
+KSetPartitions::usage = "KSetPartitions[set, k] returns the list of set partitions of set 
+with k blocks.\nKSetPartitions[n, k] returns the list of set partitions of {1, 2, ...., n} with k blocks.";
+
+KSetPartitions[0, 0] :=
+    {{}}
+
+KSetPartitions[{}, 0] :=
+    {{}}
+
+KSetPartitions[s_List, 0] :=
+    {}
+
+KSetPartitions[s_List, k_Integer] :=
+    {} /; k > Length[s]
+
+KSetPartitions[s_List, k_Integer] :=
+    {({#1}&) /@ s} /; k === Length[s]
+
+KSetPartitions[s_List, k_Integer] :=
+    Block[{$RecursionLimit = Infinity, j},
+            Join[(Prepend[#1, {First[s]}]&) /@ KSetPartitions[Rest[s],
+                 k - 1], Flatten[(Table[Prepend[Delete[#1, j], Prepend[#1[[j]], s[[1]]
+                ]], {j, Length[#1]}]&) /@ KSetPartitions[Rest[s], k], 1]]
+        ] /; k > 0 && k < Length[s]
+
+KSetPartitions[0, (k_Integer) ? Positive] :=
+    {}
+
+KSetPartitions[(n_Integer) ? Positive, 0] :=
+    {}
+
+KSetPartitions[(n_Integer) ? Positive, (k_Integer) ? Positive] :=
+    KSetPartitions[Range[n], k]
 
 LehmerCodeFromIndex // ClearAll
 
@@ -1446,6 +1485,8 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     
                                     
                                     
+                                    
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -1660,6 +1701,16 @@ SelfConjugatePartitionQ::usage = "SelfConjugatePartitionQ[partition] returns Tru
 
 SelfConjugatePartitionQ[partition_?IntegerPartitionQ] :=
     partition === ConjugatePartition[partition]
+
+SetPartitions // ClearAll
+
+SetPartitions::usage = "SetPartitions[set] returns the list of set partitions of set.\nSetPartitions[n] returns the list of set partitions of {1,2, ...., n}.";
+
+SetPartitions[lis_List?ListQ] :=
+    Catenate[Table[KSetPartitions[lis, i], {i, Length[lis]}]]
+
+SetPartitions[n_Integer ? (And @@ {# > 0, IntegerQ[#]}&)] :=
+    SetPartitions[Range[n]]
 
 SignedLahNumber // ClearAll
 
