@@ -2,19 +2,15 @@
 
 (**)
 
-
-
 (* ::Section:: *)
-(*Package Header*)
 
+(*Package Header*)
 
 BeginPackage["PeterBurbery`Combinatorics`"];
 
-
-
 (* ::Text:: *)
-(*Declare your public symbols here:*)
 
+(*Declare your public symbols here:*)
 
 PeterBurbery`Combinatorics`CakeNumber;
 
@@ -238,15 +234,13 @@ PeterBurbery`Combinatorics`ZeckendorfRepresentation;
 
 Begin["`Private`"];
 
-
-
 (* ::Section:: *)
+
 (*Definitions*)
 
-
 (* ::Text:: *)
-(*Define your public and private symbols here:*)
 
+(*Define your public and private symbols here:*)
 
 CakeNumber // ClearAll
 
@@ -312,6 +306,16 @@ MapThread[
 (* DedekindNumber[n_ /; n > 9] :=
     Total[Boole[Table[UnateQ[BooleanFunction[k, n]], {k, 0, 2 ^ (2^n)
          - 1}]]] *)
+
+DelannoyNumber // ClearAll
+
+DelannoyNumber::usage = "DelannoyNumber[m,n] gives the Delannoy number D(m,n).";
+
+SetAttributes[DelannoyNumber, {Listable}]
+
+DelannoyNumber[n_, k_] :=
+    Binomial[n + k, k] * Hypergeometric2F1[-k, -n, -n - k, -1]                                                       (*Jean-
+François Alcover,Apr 05 2012,after 3rd formula*)
 
 DescendingSublists // ClearAll
 
@@ -1519,6 +1523,7 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                     
                                     
                                     
+                                    
                                     *)
                                     Do[
                                         If[Unequal @@ vars,
@@ -2175,11 +2180,9 @@ LeadingIndex[(n_Integer) ? (#1 >= 0&)] :=
         k
     ]
 
-
-
 (* ::Section:: *)
-(*Package Footer*)
 
+(*Package Footer*)
 
 End[]
 
