@@ -285,6 +285,34 @@ ConjugatePartition::usage = "ConjugatePartition[p] gives the partition that tran
 ConjugatePartition[p_] /; IntegerPartitionQ[p] :=
     Total[UnitStep[Outer[Plus, p, -Range[First[p]]]]]
 
+DedekindNumber // ClearAll
+
+DedekindNumber::usage = "DedekindNumber[n] gives the nth Dedekind number.";
+
+(* DedekindNumber[0] = 1;
+
+DedekindNumber[1] = 3
+
+DedekindNumber[2] = 6
+
+DedekindNumber[3] = 20 *)
+
+SetAttributes[DedekindNumber, {Listable}]
+
+MapThread[
+    Set[DedekindNumber[#1], #2]&
+    ,
+    {
+        Range[0, 9], {2, 3, 6, 20, 168, 7581, 7828354, 2414682040998,
+             56130437228687557907788, 286386577668298411128469151667598498812366}
+            (*ResourceFunction[
+"OEISSequenceData"]["A000372 "]*)}
+]
+
+(* DedekindNumber[n_ /; n > 9] :=
+    Total[Boole[Table[UnateQ[BooleanFunction[k, n]], {k, 0, 2 ^ (2^n)
+         - 1}]]] *)
+
 DescendingSublists // ClearAll
 
 DescendingSublists::usage = "DescendingSublists[list] makes sublists of list starting at its left-to-right maxima.";
@@ -1437,6 +1465,10 @@ iSelectPermutations[list_, nlist_List, crit_, m_:\[Infinity]] :=
                                 minindex = Association[Rule @@@ minindex
                                     ];
                                 If[DuplicateFreeQ[list], (* optimize for lists that are duplicate-free 
+                                    
+                                    
+                                    
+                                    
                                     
                                     
                                     
